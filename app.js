@@ -205,6 +205,7 @@
     hideAllViews();
     subjectsView.style.display = 'block';
     testHeaderStatus.style.display = 'none';
+    testHeaderStatus.classList.add('hidden');
     const mainNav = document.getElementById('main-nav-links');
     if (mainNav) mainNav.style.display = 'flex';
     navChangeSubject.style.display = 'none';
@@ -218,6 +219,8 @@
 
     hideAllViews();
     dashboardView.style.display = 'block';
+    testHeaderStatus.style.display = 'none';
+    testHeaderStatus.classList.add('hidden');
     const mainNav = document.getElementById('main-nav-links');
     if (mainNav) mainNav.style.display = 'flex';
     navChangeSubject.style.display = 'inline-block';
@@ -239,6 +242,7 @@
     testView.style.display = 'none';
     resultView.style.display = 'none';
     testHeaderStatus.style.display = 'none';
+    testHeaderStatus.classList.add('hidden');
   }
 
   // --------------------------------------------------------------------------
@@ -422,6 +426,7 @@
 
     hideAllViews();
     testView.style.display = 'block';
+    testHeaderStatus.classList.remove('hidden');
     testHeaderStatus.style.display = 'flex';
     const mainNav = document.getElementById('main-nav-links');
     if (mainNav) mainNav.style.display = 'none';
@@ -785,6 +790,7 @@
     hideAllViews();
     resultView.style.display = 'block';
     testHeaderStatus.style.display = 'none';
+    testHeaderStatus.classList.add('hidden');
     const mainNav = document.getElementById('main-nav-links');
     if (mainNav) mainNav.style.display = 'flex';
 

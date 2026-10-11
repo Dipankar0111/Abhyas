@@ -123,13 +123,18 @@ body {
 }
 
 .test-header-bar {
-  display: flex !important;
-  flex-direction: row !important;
-  align-items: center !important;
-  justify-content: center !important;
-  gap: 12px !important;
-  height: 100% !important;
-  margin: 0 auto !important;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.test-header-bar.hidden,
+.test-header-bar[style*="display: none"] {
+  display: none !important;
 }
 
 .timer-badge {

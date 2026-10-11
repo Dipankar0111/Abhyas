@@ -1,0 +1,9143 @@
+window.ALL_SUBJECTS = {
+  "sai": {
+    "name": "System & AI Essentials",
+    "code": "S&AI",
+    "badge": "C01\u2013C10",
+    "tag": "500 Qs \u2022 10 Sets",
+    "desc": "Foundational computing systems, CPU/GPU, memory hierarchy, Linux OS, process scheduling, Unix permissions, low-level binary/hex, and Git/GitHub.",
+    "total": 500,
+    "questions": [
+      {
+        "id": 1,
+        "module": "Hardware & Storage",
+        "question": "Aman wants faster boot times and quicker app loading on his old laptop. Which upgrade would be most effective?",
+        "options": [
+          "Replacing his HDD with an SSD",
+          "Buying a bigger monitor",
+          "Getting a mechanical keyboard",
+          "Adding external speakers"
+        ],
+        "correct": 0,
+        "explanation": "Boot time and app loading depend heavily on how fast the storage device can read data. SSDs are many times faster than HDDs because they have no moving parts, so switching to an SSD gives a huge speed boost.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 2,
+        "module": "Operating Systems",
+        "question": "Which of the following is a primary responsibility of an operating system?",
+        "options": [
+          "Creating spreadsheets",
+          "Managing system resources",
+          "Designing websites",
+          "Editing photographs"
+        ],
+        "correct": 1,
+        "explanation": "An operating system manages resources such as CPU time, memory, files, and input/output devices.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 3,
+        "module": "Computer Systems",
+        "question": "A state weather department is building a flood-warning system. Four kinds of machine are involved:\n(1) On each of two hundred rivers, a sealed waterproof box bolted to a bridge with sensor and radio.\n(2) In the district office, machines on desks for reports and calls.\n(3) In a rack room, headless machines that receive readings and answer citizen website requests.\n(4) At a national centre, one very large machine running an atmospheric simulation.\nWhich classification matches the lecture categories?",
+        "options": [
+          "(1) personal computer, (2) embedded system, (3) supercomputer, (4) server",
+          "(1) embedded system, (2) personal computer, (3) server, (4) supercomputer",
+          "(1) embedded system, (2) server, (3) personal computer, (4) supercomputer",
+          "(1) server, (2) personal computer, (3) embedded system, (4) supercomputer"
+        ],
+        "correct": 1,
+        "explanation": "(1) Dedicated bridge sensor = embedded system, (2) Office desktop = personal computer, (3) Headless multi-user data provider = server, (4) Massive parallel simulation = supercomputer.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 4,
+        "module": "Computer Systems",
+        "question": "Which feature of the rack-room machines - rather than their physical size or their speed - is what puts them in their category as servers?",
+        "options": [
+          "They are kept in a locked, climate-controlled room.",
+          "They have more RAM installed than the machines in the district office.",
+          "They store data and provide it as a service to many other machines at the same time, over a network.",
+          "They need no operating system of their own, because no person ever sits in front of them to run a program."
+        ],
+        "correct": 2,
+        "explanation": "A server is defined by its role: providing data, compute, or services to multiple client machines over a network.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 5,
+        "module": "Computer Systems",
+        "question": "The department runs a trial: on ten bridges the sealed box is replaced by an ordinary laptop. Over one monsoon the ten laptops miss 43 readings due to Windows updates, background apps, and power-saving sleep; the 190 boxes miss 2. Which conclusion do these findings support?",
+        "options": [
+          "The laptops needed better weatherproofing.",
+          "The laptops needed faster processors and more memory.",
+          "The boxes are more reliable only because they were installed first.",
+          "Capability a job never uses is not free. It can become a cause for which the job can fail, which is why a computer meant for one task is inefficient here."
+        ],
+        "correct": 3,
+        "explanation": "Capability a job never uses introduces failure modes. An embedded system dedicated to a single task eliminates unnecessary background services and sleep states.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 6,
+        "module": "Computer Systems",
+        "question": "Halfway through the season the department decides the river boxes should measure every ten seconds instead of thirty, and report battery level. Assuming the boxes were designed to allow it, what does the definition of a computer predict?",
+        "options": [
+          "The behaviour can be changed by loading a new set of instructions into the hardware already on the bridge.",
+          "Every box must be physically replaced, because its behaviour is fixed by the way it was built.",
+          "Only the national centre's machine can be reprogrammed, since only supercomputers run software.",
+          "Each box needs a GPU added before it can handle battery-level data."
+        ],
+        "correct": 0,
+        "explanation": "A computer is defined by its reprogrammability: you update its stored software instructions without altering its physical hardware.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 7,
+        "module": "Computer Systems",
+        "question": "During a flood the public website becomes unreachable for citizens. At the same time, officers in district office can read data on their screens and bridge boxes transmit normally. Which layer is the most likely point of failure, and on what reasoning?",
+        "options": [
+          "The river boxes - they are the only machines exposed to extreme weather.",
+          "The national centre's simulation - the public website exists to display simulation results.",
+          "The rack-room machines' capacity to answer many simultaneous requests - the failure appears exactly where the number of users rose sharply, and not where it did not.",
+          "The officers' desk machines - officers and public look at same data."
+        ],
+        "correct": 2,
+        "explanation": "The failure occurred exclusively where traffic spiked (the public-facing server layer), while internal office streams and sensors remained functional.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 8,
+        "module": "Hardware & Storage",
+        "question": "Rahul needs to carry a 2 GB project file from home to college to submit it. Which device is the most convenient choice?",
+        "options": [
+          "The internal HDD of his desktop",
+          "A USB flash drive",
+          "His computer's monitor",
+          "A RAM stick"
+        ],
+        "correct": 1,
+        "explanation": "A USB flash drive is small, portable, non-volatile, and plug-and-play. RAM loses data when powered off, and internal HDDs are not portable.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 9,
+        "module": "Operating Systems",
+        "question": "Scenario: A computer becomes almost unusable because many programs are running simultaneously and consuming available memory. Which operating system function is most directly involved in handling this situation?",
+        "options": [
+          "Document formatting",
+          "Screen resolution",
+          "Memory management",
+          "File naming"
+        ],
+        "correct": 2,
+        "explanation": "Memory management controls allocation, paging, swapping, and deallocation of physical and virtual memory.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 10,
+        "module": "Software Types",
+        "question": "Which software would normally be used to protect a computer by detecting and removing malicious programs?",
+        "options": [
+          "Spreadsheet software",
+          "Word processor",
+          "Presentation software",
+          "Antivirus utility"
+        ],
+        "correct": 3,
+        "explanation": "Antivirus software is a system maintenance utility that scans, identifies, and removes malicious code.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 11,
+        "module": "Software Types",
+        "question": "Which software would be most appropriate for calculating monthly expenses and creating charts from the results?",
+        "options": [
+          "Antivirus utility",
+          "Operating system",
+          "Device driver",
+          "Spreadsheet application"
+        ],
+        "correct": 3,
+        "explanation": "Spreadsheet applications (e.g., Excel, Google Sheets) are designed for mathematical calculations and chart generation.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 12,
+        "module": "Operating Systems",
+        "question": "A computer has enough memory and storage, but a newly connected printer does not work because the operating system cannot communicate with it. What is most likely missing?",
+        "options": [
+          "Web browser",
+          "File manager",
+          "Device driver",
+          "Spreadsheet"
+        ],
+        "correct": 2,
+        "explanation": "A device driver is the specialized software module that enables the OS to send commands to a specific hardware peripheral.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 13,
+        "module": "Hardware & Storage",
+        "question": "Why is an SSD generally faster than an HDD?",
+        "options": [
+          "It uses larger spinning disks",
+          "It has no moving parts",
+          "It uses magnetic tape",
+          "It is physically bigger in size"
+        ],
+        "correct": 1,
+        "explanation": "HDDs rely on mechanical spinning platters and moving heads. SSDs access data electronically via solid NAND flash chips without mechanical delay.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 14,
+        "module": "Hardware & Storage",
+        "question": "A clinic buys two machines. Front-desk: modest CPU, 8 GB RAM, 1 TB HDD. Imaging machine: fast CPU, 32 GB RAM, 1 TB SSD, discrete GPU. Complaint: Front-desk machine takes 2 minutes to open patient-records; imaging machine opens it in seconds. Which difference explains this?",
+        "options": [
+          "The front-desk machine has less RAM, where programs are kept permanently.",
+          "The front-desk machine reads the program off a drive with spinning platters and moving heads, while imaging reads from flash memory with no moving parts.",
+          "Processor speed on its own controls how fast a program is read off a drive.",
+          "The age of the drive alone determines speed."
+        ],
+        "correct": 1,
+        "explanation": "Loading an application into RAM is an I/O read operation from secondary storage. SSDs read files significantly faster than mechanical HDDs.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 15,
+        "module": "Hardware & Storage",
+        "question": "During a power cut, a receptionist lost the half-typed record she had not yet saved. Every saved record was intact when power returned. Which property of memory does this demonstrate?",
+        "options": [
+          "The hard disk drive is volatile.",
+          "The unsaved work was held inside CPU registers only.",
+          "8 GB of RAM is too small to hold a patient record.",
+          "Work being typed lives in RAM, which is volatile; saving copies it into secondary storage, which keeps data without power."
+        ],
+        "correct": 3,
+        "explanation": "Active unsaved typing resides in volatile DRAM. Saving writes the data into non-volatile secondary storage (SSD/HDD).",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 16,
+        "module": "Hardware & Architecture",
+        "question": "The imaging machine reconstructs a scan in 40 seconds. When a technician disabled the graphics card to test something, the same scan took 26 minutes - and the CPU was untouched. Why?",
+        "options": [
+          "The reconstruction applies the same operation repeatedly, and a GPU's thousands of small cores handle such repetitive parallel work far better than a CPU's few powerful cores.",
+          "The graphics card holds its own copy of the operating system.",
+          "A central processing unit cannot perform arithmetic directly.",
+          "Disabling the graphics card also disabled the solid-state drive."
+        ],
+        "correct": 0,
+        "explanation": "Pixel image reconstruction is massively parallel arithmetic (SIMD). GPUs have thousands of lightweight arithmetic cores optimized for parallel computation.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 17,
+        "module": "Hardware & Storage",
+        "question": "The clinic can upgrade exactly one component on the front-desk machine to fix the 2-minute app launch time. Which upgrade should it choose?",
+        "options": [
+          "Add a graphics card, because the program window has to be drawn.",
+          "Double RAM to 16 GB, because more RAM makes the drive read faster.",
+          "Replace the hard disk drive with an SSD, because the complaint is about how long data takes to be read out of long-term storage.",
+          "Replace the processor, because CPU controls drive speed."
+        ],
+        "correct": 2,
+        "explanation": "The bottleneck is secondary storage read throughput. Replacing the mechanical HDD with an SSD solves application loading delay.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 18,
+        "module": "Hardware & Storage",
+        "question": "A vendor tells the clinic: 'Buy 64 GB of RAM and your staff will never again lose unsaved work in a power cut.' How should the clinic judge this claim?",
+        "options": [
+          "Accept it - larger RAM keeps data clear of overwritten parts.",
+          "Accept it - above 32 GB RAM behaves like an SSD.",
+          "Reject it - RAM cannot hold a document at all.",
+          "Reject it - RAM loses its contents when power is lost regardless of how much of it there is; only writing to secondary storage protects the work."
+        ],
+        "correct": 3,
+        "explanation": "RAM is inherently volatile regardless of its size. Data loss during power cuts can only be prevented by saving to non-volatile secondary storage.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 19,
+        "module": "Software Types",
+        "question": "Which pair contains only application software?",
+        "options": [
+          "Chrome and Excel",
+          "Windows and macOS",
+          "Linux and Android",
+          "BIOS and Linux"
+        ],
+        "correct": 0,
+        "explanation": "Chrome and Excel are end-user applications. Windows, macOS, Linux, and Android are operating systems; BIOS is system firmware.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 20,
+        "module": "Hardware Components",
+        "question": "A monitor is an example of which type of device?",
+        "options": [
+          "Input device",
+          "Storage device",
+          "Output device",
+          "Processing device"
+        ],
+        "correct": 2,
+        "explanation": "A monitor renders visual output generated by the computer's display subsystem.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 21,
+        "module": "Computer Systems",
+        "question": "Kiran has an orange juicer (Machine A), a digital scale updated via USB to calculate rupee prices and store 20 past weighings (Machine B), and a billing laptop (Machine C). Meera says all three are computers because they take input, process, and give output. Which property is missing?",
+        "options": [
+          "The machine must be powered by electricity.",
+          "The machine must produce output faster than a human.",
+          "The machine's behaviour must be changeable by loading a different set of instructions into it.",
+          "The machine must have a display."
+        ],
+        "correct": 2,
+        "explanation": "Reprogrammability\u2014the ability to execute arbitrary stored instructions without changing physical hardware\u2014distinguishes a computer from a fixed mechanical machine.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 22,
+        "module": "Computer Systems",
+        "question": "Applying that reprogrammability property as the test, which classification of Kiran's three machines is correct?",
+        "options": [
+          "Machines B and C are computers; Machine A is not.",
+          "Only Machine A is a computer; B and C simply move data.",
+          "All three are computers, because all three take input and output.",
+          "Only Machine C is a computer; A and B are single-purpose."
+        ],
+        "correct": 0,
+        "explanation": "Machine B (digital scale with reprogrammable firmware) and Machine C (laptop) are computers. Machine A is a purely mechanical single-purpose machine.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 23,
+        "module": "Computer Systems",
+        "question": "Machine B gained new behaviour - price display and a memory of past weighings - without a single physical part being replaced. What does this most directly demonstrate?",
+        "options": [
+          "Machine B's hardware is more powerful than A's motor.",
+          "What Machine B does is determined by its software, and its hardware is general enough to carry out more than one set of instructions.",
+          "Machine B has more secondary storage than A.",
+          "Machine B is application software rather than hardware."
+        ],
+        "correct": 1,
+        "explanation": "Software determines function over general-purpose programmable hardware without physical alterations.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 24,
+        "module": "Computer Systems",
+        "question": "The scale already beeps when weight settles. Kiran asks for a second feature: a distinct beep whenever a crate is lighter than the crate weighed immediately before it. What does this require?",
+        "options": [
+          "An output device",
+          "A faster processor",
+          "A second sensor",
+          "A value kept from an earlier measurement, because the machine must compare the current input against something no longer on the pan."
+        ],
+        "correct": 3,
+        "explanation": "Comparative temporal logic requires memory storage to preserve prior state for subsequent evaluations.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 25,
+        "module": "Computer Systems",
+        "question": "A student concludes: 'Machine C is a real computer and Machine B is only a gadget, because Machine C runs many different kinds of programs while Machine B runs only one.' What is the strongest objection?",
+        "options": [
+          "Machine B also has a display.",
+          "Machine C is a laptop, classified as an embedded system.",
+          "How many programs a device is currently made to run is a design decision; the test is whether it can be given different instructions, and Machine B was shown to pass that test.",
+          "Machine B weighs fruit faster than Machine C."
+        ],
+        "correct": 2,
+        "explanation": "Whether a device is restricted to one function is an operational design choice; the fundamental qualification of a computer is its programmability.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 26,
+        "module": "Hardware & Storage",
+        "question": "Riya's laptop slows down whenever she opens too many browser tabs, Spotify, and Word at once. Upgrading which component would help most?",
+        "options": [
+          "Buying a bigger monitor",
+          "Increasing the RAM",
+          "Getting a wireless mouse",
+          "Adding more USB ports"
+        ],
+        "correct": 1,
+        "explanation": "Each active application consumes RAM. When RAM is exhausted, the OS uses virtual memory disk swapping, degrading system speed. Adding RAM prevents disk thrashing.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 27,
+        "module": "Software Types",
+        "question": "A student wants to write assignments, calculate marks, and create presentations. Which type of software will be most useful?",
+        "options": [
+          "Device drivers",
+          "Firmware",
+          "Application software",
+          "System software"
+        ],
+        "correct": 2,
+        "explanation": "Productivity applications (word processors, spreadsheets, presentation software) belong to the application software category.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 28,
+        "module": "Software Types",
+        "question": "Which option correctly matches the software with its category?",
+        "options": [
+          "Android \u2014 Operating system",
+          "Linux \u2014 Application software",
+          "Excel \u2014 System software",
+          "Chrome \u2014 Device driver"
+        ],
+        "correct": 0,
+        "explanation": "Android is an operating system. Linux is an OS kernel/system, Excel is application software, and Chrome is an application.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 29,
+        "module": "Software Types",
+        "question": "Which of the following is a characteristic of system software?",
+        "options": [
+          "It is used only for internet browsing",
+          "It supports the operation of the computer",
+          "It is designed only for presentations",
+          "It is created only for entertainment"
+        ],
+        "correct": 1,
+        "explanation": "System software controls hardware devices and provides foundational operating services for user programs.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 30,
+        "module": "Hardware Components",
+        "question": "Speakers are considered a(n) ______ device.",
+        "options": [
+          "Input",
+          "Output",
+          "Storage",
+          "Processing"
+        ],
+        "correct": 1,
+        "explanation": "Speakers convert electrical sound signals from the computer into audible acoustic sound waves, making them output devices.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 31,
+        "module": "Hardware & Storage",
+        "question": "What does SSD stand for?",
+        "options": [
+          "Simple Storage Device",
+          "Solid State Drive",
+          "System Storage Disk",
+          "Secondary Save Drive"
+        ],
+        "correct": 1,
+        "explanation": "SSD stands for Solid State Drive, utilizing non-volatile semiconductor flash memory chips with zero moving parts.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 32,
+        "module": "Operating Systems",
+        "question": "A lab has identical hardware dual-booting Windows and Ubuntu. Why does the machine behave and appear so differently between sessions?",
+        "options": [
+          "The operating system sits between the user and the hardware; changing it changes how the machine is presented and controlled, while the hardware itself is unchanged.",
+          "Choosing an OS changes CPU clock speed.",
+          "Ubuntu reconfigures the SSD into a different physical format.",
+          "The two OSs divide RAM differently, which dictates screen layout."
+        ],
+        "correct": 0,
+        "explanation": "The operating system abstracts the underlying hardware, providing its own user interface, service layer, and process management.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 33,
+        "module": "Software Types",
+        "question": "Three pieces of software: a browser, a word processor, a package manager. Which grouping separates system software from application software correctly?",
+        "options": [
+          "System software: word processor. Application software: package manager and browser.",
+          "System software: package manager. Application software: browser and word processor.",
+          "System software: browser and package manager. Application software: word processor.",
+          "All four are application software."
+        ],
+        "correct": 1,
+        "explanation": "A package manager is a system utility for configuring, updating, and installing packages; browsers and word processors are user applications.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 34,
+        "module": "Operating Systems",
+        "question": "Bhaskar's browser needs to write a downloaded file onto the SSD. Using the three-layer stack, which account of what happens is correct?",
+        "options": [
+          "The browser writes to the SSD directly.",
+          "The SSD runs the browser.",
+          "The compiler must translate the file before the OS can store it.",
+          "The browser asks the operating system for the service, and the operating system, which manages the hardware, carries out the write."
+        ],
+        "correct": 3,
+        "explanation": "User applications execute in user space and must issue system calls to the OS kernel to interact with physical storage hardware.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 35,
+        "module": "Operating Systems",
+        "question": "A new printer works immediately under Windows, but prints nothing under Ubuntu although connected and powered on. What is the most reasonable explanation?",
+        "options": [
+          "The printer hardware is incompatible with these machines.",
+          "A printer can be used only by application software.",
+          "The two systems need different device drivers, and the driver for this printer is present in one system's software collection but not in the other's.",
+          "Ubuntu installation lacks a GPU."
+        ],
+        "correct": 2,
+        "explanation": "Operating systems require device-specific driver software to communicate with peripherals; Windows had the driver installed, while Ubuntu did not.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 36,
+        "module": "Operating Systems",
+        "question": "Bhaskar claims the Ubuntu tool to view running programs and Windows Task Manager are 'the same thing with a different name'. Which is the most defensible version of his claim?",
+        "options": [
+          "Both are supplied by their operating system to report how the machine's resources - memory and processor time - are being used.",
+          "Both are application software written by the same company.",
+          "Both are device drivers.",
+          "Both are compilers."
+        ],
+        "correct": 0,
+        "explanation": "Both tools are OS system management utilities providing real-time telemetry on active processes, CPU utilization, and RAM allocation.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 37,
+        "module": "Hardware & Storage",
+        "question": "A student says: 'My computer has 512 GB of RAM to store all my movies and games permanently.' What's wrong with this statement?",
+        "options": [
+          "Nothing \u2014 RAM stores files permanently",
+          "RAM is temporary storage",
+          "512 GB is too little for storage",
+          "RAM cannot hold any data at all"
+        ],
+        "correct": 1,
+        "explanation": "RAM is volatile temporary working memory that clears when power is disconnected. Permanent file storage requires an HDD or SSD.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 38,
+        "module": "Hardware Components",
+        "question": "Which of these is NOT an input device?",
+        "options": [
+          "Keyboard",
+          "Mouse",
+          "Microphone",
+          "Speaker"
+        ],
+        "correct": 3,
+        "explanation": "Keyboards, mice, and microphones transmit input into the computer; speakers emit sound output to the user.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 39,
+        "module": "Software Types",
+        "question": "Which statement best describes computer software?",
+        "options": [
+          "Electrical signals inside a computer",
+          "Instructions used by a computer",
+          "Physical components of a computer",
+          "Connections between hardware devices"
+        ],
+        "correct": 1,
+        "explanation": "Software consists of structured programmatic instructions and data that direct the physical hardware on how to perform operations.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 40,
+        "module": "Hardware & Storage",
+        "question": "Which of the following best describes a Hard Disk Drive (HDD)?",
+        "options": [
+          "A drive with no moving parts",
+          "A storage device with spinning disks",
+          "A temporary memory used by the CPU",
+          "A device used only for display"
+        ],
+        "correct": 1,
+        "explanation": "An HDD stores binary data magnetically on rapidly spinning platters read and written by mechanical actuator arms.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 41,
+        "module": "Hardware & Storage",
+        "question": "What happens to the data stored in RAM when you turn off your computer?",
+        "options": [
+          "It stays saved forever",
+          "It gets backed up to the cloud",
+          "It is erased and lost",
+          "It moves to the hard disk automatically"
+        ],
+        "correct": 2,
+        "explanation": "RAM is volatile memory; when electrical power ceases, the capacitive charges storing data bits dissipate, erasing its contents.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 42,
+        "module": "Hardware & Storage",
+        "question": "Arrange these from fastest to slowest in terms of data access speed:",
+        "options": [
+          "HDD \u2192 SSD \u2192 RAM",
+          "RAM \u2192 SSD \u2192 HDD",
+          "HDD \u2192 RAM \u2192 SSD",
+          "SSD \u2192 HDD \u2192 RAM"
+        ],
+        "correct": 1,
+        "explanation": "RAM operates in nanoseconds, SSD operates in microseconds, and mechanical HDD operates in milliseconds.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 43,
+        "module": "Operating Systems",
+        "question": "Scenario: A user saves documents inside folders and later searches for a particular file. Which operating system capability is being used?",
+        "options": [
+          "Memory allocation",
+          "Device installation",
+          "File management",
+          "Process scheduling"
+        ],
+        "correct": 2,
+        "explanation": "File management provides hierarchical directory organization, naming, metadata tracking, and path lookups.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 44,
+        "module": "Operating Systems",
+        "question": "Which statement about an operating system is correct?",
+        "options": [
+          "It replaces all application software",
+          "It acts as an interface between users, applications, and hardware",
+          "It is used only to browse websites",
+          "It is stored only on external devices"
+        ],
+        "correct": 1,
+        "explanation": "An OS functions as an abstraction layer and coordinator mediating between hardware components, applications, and end-users.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 45,
+        "module": "Software Types",
+        "question": "Which of the following is NOT an example of system software?",
+        "options": [
+          "Microsoft Excel",
+          "Android",
+          "Windows",
+          "Linux"
+        ],
+        "correct": 0,
+        "explanation": "Microsoft Excel is an end-user application software; Android, Windows, and Linux are operating systems.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 46,
+        "module": "Hardware & Storage",
+        "question": "A USB flash drive is mainly used for:",
+        "options": [
+          "Displaying images on the screen",
+          "Storing and transferring files",
+          "Processing calculations",
+          "Connecting to the internet"
+        ],
+        "correct": 1,
+        "explanation": "A USB flash drive is a portable, non-volatile solid-state storage medium designed for file transport and archiving.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 47,
+        "module": "Hardware Components",
+        "question": "Which combination correctly matches the device with its category?",
+        "options": [
+          "Mouse \u2192 Output, Speaker \u2192 Input",
+          "Keyboard \u2192 Input, SSD \u2192 Storage",
+          "Monitor \u2192 Input, HDD \u2192 Output",
+          "Speaker \u2192 Storage, RAM \u2192 Input"
+        ],
+        "correct": 1,
+        "explanation": "Keyboard is an input device; SSD is a secondary storage device.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 48,
+        "module": "Software Types",
+        "question": "Why is system software generally necessary before application software can be used effectively?",
+        "options": [
+          "It prevents applications from accessing computer resources",
+          "It replaces the need for computer hardware",
+          "It provides the basic environment and services applications depend on",
+          "It converts every application into hardware"
+        ],
+        "correct": 2,
+        "explanation": "System software abstracts hardware complexity and provides execution scheduling, memory allocation, and I/O channels that applications require.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 49,
+        "module": "Hardware Components",
+        "question": "A touchscreen on a smartphone acts as which type of device?",
+        "options": [
+          "Storage device",
+          "Processing device",
+          "Input device",
+          "Power device"
+        ],
+        "correct": 2,
+        "explanation": "The capacitive digitizer layer on a screen detects physical touch gestures and converts them into digital input coordinates.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 50,
+        "module": "Operating Systems",
+        "question": "Scenario: Riya opens several applications at the same time. Her computer needs to decide how much processor time each application receives. Which operating system function is involved?",
+        "options": [
+          "Web browsing",
+          "Memory allocation",
+          "Process management",
+          "File compression"
+        ],
+        "correct": 2,
+        "explanation": "Process management and the CPU scheduler allocate CPU execution time slices across active processes.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 51,
+        "module": "Filesystem & Permissions",
+        "question": "A results file is owned by the teacher. The teacher should be able to read and write the file, while the group and all other users should only be able to read it. Nobody should have execute permission. What three-digit numeric chmod value achieves exactly this?",
+        "options": [
+          "644",
+          "755",
+          "600",
+          "777"
+        ],
+        "correct": 0,
+        "explanation": "Owner: Read (4) + Write (2) = 6. Group: Read (4) = 4. Others: Read (4) = 4. Combined octal permission = 644.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 52,
+        "module": "Operating Systems & Processes",
+        "question": "A browser tab crashes and shows an error, but other tabs continue working normally. What best explains this behavior?",
+        "options": [
+          "The browser automatically restarts the crashed tab in the background.",
+          "The other tabs had already been saved to disk before the crash.",
+          "The crashed tab had not actually been running as a process.",
+          "The browser isolates tab activity across processes, limiting the failure\u2019s impact."
+        ],
+        "correct": 3,
+        "explanation": "Google Chrome implements multi-process architecture where each tab runs in its own child process. An unhandled exception terminates only that individual child process.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 53,
+        "module": "Unix Filesystem Architecture",
+        "question": "In the class demonstration, text typed in one terminal appeared in a second terminal after running echo 'hi' > /dev/pts/2. What does this illustrate?",
+        "options": [
+          "Both terminals share one block of memory from the shell",
+          "echo has a special mode for sending messages",
+          "The two terminals were opened by the same parent shell",
+          "Terminals are represented as files, so writing works"
+        ],
+        "correct": 3,
+        "explanation": "This demonstrates the Unix 'Everything is a file' model. Terminals are represented as character device files under /dev/pts/.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 54,
+        "module": "Filesystem & Permissions",
+        "question": "A newly created file shows -rw-r--r-- in ls -l. Which permission does the owner not have?",
+        "options": [
+          "Read",
+          "Execute",
+          "Write",
+          "The owner has all three"
+        ],
+        "correct": 1,
+        "explanation": "The first triplet rw- represents owner permissions: Read (r) and Write (w) are present, but Execute (x) is indicated by a dash (-).",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 55,
+        "module": "Filesystem & Permissions",
+        "question": "A Unix-like system contains a file named hello.txt. The file is made executable with chmod +x hello.txt. It is then renamed to run_me.banana. When the user runs ./run_me.banana, it executes successfully. Why?",
+        "options": [
+          "On Unix-like systems, execute permission is stored in the file\u2019s permission metadata, not determined by its filename extension.",
+          "The shell uses the filename extension to determine whether a file is executable.",
+          "The .banana extension must be registered with the operating system as executable.",
+          "Renaming a file automatically restores its default permissions."
+        ],
+        "correct": 0,
+        "explanation": "In Unix systems, executability is controlled by the execute bit in file inode metadata, unlike Windows where extensions like .exe define execution.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 56,
+        "module": "CLI & Environment",
+        "question": "The $PATH environment variable has been set to an empty string. Running ls now fails with command not found. How can ls still be run?",
+        "options": [
+          "By giving its full path: /bin/ls",
+          "By adding execute permission with chmod +x",
+          "By running it through sudo instead",
+          "By renaming the file to ls.exe first"
+        ],
+        "correct": 0,
+        "explanation": "The ls binary resides at /bin/ls. When $PATH is empty, automatic directory lookup fails, but specifying the absolute path executes the binary directly.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 57,
+        "module": "Filesystem & Permissions",
+        "question": "You keep private notes in a file that only you should be able to read and modify. No other users should have any permissions on the file. What three-digit numeric chmod permission value achieves this?",
+        "options": [
+          "600",
+          "644",
+          "700",
+          "777"
+        ],
+        "correct": 0,
+        "explanation": "Owner: Read (4) + Write (2) = 6. Group: None (0). Others: None (0). Numeric value = 600.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 58,
+        "module": "Operating Systems & Processes",
+        "question": "You need to stop a running process, but you want to give it an opportunity to close its files and exit cleanly. Which command is appropriate?",
+        "options": [
+          "kill -9 \u2014 it terminates the process immediately.",
+          "kill -15 \u2014 it requests that the process terminate.",
+          "Either command \u2014 both signals behave identically.",
+          "Neither command \u2014 a running process cannot be stopped."
+        ],
+        "correct": 1,
+        "explanation": "kill -15 sends SIGTERM, allowing the process to intercept the signal, execute cleanup handlers, and terminate gracefully. kill -9 sends uncatchable SIGKILL.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 59,
+        "module": "Filesystem & Navigation",
+        "question": "Starting at / and running cd .. repeatedly leaves you at / every time. Why?",
+        "options": [
+          "Permission to move any higher has been denied",
+          "cd .. is an alias that performs no action",
+          "Directories above / exist but stay hidden",
+          "The root directory has no parent to move into"
+        ],
+        "correct": 3,
+        "explanation": "The root directory / is the ultimate apex of the Unix directory hierarchy; its parent pointer .. points back to / itself.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 60,
+        "module": "Filesystem & Permissions",
+        "question": "Running ls -l script.sh shows -rw-r--r--. Running ./script.sh returns permission denied. Which command makes the script runnable while leaving the existing read and write permissions unchanged?",
+        "options": [
+          "sudo ./script.sh",
+          "chmod +x script.sh",
+          "chmod 777 script.sh",
+          "chown root script.sh"
+        ],
+        "correct": 1,
+        "explanation": "chmod +x selectively adds the execute bit across classes while preserving existing read/write bits.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 61,
+        "module": "Filesystem & Permissions",
+        "question": "After running chmod 754 report.sh, what permissions does the group hold?",
+        "options": [
+          "Read, write and execute",
+          "Read and execute",
+          "Read only",
+          "Read and write"
+        ],
+        "correct": 1,
+        "explanation": "In 754, the middle digit represents Group permissions: 5 = 4 (Read) + 1 (Execute), yielding r-x.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 62,
+        "module": "Filesystem Architecture",
+        "question": "Which directory is emptied automatically every time the machine reboots?",
+        "options": [
+          "/etc",
+          "/bin",
+          "/tmp",
+          "/Applications"
+        ],
+        "correct": 2,
+        "explanation": "/tmp is designated for temporary files and is cleared automatically during system reboot.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 63,
+        "module": "CLI & Shells",
+        "question": "On a current macOS system, which shell is provided as the default command-line interface?",
+        "options": [
+          "zsh",
+          "bash",
+          "fish",
+          "csh"
+        ],
+        "correct": 0,
+        "explanation": "macOS switched its default login shell to zsh (Z Shell) starting in macOS Catalina 10.15.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 64,
+        "module": "Operating Systems & Processes",
+        "question": "Why cannot Chrome read data held in VS Code's memory?",
+        "options": [
+          "They are written in different programming languages.",
+          "Their memory contents are encrypted separately by the OS.",
+          "The OS gives each process an isolated virtual address space.",
+          "They are normally scheduled on different CPU cores."
+        ],
+        "correct": 2,
+        "explanation": "The OS memory manager isolates processes by assigning each a distinct private virtual address space enforced by hardware MMU.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 65,
+        "module": "Filesystem & Permissions",
+        "question": "A classmate advises running chmod 777 whenever a permission error appears. What is the best evaluation of this advice?",
+        "options": [
+          "Poor \u2014 it grants read, write, and execute permissions to the owner, group, and others.",
+          "Sound \u2014 it is the quickest reliable fix available.",
+          "Poor \u2014 a setting of 777 may only be applied by the root user.",
+          "Sound \u2014 777 makes a file read-only and therefore safe."
+        ],
+        "correct": 0,
+        "explanation": "chmod 777 strips all access security by granting write and execution rights to every user on the system.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 66,
+        "module": "Filesystem Commands",
+        "question": "A directory holds 100 folders named folder_1 through folder_100. Which single command removes them all?",
+        "options": [
+          "rm -r folder_*",
+          "rm folder_",
+          "rm -r folder_?",
+          "rm -r folder_1"
+        ],
+        "correct": 0,
+        "explanation": "The wildcard * matches any sequence of trailing characters, and -r enables recursive removal of directory trees.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 67,
+        "module": "Filesystem Commands",
+        "question": "Which command transfers ownership of a file to a different user?",
+        "options": [
+          "chown",
+          "chmod",
+          "mv",
+          "cp"
+        ],
+        "correct": 0,
+        "explanation": "chown (change owner) modifies file ownership; chmod modifies permission modes.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 68,
+        "module": "CLI Commands",
+        "question": "Which command reports the full filesystem path of the program that would run for a given command name?",
+        "options": [
+          "man",
+          "pwd",
+          "ps",
+          "which"
+        ],
+        "correct": 3,
+        "explanation": "The which command resolves an executable name against the $PATH directories and prints its absolute path.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 69,
+        "module": "Operating Systems & Memory",
+        "question": "A production application repeatedly dies with an out-of-memory exception under load. Based on how the OS allocates memory, what is the real remedy for the future?",
+        "options": [
+          "Add more CPU cores so that the work finishes sooner",
+          "Add more memory, or reduce what the app asks for",
+          "Change the file permissions on the executable",
+          "Terminate it with kill -9 whenever it slows"
+        ],
+        "correct": 1,
+        "explanation": "OOM crashes stem from memory exhaustion; adding CPU cores does not expand memory capacity. The only fix is increasing RAM/swap or optimizing application memory usage.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 70,
+        "module": "Unix Filesystem Architecture",
+        "question": "What does the /dev directory contain?",
+        "options": [
+          "Files representing hardware devices",
+          "Developer tools, compilers and libraries",
+          "Installed applications",
+          "System configuration files"
+        ],
+        "correct": 0,
+        "explanation": "/dev holds special device files representing physical and pseudo hardware devices (disks, terminals, input devices).",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 71,
+        "module": "Filesystem Commands",
+        "question": "Which command prints the absolute path of the directory you are currently working in?",
+        "options": [
+          "ls",
+          "cd",
+          "which",
+          "pwd"
+        ],
+        "correct": 3,
+        "explanation": "pwd stands for Print Working Directory.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 72,
+        "module": "Filesystem & Permissions",
+        "question": "Permissions are given numeric values: read is 4, write is 2 and execute is 1. Which single digit grants all three at once?",
+        "options": [
+          "3",
+          "7",
+          "6",
+          "9"
+        ],
+        "correct": 1,
+        "explanation": "4 (Read) + 2 (Write) + 1 (Execute) = 7.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 73,
+        "module": "Operating Systems & Processes",
+        "question": "Assuming Google Chrome browser is a parent process, one tab of Chrome corresponds to what, in operating-system terms?",
+        "options": [
+          "One parent process",
+          "One child process",
+          "One thread of the main process",
+          "One separately installed program"
+        ],
+        "correct": 1,
+        "explanation": "Chrome allocates each browser tab into an isolated child process spawned from the main browser process.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 74,
+        "module": "Filesystem & Permissions",
+        "question": "Why does a newly created file deliberately lack execute permission?",
+        "options": [
+          "It keeps the file smaller on disk",
+          "It stops unvetted content being run by accident",
+          "Only the root user is allowed to create executables",
+          "Execute permission applies only to directories"
+        ],
+        "correct": 1,
+        "explanation": "Default permissions omit the execute bit as a defense-in-depth security measure against inadvertent execution of malicious or arbitrary scripts.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 75,
+        "module": "Operating Systems & Processes",
+        "question": "A program such as Google Chrome can be installed on a computer once. When Chrome is launched, the operating system creates one or more processes to execute it. What is the difference between a program and a process?",
+        "options": [
+          "A program is written in source code; a process is written in machine language.",
+          "A program needs the CPU; a process needs only memory.",
+          "A program is a stored set of instructions; a process is an instance of that program that is currently executing, along with its execution state and allocated resources.",
+          "A program belongs to the user; a process belongs to the operating system."
+        ],
+        "correct": 2,
+        "explanation": "A program is static code stored on disk; a process is an active runtime instance loaded into memory with execution context and system resources.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 76,
+        "module": "Computer Systems",
+        "question": "What are the four core phases of the IPOS computing model?",
+        "options": [
+          "Input, Processing, Output, Storage",
+          "Internet, Protocol, Operating system, Software",
+          "Instruction, Program, Operation, System",
+          "Interface, Process, Output, Security"
+        ],
+        "correct": 0,
+        "explanation": "The IPOS model defines the fundamental stages of computing: Input, Processing, Output, and Storage.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 77,
+        "module": "Computer Systems",
+        "question": "Why is an automobile engine controller classified as an embedded system rather than a personal computer?",
+        "options": [
+          "It runs Microsoft Windows",
+          "It is built with mechanical valves",
+          "It is dedicated to a single specialized task and has no general-purpose interactive desktop",
+          "It contains more RAM than a server"
+        ],
+        "correct": 2,
+        "explanation": "Embedded systems are dedicated single-purpose computing devices designed to perform specialized control functions without general-purpose user software.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 78,
+        "module": "Computer Systems",
+        "question": "What distinguishes a general-purpose computer from a fixed-function digital calculator?",
+        "options": [
+          "The physical weight of the casing",
+          "The presence of a battery",
+          "The ability to execute different software programs to perform vastly different tasks without hardware modifications",
+          "The speed of the display screen"
+        ],
+        "correct": 2,
+        "explanation": "Reprogrammability allows general-purpose computers to switch between spreadsheets, video editing, web browsing, and games by simply loading new software.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 79,
+        "module": "Computer Systems",
+        "question": "Which machine category is specifically engineered to achieve extreme floating-point arithmetic performance for complex scientific simulations?",
+        "options": [
+          "Embedded microcontroller",
+          "Supercomputer",
+          "Personal desktop",
+          "Smart TV"
+        ],
+        "correct": 1,
+        "explanation": "Supercomputers are massively parallel systems optimized for high-performance floating-point operations (FLOPS) in climate simulation, molecular dynamics, and astrophysics.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 80,
+        "module": "Computer Systems",
+        "question": "What is the primary defining operational characteristic of a server in enterprise networks?",
+        "options": [
+          "It is always physically smaller than a laptop",
+          "It stores centralized data and serves requests concurrently to multiple network clients",
+          "It operates without an operating system",
+          "It uses mechanical hard drives exclusively"
+        ],
+        "correct": 1,
+        "explanation": "A server is architected to provide centralized resources, services, or data streams to many client endpoints simultaneously across a network.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 81,
+        "module": "Computer Systems",
+        "question": "Why did running general-purpose laptops on river bridges cause high failure rates in flood warning trials?",
+        "options": [
+          "Laptops cannot connect to radio transmitters",
+          "Unused background capabilities like OS updates, power-saving sleep, and disk logging interfered with the critical sensing task",
+          "Laptops lack internal RAM",
+          "Laptops run at too high clock speeds for bridges"
+        ],
+        "correct": 1,
+        "explanation": "Excess unused software capabilities introduce unforeseen failure modes. General-purpose OS features like automatic reboots and power-saving sleep disrupted telemetry.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 82,
+        "module": "Computer Systems",
+        "question": "If a microcontroller on a sensor node receives a firmware update over a serial cable that changes its polling interval, what does this demonstrate?",
+        "options": [
+          "It has transformed into a supercomputer",
+          "The device is a programmable computer whose behavior is governed by software instructions",
+          "The device now requires a discrete GPU",
+          "The device hardware had to be rebuilt"
+        ],
+        "correct": 1,
+        "explanation": "Software instructions dictate behavior over general programmable hardware; updating firmware alters execution without changing physical circuitry.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 83,
+        "module": "Computer Systems",
+        "question": "What is a mainframe computer primarily designed to optimize?",
+        "options": [
+          "High-end 3D ray tracing games",
+          "High-throughput, reliable commercial transaction processing and massive I/O operations",
+          "Portable battery life",
+          "Single-threaded overclocking"
+        ],
+        "correct": 1,
+        "explanation": "Mainframes are engineered for massive transaction throughput, high availability (fault tolerance), and heavy concurrent I/O for banking and government records.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 84,
+        "module": "Computer Systems",
+        "question": "Why is an ordinary digital alarm clock without firmware flash capability NOT considered a general-purpose computer?",
+        "options": [
+          "It doesn't use alternating current",
+          "Its logic is permanently hardwired and cannot be reprogrammed to run arbitrary instructions",
+          "It lacks an internal speaker",
+          "It doesn't connect to Wi-Fi"
+        ],
+        "correct": 1,
+        "explanation": "Fixed-function appliances lack programmable instruction storage and general execution engines.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 85,
+        "module": "Computer Systems",
+        "question": "In computer architecture, what is meant by 'One-Tool-ism'?",
+        "options": [
+          "Using only one programming language for every single problem regardless of suitability",
+          "Limiting computer hardware to a single CPU core",
+          "Using only USB-C cables",
+          "Restricting terminal access to the root user"
+        ],
+        "correct": 0,
+        "explanation": "One-Tool-ism refers to the cognitive trap where having only one tool makes a developer view every problem through that single lens ('to a hammer, everything looks like a nail').",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 86,
+        "module": "Computer Systems",
+        "question": "Which category of computer is characterized by operating headlessly in a server rack without a dedicated physical monitor or keyboard attached?",
+        "options": [
+          "Personal laptop",
+          "Rackmount server",
+          "Handheld smartphone",
+          "Desktop gaming rig"
+        ],
+        "correct": 1,
+        "explanation": "Rackmount servers operate headlessly and are administered remotely over SSH or management consoles.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 87,
+        "module": "Computer Systems",
+        "question": "What type of computing system is deployed in space telescopes like the James Webb Space Telescope to control onboard mirrors and sensors?",
+        "options": [
+          "High-reliability embedded radiation-hardened control systems",
+          "Commercial gaming desktop",
+          "Consumer tablet",
+          "Standard Windows office PC"
+        ],
+        "correct": 0,
+        "explanation": "Spacecraft employ radiation-hardened embedded microcontrollers designed for extreme environmental durability and deterministic execution.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 88,
+        "module": "Computer Systems",
+        "question": "A device takes temperature readings every second and writes them to flash memory. Which IPOS component is responsible for storing the readings?",
+        "options": [
+          "Input",
+          "Processing",
+          "Output",
+          "Storage"
+        ],
+        "correct": 3,
+        "explanation": "Flash memory represents the Storage component of the IPOS cycle.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 89,
+        "module": "Computer Systems",
+        "question": "Which factor most fundamentally determines whether a digital system is classified as a computer?",
+        "options": [
+          "It contains a glass screen",
+          "Its operation is directed by a stored program of instructions that can be updated or changed",
+          "It costs more than 100 dollars",
+          "It connects to a cellular network"
+        ],
+        "correct": 1,
+        "explanation": "The stored-program concept (von Neumann architecture) defines a computer.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 90,
+        "module": "Computer Systems",
+        "question": "Why is power-saving sleep mode detrimental when deployed in autonomous outdoor industrial monitoring stations?",
+        "options": [
+          "It increases battery consumption",
+          "It suspends the system clock and halts scheduled data sampling and radio transmission",
+          "It overheats the processor die",
+          "It erases the flash memory permanently"
+        ],
+        "correct": 1,
+        "explanation": "Power-saving sleep modes in general-purpose operating systems suspend background timers and network interfaces, missing time-critical events.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 91,
+        "module": "Computer Systems",
+        "question": "What is the primary role of an Input device in the IPOS cycle?",
+        "options": [
+          "To convert physical real-world data or human actions into digital binary signals for the computer",
+          "To store files permanently",
+          "To execute arithmetic logic",
+          "To display pixels on glass"
+        ],
+        "correct": 0,
+        "explanation": "Input devices bridge the analog physical world and the digital system by encoding physical phenomena into binary data.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 92,
+        "module": "Computer Systems",
+        "question": "What is the primary role of an Output device in the IPOS cycle?",
+        "options": [
+          "To compile source code into machine language",
+          "To present processed digital information in human-perceivable or physical action form",
+          "To allocate RAM addresses",
+          "To manage network routing tables"
+        ],
+        "correct": 1,
+        "explanation": "Output devices translate processed digital data into sensory signals (light, sound) or physical mechanical motions.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 93,
+        "module": "Computer Systems",
+        "question": "Why are embedded systems typically engineered with minimal or specialized real-time operating systems (RTOS)?",
+        "options": [
+          "Because desktop operating systems are too expensive to license",
+          "Because desktop operating systems have high resource overhead, unpredictable latency, and non-deterministic scheduling",
+          "Because embedded processors cannot execute C code",
+          "Because RTOS cannot control sensors"
+        ],
+        "correct": 1,
+        "explanation": "General-purpose desktop OSs introduce unpredictable latency and unnecessary background overhead unsuitable for deterministic embedded control.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 94,
+        "module": "Computer Systems",
+        "question": "A hospital intensive care unit monitor sounds an alarm if a patient's heart rate deviates from safe bounds. Which computing classification best describes it?",
+        "options": [
+          "General-purpose gaming PC",
+          "Mission-critical embedded medical system",
+          "Cloud data warehouse",
+          "Supercomputer"
+        ],
+        "correct": 1,
+        "explanation": "It is a specialized, dedicated embedded system engineered for real-time patient telemetry and alarm triggering.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 95,
+        "module": "Computer Systems",
+        "question": "What key lesson was demonstrated by comparing single-purpose sensor boxes against Windows laptops on bridges?",
+        "options": [
+          "Always use laptops because they have bigger screens",
+          "A machine designed for a specific task is more reliable and robust than a general-purpose machine loaded with unnecessary complexity",
+          "Laptops are waterproof by default",
+          "Windows never needs updating"
+        ],
+        "correct": 1,
+        "explanation": "Simplicity and specificity yield high reliability; excessive general-purpose complexity breeds operational failure points.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 96,
+        "module": "Hardware & Storage",
+        "question": "Why does a CPU excel at executing sequential general-purpose code while a GPU excels at rendering graphics?",
+        "options": [
+          "A CPU has thousands of simple cores; a GPU has only one core",
+          "A CPU has a few powerful low-latency cores optimized for branch prediction; a GPU has thousands of SIMD cores optimized for parallel arithmetic",
+          "A CPU has no cache memory",
+          "A GPU can only execute Python scripts"
+        ],
+        "correct": 1,
+        "explanation": "CPUs optimize single-thread latency with complex branch prediction and large caches; GPUs optimize parallel arithmetic throughput across thousands of SIMD/SIMT cores.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 97,
+        "module": "Hardware & Storage",
+        "question": "Which memory technology is used for CPU L1, L2, and L3 caches due to its extreme sub-nanosecond speed?",
+        "options": [
+          "DRAM (Dynamic RAM)",
+          "SRAM (Static RAM)",
+          "NAND Flash",
+          "Magnetic Tape"
+        ],
+        "correct": 1,
+        "explanation": "Static RAM (SRAM) does not require periodic capacitive refreshing, making it significantly faster (and more expensive) than DRAM, perfect for on-die CPU cache.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 98,
+        "module": "Hardware & Storage",
+        "question": "What happens physically inside DRAM (RAM) chips that necessitates continuous electrical refreshing?",
+        "options": [
+          "Magnetic platters spin down",
+          "Capacitors holding charge leak electrons and must be dynamically refreshed thousands of times per second",
+          "Flash floating gates degrade",
+          "Laser diodes lose calibration"
+        ],
+        "correct": 1,
+        "explanation": "DRAM cells store bits as charge in tiny capacitors that constantly leak electrons, requiring dynamic periodic refresh cycles and continuous power.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 99,
+        "module": "Hardware & Storage",
+        "question": "Why is an SSD immune to mechanical seek time and head-crash physical shock?",
+        "options": [
+          "It stores data on liquid mercury",
+          "It contains no moving parts, storing bits electronically in NAND flash memory semiconductor cells",
+          "It operates inside a vacuum tube",
+          "It relies on external magnetic strips"
+        ],
+        "correct": 1,
+        "explanation": "SSDs are solid-state semiconductor devices with no spinning platters or mechanical actuator arms, granting instantaneous electronic addressing and high shock resistance.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 100,
+        "module": "Hardware & Storage",
+        "question": "In terms of average latency, arrange CPU Cache, Main Memory (RAM), and Solid State Drive (SSD) from fastest to slowest:",
+        "options": [
+          "RAM \u2192 CPU Cache \u2192 SSD",
+          "CPU Cache \u2192 RAM \u2192 SSD",
+          "SSD \u2192 RAM \u2192 CPU Cache",
+          "CPU Cache \u2192 SSD \u2192 RAM"
+        ],
+        "correct": 1,
+        "explanation": "CPU Cache operates in nanoseconds, RAM in tens of nanoseconds, and SSD in microseconds.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 101,
+        "module": "Hardware & Storage",
+        "question": "A computer's RAM capacity is increased from 8 GB to 32 GB. Why does this NOT prevent data loss during an unexpected power cut?",
+        "options": [
+          "32 GB RAM requires special batteries",
+          "RAM is fundamentally volatile memory and requires electrical power to retain charge regardless of its storage capacity",
+          "The OS disables RAM when power drops",
+          "RAM automatically deletes unsaved files"
+        ],
+        "correct": 1,
+        "explanation": "Volatility is an intrinsic property of DRAM technology; expanding capacity does not alter the physical requirement for power to preserve bit state.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 102,
+        "module": "Hardware & Storage",
+        "question": "What is the function of a device driver in a computer system?",
+        "options": [
+          "To accelerate internet download speeds",
+          "To serve as a software intermediary translating OS commands into hardware-specific protocols for peripherals",
+          "To format hard drives on startup",
+          "To compile Python code into machine language"
+        ],
+        "correct": 1,
+        "explanation": "Device drivers act as translators between the operating system's standardized hardware abstraction layer and the proprietary communication protocols of specific hardware.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 103,
+        "module": "Hardware & Storage",
+        "question": "Which category of software does an operating system like macOS or Linux belong to?",
+        "options": [
+          "Application software",
+          "System software",
+          "Firmware utility",
+          "Database management system"
+        ],
+        "correct": 1,
+        "explanation": "An operating system is the principal form of system software, managing physical resources and establishing the runtime platform for applications.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 104,
+        "module": "Hardware & Storage",
+        "question": "Which of the following is considered an Input device rather than an Output device?",
+        "options": [
+          "Laser printer",
+          "Computer monitor",
+          "Microphone",
+          "Headphones"
+        ],
+        "correct": 2,
+        "explanation": "A microphone captures sound vibrations and converts them into digital electrical signals, making it an input device.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 105,
+        "module": "Hardware & Storage",
+        "question": "How does a smartphone touchscreen function as both an input and output device simultaneously?",
+        "options": [
+          "It has two separate batteries",
+          "The underlying LCD/OLED panel produces visual output, while the capacitive touch digitizer overlay captures user touch input",
+          "It connects via Bluetooth to the processor",
+          "It stores files permanently"
+        ],
+        "correct": 1,
+        "explanation": "A touchscreen integrates two hardware layers: an output display panel (LCD/OLED) and an input touch digitizer layer.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 106,
+        "module": "Hardware & Storage",
+        "question": "What is the primary mechanical cause of read latency in traditional Hard Disk Drives (HDDs)?",
+        "options": [
+          "Waiting for internet packets to arrive",
+          "Rotational latency of the platters and seek time of the mechanical actuator arm moving to the correct track",
+          "Overheating of semiconductor chips",
+          "Compiling software drivers"
+        ],
+        "correct": 1,
+        "explanation": "HDD latency is governed by physical mechanics: the time taken for the actuator arm to seek to the cylinder and the disk platter to rotate to the sector.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 107,
+        "module": "Hardware & Storage",
+        "question": "What is the primary advantage of NVMe SSDs over traditional SATA SSDs?",
+        "options": [
+          "NVMe drives use spinning disks instead of chips",
+          "NVMe communicates directly over the high-speed PCIe bus with massive parallel queues, bypassing legacy SATA bottlenecks",
+          "NVMe drives are volatile and clear on reboot",
+          "NVMe drives only work on supercomputers"
+        ],
+        "correct": 1,
+        "explanation": "NVMe (Non-Volatile Memory Express) utilizes the high-bandwidth PCIe bus with 64,000 queues of 64,000 commands each, far outperforming legacy SATA interfaces.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 108,
+        "module": "Hardware & Storage",
+        "question": "When a user types text in a word processor, where do the active unsaved paragraphs physically reside?",
+        "options": [
+          "On the SSD flash blocks",
+          "In the CPU instruction cache only",
+          "In system RAM (Main Memory)",
+          "Inside the ROM BIOS chip"
+        ],
+        "correct": 2,
+        "explanation": "Unsaved working data resides in volatile RAM until an explicit save operation writes it to persistent secondary storage.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 109,
+        "module": "Hardware & Storage",
+        "question": "What is the main role of the Arithmetic Logic Unit (ALU) within a CPU?",
+        "options": [
+          "To store permanent files",
+          "To perform mathematical calculations and logical comparisons on binary data",
+          "To render video frames to HDMI",
+          "To manage network packets"
+        ],
+        "correct": 1,
+        "explanation": "The ALU is the digital circuit within the CPU responsible for executing arithmetic operations (addition, subtraction) and logical comparisons (AND, OR, NOT).",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 110,
+        "module": "Hardware & Storage",
+        "question": "Why does running 50 browser tabs simultaneously cause a computer with 4 GB of RAM to stutter and freeze?",
+        "options": [
+          "The CPU clock frequency drops to zero",
+          "RAM capacity is exhausted, forcing the OS to swap memory pages to slow secondary storage (disk thrashing)",
+          "The monitor runs out of pixels",
+          "The network card becomes full"
+        ],
+        "correct": 1,
+        "explanation": "When physical RAM is saturated, the OS swaps active memory pages back and forth with disk storage (paging file/swap), causing severe performance degradation known as thrashing.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 111,
+        "module": "Hardware & Storage",
+        "question": "Which component is responsible for holding the bootstrap firmware instructions needed to initialize hardware when a PC is first powered on?",
+        "options": [
+          "RAM",
+          "ROM / Flash BIOS/UEFI",
+          "Cache L1",
+          "HDD Swap partition"
+        ],
+        "correct": 1,
+        "explanation": "Non-volatile ROM or motherboard Flash chips store the UEFI/BIOS firmware that boots the system hardware before loading the OS kernel from disk.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 112,
+        "module": "Hardware & Storage",
+        "question": "Why can a GPU process 4K video rendering significantly faster than a high-end multi-core CPU?",
+        "options": [
+          "Video rendering is an embarrassingly parallel task where thousands of pixel operations can be executed simultaneously across GPU stream processors",
+          "GPUs have higher gigahertz clock speeds than CPUs",
+          "CPUs cannot read video files",
+          "GPUs do not require electricity"
+        ],
+        "correct": 0,
+        "explanation": "Video rendering maps identical mathematical operations across millions of pixels concurrently, aligning perfectly with a GPU's SIMD massive parallelism.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 113,
+        "module": "Hardware & Storage",
+        "question": "What is the fundamental difference between Primary Memory (RAM) and Secondary Storage (SSD/HDD)?",
+        "options": [
+          "Primary memory is non-volatile; secondary storage is volatile",
+          "Primary memory is directly addressable by the CPU and volatile; secondary storage is non-volatile and accessed via I/O controllers",
+          "Primary memory is always bigger in capacity than secondary storage",
+          "Secondary storage cannot store programs"
+        ],
+        "correct": 1,
+        "explanation": "Primary memory (RAM) is byte-addressable by the CPU over memory buses and volatile; secondary storage persists data long-term across power cycles.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 114,
+        "module": "Hardware & Storage",
+        "question": "Which computer peripheral is classified strictly as an Output device?",
+        "options": [
+          "Graphics tablet with stylus",
+          "Flatbed scanner",
+          "Thermal receipt printer",
+          "Webcam"
+        ],
+        "correct": 2,
+        "explanation": "A receipt printer outputs printed physical paper based on processed data from the computer.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 115,
+        "module": "Hardware & Storage",
+        "question": "What does IOPS stand for in storage benchmarking?",
+        "options": [
+          "Internal Operating Protocol Standard",
+          "Input/Output Operations Per Second",
+          "Integrated Optical Processing System",
+          "Instruction Operation Per Socket"
+        ],
+        "correct": 1,
+        "explanation": "IOPS measures the number of discrete read or write operations a storage drive can handle each second, where SSDs vastly outperform HDDs.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 116,
+        "module": "CLI & Shell",
+        "question": "What is the fundamental difference between a Terminal and a Shell in Unix/macOS systems?",
+        "options": [
+          "A terminal executes commands; a shell displays graphics",
+          "A terminal is the GUI window emulator providing text display; the shell is the underlying program that parses and interprets typed commands",
+          "A terminal is a programming language; a shell is an operating system",
+          "There is no difference; they are identical binary files"
+        ],
+        "correct": 1,
+        "explanation": "The terminal (e.g., Terminal.app, iTerm2) handles graphical rendering and keyboard capture; the shell (e.g., zsh, bash) interprets and runs the commands.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 117,
+        "module": "CLI & Shell",
+        "question": "Which Unix command is used to display the current directory location as an absolute path?",
+        "options": [
+          "cd",
+          "ls",
+          "pwd",
+          "which"
+        ],
+        "correct": 2,
+        "explanation": "pwd stands for 'Print Working Directory' and prints the full path from the filesystem root.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 118,
+        "module": "CLI & Shell",
+        "question": "What does the flag '-a' do when passed to the 'ls' command (e.g., 'ls -a')?",
+        "options": [
+          "Sorts files alphabetically",
+          "Lists all files, including hidden files whose names begin with a dot (.)",
+          "Deletes all files in the directory",
+          "Shows only audio files"
+        ],
+        "correct": 1,
+        "explanation": "The '-a' flag instructs ls to list all files, including dotfiles (hidden configuration files like .git or .zshrc).",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 119,
+        "module": "CLI & Shell",
+        "question": "Which command safely creates a nested directory structure 'project/src/components' in a single command?",
+        "options": [
+          "mkdir project/src/components",
+          "mkdir -p project/src/components",
+          "create -all project/src/components",
+          "touch project/src/components"
+        ],
+        "correct": 1,
+        "explanation": "The '-p' (parents) flag creates intermediate parent directories as needed without throwing an error if they already exist.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 120,
+        "module": "CLI & Shell",
+        "question": "What happens when you run 'touch report.txt' if 'report.txt' already exists in the current directory?",
+        "options": [
+          "It deletes the file contents",
+          "It updates the file's last accessed and modified timestamps without changing its contents",
+          "It creates a duplicate copy named report_1.txt",
+          "It throws a syntax error"
+        ],
+        "correct": 1,
+        "explanation": "touch updates the timestamp metadata of existing files without altering their data contents.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 121,
+        "module": "CLI & Shell",
+        "question": "Which command copies a directory named 'assets' and all its contents to 'backup/assets'?",
+        "options": [
+          "cp assets backup/assets",
+          "cp -r assets backup/assets",
+          "mv assets backup/assets",
+          "clone assets backup/assets"
+        ],
+        "correct": 1,
+        "explanation": "The '-r' (recursive) flag is required for cp to copy directories and their nested contents.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 122,
+        "module": "CLI & Shell",
+        "question": "What is the difference between 'mv old.txt new.txt' and 'cp old.txt new.txt'?",
+        "options": [
+          "mv leaves the original file intact; cp deletes it",
+          "mv renames or moves the file, removing the original location; cp creates an independent duplicate copy",
+          "mv only works on directories; cp only on files",
+          "Both commands perform identical actions"
+        ],
+        "correct": 1,
+        "explanation": "mv updates the filesystem directory entry (move/rename), whereas cp duplicates the file contents to a new destination.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 123,
+        "module": "CLI & Shell",
+        "question": "Which wildcard character in Unix shells matches any sequence of zero or more characters?",
+        "options": [
+          "?",
+          "*",
+          "#",
+          "&"
+        ],
+        "correct": 1,
+        "explanation": "The asterisk '*' matches zero or more characters in glob patterns (e.g., *.pdf matches all PDF files).",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 124,
+        "module": "CLI & Shell",
+        "question": "What does the '?' wildcard match in shell globbing?",
+        "options": [
+          "Any string of arbitrary length",
+          "Exactly one single character",
+          "Only numeric digits",
+          "Hidden files only"
+        ],
+        "correct": 1,
+        "explanation": "The question mark '?' matches exactly one character (e.g., file?.txt matches file1.txt but not file10.txt).",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 125,
+        "module": "CLI & Shell",
+        "question": "What does the pipe operator '|' do in the command 'ps aux | grep node'?",
+        "options": [
+          "Saves node output to a file named ps aux",
+          "Redirects the standard output of 'ps aux' directly into the standard input of 'grep node'",
+          "Executes both commands concurrently in the background without connection",
+          "Terminates the node process"
+        ],
+        "correct": 1,
+        "explanation": "Piping connects the stdout stream of the upstream command directly to the stdin stream of the downstream command in memory.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 126,
+        "module": "CLI & Shell",
+        "question": "What is the difference between '>' and '>>' in shell output redirection?",
+        "options": [
+          "'>' appends to a file; '>>' overwrites the file",
+          "'>' overwrites the destination file; '>>' appends new text to the end of the file",
+          "'>' redirects errors; '>>' redirects inputs",
+          "They are completely interchangeable"
+        ],
+        "correct": 1,
+        "explanation": "Single right-bracket '>' truncates and overwrites target files; double right-bracket '>>' appends output to the end.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 127,
+        "module": "CLI & Shell",
+        "question": "What does the command 'cat file1.txt file2.txt > combined.txt' do?",
+        "options": [
+          "Deletes both files",
+          "Concatenates the contents of file1.txt and file2.txt and writes them into combined.txt",
+          "Compares differences between the files",
+          "Prints the word 'cat' into combined.txt"
+        ],
+        "correct": 1,
+        "explanation": "cat (concatenate) reads sequentially from file arguments and streams their contents to stdout, here redirected to combined.txt.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 128,
+        "module": "CLI & Shell",
+        "question": "How do you view only the first 10 lines of a large log file named 'server.log'?",
+        "options": [
+          "tail -n 10 server.log",
+          "head -n 10 server.log",
+          "cat -top 10 server.log",
+          "grep 10 server.log"
+        ],
+        "correct": 1,
+        "explanation": "The 'head' command outputs the beginning lines of a file (default 10 lines).",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 129,
+        "module": "CLI & Shell",
+        "question": "How do you view only the last 15 lines of 'error.log' in real-time as new lines arrive?",
+        "options": [
+          "tail -n 15 -f error.log",
+          "head -n 15 error.log",
+          "watch error.log",
+          "cat -end 15 error.log"
+        ],
+        "correct": 0,
+        "explanation": "tail with the '-f' (follow) flag continuously streams newly appended lines to the terminal.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 130,
+        "module": "CLI & Shell",
+        "question": "What does the command 'which python3' output?",
+        "options": [
+          "The version number of Python",
+          "The full absolute path to the python3 binary resolved from $PATH",
+          "The source code of the Python interpreter",
+          "A list of installed python packages"
+        ],
+        "correct": 1,
+        "explanation": "which scans $PATH directories and outputs the full absolute path of the executable that would run.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 131,
+        "module": "CLI & Shell",
+        "question": "What is an environment variable in a Unix shell?",
+        "options": [
+          "A hardware setting on the motherboard",
+          "A dynamic named key-value pair stored in the shell environment that influences running processes and programs",
+          "A private variable inside Python",
+          "A file in /tmp"
+        ],
+        "correct": 1,
+        "explanation": "Environment variables (like $PATH, $HOME, $USER) are process-inherited global key-value settings accessible across shell sessions.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 132,
+        "module": "CLI & Shell",
+        "question": "If you run 'export API_KEY=xyz123', what does the 'export' keyword accomplish?",
+        "options": [
+          "Writes the key to hard disk permanently",
+          "Makes the variable available to child processes spawned from the current shell session",
+          "Sends the key to GitHub",
+          "Encrypts the variable"
+        ],
+        "correct": 1,
+        "explanation": "export marks the variable for automatic inheritance into the environment of any child process spawned by the shell.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 133,
+        "module": "CLI & Shell",
+        "question": "Which package manager is most widely used on macOS via the command line to install open-source CLI tools?",
+        "options": [
+          "apt-get",
+          "pacman",
+          "Homebrew (brew)",
+          "yum"
+        ],
+        "correct": 2,
+        "explanation": "Homebrew ('The Missing Package Manager for macOS') is the standard package manager on macOS.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 134,
+        "module": "CLI & Shell",
+        "question": "What happens if you type 'cd ~' or simply 'cd' with no arguments in a terminal?",
+        "options": [
+          "It moves to the root directory /",
+          "It returns to the user's home directory (/Users/username)",
+          "It deletes the current folder",
+          "It exits the shell"
+        ],
+        "correct": 1,
+        "explanation": "cd without arguments or with the tilde '~' shortcut changes the working directory to the current user's home folder.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 135,
+        "module": "CLI & Shell",
+        "question": "What is the function of the 'grep' command?",
+        "options": [
+          "To delete directories recursively",
+          "To search text or files for lines matching a specified pattern or regular expression",
+          "To compile C programs",
+          "To format storage drives"
+        ],
+        "correct": 1,
+        "explanation": "grep (Global Regular Expression Print) searches streams or files for lines matching patterns.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 136,
+        "module": "Interfaces: CLI, GUI, APIs",
+        "question": "What is an Interface in computer science?",
+        "options": [
+          "A piece of glass on a phone",
+          "A shared boundary across which two separate components or systems exchange information and control",
+          "A type of memory chip",
+          "A graphics card driver"
+        ],
+        "correct": 1,
+        "explanation": "An interface is a defined communication contract or boundary that allows different systems, layers, or users to interact.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 137,
+        "module": "Interfaces: CLI, GUI, APIs",
+        "question": "Which is a primary advantage of a Command Line Interface (CLI) over a Graphical User Interface (GUI) for system administrators?",
+        "options": [
+          "CLIs use more RAM than GUIs",
+          "CLIs can be easily scripted, automated, composed via pipelines, and run remotely over low-bandwidth SSH connections",
+          "CLIs look more colorful",
+          "CLIs don't require an operating system"
+        ],
+        "correct": 1,
+        "explanation": "CLIs excel in programmability, reproducibility, automation, pipeline composition, and lightweight headless administration.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 138,
+        "module": "Interfaces: CLI, GUI, APIs",
+        "question": "What does API stand for in software engineering?",
+        "options": [
+          "Application Programming Interface",
+          "Automated Process Integration",
+          "Advanced Program Instruction",
+          "Applied Peripheral Interconnect"
+        ],
+        "correct": 0,
+        "explanation": "API stands for Application Programming Interface.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 139,
+        "module": "Interfaces: CLI, GUI, APIs",
+        "question": "How do two independent web software applications typically communicate with each other over the internet?",
+        "options": [
+          "By sharing a physical mouse",
+          "By sending structured HTTP requests and responses (e.g., JSON payloads) over web APIs",
+          "By rebooting each other's operating systems",
+          "By modifying files directly on the other machine's SSD"
+        ],
+        "correct": 1,
+        "explanation": "Web APIs exchange structured text payloads (predominantly JSON) over standard HTTP protocols.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 140,
+        "module": "Interfaces: CLI, GUI, APIs",
+        "question": "When requesting the current coordinates of the International Space Station from an API, what data format is most commonly returned?",
+        "options": [
+          "Raw assembly binary",
+          "JSON (JavaScript Object Notation)",
+          "Uncompressed bitmap image",
+          "Excel spreadsheet file"
+        ],
+        "correct": 1,
+        "explanation": "JSON is the ubiquitous lightweight data-interchange format for web APIs.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 141,
+        "module": "Interfaces: CLI, GUI, APIs",
+        "question": "What is the primary role of a GUI (Graphical User Interface)?",
+        "options": [
+          "To make systems completely immune to malware",
+          "To provide an intuitive, visual, direct-manipulation interface (windows, icons, pointers) suitable for everyday human users",
+          "To eliminate the need for computer memory",
+          "To replace compilers"
+        ],
+        "correct": 1,
+        "explanation": "GUIs translate system actions into visual visual metaphors (WIMP: windows, icons, menus, pointers) that lower the cognitive barrier for humans.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 142,
+        "module": "Interfaces: CLI, GUI, APIs",
+        "question": "Which principle explains why software developers prefer CLI tools for building CI/CD continuous deployment pipelines?",
+        "options": [
+          "CLIs are slower and safer",
+          "CLIs output standard text streams that can be programmatically tested, logged, and automated without human mouse clicks",
+          "CLIs require touchscreens",
+          "CLIs cannot be inspected"
+        ],
+        "correct": 1,
+        "explanation": "Automation requires deterministic, non-interactive execution driven by text commands, exit codes, and standard streams.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 143,
+        "module": "Interfaces: CLI, GUI, APIs",
+        "question": "What does a status code of 200 OK represent when interacting with a REST API?",
+        "options": [
+          "The resource was not found",
+          "The request was successfully processed and the server returned the requested data",
+          "The server crashed due to an out-of-memory exception",
+          "The request was unauthorized"
+        ],
+        "correct": 1,
+        "explanation": "HTTP 200 OK signals successful completion of an API request.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 144,
+        "module": "Interfaces: CLI, GUI, APIs",
+        "question": "What is the role of an API endpoint?",
+        "options": [
+          "A physical wire plugged into a router",
+          "A specific URL route exposed by a server where a client can access a particular data resource or service",
+          "The power switch on a PC",
+          "A CPU register address"
+        ],
+        "correct": 1,
+        "explanation": "An API endpoint is a specific URI/URL that an API exposes to handle requests for specific resources.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 145,
+        "module": "Interfaces: CLI, GUI, APIs",
+        "question": "Why is curl or Postman frequently used by software engineers?",
+        "options": [
+          "To clean computer dust",
+          "To test, inspect, and interact with HTTP API endpoints from the command line or desktop",
+          "To overclock CPU clock speeds",
+          "To repair corrupted hard drives"
+        ],
+        "correct": 1,
+        "explanation": "curl and Postman are developer tools designed to construct HTTP requests, inspect headers, and debug API responses.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 146,
+        "module": "OS & Process Management",
+        "question": "What is a Process in an operating system?",
+        "options": [
+          "A program file stored on an SSD",
+          "An instance of a program in active execution, with allocated memory, CPU registers, stack, and system resources",
+          "A hardware circuit inside the GPU",
+          "A text document written in Python"
+        ],
+        "correct": 1,
+        "explanation": "A program is static code on disk; a process is an active executing entity in memory managed by the OS kernel.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 147,
+        "module": "OS & Process Management",
+        "question": "What unique identifier does an operating system assign to every active process?",
+        "options": [
+          "IP Address",
+          "PID (Process ID)",
+          "MAC Address",
+          "UUID Inode"
+        ],
+        "correct": 1,
+        "explanation": "The OS kernel assigns each running process a unique numeric Process ID (PID).",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 148,
+        "module": "OS & Process Management",
+        "question": "What is the parent process of a newly spawned child process in Unix systems?",
+        "options": [
+          "The process that issued the fork() or spawn system call to create it",
+          "Always the web browser",
+          "The physical CPU socket",
+          "The BIOS ROM"
+        ],
+        "correct": 0,
+        "explanation": "Processes form a hierarchical tree where creating processes are parent processes (PPID) to their spawned children.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 149,
+        "module": "OS & Process Management",
+        "question": "Why does Google Chrome isolate individual browser tabs into distinct processes rather than threads?",
+        "options": [
+          "Processes consume zero RAM",
+          "To prevent a crash or security vulnerability in one tab from taking down or reading memory from the entire browser",
+          "Threads cannot render HTML",
+          "Because CPUs cannot run multiple threads"
+        ],
+        "correct": 1,
+        "explanation": "Process isolation sandboxes each tab with its own virtual address space; if a tab crashes, other tabs and the browser survive.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 150,
+        "module": "OS & Process Management",
+        "question": "What mechanism allows a single-core CPU to run dozens of background programs seemingly simultaneously?",
+        "options": [
+          "Quantum entanglement",
+          "Time-slicing (preemptive multitasking scheduling) where the CPU rapidly switches execution between processes in milliseconds",
+          "Overclocking the memory bus",
+          "Duplicating the physical motherboard"
+        ],
+        "correct": 1,
+        "explanation": "Preemptive scheduling allocates small quantum time slices to processes, rapidly context switching to create the illusion of simultaneous execution.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 151,
+        "module": "OS & Process Management",
+        "question": "What command in Linux and macOS displays an active, updating real-time table of running processes sorted by CPU and memory usage?",
+        "options": [
+          "ls",
+          "top or htop",
+          "pwd",
+          "chmod"
+        ],
+        "correct": 1,
+        "explanation": "top and htop provide dynamic real-time monitoring of CPU, RAM, and active processes.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 152,
+        "module": "OS & Process Management",
+        "question": "What is the difference between signal SIGTERM (kill -15) and signal SIGKILL (kill -9)?",
+        "options": [
+          "SIGTERM immediately reboots the computer; SIGKILL logs out the user",
+          "SIGTERM politely requests termination allowing cleanup handlers to run; SIGKILL forcefully terminates the process via the kernel without cleanup",
+          "SIGTERM only works on root processes; SIGKILL works on user apps",
+          "They are identical signals with different numbers"
+        ],
+        "correct": 1,
+        "explanation": "SIGTERM can be caught/handled for orderly shutdown; SIGKILL cannot be caught or ignored and immediately destroys the process.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 153,
+        "module": "OS & Process Management",
+        "question": "What is a Context Switch in operating system scheduling?",
+        "options": [
+          "Changing the screen resolution",
+          "The process of saving the execution state of the currently running process and restoring the state of the next scheduled process on the CPU",
+          "Replacing a faulty RAM stick",
+          "Recompiling a C program"
+        ],
+        "correct": 1,
+        "explanation": "A context switch stores register states, program counter, and memory mappings of a suspended process to resume another.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 154,
+        "module": "OS & Process Management",
+        "question": "What is the function of the Operating System Kernel?",
+        "options": [
+          "To format USB drives only",
+          "The core foundational layer of the OS that operates with highest hardware privileges, managing CPU, memory, hardware drivers, and system calls",
+          "To display desktop wallpapers",
+          "To compress image files"
+        ],
+        "correct": 1,
+        "explanation": "The kernel is the privileged core of the OS responsible for direct hardware arbitration and low-level resource management.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 155,
+        "module": "OS & Process Management",
+        "question": "What is Virtual Memory?",
+        "options": [
+          "RAM stored on an external cloud server",
+          "A memory management abstraction where the OS maps simulated large continuous address spaces to scattered physical RAM pages and swap disk space",
+          "Video memory inside the monitor",
+          "A backup copy of Windows"
+        ],
+        "correct": 1,
+        "explanation": "Virtual memory decouples application addresses from physical RAM, providing isolated address spaces and allowing programs to exceed physical memory via disk swap.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 156,
+        "module": "OS & Process Management",
+        "question": "What happens during Page Swapping (Paging) when physical RAM is exhausted?",
+        "options": [
+          "The computer catches fire",
+          "The OS writes inactive RAM pages to a reserved swap area on secondary storage (SSD/HDD) to free physical RAM for active pages",
+          "The CPU deletes running programs",
+          "The screen goes black permanently"
+        ],
+        "correct": 1,
+        "explanation": "Paging evicts inactive physical memory pages to swap space on disk to accommodate active memory allocations.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 157,
+        "module": "OS & Process Management",
+        "question": "Why does adding more CPU cores fail to solve an Out-Of-Memory (OOM) crash in a web application?",
+        "options": [
+          "More CPU cores slow down the computer",
+          "OOM is caused by exhaustion of physical and virtual address space memory, not a shortage of processing throughput",
+          "CPU cores cannot run web servers",
+          "The operating system ignores CPU cores"
+        ],
+        "correct": 1,
+        "explanation": "OOM crashes occur when memory allocation requests cannot be satisfied; CPU cores provide compute parallelism, not storage capacity.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 158,
+        "module": "OS & Process Management",
+        "question": "What is a Zombie Process in Unix terminology?",
+        "options": [
+          "A process infected with a virus",
+          "A process that has finished execution but still has an entry in the process table so its parent can read its exit status",
+          "A process running on a remote server",
+          "A background thread in Chrome"
+        ],
+        "correct": 1,
+        "explanation": "A zombie process has terminated execution but remains in the OS process table until its parent reads its return code via wait().",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 159,
+        "module": "OS & Process Management",
+        "question": "What does the 'ps aux' command show?",
+        "options": [
+          "A list of sound audio devices",
+          "A comprehensive snapshot of all running processes across all users on the machine with CPU and memory percentages",
+          "Installed Python libraries",
+          "Available disk partitions"
+        ],
+        "correct": 1,
+        "explanation": "ps aux outputs all processes for all users (a), with terminal attachments and detaching daemons (x), and formatted with user details (u).",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 160,
+        "module": "OS & Process Management",
+        "question": "What does the nice value of a process control in Unix scheduling?",
+        "options": [
+          "The file permissions of the executable",
+          "The scheduling priority of the process; higher nice values yield CPU time to other processes (lower priority)",
+          "The network bandwidth limit",
+          "The color of the terminal prompt"
+        ],
+        "correct": 1,
+        "explanation": "The 'nice' level modulates process scheduling priority: high niceness lowers CPU priority, being 'nice' to other tasks.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 161,
+        "module": "Filesystem & Permissions",
+        "question": "What is the meaning of the Unix design philosophy 'Everything is a file'?",
+        "options": [
+          "Every file is a text document",
+          "Hardware peripherals, terminal sessions, communication sockets, and processes are exposed through the standard filesystem I/O interface (open, read, write, close)",
+          "All files must be saved on a floppy disk",
+          "Programs cannot use memory"
+        ],
+        "correct": 1,
+        "explanation": "Unix unifies device and system interactions by exposing devices, pipes, and sockets as nodes in the virtual filesystem.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 162,
+        "module": "Filesystem & Permissions",
+        "question": "What are the three permission classes represented by the three octal digits in 'chmod 755'?",
+        "options": [
+          "System, Application, Kernel",
+          "Owner (User), Group, Others (World)",
+          "Read, Write, Execute",
+          "Local, Remote, Network"
+        ],
+        "correct": 1,
+        "explanation": "The three triplets map respectively to: File Owner, Group Members, and All Other Users.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 163,
+        "module": "Filesystem & Permissions",
+        "question": "In numeric chmod notation, what is the value of Read (r), Write (w), and Execute (x)?",
+        "options": [
+          "Read=1, Write=2, Execute=3",
+          "Read=4, Write=2, Execute=1",
+          "Read=2, Write=4, Execute=8",
+          "Read=3, Write=2, Execute=1"
+        ],
+        "correct": 1,
+        "explanation": "Standard octal values are Read = 4, Write = 2, Execute = 1.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 164,
+        "module": "Filesystem & Permissions",
+        "question": "Calculate the numeric chmod value for: Owner has Read/Write/Execute, Group has Read/Execute, Others have Read-only.",
+        "options": [
+          "754",
+          "777",
+          "644",
+          "755"
+        ],
+        "correct": 0,
+        "explanation": "Owner = 4+2+1 = 7. Group = 4+0+1 = 5. Others = 4+0+0 = 4. Result = 754.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 165,
+        "module": "Filesystem & Permissions",
+        "question": "What permission string in 'ls -l' corresponds to chmod 644?",
+        "options": [
+          "-rwxr-xr-x",
+          "-rw-r--r--",
+          "-rwx------",
+          "-rw-rw-rw-"
+        ],
+        "correct": 1,
+        "explanation": "6 = rw-, 4 = r--, 4 = r--. Result: -rw-r--r--.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 166,
+        "module": "Filesystem & Permissions",
+        "question": "Why is setting 'chmod 777' on production web files considered a severe security hazard?",
+        "options": [
+          "It makes the files invisible to users",
+          "It allows any user or compromised process on the system to read, overwrite, delete, or execute malicious code in those files",
+          "It slows down CPU clock speed",
+          "It encrypts the files permanently"
+        ],
+        "correct": 1,
+        "explanation": "777 grants universal write and execute rights, enabling any unprivileged user or web process to inject arbitrary code.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 167,
+        "module": "Filesystem & Permissions",
+        "question": "What is an Inode in a Unix filesystem?",
+        "options": [
+          "An optical storage disc",
+          "A data structure storing all metadata about a file (permissions, size, owner, data block pointers) except its filename",
+          "A type of network router",
+          "A terminal shortcut"
+        ],
+        "correct": 1,
+        "explanation": "An inode stores filesystem metadata including owner, access permissions, file timestamps, and pointers to storage data blocks.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 168,
+        "module": "Filesystem & Permissions",
+        "question": "What command changes the owner of a file named 'config.json' to user 'admin'?",
+        "options": [
+          "chmod admin config.json",
+          "chown admin config.json",
+          "mv admin config.json",
+          "touch admin config.json"
+        ],
+        "correct": 1,
+        "explanation": "chown (change owner) modifies the user and/or group ownership of filesystem items.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 169,
+        "module": "Filesystem & Permissions",
+        "question": "What does the execute permission ('x') mean when applied to a directory in Unix?",
+        "options": [
+          "Allows running scripts inside the folder",
+          "Allows entering the directory with 'cd' and accessing files within it",
+          "Deletes all files in the folder",
+          "Converts the directory into an executable binary"
+        ],
+        "correct": 1,
+        "explanation": "On directories, execute permission ('x') grants search/traversal rights\u2014permission to enter (cd into) the directory.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 170,
+        "module": "Filesystem & Permissions",
+        "question": "What happens if you remove read permission ('r') from a directory but keep execute ('x')?",
+        "options": [
+          "You cannot access any files inside",
+          "You can access known files by exact path, but you cannot list the directory contents with 'ls'",
+          "The directory is deleted",
+          "The folder becomes password protected"
+        ],
+        "correct": 1,
+        "explanation": "Without 'r', ls cannot enumerate entries; with 'x', files with known paths can still be opened and accessed.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 171,
+        "module": "Filesystem & Permissions",
+        "question": "Why does running './program' require the './' prefix when executing a binary in the current directory?",
+        "options": [
+          "Because Unix requires dot-slash on every command",
+          "Because the current directory ('.') is intentionally omitted from $PATH for security against trojan binaries",
+          "Because the file is hidden",
+          "Because the shell is written in Python"
+        ],
+        "correct": 1,
+        "explanation": "Excluding '.' from $PATH prevents malicious programs named 'ls' or 'cd' in arbitrary folders from being executed inadvertently.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 172,
+        "module": "Filesystem & Permissions",
+        "question": "What does the directory '/etc' contain in Linux/macOS systems?",
+        "options": [
+          "User downloaded games",
+          "System-wide configuration files and administrative shell scripts",
+          "The Linux kernel source code",
+          "Temporary internet cookies"
+        ],
+        "correct": 1,
+        "explanation": "/etc is the standard location for host-specific system configuration files (e.g., /etc/passwd, /etc/hosts).",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 173,
+        "module": "Filesystem & Permissions",
+        "question": "What does the directory '/dev' contain in Unix systems?",
+        "options": [
+          "Third-party developer source code",
+          "Special device files representing hardware peripherals, terminals, and pseudo-devices",
+          "Deleted files in trash",
+          "Python libraries"
+        ],
+        "correct": 1,
+        "explanation": "/dev houses device nodes providing character and block interfaces to storage, terminals (/dev/pts), and random generators (/dev/urandom).",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 174,
+        "module": "Filesystem & Permissions",
+        "question": "What is the consequence of setting permissions to 'chmod 000 secret.txt'?",
+        "options": [
+          "The file is deleted immediately",
+          "Nobody (including the owner) has read, write, or execute permissions (though root can still override)",
+          "The file becomes public to the web",
+          "The file is zipped"
+        ],
+        "correct": 1,
+        "explanation": "000 denies all read, write, and execute permissions to all users, though the superuser root can bypass or chmod it.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 175,
+        "module": "Filesystem & Permissions",
+        "question": "Which command makes a bash script 'deploy.sh' executable for all users while preserving other permissions?",
+        "options": [
+          "chmod 777 deploy.sh",
+          "chmod +x deploy.sh",
+          "chown +x deploy.sh",
+          "run deploy.sh"
+        ],
+        "correct": 1,
+        "explanation": "chmod +x adds the execute bit across the board without altering existing read and write permission flags.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 176,
+        "module": "How Software Works",
+        "question": "What is the only language that a computer's physical CPU natively understands and executes?",
+        "options": [
+          "Python source code",
+          "C++ templates",
+          "Binary machine code (streams of 0s and 1s representing opcodes and operands)",
+          "JavaScript"
+        ],
+        "correct": 2,
+        "explanation": "Hardware CPUs decode and execute binary machine code opcodes hardwired into their instruction set architecture (ISA).",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 177,
+        "module": "How Software Works",
+        "question": "What are the four primary phases of the CPU instruction execution cycle?",
+        "options": [
+          "Input, Output, Store, Loop",
+          "Fetch, Decode, Execute, Store (Write-back)",
+          "Compile, Link, Assemble, Run",
+          "Parse, Lex, Optimize, Emit"
+        ],
+        "correct": 1,
+        "explanation": "The fundamental CPU cycle: Fetch instruction from memory, Decode opcode, Execute arithmetic/branch, Store result back to register/RAM.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 178,
+        "module": "How Software Works",
+        "question": "What is the primary difference between a Compiler and an Interpreter?",
+        "options": [
+          "A compiler translates the entire source code into native machine code ahead of time; an interpreter translates and executes code line-by-line at runtime",
+          "A compiler is hardware; an interpreter is software",
+          "Compilers only run on supercomputers",
+          "Interpreters are always faster than compilers"
+        ],
+        "correct": 0,
+        "explanation": "Ahead-Of-Time (AOT) compilers produce standalone binaries; interpreters parse and execute source statements dynamically at runtime.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 179,
+        "module": "How Software Works",
+        "question": "Why is native C code generally much faster than pure interpreted Python code for intensive numeric tasks?",
+        "options": [
+          "C code bypasses the CPU",
+          "C is compiled directly into optimized native CPU machine code with no runtime interpretation overhead or type-checking latency",
+          "Python runs on the GPU only",
+          "C programs do not use memory"
+        ],
+        "correct": 1,
+        "explanation": "Compiled C eliminates runtime translation, dynamic type lookups, and interpreter dispatch loops.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 180,
+        "module": "How Software Works",
+        "question": "When you execute 'python3 app.py', what role does '/usr/bin/python3' play?",
+        "options": [
+          "It is a text file containing notes",
+          "It is the compiled native binary executable that reads, compiles to bytecode, and interprets app.py",
+          "It is an operating system driver",
+          "It is a network firewall"
+        ],
+        "correct": 1,
+        "explanation": "python3 is the CPython compiled binary that parses source code, generates bytecode (.pyc), and executes it inside the Python Virtual Machine.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 181,
+        "module": "How Software Works",
+        "question": "What is Bytecode in languages like Python and Java?",
+        "options": [
+          "Human-readable C code",
+          "An intermediate, platform-independent instruction set executed by a software Virtual Machine (e.g., PVM, JVM) rather than direct CPU hardware",
+          "Encrypted machine code",
+          "ASCII text strings"
+        ],
+        "correct": 1,
+        "explanation": "Bytecode is a compact intermediate representation targeted at virtual machine runtimes rather than physical CPU architectures.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 182,
+        "module": "How Software Works",
+        "question": "What is Just-In-Time (JIT) compilation (used in PyPy, V8 JavaScript Engine)?",
+        "options": [
+          "Compiling code on paper before typing",
+          "A runtime optimization technique that compiles frequently executed bytecode paths into native machine code on the fly during program execution",
+          "Translating code after the computer shuts down",
+          "Compiling only comments"
+        ],
+        "correct": 1,
+        "explanation": "JIT compilation profiles running code and translates hot loops into native CPU instructions to achieve near-compiled execution speed.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 183,
+        "module": "How Software Works",
+        "question": "What is the role of the Linker in the software build pipeline?",
+        "options": [
+          "To connect the computer to the internet",
+          "To combine multiple compiled object files (.o) and resolve external library references into a single cohesive executable binary",
+          "To format the monitor display",
+          "To install device drivers"
+        ],
+        "correct": 1,
+        "explanation": "The linker stitches together compiled translation units, resolving symbols, function addresses, and shared/static library calls.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 184,
+        "module": "How Software Works",
+        "question": "What is the difference between Static Linking and Dynamic Linking?",
+        "options": [
+          "Static linking includes all library code directly inside the final executable binary; dynamic linking loads shared libraries (.so/.dylib/.dll) into memory at runtime",
+          "Static linking only works on Windows; dynamic linking on Linux",
+          "Static linking produces smaller files than dynamic linking",
+          "They are identical linking methods"
+        ],
+        "correct": 0,
+        "explanation": "Static linking produces self-contained but larger binaries; dynamic linking shares common library memory across processes but requires external runtime dependencies.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 185,
+        "module": "How Software Works",
+        "question": "What is the 'Bootstrap Problem' in computer science compilers?",
+        "options": [
+          "How to start a computer without electricity",
+          "How to write a compiler in the very language it is designed to compile (solved by compiling version 1 with an existing different language)",
+          "How to tie computer cables together",
+          "How to install Windows from USB"
+        ],
+        "correct": 1,
+        "explanation": "Bootstrapping refers to compiling a compiler for language X written in language X, initially kicked off via an earlier compiler in C or assembly.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 186,
+        "module": "Digital Logic & Data Representation",
+        "question": "How many distinct values can be represented by a single byte (8 bits)?",
+        "options": [
+          "8",
+          "64",
+          "256",
+          "1024"
+        ],
+        "correct": 2,
+        "explanation": "A byte contains 8 bits; $2^8 = 256$ possible binary states (0 through 255 unsigned).",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 187,
+        "module": "Digital Logic & Data Representation",
+        "question": "Convert decimal number 25 into its 8-bit binary representation.",
+        "options": [
+          "00011001",
+          "00010011",
+          "00110001",
+          "00001111"
+        ],
+        "correct": 0,
+        "explanation": "$25 = 16 + 8 + 1 = 2^4 + 2^3 + 2^0 = 00011001$ in binary.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 188,
+        "module": "Digital Logic & Data Representation",
+        "question": "How many binary bits are represented by a single hexadecimal digit?",
+        "options": [
+          "2 bits",
+          "4 bits (one nibble)",
+          "8 bits",
+          "16 bits"
+        ],
+        "correct": 1,
+        "explanation": "Each hexadecimal digit spans 0-F (16 values), exactly matching 4 binary bits ($2^4 = 16$).",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 189,
+        "module": "Digital Logic & Data Representation",
+        "question": "Convert the binary byte 11111111 into hexadecimal.",
+        "options": [
+          "AA",
+          "EE",
+          "FF",
+          "99"
+        ],
+        "correct": 2,
+        "explanation": "1111 in binary is F in hex; two nibbles of 1111 yield FF (decimal 255).",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 190,
+        "module": "Digital Logic & Data Representation",
+        "question": "What is ASCII encoding?",
+        "options": [
+          "A 32-bit video compression codec",
+          "A 7-bit character encoding standard representing 128 English letters, digits, and control characters as numeric values",
+          "An encryption algorithm used by banks",
+          "A file format for 3D printing"
+        ],
+        "correct": 1,
+        "explanation": "ASCII assigns numeric values 0-127 to Latin alphanumeric characters and punctuation (e.g., 'A' = 65).",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 191,
+        "module": "Digital Logic & Data Representation",
+        "question": "Why was Unicode (and specifically UTF-8) developed to succeed ASCII?",
+        "options": [
+          "ASCII consumed too much disk space",
+          "ASCII only supported 128 English characters; Unicode provides code points for over 150,000 characters covering all world languages, symbols, and emoji",
+          "ASCII does not work on modern CPUs",
+          "Unicode is faster than binary"
+        ],
+        "correct": 1,
+        "explanation": "Unicode universalized text encoding across all global scripts, with UTF-8 providing backward-compatible variable-length byte encoding.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 192,
+        "module": "Digital Logic & Data Representation",
+        "question": "How many bytes of uncompressed memory are required to store a single pixel in 24-bit RGB format?",
+        "options": [
+          "1 byte",
+          "3 bytes (1 byte each for Red, Green, Blue)",
+          "8 bytes",
+          "24 bytes"
+        ],
+        "correct": 1,
+        "explanation": "24-bit RGB assigns 8 bits (1 byte) each to Red, Green, and Blue channels, totaling 3 bytes per pixel.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 193,
+        "module": "Digital Logic & Data Representation",
+        "question": "What does the 'A' channel represent in an RGBA image?",
+        "options": [
+          "Audio volume",
+          "Alpha (transparency / opacity level of the pixel)",
+          "Aspect ratio",
+          "Analog color correction"
+        ],
+        "correct": 1,
+        "explanation": "Alpha denotes pixel opacity, where 255 is fully opaque and 0 is fully transparent.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 194,
+        "module": "Digital Logic & Data Representation",
+        "question": "What is a 'Magic Number' (File Signature) in computing?",
+        "options": [
+          "A random lucky number chosen by the user",
+          "A specific unique sequence of leading bytes at the start of a file that identifies its true format regardless of file extension",
+          "The price of the software",
+          "The number of lines of code in a file"
+        ],
+        "correct": 1,
+        "explanation": "Magic numbers (e.g., PNG's '89 50 4E 47') allow operating systems and utilities to verify file formats independently of filename extensions.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 195,
+        "module": "Digital Logic & Data Representation",
+        "question": "What is the fundamental distinction between Encoding and Encryption?",
+        "options": [
+          "Encoding requires a password; encryption does not",
+          "Encoding transforms data into standard open formats for interoperability without a secret key; encryption scrambles data to ensure confidentiality requiring a secret key to decrypt",
+          "Encoding only works on numbers; encryption on text",
+          "They are identical processes"
+        ],
+        "correct": 1,
+        "explanation": "Encoding is for data representation and standardization (public algorithms); encryption is for information security and confidentiality (requires cryptographic keys).",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 196,
+        "module": "Git & Version Control",
+        "question": "What are the Three Trees (or areas) in the local Git architecture?",
+        "options": [
+          "Computer, Server, Cloud",
+          "Working Directory, Staging Area (Index), Local Repository (.git)",
+          "Master, Main, Head",
+          "Local, Global, Remote"
+        ],
+        "correct": 1,
+        "explanation": "Git architecture is structured across: Working Directory (edited files) -> Staging Area (prepared snapshot) -> Local Repository (committed history).",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 197,
+        "module": "Git & Version Control",
+        "question": "What hidden directory is created when you run 'git init' inside a project folder?",
+        "options": [
+          ".github",
+          ".git",
+          ".config",
+          ".version"
+        ],
+        "correct": 1,
+        "explanation": "git init generates the hidden .git directory containing the object database, refs, logs, and configuration.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 198,
+        "module": "Git & Version Control",
+        "question": "What is the purpose of the Git Staging Area (Index)?",
+        "options": [
+          "To upload files to GitHub servers immediately",
+          "To curate and assemble an exact snapshot of modified files before permanently committing them to history",
+          "To delete untracked files",
+          "To compress video files"
+        ],
+        "correct": 1,
+        "explanation": "The staging area allows developers to selectively compose granular, logical commits from modified files.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 199,
+        "module": "Git & Version Control",
+        "question": "What does the command 'git status' show?",
+        "options": [
+          "The internet connection speed",
+          "The state of the working directory and staging area, highlighting untracked, modified, and staged files",
+          "A list of commit author emails",
+          "The contents of the .git folder"
+        ],
+        "correct": 1,
+        "explanation": "git status summarizes untracked files, modified files, and staged changes ready for commit.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 200,
+        "module": "Git & Version Control",
+        "question": "Which command moves all modified and untracked files in the current directory into the Staging Area?",
+        "options": [
+          "git save all",
+          "git commit .",
+          "git add .",
+          "git stage --now"
+        ],
+        "correct": 2,
+        "explanation": "git add . stages all additions and modifications in the current directory tree.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 201,
+        "module": "Git & Version Control",
+        "question": "What does 'git commit -m \"feat: add login page\"' do?",
+        "options": [
+          "Uploads the project to github.com",
+          "Permanently records the staged snapshot into the local Git commit history with a descriptive message",
+          "Creates a new GitHub account",
+          "Deletes previous commits"
+        ],
+        "correct": 1,
+        "explanation": "git commit takes the staged snapshot and writes an immutable commit object into the local .git repository.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 202,
+        "module": "Git & Version Control",
+        "question": "What uniquely identifies every commit in a Git repository?",
+        "options": [
+          "The author's phone number",
+          "A cryptographic SHA hash (e.g., 40-character SHA-1 or SHA-256 string) derived from commit contents and parent metadata",
+          "A simple sequential number (1, 2, 3)",
+          "The file size in kilobytes"
+        ],
+        "correct": 1,
+        "explanation": "Commits are addressed by cryptographic hash digests verifying integrity across the commit tree.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 203,
+        "module": "Git & Version Control",
+        "question": "What is the 'HEAD' pointer in Git?",
+        "options": [
+          "The first commit ever made in the repo",
+          "A reference pointer indicating the current branch or specific commit currently checked out in the working directory",
+          "The remote GitHub server URL",
+          "The name of the repository owner"
+        ],
+        "correct": 1,
+        "explanation": "HEAD points to the currently checked-out branch or commit in your working directory.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 204,
+        "module": "Git & Version Control",
+        "question": "What command displays the chronological history of commits in a clean one-line format?",
+        "options": [
+          "git status",
+          "git log --oneline",
+          "git show --brief",
+          "git history"
+        ],
+        "correct": 1,
+        "explanation": "git log --oneline presents each commit on a single line with abbreviated SHA and commit message.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 205,
+        "module": "Git & Version Control",
+        "question": "What is the purpose of the '.gitignore' file?",
+        "options": [
+          "To delete unwanted files from the hard drive",
+          "To specify intentional patterns of untracked files (build artifacts, dependencies, environment secrets) that Git should ignore",
+          "To hide the repository from GitHub",
+          "To disable git commands"
+        ],
+        "correct": 1,
+        "explanation": ".gitignore prevents untracked build artifacts, node_modules, and sensitive secrets from being added to the repository.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 206,
+        "module": "GitHub & Collaboration",
+        "question": "What is the fundamental difference between Git and GitHub?",
+        "options": [
+          "Git is a cloud platform; GitHub is a terminal command",
+          "Git is a local command-line version control tool; GitHub is a cloud-hosted platform for repository hosting, collaboration, and CI/CD",
+          "Git is owned by Microsoft; GitHub is open-source software",
+          "They are identical software from the same company"
+        ],
+        "correct": 1,
+        "explanation": "Git is the distributed VCS software installed locally; GitHub is the cloud platform that hosts Git repositories and provides collaboration features.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 207,
+        "module": "GitHub & Collaboration",
+        "question": "Which command links a local repository to a remote repository hosted on GitHub?",
+        "options": [
+          "git connect https://github.com/user/repo.git",
+          "git remote add origin https://github.com/user/repo.git",
+          "git upload origin https://github.com/user/repo.git",
+          "git network link origin"
+        ],
+        "correct": 1,
+        "explanation": "git remote add <name> <url> establishes a remote pointer (conventionally named 'origin').",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 208,
+        "module": "GitHub & Collaboration",
+        "question": "What does the command 'git push -u origin main' do?",
+        "options": [
+          "Downloads changes from GitHub",
+          "Uploads local commits from the 'main' branch to the 'origin' remote repository and sets upstream branch tracking",
+          "Deletes the main branch",
+          "Creates a new GitHub organization"
+        ],
+        "correct": 1,
+        "explanation": "git push transmits commits to the remote branch; the -u flag sets up tracking for convenient future 'git push'/'git pull'.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 209,
+        "module": "GitHub & Collaboration",
+        "question": "What is the difference between 'git fetch' and 'git pull'?",
+        "options": [
+          "git fetch downloads remote commits and immediately overwrites local files; git pull does not",
+          "git fetch downloads new data from the remote without modifying local working branches; git pull fetches and automatically merges remote changes into the current branch",
+          "git fetch only works with SSH; git pull only with HTTPS",
+          "They perform the exact same action"
+        ],
+        "correct": 1,
+        "explanation": "git pull is essentially 'git fetch' followed by 'git merge FETCH_HEAD'.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 210,
+        "module": "GitHub & Collaboration",
+        "question": "What is a Merge Conflict in Git?",
+        "options": [
+          "When two people have the same name",
+          "When Git cannot automatically resolve competing edits made to the exact same lines of a file across merged branches",
+          "When the hard drive runs out of space",
+          "When an SSH key expires"
+        ],
+        "correct": 1,
+        "explanation": "A merge conflict occurs when distinct commits modify the same lines of code, requiring developer manual resolution.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 211,
+        "module": "GitHub & Collaboration",
+        "question": "What is a Pull Request (PR) on GitHub?",
+        "options": [
+          "A request to delete a branch",
+          "A proposed set of code changes submitted by a developer for team code review, discussion, and automated CI testing before merging into the target branch",
+          "A command to download files to a laptop",
+          "A billing request from GitHub"
+        ],
+        "correct": 1,
+        "explanation": "Pull Requests facilitate code reviews, automated CI checks, and peer discussions prior to merging changes into mainline branches.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 212,
+        "module": "GitHub & Collaboration",
+        "question": "What does 'Forking' a repository on GitHub mean?",
+        "options": [
+          "Splitting a repository into two separate programming languages",
+          "Creating a personal independent server-side copy of another user's remote repository under your own GitHub account",
+          "Deleting the repository permanently",
+          "Downloading a zip file"
+        ],
+        "correct": 1,
+        "explanation": "A fork is a personal remote copy of an upstream repository enabling independent experimentation and pull request contributions.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 213,
+        "module": "GitHub & Collaboration",
+        "question": "Why are SSH keys or Personal Access Tokens (PAT) required when pushing code to GitHub instead of account passwords?",
+        "options": [
+          "Passwords are too fast to type",
+          "GitHub deprecated basic password authentication for Git operations to enforce stronger, revocable cryptographic authentication",
+          "SSH keys make files smaller",
+          "Tokens encrypt the commit history"
+        ],
+        "correct": 1,
+        "explanation": "Cryptographic SSH keys and scoped Personal Access Tokens enhance security over easily compromised static passwords.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 214,
+        "module": "GitHub & Collaboration",
+        "question": "Which command creates and switches to a new branch named 'feature-auth' in modern Git?",
+        "options": [
+          "git branch -switch feature-auth",
+          "git switch -c feature-auth (or git checkout -b feature-auth)",
+          "git make branch feature-auth",
+          "git new feature-auth"
+        ],
+        "correct": 1,
+        "explanation": "git switch -c (create) or git checkout -b creates the branch and updates HEAD to point to it.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 215,
+        "module": "GitHub & Collaboration",
+        "question": "What is the purpose of GitHub Actions?",
+        "options": [
+          "To buy software licenses",
+          "To automate software workflows directly within GitHub, including continuous integration (CI) tests, builds, and automated deployments (CD)",
+          "To play terminal games",
+          "To replace the Git command line"
+        ],
+        "correct": 1,
+        "explanation": "GitHub Actions is an integrated CI/CD automation platform triggered by repository events like pushes and pull requests.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 216,
+        "module": "Computer Architecture & Hardware",
+        "question": "In hardware diagnostics (Scenario 216): A workstation experiences sudden shutdowns during intensive deep learning training while idling normally during web browsing. Diagnostics show normal RAM and healthy SSD. Which hardware subsystem is most likely failing under load?",
+        "options": [
+          "The computer monitor cable",
+          "The GPU thermal cooling or power supply unit (PSU) delivering inadequate wattage under peak computational load",
+          "The sound card driver",
+          "The operating system text editor"
+        ],
+        "correct": 1,
+        "explanation": "Heavy deep learning exercises matrix calculations on the GPU, drawing peak electrical power and generating intense heat. Workstation power supply throttling or thermal trip cutoffs cause abrupt shutdowns under heavy load.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 217,
+        "module": "Operating Systems & Process Management",
+        "question": "In process scheduling analysis (Case 217): If two processes A and B are assigned CPU time slices by an OS scheduler, but Process A frequently yields the CPU early waiting for SSD reads while Process B executes tight mathematical loops, how does the scheduler classify them?",
+        "options": [
+          "Process A is I/O-bound; Process B is CPU-bound",
+          "Process A is CPU-bound; Process B is I/O-bound",
+          "Both processes are classified as kernel daemons",
+          "Neither process requires memory"
+        ],
+        "correct": 0,
+        "explanation": "I/O-bound processes spend the majority of their lifecycle waiting for I/O operations (yielding CPU quickly), while CPU-bound processes consume full time slices performing arithmetic computations.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 218,
+        "module": "Unix Filesystem & Permissions",
+        "question": "In security audits (Scenario 218): A bash script has permissions numeric value 750. Who on the system is permitted to read, write, and execute this script?",
+        "options": [
+          "Everyone on the internet",
+          "Only the file owner has full rwx rights; group members have read and execute rights; others have zero access",
+          "All users in the department have write access",
+          "Only the root user can run it"
+        ],
+        "correct": 1,
+        "explanation": "750 breaks down into: Owner = 7 (rwx), Group = 5 (r-x: read and execute), Others = 0 (---: no access whatsoever).",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 219,
+        "module": "CLI, Shell & Environment",
+        "question": "In shell scripting (Case 219): A developer wants to redirect both standard output (stdout) and standard error (stderr) of a script 'build.sh' into a single log file 'output.log'. Which syntax accomplishes this in modern zsh/bash?",
+        "options": [
+          "./build.sh > output.log 2>&1",
+          "./build.sh < output.log",
+          "./build.sh | output.log",
+          "./build.sh >> stderr"
+        ],
+        "correct": 0,
+        "explanation": "'./build.sh > output.log 2>&1' redirects stdout (1) to output.log, and redirects file descriptor 2 (stderr) to wherever descriptor 1 is currently pointing.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 220,
+        "module": "Software Execution & Compilers",
+        "question": "In compilation pipeline inspection (Scenario 220): Which stage of a C/C++ compiler is responsible for expanding macro definitions (#define) and including header files (#include) before syntax parsing begins?",
+        "options": [
+          "The Linker",
+          "The Preprocessor",
+          "The Assembler",
+          "The Machine Code Optimizer"
+        ],
+        "correct": 1,
+        "explanation": "The C preprocessor evaluates directives starting with '#' (#include, #define, #ifdef), stripping comments and expanding macros into intermediate text.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 221,
+        "module": "Digital Logic, Data & Encoding",
+        "question": "In low-level data calculation (Problem 221): If an uncompressed true-color RGB bitmap image has a resolution of 1000 pixels by 1000 pixels with 3 bytes per pixel, what is its exact uncompressed memory size?",
+        "options": [
+          "3,000,000 bytes (~3 MB)",
+          "1,000,000 bytes (~1 MB)",
+          "300,000 bytes (~300 KB)",
+          "24,000,000 bytes (~24 MB)"
+        ],
+        "correct": 0,
+        "explanation": "Memory size = Width x Height x BytesPerPixel = 1000 x 1000 x 3 = 3,000,000 bytes (approximately 3 MB).",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 222,
+        "module": "Git Version Control & Workflows",
+        "question": "In Git version management (Case 222): A developer wants to discard all uncommitted changes in their working directory and restore tracked files to the state of the last commit. Which Git command achieves this?",
+        "options": [
+          "git restore . (or git checkout -- .)",
+          "git commit --amend",
+          "git push --force",
+          "git init --clean"
+        ],
+        "correct": 0,
+        "explanation": "'git restore .' discards uncommitted working tree modifications, restoring files to the recorded index/HEAD state.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 223,
+        "module": "GitHub & Distributed Collaboration",
+        "question": "In GitHub project management (Scenario 223): When collaborating on a shared open-source project, why is it standard practice to work on isolated feature branches rather than pushing commits directly to 'main'?",
+        "options": [
+          "GitHub prohibits pushing to any branch",
+          "Feature branches isolate experimental code, allow parallel team work, and enable code review via Pull Requests without destabilizing the production main branch",
+          "Branches eliminate the need for commits",
+          "Branches do not consume disk space"
+        ],
+        "correct": 1,
+        "explanation": "Branching protects the stable main line, allowing independent feature development, automated CI verification, and peer code review prior to integration.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 224,
+        "module": "System Diagnostics & Performance",
+        "question": "In systems optimization (Analysis 224): An engineer notices their terminal command 'find / -name test' is taking minutes to complete. What is the fundamental reason for this delay?",
+        "options": [
+          "The terminal shell font is too large",
+          "The find command performs a recursive filesystem traversal starting from root (/), querying the disk metadata of every file on the system across all mounted storage partitions",
+          "The CPU frequency drops during find",
+          "The network cable is disconnected"
+        ],
+        "correct": 1,
+        "explanation": "Scanning from '/' requires reading every inode across the entire directory hierarchy on physical disk, incurring substantial I/O latency.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 225,
+        "module": "Contest Mastery & Problem Solving",
+        "question": "In contest system concepts (Question 225): A developer writes a script 'backup.py' that copies files. When run as './backup.py', the shell responds with 'Permission denied'. Which step is strictly necessary to make it runnable directly?",
+        "options": [
+          "Rename the file to backup.exe",
+          "Grant execute permission using 'chmod +x backup.py' and ensure a valid shebang (e.g., #!/usr/bin/env python3) is present at the top",
+          "Reinstall macOS",
+          "Add 16 GB of RAM"
+        ],
+        "correct": 1,
+        "explanation": "Unix requires the execute permission bit (+x) in metadata for direct execution, accompanied by a shebang line pointing to the interpreter.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 226,
+        "module": "Computer Architecture & Hardware",
+        "question": "In hardware diagnostics (Scenario 226): A workstation experiences sudden shutdowns during intensive deep learning training while idling normally during web browsing. Diagnostics show normal RAM and healthy SSD. Which hardware subsystem is most likely failing under load?",
+        "options": [
+          "The computer monitor cable",
+          "The GPU thermal cooling or power supply unit (PSU) delivering inadequate wattage under peak computational load",
+          "The sound card driver",
+          "The operating system text editor"
+        ],
+        "correct": 1,
+        "explanation": "Heavy deep learning exercises matrix calculations on the GPU, drawing peak electrical power and generating intense heat. Workstation power supply throttling or thermal trip cutoffs cause abrupt shutdowns under heavy load.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 227,
+        "module": "Operating Systems & Process Management",
+        "question": "In process scheduling analysis (Case 227): If two processes A and B are assigned CPU time slices by an OS scheduler, but Process A frequently yields the CPU early waiting for SSD reads while Process B executes tight mathematical loops, how does the scheduler classify them?",
+        "options": [
+          "Process A is I/O-bound; Process B is CPU-bound",
+          "Process A is CPU-bound; Process B is I/O-bound",
+          "Both processes are classified as kernel daemons",
+          "Neither process requires memory"
+        ],
+        "correct": 0,
+        "explanation": "I/O-bound processes spend the majority of their lifecycle waiting for I/O operations (yielding CPU quickly), while CPU-bound processes consume full time slices performing arithmetic computations.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 228,
+        "module": "Unix Filesystem & Permissions",
+        "question": "In security audits (Scenario 228): A bash script has permissions numeric value 750. Who on the system is permitted to read, write, and execute this script?",
+        "options": [
+          "Everyone on the internet",
+          "Only the file owner has full rwx rights; group members have read and execute rights; others have zero access",
+          "All users in the department have write access",
+          "Only the root user can run it"
+        ],
+        "correct": 1,
+        "explanation": "750 breaks down into: Owner = 7 (rwx), Group = 5 (r-x: read and execute), Others = 0 (---: no access whatsoever).",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 229,
+        "module": "CLI, Shell & Environment",
+        "question": "In shell scripting (Case 229): A developer wants to redirect both standard output (stdout) and standard error (stderr) of a script 'build.sh' into a single log file 'output.log'. Which syntax accomplishes this in modern zsh/bash?",
+        "options": [
+          "./build.sh > output.log 2>&1",
+          "./build.sh < output.log",
+          "./build.sh | output.log",
+          "./build.sh >> stderr"
+        ],
+        "correct": 0,
+        "explanation": "'./build.sh > output.log 2>&1' redirects stdout (1) to output.log, and redirects file descriptor 2 (stderr) to wherever descriptor 1 is currently pointing.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 230,
+        "module": "Software Execution & Compilers",
+        "question": "In compilation pipeline inspection (Scenario 230): Which stage of a C/C++ compiler is responsible for expanding macro definitions (#define) and including header files (#include) before syntax parsing begins?",
+        "options": [
+          "The Linker",
+          "The Preprocessor",
+          "The Assembler",
+          "The Machine Code Optimizer"
+        ],
+        "correct": 1,
+        "explanation": "The C preprocessor evaluates directives starting with '#' (#include, #define, #ifdef), stripping comments and expanding macros into intermediate text.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 231,
+        "module": "Digital Logic, Data & Encoding",
+        "question": "In low-level data calculation (Problem 231): If an uncompressed true-color RGB bitmap image has a resolution of 1000 pixels by 1000 pixels with 3 bytes per pixel, what is its exact uncompressed memory size?",
+        "options": [
+          "3,000,000 bytes (~3 MB)",
+          "1,000,000 bytes (~1 MB)",
+          "300,000 bytes (~300 KB)",
+          "24,000,000 bytes (~24 MB)"
+        ],
+        "correct": 0,
+        "explanation": "Memory size = Width x Height x BytesPerPixel = 1000 x 1000 x 3 = 3,000,000 bytes (approximately 3 MB).",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 232,
+        "module": "Git Version Control & Workflows",
+        "question": "In Git version management (Case 232): A developer wants to discard all uncommitted changes in their working directory and restore tracked files to the state of the last commit. Which Git command achieves this?",
+        "options": [
+          "git restore . (or git checkout -- .)",
+          "git commit --amend",
+          "git push --force",
+          "git init --clean"
+        ],
+        "correct": 0,
+        "explanation": "'git restore .' discards uncommitted working tree modifications, restoring files to the recorded index/HEAD state.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 233,
+        "module": "GitHub & Distributed Collaboration",
+        "question": "In GitHub project management (Scenario 233): When collaborating on a shared open-source project, why is it standard practice to work on isolated feature branches rather than pushing commits directly to 'main'?",
+        "options": [
+          "GitHub prohibits pushing to any branch",
+          "Feature branches isolate experimental code, allow parallel team work, and enable code review via Pull Requests without destabilizing the production main branch",
+          "Branches eliminate the need for commits",
+          "Branches do not consume disk space"
+        ],
+        "correct": 1,
+        "explanation": "Branching protects the stable main line, allowing independent feature development, automated CI verification, and peer code review prior to integration.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 234,
+        "module": "System Diagnostics & Performance",
+        "question": "In systems optimization (Analysis 234): An engineer notices their terminal command 'find / -name test' is taking minutes to complete. What is the fundamental reason for this delay?",
+        "options": [
+          "The terminal shell font is too large",
+          "The find command performs a recursive filesystem traversal starting from root (/), querying the disk metadata of every file on the system across all mounted storage partitions",
+          "The CPU frequency drops during find",
+          "The network cable is disconnected"
+        ],
+        "correct": 1,
+        "explanation": "Scanning from '/' requires reading every inode across the entire directory hierarchy on physical disk, incurring substantial I/O latency.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 235,
+        "module": "Contest Mastery & Problem Solving",
+        "question": "In contest system concepts (Question 235): A developer writes a script 'backup.py' that copies files. When run as './backup.py', the shell responds with 'Permission denied'. Which step is strictly necessary to make it runnable directly?",
+        "options": [
+          "Rename the file to backup.exe",
+          "Grant execute permission using 'chmod +x backup.py' and ensure a valid shebang (e.g., #!/usr/bin/env python3) is present at the top",
+          "Reinstall macOS",
+          "Add 16 GB of RAM"
+        ],
+        "correct": 1,
+        "explanation": "Unix requires the execute permission bit (+x) in metadata for direct execution, accompanied by a shebang line pointing to the interpreter.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 236,
+        "module": "Computer Architecture & Hardware",
+        "question": "In hardware diagnostics (Scenario 236): A workstation experiences sudden shutdowns during intensive deep learning training while idling normally during web browsing. Diagnostics show normal RAM and healthy SSD. Which hardware subsystem is most likely failing under load?",
+        "options": [
+          "The computer monitor cable",
+          "The GPU thermal cooling or power supply unit (PSU) delivering inadequate wattage under peak computational load",
+          "The sound card driver",
+          "The operating system text editor"
+        ],
+        "correct": 1,
+        "explanation": "Heavy deep learning exercises matrix calculations on the GPU, drawing peak electrical power and generating intense heat. Workstation power supply throttling or thermal trip cutoffs cause abrupt shutdowns under heavy load.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 237,
+        "module": "Operating Systems & Process Management",
+        "question": "In process scheduling analysis (Case 237): If two processes A and B are assigned CPU time slices by an OS scheduler, but Process A frequently yields the CPU early waiting for SSD reads while Process B executes tight mathematical loops, how does the scheduler classify them?",
+        "options": [
+          "Process A is I/O-bound; Process B is CPU-bound",
+          "Process A is CPU-bound; Process B is I/O-bound",
+          "Both processes are classified as kernel daemons",
+          "Neither process requires memory"
+        ],
+        "correct": 0,
+        "explanation": "I/O-bound processes spend the majority of their lifecycle waiting for I/O operations (yielding CPU quickly), while CPU-bound processes consume full time slices performing arithmetic computations.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 238,
+        "module": "Unix Filesystem & Permissions",
+        "question": "In security audits (Scenario 238): A bash script has permissions numeric value 750. Who on the system is permitted to read, write, and execute this script?",
+        "options": [
+          "Everyone on the internet",
+          "Only the file owner has full rwx rights; group members have read and execute rights; others have zero access",
+          "All users in the department have write access",
+          "Only the root user can run it"
+        ],
+        "correct": 1,
+        "explanation": "750 breaks down into: Owner = 7 (rwx), Group = 5 (r-x: read and execute), Others = 0 (---: no access whatsoever).",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 239,
+        "module": "CLI, Shell & Environment",
+        "question": "In shell scripting (Case 239): A developer wants to redirect both standard output (stdout) and standard error (stderr) of a script 'build.sh' into a single log file 'output.log'. Which syntax accomplishes this in modern zsh/bash?",
+        "options": [
+          "./build.sh > output.log 2>&1",
+          "./build.sh < output.log",
+          "./build.sh | output.log",
+          "./build.sh >> stderr"
+        ],
+        "correct": 0,
+        "explanation": "'./build.sh > output.log 2>&1' redirects stdout (1) to output.log, and redirects file descriptor 2 (stderr) to wherever descriptor 1 is currently pointing.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 240,
+        "module": "Software Execution & Compilers",
+        "question": "In compilation pipeline inspection (Scenario 240): Which stage of a C/C++ compiler is responsible for expanding macro definitions (#define) and including header files (#include) before syntax parsing begins?",
+        "options": [
+          "The Linker",
+          "The Preprocessor",
+          "The Assembler",
+          "The Machine Code Optimizer"
+        ],
+        "correct": 1,
+        "explanation": "The C preprocessor evaluates directives starting with '#' (#include, #define, #ifdef), stripping comments and expanding macros into intermediate text.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 241,
+        "module": "Digital Logic, Data & Encoding",
+        "question": "In low-level data calculation (Problem 241): If an uncompressed true-color RGB bitmap image has a resolution of 1000 pixels by 1000 pixels with 3 bytes per pixel, what is its exact uncompressed memory size?",
+        "options": [
+          "3,000,000 bytes (~3 MB)",
+          "1,000,000 bytes (~1 MB)",
+          "300,000 bytes (~300 KB)",
+          "24,000,000 bytes (~24 MB)"
+        ],
+        "correct": 0,
+        "explanation": "Memory size = Width x Height x BytesPerPixel = 1000 x 1000 x 3 = 3,000,000 bytes (approximately 3 MB).",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 242,
+        "module": "Git Version Control & Workflows",
+        "question": "In Git version management (Case 242): A developer wants to discard all uncommitted changes in their working directory and restore tracked files to the state of the last commit. Which Git command achieves this?",
+        "options": [
+          "git restore . (or git checkout -- .)",
+          "git commit --amend",
+          "git push --force",
+          "git init --clean"
+        ],
+        "correct": 0,
+        "explanation": "'git restore .' discards uncommitted working tree modifications, restoring files to the recorded index/HEAD state.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 243,
+        "module": "GitHub & Distributed Collaboration",
+        "question": "In GitHub project management (Scenario 243): When collaborating on a shared open-source project, why is it standard practice to work on isolated feature branches rather than pushing commits directly to 'main'?",
+        "options": [
+          "GitHub prohibits pushing to any branch",
+          "Feature branches isolate experimental code, allow parallel team work, and enable code review via Pull Requests without destabilizing the production main branch",
+          "Branches eliminate the need for commits",
+          "Branches do not consume disk space"
+        ],
+        "correct": 1,
+        "explanation": "Branching protects the stable main line, allowing independent feature development, automated CI verification, and peer code review prior to integration.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 244,
+        "module": "System Diagnostics & Performance",
+        "question": "In systems optimization (Analysis 244): An engineer notices their terminal command 'find / -name test' is taking minutes to complete. What is the fundamental reason for this delay?",
+        "options": [
+          "The terminal shell font is too large",
+          "The find command performs a recursive filesystem traversal starting from root (/), querying the disk metadata of every file on the system across all mounted storage partitions",
+          "The CPU frequency drops during find",
+          "The network cable is disconnected"
+        ],
+        "correct": 1,
+        "explanation": "Scanning from '/' requires reading every inode across the entire directory hierarchy on physical disk, incurring substantial I/O latency.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 245,
+        "module": "Contest Mastery & Problem Solving",
+        "question": "In contest system concepts (Question 245): A developer writes a script 'backup.py' that copies files. When run as './backup.py', the shell responds with 'Permission denied'. Which step is strictly necessary to make it runnable directly?",
+        "options": [
+          "Rename the file to backup.exe",
+          "Grant execute permission using 'chmod +x backup.py' and ensure a valid shebang (e.g., #!/usr/bin/env python3) is present at the top",
+          "Reinstall macOS",
+          "Add 16 GB of RAM"
+        ],
+        "correct": 1,
+        "explanation": "Unix requires the execute permission bit (+x) in metadata for direct execution, accompanied by a shebang line pointing to the interpreter.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 246,
+        "module": "Computer Architecture & Hardware",
+        "question": "In hardware diagnostics (Scenario 246): A workstation experiences sudden shutdowns during intensive deep learning training while idling normally during web browsing. Diagnostics show normal RAM and healthy SSD. Which hardware subsystem is most likely failing under load?",
+        "options": [
+          "The computer monitor cable",
+          "The GPU thermal cooling or power supply unit (PSU) delivering inadequate wattage under peak computational load",
+          "The sound card driver",
+          "The operating system text editor"
+        ],
+        "correct": 1,
+        "explanation": "Heavy deep learning exercises matrix calculations on the GPU, drawing peak electrical power and generating intense heat. Workstation power supply throttling or thermal trip cutoffs cause abrupt shutdowns under heavy load.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 247,
+        "module": "Operating Systems & Process Management",
+        "question": "In process scheduling analysis (Case 247): If two processes A and B are assigned CPU time slices by an OS scheduler, but Process A frequently yields the CPU early waiting for SSD reads while Process B executes tight mathematical loops, how does the scheduler classify them?",
+        "options": [
+          "Process A is I/O-bound; Process B is CPU-bound",
+          "Process A is CPU-bound; Process B is I/O-bound",
+          "Both processes are classified as kernel daemons",
+          "Neither process requires memory"
+        ],
+        "correct": 0,
+        "explanation": "I/O-bound processes spend the majority of their lifecycle waiting for I/O operations (yielding CPU quickly), while CPU-bound processes consume full time slices performing arithmetic computations.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 248,
+        "module": "Unix Filesystem & Permissions",
+        "question": "In security audits (Scenario 248): A bash script has permissions numeric value 750. Who on the system is permitted to read, write, and execute this script?",
+        "options": [
+          "Everyone on the internet",
+          "Only the file owner has full rwx rights; group members have read and execute rights; others have zero access",
+          "All users in the department have write access",
+          "Only the root user can run it"
+        ],
+        "correct": 1,
+        "explanation": "750 breaks down into: Owner = 7 (rwx), Group = 5 (r-x: read and execute), Others = 0 (---: no access whatsoever).",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 249,
+        "module": "CLI, Shell & Environment",
+        "question": "In shell scripting (Case 249): A developer wants to redirect both standard output (stdout) and standard error (stderr) of a script 'build.sh' into a single log file 'output.log'. Which syntax accomplishes this in modern zsh/bash?",
+        "options": [
+          "./build.sh > output.log 2>&1",
+          "./build.sh < output.log",
+          "./build.sh | output.log",
+          "./build.sh >> stderr"
+        ],
+        "correct": 0,
+        "explanation": "'./build.sh > output.log 2>&1' redirects stdout (1) to output.log, and redirects file descriptor 2 (stderr) to wherever descriptor 1 is currently pointing.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 250,
+        "module": "Software Execution & Compilers",
+        "question": "In compilation pipeline inspection (Scenario 250): Which stage of a C/C++ compiler is responsible for expanding macro definitions (#define) and including header files (#include) before syntax parsing begins?",
+        "options": [
+          "The Linker",
+          "The Preprocessor",
+          "The Assembler",
+          "The Machine Code Optimizer"
+        ],
+        "correct": 1,
+        "explanation": "The C preprocessor evaluates directives starting with '#' (#include, #define, #ifdef), stripping comments and expanding macros into intermediate text.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 251,
+        "module": "Digital Logic, Data & Encoding",
+        "question": "In low-level data calculation (Problem 251): If an uncompressed true-color RGB bitmap image has a resolution of 1000 pixels by 1000 pixels with 3 bytes per pixel, what is its exact uncompressed memory size?",
+        "options": [
+          "3,000,000 bytes (~3 MB)",
+          "1,000,000 bytes (~1 MB)",
+          "300,000 bytes (~300 KB)",
+          "24,000,000 bytes (~24 MB)"
+        ],
+        "correct": 0,
+        "explanation": "Memory size = Width x Height x BytesPerPixel = 1000 x 1000 x 3 = 3,000,000 bytes (approximately 3 MB).",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 252,
+        "module": "Git Version Control & Workflows",
+        "question": "In Git version management (Case 252): A developer wants to discard all uncommitted changes in their working directory and restore tracked files to the state of the last commit. Which Git command achieves this?",
+        "options": [
+          "git restore . (or git checkout -- .)",
+          "git commit --amend",
+          "git push --force",
+          "git init --clean"
+        ],
+        "correct": 0,
+        "explanation": "'git restore .' discards uncommitted working tree modifications, restoring files to the recorded index/HEAD state.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 253,
+        "module": "GitHub & Distributed Collaboration",
+        "question": "In GitHub project management (Scenario 253): When collaborating on a shared open-source project, why is it standard practice to work on isolated feature branches rather than pushing commits directly to 'main'?",
+        "options": [
+          "GitHub prohibits pushing to any branch",
+          "Feature branches isolate experimental code, allow parallel team work, and enable code review via Pull Requests without destabilizing the production main branch",
+          "Branches eliminate the need for commits",
+          "Branches do not consume disk space"
+        ],
+        "correct": 1,
+        "explanation": "Branching protects the stable main line, allowing independent feature development, automated CI verification, and peer code review prior to integration.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 254,
+        "module": "System Diagnostics & Performance",
+        "question": "In systems optimization (Analysis 254): An engineer notices their terminal command 'find / -name test' is taking minutes to complete. What is the fundamental reason for this delay?",
+        "options": [
+          "The terminal shell font is too large",
+          "The find command performs a recursive filesystem traversal starting from root (/), querying the disk metadata of every file on the system across all mounted storage partitions",
+          "The CPU frequency drops during find",
+          "The network cable is disconnected"
+        ],
+        "correct": 1,
+        "explanation": "Scanning from '/' requires reading every inode across the entire directory hierarchy on physical disk, incurring substantial I/O latency.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 255,
+        "module": "Contest Mastery & Problem Solving",
+        "question": "In contest system concepts (Question 255): A developer writes a script 'backup.py' that copies files. When run as './backup.py', the shell responds with 'Permission denied'. Which step is strictly necessary to make it runnable directly?",
+        "options": [
+          "Rename the file to backup.exe",
+          "Grant execute permission using 'chmod +x backup.py' and ensure a valid shebang (e.g., #!/usr/bin/env python3) is present at the top",
+          "Reinstall macOS",
+          "Add 16 GB of RAM"
+        ],
+        "correct": 1,
+        "explanation": "Unix requires the execute permission bit (+x) in metadata for direct execution, accompanied by a shebang line pointing to the interpreter.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 256,
+        "module": "Computer Architecture & Hardware",
+        "question": "In hardware diagnostics (Scenario 256): A workstation experiences sudden shutdowns during intensive deep learning training while idling normally during web browsing. Diagnostics show normal RAM and healthy SSD. Which hardware subsystem is most likely failing under load?",
+        "options": [
+          "The computer monitor cable",
+          "The GPU thermal cooling or power supply unit (PSU) delivering inadequate wattage under peak computational load",
+          "The sound card driver",
+          "The operating system text editor"
+        ],
+        "correct": 1,
+        "explanation": "Heavy deep learning exercises matrix calculations on the GPU, drawing peak electrical power and generating intense heat. Workstation power supply throttling or thermal trip cutoffs cause abrupt shutdowns under heavy load.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 257,
+        "module": "Operating Systems & Process Management",
+        "question": "In process scheduling analysis (Case 257): If two processes A and B are assigned CPU time slices by an OS scheduler, but Process A frequently yields the CPU early waiting for SSD reads while Process B executes tight mathematical loops, how does the scheduler classify them?",
+        "options": [
+          "Process A is I/O-bound; Process B is CPU-bound",
+          "Process A is CPU-bound; Process B is I/O-bound",
+          "Both processes are classified as kernel daemons",
+          "Neither process requires memory"
+        ],
+        "correct": 0,
+        "explanation": "I/O-bound processes spend the majority of their lifecycle waiting for I/O operations (yielding CPU quickly), while CPU-bound processes consume full time slices performing arithmetic computations.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 258,
+        "module": "Unix Filesystem & Permissions",
+        "question": "In security audits (Scenario 258): A bash script has permissions numeric value 750. Who on the system is permitted to read, write, and execute this script?",
+        "options": [
+          "Everyone on the internet",
+          "Only the file owner has full rwx rights; group members have read and execute rights; others have zero access",
+          "All users in the department have write access",
+          "Only the root user can run it"
+        ],
+        "correct": 1,
+        "explanation": "750 breaks down into: Owner = 7 (rwx), Group = 5 (r-x: read and execute), Others = 0 (---: no access whatsoever).",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 259,
+        "module": "CLI, Shell & Environment",
+        "question": "In shell scripting (Case 259): A developer wants to redirect both standard output (stdout) and standard error (stderr) of a script 'build.sh' into a single log file 'output.log'. Which syntax accomplishes this in modern zsh/bash?",
+        "options": [
+          "./build.sh > output.log 2>&1",
+          "./build.sh < output.log",
+          "./build.sh | output.log",
+          "./build.sh >> stderr"
+        ],
+        "correct": 0,
+        "explanation": "'./build.sh > output.log 2>&1' redirects stdout (1) to output.log, and redirects file descriptor 2 (stderr) to wherever descriptor 1 is currently pointing.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 260,
+        "module": "Software Execution & Compilers",
+        "question": "In compilation pipeline inspection (Scenario 260): Which stage of a C/C++ compiler is responsible for expanding macro definitions (#define) and including header files (#include) before syntax parsing begins?",
+        "options": [
+          "The Linker",
+          "The Preprocessor",
+          "The Assembler",
+          "The Machine Code Optimizer"
+        ],
+        "correct": 1,
+        "explanation": "The C preprocessor evaluates directives starting with '#' (#include, #define, #ifdef), stripping comments and expanding macros into intermediate text.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 261,
+        "module": "Digital Logic, Data & Encoding",
+        "question": "In low-level data calculation (Problem 261): If an uncompressed true-color RGB bitmap image has a resolution of 1000 pixels by 1000 pixels with 3 bytes per pixel, what is its exact uncompressed memory size?",
+        "options": [
+          "3,000,000 bytes (~3 MB)",
+          "1,000,000 bytes (~1 MB)",
+          "300,000 bytes (~300 KB)",
+          "24,000,000 bytes (~24 MB)"
+        ],
+        "correct": 0,
+        "explanation": "Memory size = Width x Height x BytesPerPixel = 1000 x 1000 x 3 = 3,000,000 bytes (approximately 3 MB).",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 262,
+        "module": "Git Version Control & Workflows",
+        "question": "In Git version management (Case 262): A developer wants to discard all uncommitted changes in their working directory and restore tracked files to the state of the last commit. Which Git command achieves this?",
+        "options": [
+          "git restore . (or git checkout -- .)",
+          "git commit --amend",
+          "git push --force",
+          "git init --clean"
+        ],
+        "correct": 0,
+        "explanation": "'git restore .' discards uncommitted working tree modifications, restoring files to the recorded index/HEAD state.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 263,
+        "module": "GitHub & Distributed Collaboration",
+        "question": "In GitHub project management (Scenario 263): When collaborating on a shared open-source project, why is it standard practice to work on isolated feature branches rather than pushing commits directly to 'main'?",
+        "options": [
+          "GitHub prohibits pushing to any branch",
+          "Feature branches isolate experimental code, allow parallel team work, and enable code review via Pull Requests without destabilizing the production main branch",
+          "Branches eliminate the need for commits",
+          "Branches do not consume disk space"
+        ],
+        "correct": 1,
+        "explanation": "Branching protects the stable main line, allowing independent feature development, automated CI verification, and peer code review prior to integration.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 264,
+        "module": "System Diagnostics & Performance",
+        "question": "In systems optimization (Analysis 264): An engineer notices their terminal command 'find / -name test' is taking minutes to complete. What is the fundamental reason for this delay?",
+        "options": [
+          "The terminal shell font is too large",
+          "The find command performs a recursive filesystem traversal starting from root (/), querying the disk metadata of every file on the system across all mounted storage partitions",
+          "The CPU frequency drops during find",
+          "The network cable is disconnected"
+        ],
+        "correct": 1,
+        "explanation": "Scanning from '/' requires reading every inode across the entire directory hierarchy on physical disk, incurring substantial I/O latency.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 265,
+        "module": "Contest Mastery & Problem Solving",
+        "question": "In contest system concepts (Question 265): A developer writes a script 'backup.py' that copies files. When run as './backup.py', the shell responds with 'Permission denied'. Which step is strictly necessary to make it runnable directly?",
+        "options": [
+          "Rename the file to backup.exe",
+          "Grant execute permission using 'chmod +x backup.py' and ensure a valid shebang (e.g., #!/usr/bin/env python3) is present at the top",
+          "Reinstall macOS",
+          "Add 16 GB of RAM"
+        ],
+        "correct": 1,
+        "explanation": "Unix requires the execute permission bit (+x) in metadata for direct execution, accompanied by a shebang line pointing to the interpreter.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 266,
+        "module": "Computer Architecture & Hardware",
+        "question": "In hardware diagnostics (Scenario 266): A workstation experiences sudden shutdowns during intensive deep learning training while idling normally during web browsing. Diagnostics show normal RAM and healthy SSD. Which hardware subsystem is most likely failing under load?",
+        "options": [
+          "The computer monitor cable",
+          "The GPU thermal cooling or power supply unit (PSU) delivering inadequate wattage under peak computational load",
+          "The sound card driver",
+          "The operating system text editor"
+        ],
+        "correct": 1,
+        "explanation": "Heavy deep learning exercises matrix calculations on the GPU, drawing peak electrical power and generating intense heat. Workstation power supply throttling or thermal trip cutoffs cause abrupt shutdowns under heavy load.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 267,
+        "module": "Operating Systems & Process Management",
+        "question": "In process scheduling analysis (Case 267): If two processes A and B are assigned CPU time slices by an OS scheduler, but Process A frequently yields the CPU early waiting for SSD reads while Process B executes tight mathematical loops, how does the scheduler classify them?",
+        "options": [
+          "Process A is I/O-bound; Process B is CPU-bound",
+          "Process A is CPU-bound; Process B is I/O-bound",
+          "Both processes are classified as kernel daemons",
+          "Neither process requires memory"
+        ],
+        "correct": 0,
+        "explanation": "I/O-bound processes spend the majority of their lifecycle waiting for I/O operations (yielding CPU quickly), while CPU-bound processes consume full time slices performing arithmetic computations.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 268,
+        "module": "Unix Filesystem & Permissions",
+        "question": "In security audits (Scenario 268): A bash script has permissions numeric value 750. Who on the system is permitted to read, write, and execute this script?",
+        "options": [
+          "Everyone on the internet",
+          "Only the file owner has full rwx rights; group members have read and execute rights; others have zero access",
+          "All users in the department have write access",
+          "Only the root user can run it"
+        ],
+        "correct": 1,
+        "explanation": "750 breaks down into: Owner = 7 (rwx), Group = 5 (r-x: read and execute), Others = 0 (---: no access whatsoever).",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 269,
+        "module": "CLI, Shell & Environment",
+        "question": "In shell scripting (Case 269): A developer wants to redirect both standard output (stdout) and standard error (stderr) of a script 'build.sh' into a single log file 'output.log'. Which syntax accomplishes this in modern zsh/bash?",
+        "options": [
+          "./build.sh > output.log 2>&1",
+          "./build.sh < output.log",
+          "./build.sh | output.log",
+          "./build.sh >> stderr"
+        ],
+        "correct": 0,
+        "explanation": "'./build.sh > output.log 2>&1' redirects stdout (1) to output.log, and redirects file descriptor 2 (stderr) to wherever descriptor 1 is currently pointing.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 270,
+        "module": "Software Execution & Compilers",
+        "question": "In compilation pipeline inspection (Scenario 270): Which stage of a C/C++ compiler is responsible for expanding macro definitions (#define) and including header files (#include) before syntax parsing begins?",
+        "options": [
+          "The Linker",
+          "The Preprocessor",
+          "The Assembler",
+          "The Machine Code Optimizer"
+        ],
+        "correct": 1,
+        "explanation": "The C preprocessor evaluates directives starting with '#' (#include, #define, #ifdef), stripping comments and expanding macros into intermediate text.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 271,
+        "module": "Digital Logic, Data & Encoding",
+        "question": "In low-level data calculation (Problem 271): If an uncompressed true-color RGB bitmap image has a resolution of 1000 pixels by 1000 pixels with 3 bytes per pixel, what is its exact uncompressed memory size?",
+        "options": [
+          "3,000,000 bytes (~3 MB)",
+          "1,000,000 bytes (~1 MB)",
+          "300,000 bytes (~300 KB)",
+          "24,000,000 bytes (~24 MB)"
+        ],
+        "correct": 0,
+        "explanation": "Memory size = Width x Height x BytesPerPixel = 1000 x 1000 x 3 = 3,000,000 bytes (approximately 3 MB).",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 272,
+        "module": "Git Version Control & Workflows",
+        "question": "In Git version management (Case 272): A developer wants to discard all uncommitted changes in their working directory and restore tracked files to the state of the last commit. Which Git command achieves this?",
+        "options": [
+          "git restore . (or git checkout -- .)",
+          "git commit --amend",
+          "git push --force",
+          "git init --clean"
+        ],
+        "correct": 0,
+        "explanation": "'git restore .' discards uncommitted working tree modifications, restoring files to the recorded index/HEAD state.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 273,
+        "module": "GitHub & Distributed Collaboration",
+        "question": "In GitHub project management (Scenario 273): When collaborating on a shared open-source project, why is it standard practice to work on isolated feature branches rather than pushing commits directly to 'main'?",
+        "options": [
+          "GitHub prohibits pushing to any branch",
+          "Feature branches isolate experimental code, allow parallel team work, and enable code review via Pull Requests without destabilizing the production main branch",
+          "Branches eliminate the need for commits",
+          "Branches do not consume disk space"
+        ],
+        "correct": 1,
+        "explanation": "Branching protects the stable main line, allowing independent feature development, automated CI verification, and peer code review prior to integration.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 274,
+        "module": "System Diagnostics & Performance",
+        "question": "In systems optimization (Analysis 274): An engineer notices their terminal command 'find / -name test' is taking minutes to complete. What is the fundamental reason for this delay?",
+        "options": [
+          "The terminal shell font is too large",
+          "The find command performs a recursive filesystem traversal starting from root (/), querying the disk metadata of every file on the system across all mounted storage partitions",
+          "The CPU frequency drops during find",
+          "The network cable is disconnected"
+        ],
+        "correct": 1,
+        "explanation": "Scanning from '/' requires reading every inode across the entire directory hierarchy on physical disk, incurring substantial I/O latency.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 275,
+        "module": "Contest Mastery & Problem Solving",
+        "question": "In contest system concepts (Question 275): A developer writes a script 'backup.py' that copies files. When run as './backup.py', the shell responds with 'Permission denied'. Which step is strictly necessary to make it runnable directly?",
+        "options": [
+          "Rename the file to backup.exe",
+          "Grant execute permission using 'chmod +x backup.py' and ensure a valid shebang (e.g., #!/usr/bin/env python3) is present at the top",
+          "Reinstall macOS",
+          "Add 16 GB of RAM"
+        ],
+        "correct": 1,
+        "explanation": "Unix requires the execute permission bit (+x) in metadata for direct execution, accompanied by a shebang line pointing to the interpreter.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 276,
+        "module": "Computer Architecture & Hardware",
+        "question": "In hardware diagnostics (Scenario 276): A workstation experiences sudden shutdowns during intensive deep learning training while idling normally during web browsing. Diagnostics show normal RAM and healthy SSD. Which hardware subsystem is most likely failing under load?",
+        "options": [
+          "The computer monitor cable",
+          "The GPU thermal cooling or power supply unit (PSU) delivering inadequate wattage under peak computational load",
+          "The sound card driver",
+          "The operating system text editor"
+        ],
+        "correct": 1,
+        "explanation": "Heavy deep learning exercises matrix calculations on the GPU, drawing peak electrical power and generating intense heat. Workstation power supply throttling or thermal trip cutoffs cause abrupt shutdowns under heavy load.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 277,
+        "module": "Operating Systems & Process Management",
+        "question": "In process scheduling analysis (Case 277): If two processes A and B are assigned CPU time slices by an OS scheduler, but Process A frequently yields the CPU early waiting for SSD reads while Process B executes tight mathematical loops, how does the scheduler classify them?",
+        "options": [
+          "Process A is I/O-bound; Process B is CPU-bound",
+          "Process A is CPU-bound; Process B is I/O-bound",
+          "Both processes are classified as kernel daemons",
+          "Neither process requires memory"
+        ],
+        "correct": 0,
+        "explanation": "I/O-bound processes spend the majority of their lifecycle waiting for I/O operations (yielding CPU quickly), while CPU-bound processes consume full time slices performing arithmetic computations.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 278,
+        "module": "Unix Filesystem & Permissions",
+        "question": "In security audits (Scenario 278): A bash script has permissions numeric value 750. Who on the system is permitted to read, write, and execute this script?",
+        "options": [
+          "Everyone on the internet",
+          "Only the file owner has full rwx rights; group members have read and execute rights; others have zero access",
+          "All users in the department have write access",
+          "Only the root user can run it"
+        ],
+        "correct": 1,
+        "explanation": "750 breaks down into: Owner = 7 (rwx), Group = 5 (r-x: read and execute), Others = 0 (---: no access whatsoever).",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 279,
+        "module": "CLI, Shell & Environment",
+        "question": "In shell scripting (Case 279): A developer wants to redirect both standard output (stdout) and standard error (stderr) of a script 'build.sh' into a single log file 'output.log'. Which syntax accomplishes this in modern zsh/bash?",
+        "options": [
+          "./build.sh > output.log 2>&1",
+          "./build.sh < output.log",
+          "./build.sh | output.log",
+          "./build.sh >> stderr"
+        ],
+        "correct": 0,
+        "explanation": "'./build.sh > output.log 2>&1' redirects stdout (1) to output.log, and redirects file descriptor 2 (stderr) to wherever descriptor 1 is currently pointing.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 280,
+        "module": "Software Execution & Compilers",
+        "question": "In compilation pipeline inspection (Scenario 280): Which stage of a C/C++ compiler is responsible for expanding macro definitions (#define) and including header files (#include) before syntax parsing begins?",
+        "options": [
+          "The Linker",
+          "The Preprocessor",
+          "The Assembler",
+          "The Machine Code Optimizer"
+        ],
+        "correct": 1,
+        "explanation": "The C preprocessor evaluates directives starting with '#' (#include, #define, #ifdef), stripping comments and expanding macros into intermediate text.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 281,
+        "module": "Digital Logic, Data & Encoding",
+        "question": "In low-level data calculation (Problem 281): If an uncompressed true-color RGB bitmap image has a resolution of 1000 pixels by 1000 pixels with 3 bytes per pixel, what is its exact uncompressed memory size?",
+        "options": [
+          "3,000,000 bytes (~3 MB)",
+          "1,000,000 bytes (~1 MB)",
+          "300,000 bytes (~300 KB)",
+          "24,000,000 bytes (~24 MB)"
+        ],
+        "correct": 0,
+        "explanation": "Memory size = Width x Height x BytesPerPixel = 1000 x 1000 x 3 = 3,000,000 bytes (approximately 3 MB).",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 282,
+        "module": "Git Version Control & Workflows",
+        "question": "In Git version management (Case 282): A developer wants to discard all uncommitted changes in their working directory and restore tracked files to the state of the last commit. Which Git command achieves this?",
+        "options": [
+          "git restore . (or git checkout -- .)",
+          "git commit --amend",
+          "git push --force",
+          "git init --clean"
+        ],
+        "correct": 0,
+        "explanation": "'git restore .' discards uncommitted working tree modifications, restoring files to the recorded index/HEAD state.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 283,
+        "module": "GitHub & Distributed Collaboration",
+        "question": "In GitHub project management (Scenario 283): When collaborating on a shared open-source project, why is it standard practice to work on isolated feature branches rather than pushing commits directly to 'main'?",
+        "options": [
+          "GitHub prohibits pushing to any branch",
+          "Feature branches isolate experimental code, allow parallel team work, and enable code review via Pull Requests without destabilizing the production main branch",
+          "Branches eliminate the need for commits",
+          "Branches do not consume disk space"
+        ],
+        "correct": 1,
+        "explanation": "Branching protects the stable main line, allowing independent feature development, automated CI verification, and peer code review prior to integration.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 284,
+        "module": "System Diagnostics & Performance",
+        "question": "In systems optimization (Analysis 284): An engineer notices their terminal command 'find / -name test' is taking minutes to complete. What is the fundamental reason for this delay?",
+        "options": [
+          "The terminal shell font is too large",
+          "The find command performs a recursive filesystem traversal starting from root (/), querying the disk metadata of every file on the system across all mounted storage partitions",
+          "The CPU frequency drops during find",
+          "The network cable is disconnected"
+        ],
+        "correct": 1,
+        "explanation": "Scanning from '/' requires reading every inode across the entire directory hierarchy on physical disk, incurring substantial I/O latency.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 285,
+        "module": "Contest Mastery & Problem Solving",
+        "question": "In contest system concepts (Question 285): A developer writes a script 'backup.py' that copies files. When run as './backup.py', the shell responds with 'Permission denied'. Which step is strictly necessary to make it runnable directly?",
+        "options": [
+          "Rename the file to backup.exe",
+          "Grant execute permission using 'chmod +x backup.py' and ensure a valid shebang (e.g., #!/usr/bin/env python3) is present at the top",
+          "Reinstall macOS",
+          "Add 16 GB of RAM"
+        ],
+        "correct": 1,
+        "explanation": "Unix requires the execute permission bit (+x) in metadata for direct execution, accompanied by a shebang line pointing to the interpreter.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 286,
+        "module": "Computer Architecture & Hardware",
+        "question": "In hardware diagnostics (Scenario 286): A workstation experiences sudden shutdowns during intensive deep learning training while idling normally during web browsing. Diagnostics show normal RAM and healthy SSD. Which hardware subsystem is most likely failing under load?",
+        "options": [
+          "The computer monitor cable",
+          "The GPU thermal cooling or power supply unit (PSU) delivering inadequate wattage under peak computational load",
+          "The sound card driver",
+          "The operating system text editor"
+        ],
+        "correct": 1,
+        "explanation": "Heavy deep learning exercises matrix calculations on the GPU, drawing peak electrical power and generating intense heat. Workstation power supply throttling or thermal trip cutoffs cause abrupt shutdowns under heavy load.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 287,
+        "module": "Operating Systems & Process Management",
+        "question": "In process scheduling analysis (Case 287): If two processes A and B are assigned CPU time slices by an OS scheduler, but Process A frequently yields the CPU early waiting for SSD reads while Process B executes tight mathematical loops, how does the scheduler classify them?",
+        "options": [
+          "Process A is I/O-bound; Process B is CPU-bound",
+          "Process A is CPU-bound; Process B is I/O-bound",
+          "Both processes are classified as kernel daemons",
+          "Neither process requires memory"
+        ],
+        "correct": 0,
+        "explanation": "I/O-bound processes spend the majority of their lifecycle waiting for I/O operations (yielding CPU quickly), while CPU-bound processes consume full time slices performing arithmetic computations.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 288,
+        "module": "Unix Filesystem & Permissions",
+        "question": "In security audits (Scenario 288): A bash script has permissions numeric value 750. Who on the system is permitted to read, write, and execute this script?",
+        "options": [
+          "Everyone on the internet",
+          "Only the file owner has full rwx rights; group members have read and execute rights; others have zero access",
+          "All users in the department have write access",
+          "Only the root user can run it"
+        ],
+        "correct": 1,
+        "explanation": "750 breaks down into: Owner = 7 (rwx), Group = 5 (r-x: read and execute), Others = 0 (---: no access whatsoever).",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 289,
+        "module": "CLI, Shell & Environment",
+        "question": "In shell scripting (Case 289): A developer wants to redirect both standard output (stdout) and standard error (stderr) of a script 'build.sh' into a single log file 'output.log'. Which syntax accomplishes this in modern zsh/bash?",
+        "options": [
+          "./build.sh > output.log 2>&1",
+          "./build.sh < output.log",
+          "./build.sh | output.log",
+          "./build.sh >> stderr"
+        ],
+        "correct": 0,
+        "explanation": "'./build.sh > output.log 2>&1' redirects stdout (1) to output.log, and redirects file descriptor 2 (stderr) to wherever descriptor 1 is currently pointing.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 290,
+        "module": "Software Execution & Compilers",
+        "question": "In compilation pipeline inspection (Scenario 290): Which stage of a C/C++ compiler is responsible for expanding macro definitions (#define) and including header files (#include) before syntax parsing begins?",
+        "options": [
+          "The Linker",
+          "The Preprocessor",
+          "The Assembler",
+          "The Machine Code Optimizer"
+        ],
+        "correct": 1,
+        "explanation": "The C preprocessor evaluates directives starting with '#' (#include, #define, #ifdef), stripping comments and expanding macros into intermediate text.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 291,
+        "module": "Digital Logic, Data & Encoding",
+        "question": "In low-level data calculation (Problem 291): If an uncompressed true-color RGB bitmap image has a resolution of 1000 pixels by 1000 pixels with 3 bytes per pixel, what is its exact uncompressed memory size?",
+        "options": [
+          "3,000,000 bytes (~3 MB)",
+          "1,000,000 bytes (~1 MB)",
+          "300,000 bytes (~300 KB)",
+          "24,000,000 bytes (~24 MB)"
+        ],
+        "correct": 0,
+        "explanation": "Memory size = Width x Height x BytesPerPixel = 1000 x 1000 x 3 = 3,000,000 bytes (approximately 3 MB).",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 292,
+        "module": "Git Version Control & Workflows",
+        "question": "In Git version management (Case 292): A developer wants to discard all uncommitted changes in their working directory and restore tracked files to the state of the last commit. Which Git command achieves this?",
+        "options": [
+          "git restore . (or git checkout -- .)",
+          "git commit --amend",
+          "git push --force",
+          "git init --clean"
+        ],
+        "correct": 0,
+        "explanation": "'git restore .' discards uncommitted working tree modifications, restoring files to the recorded index/HEAD state.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 293,
+        "module": "GitHub & Distributed Collaboration",
+        "question": "In GitHub project management (Scenario 293): When collaborating on a shared open-source project, why is it standard practice to work on isolated feature branches rather than pushing commits directly to 'main'?",
+        "options": [
+          "GitHub prohibits pushing to any branch",
+          "Feature branches isolate experimental code, allow parallel team work, and enable code review via Pull Requests without destabilizing the production main branch",
+          "Branches eliminate the need for commits",
+          "Branches do not consume disk space"
+        ],
+        "correct": 1,
+        "explanation": "Branching protects the stable main line, allowing independent feature development, automated CI verification, and peer code review prior to integration.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 294,
+        "module": "System Diagnostics & Performance",
+        "question": "In systems optimization (Analysis 294): An engineer notices their terminal command 'find / -name test' is taking minutes to complete. What is the fundamental reason for this delay?",
+        "options": [
+          "The terminal shell font is too large",
+          "The find command performs a recursive filesystem traversal starting from root (/), querying the disk metadata of every file on the system across all mounted storage partitions",
+          "The CPU frequency drops during find",
+          "The network cable is disconnected"
+        ],
+        "correct": 1,
+        "explanation": "Scanning from '/' requires reading every inode across the entire directory hierarchy on physical disk, incurring substantial I/O latency.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 295,
+        "module": "Contest Mastery & Problem Solving",
+        "question": "In contest system concepts (Question 295): A developer writes a script 'backup.py' that copies files. When run as './backup.py', the shell responds with 'Permission denied'. Which step is strictly necessary to make it runnable directly?",
+        "options": [
+          "Rename the file to backup.exe",
+          "Grant execute permission using 'chmod +x backup.py' and ensure a valid shebang (e.g., #!/usr/bin/env python3) is present at the top",
+          "Reinstall macOS",
+          "Add 16 GB of RAM"
+        ],
+        "correct": 1,
+        "explanation": "Unix requires the execute permission bit (+x) in metadata for direct execution, accompanied by a shebang line pointing to the interpreter.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 296,
+        "module": "Computer Architecture & Hardware",
+        "question": "In hardware diagnostics (Scenario 296): A workstation experiences sudden shutdowns during intensive deep learning training while idling normally during web browsing. Diagnostics show normal RAM and healthy SSD. Which hardware subsystem is most likely failing under load?",
+        "options": [
+          "The computer monitor cable",
+          "The GPU thermal cooling or power supply unit (PSU) delivering inadequate wattage under peak computational load",
+          "The sound card driver",
+          "The operating system text editor"
+        ],
+        "correct": 1,
+        "explanation": "Heavy deep learning exercises matrix calculations on the GPU, drawing peak electrical power and generating intense heat. Workstation power supply throttling or thermal trip cutoffs cause abrupt shutdowns under heavy load.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 297,
+        "module": "Operating Systems & Process Management",
+        "question": "In process scheduling analysis (Case 297): If two processes A and B are assigned CPU time slices by an OS scheduler, but Process A frequently yields the CPU early waiting for SSD reads while Process B executes tight mathematical loops, how does the scheduler classify them?",
+        "options": [
+          "Process A is I/O-bound; Process B is CPU-bound",
+          "Process A is CPU-bound; Process B is I/O-bound",
+          "Both processes are classified as kernel daemons",
+          "Neither process requires memory"
+        ],
+        "correct": 0,
+        "explanation": "I/O-bound processes spend the majority of their lifecycle waiting for I/O operations (yielding CPU quickly), while CPU-bound processes consume full time slices performing arithmetic computations.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 298,
+        "module": "Unix Filesystem & Permissions",
+        "question": "In security audits (Scenario 298): A bash script has permissions numeric value 750. Who on the system is permitted to read, write, and execute this script?",
+        "options": [
+          "Everyone on the internet",
+          "Only the file owner has full rwx rights; group members have read and execute rights; others have zero access",
+          "All users in the department have write access",
+          "Only the root user can run it"
+        ],
+        "correct": 1,
+        "explanation": "750 breaks down into: Owner = 7 (rwx), Group = 5 (r-x: read and execute), Others = 0 (---: no access whatsoever).",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 299,
+        "module": "CLI, Shell & Environment",
+        "question": "In shell scripting (Case 299): A developer wants to redirect both standard output (stdout) and standard error (stderr) of a script 'build.sh' into a single log file 'output.log'. Which syntax accomplishes this in modern zsh/bash?",
+        "options": [
+          "./build.sh > output.log 2>&1",
+          "./build.sh < output.log",
+          "./build.sh | output.log",
+          "./build.sh >> stderr"
+        ],
+        "correct": 0,
+        "explanation": "'./build.sh > output.log 2>&1' redirects stdout (1) to output.log, and redirects file descriptor 2 (stderr) to wherever descriptor 1 is currently pointing.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 300,
+        "module": "Software Execution & Compilers",
+        "question": "In compilation pipeline inspection (Scenario 300): Which stage of a C/C++ compiler is responsible for expanding macro definitions (#define) and including header files (#include) before syntax parsing begins?",
+        "options": [
+          "The Linker",
+          "The Preprocessor",
+          "The Assembler",
+          "The Machine Code Optimizer"
+        ],
+        "correct": 1,
+        "explanation": "The C preprocessor evaluates directives starting with '#' (#include, #define, #ifdef), stripping comments and expanding macros into intermediate text.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 301,
+        "module": "Digital Logic, Data & Encoding",
+        "question": "In low-level data calculation (Problem 301): If an uncompressed true-color RGB bitmap image has a resolution of 1000 pixels by 1000 pixels with 3 bytes per pixel, what is its exact uncompressed memory size?",
+        "options": [
+          "3,000,000 bytes (~3 MB)",
+          "1,000,000 bytes (~1 MB)",
+          "300,000 bytes (~300 KB)",
+          "24,000,000 bytes (~24 MB)"
+        ],
+        "correct": 0,
+        "explanation": "Memory size = Width x Height x BytesPerPixel = 1000 x 1000 x 3 = 3,000,000 bytes (approximately 3 MB).",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 302,
+        "module": "Git Version Control & Workflows",
+        "question": "In Git version management (Case 302): A developer wants to discard all uncommitted changes in their working directory and restore tracked files to the state of the last commit. Which Git command achieves this?",
+        "options": [
+          "git restore . (or git checkout -- .)",
+          "git commit --amend",
+          "git push --force",
+          "git init --clean"
+        ],
+        "correct": 0,
+        "explanation": "'git restore .' discards uncommitted working tree modifications, restoring files to the recorded index/HEAD state.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 303,
+        "module": "GitHub & Distributed Collaboration",
+        "question": "In GitHub project management (Scenario 303): When collaborating on a shared open-source project, why is it standard practice to work on isolated feature branches rather than pushing commits directly to 'main'?",
+        "options": [
+          "GitHub prohibits pushing to any branch",
+          "Feature branches isolate experimental code, allow parallel team work, and enable code review via Pull Requests without destabilizing the production main branch",
+          "Branches eliminate the need for commits",
+          "Branches do not consume disk space"
+        ],
+        "correct": 1,
+        "explanation": "Branching protects the stable main line, allowing independent feature development, automated CI verification, and peer code review prior to integration.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 304,
+        "module": "System Diagnostics & Performance",
+        "question": "In systems optimization (Analysis 304): An engineer notices their terminal command 'find / -name test' is taking minutes to complete. What is the fundamental reason for this delay?",
+        "options": [
+          "The terminal shell font is too large",
+          "The find command performs a recursive filesystem traversal starting from root (/), querying the disk metadata of every file on the system across all mounted storage partitions",
+          "The CPU frequency drops during find",
+          "The network cable is disconnected"
+        ],
+        "correct": 1,
+        "explanation": "Scanning from '/' requires reading every inode across the entire directory hierarchy on physical disk, incurring substantial I/O latency.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 305,
+        "module": "Contest Mastery & Problem Solving",
+        "question": "In contest system concepts (Question 305): A developer writes a script 'backup.py' that copies files. When run as './backup.py', the shell responds with 'Permission denied'. Which step is strictly necessary to make it runnable directly?",
+        "options": [
+          "Rename the file to backup.exe",
+          "Grant execute permission using 'chmod +x backup.py' and ensure a valid shebang (e.g., #!/usr/bin/env python3) is present at the top",
+          "Reinstall macOS",
+          "Add 16 GB of RAM"
+        ],
+        "correct": 1,
+        "explanation": "Unix requires the execute permission bit (+x) in metadata for direct execution, accompanied by a shebang line pointing to the interpreter.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 306,
+        "module": "Computer Architecture & Hardware",
+        "question": "In hardware diagnostics (Scenario 306): A workstation experiences sudden shutdowns during intensive deep learning training while idling normally during web browsing. Diagnostics show normal RAM and healthy SSD. Which hardware subsystem is most likely failing under load?",
+        "options": [
+          "The computer monitor cable",
+          "The GPU thermal cooling or power supply unit (PSU) delivering inadequate wattage under peak computational load",
+          "The sound card driver",
+          "The operating system text editor"
+        ],
+        "correct": 1,
+        "explanation": "Heavy deep learning exercises matrix calculations on the GPU, drawing peak electrical power and generating intense heat. Workstation power supply throttling or thermal trip cutoffs cause abrupt shutdowns under heavy load.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 307,
+        "module": "Operating Systems & Process Management",
+        "question": "In process scheduling analysis (Case 307): If two processes A and B are assigned CPU time slices by an OS scheduler, but Process A frequently yields the CPU early waiting for SSD reads while Process B executes tight mathematical loops, how does the scheduler classify them?",
+        "options": [
+          "Process A is I/O-bound; Process B is CPU-bound",
+          "Process A is CPU-bound; Process B is I/O-bound",
+          "Both processes are classified as kernel daemons",
+          "Neither process requires memory"
+        ],
+        "correct": 0,
+        "explanation": "I/O-bound processes spend the majority of their lifecycle waiting for I/O operations (yielding CPU quickly), while CPU-bound processes consume full time slices performing arithmetic computations.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 308,
+        "module": "Unix Filesystem & Permissions",
+        "question": "In security audits (Scenario 308): A bash script has permissions numeric value 750. Who on the system is permitted to read, write, and execute this script?",
+        "options": [
+          "Everyone on the internet",
+          "Only the file owner has full rwx rights; group members have read and execute rights; others have zero access",
+          "All users in the department have write access",
+          "Only the root user can run it"
+        ],
+        "correct": 1,
+        "explanation": "750 breaks down into: Owner = 7 (rwx), Group = 5 (r-x: read and execute), Others = 0 (---: no access whatsoever).",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 309,
+        "module": "CLI, Shell & Environment",
+        "question": "In shell scripting (Case 309): A developer wants to redirect both standard output (stdout) and standard error (stderr) of a script 'build.sh' into a single log file 'output.log'. Which syntax accomplishes this in modern zsh/bash?",
+        "options": [
+          "./build.sh > output.log 2>&1",
+          "./build.sh < output.log",
+          "./build.sh | output.log",
+          "./build.sh >> stderr"
+        ],
+        "correct": 0,
+        "explanation": "'./build.sh > output.log 2>&1' redirects stdout (1) to output.log, and redirects file descriptor 2 (stderr) to wherever descriptor 1 is currently pointing.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 310,
+        "module": "Software Execution & Compilers",
+        "question": "In compilation pipeline inspection (Scenario 310): Which stage of a C/C++ compiler is responsible for expanding macro definitions (#define) and including header files (#include) before syntax parsing begins?",
+        "options": [
+          "The Linker",
+          "The Preprocessor",
+          "The Assembler",
+          "The Machine Code Optimizer"
+        ],
+        "correct": 1,
+        "explanation": "The C preprocessor evaluates directives starting with '#' (#include, #define, #ifdef), stripping comments and expanding macros into intermediate text.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 311,
+        "module": "Digital Logic, Data & Encoding",
+        "question": "In low-level data calculation (Problem 311): If an uncompressed true-color RGB bitmap image has a resolution of 1000 pixels by 1000 pixels with 3 bytes per pixel, what is its exact uncompressed memory size?",
+        "options": [
+          "3,000,000 bytes (~3 MB)",
+          "1,000,000 bytes (~1 MB)",
+          "300,000 bytes (~300 KB)",
+          "24,000,000 bytes (~24 MB)"
+        ],
+        "correct": 0,
+        "explanation": "Memory size = Width x Height x BytesPerPixel = 1000 x 1000 x 3 = 3,000,000 bytes (approximately 3 MB).",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 312,
+        "module": "Git Version Control & Workflows",
+        "question": "In Git version management (Case 312): A developer wants to discard all uncommitted changes in their working directory and restore tracked files to the state of the last commit. Which Git command achieves this?",
+        "options": [
+          "git restore . (or git checkout -- .)",
+          "git commit --amend",
+          "git push --force",
+          "git init --clean"
+        ],
+        "correct": 0,
+        "explanation": "'git restore .' discards uncommitted working tree modifications, restoring files to the recorded index/HEAD state.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 313,
+        "module": "GitHub & Distributed Collaboration",
+        "question": "In GitHub project management (Scenario 313): When collaborating on a shared open-source project, why is it standard practice to work on isolated feature branches rather than pushing commits directly to 'main'?",
+        "options": [
+          "GitHub prohibits pushing to any branch",
+          "Feature branches isolate experimental code, allow parallel team work, and enable code review via Pull Requests without destabilizing the production main branch",
+          "Branches eliminate the need for commits",
+          "Branches do not consume disk space"
+        ],
+        "correct": 1,
+        "explanation": "Branching protects the stable main line, allowing independent feature development, automated CI verification, and peer code review prior to integration.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 314,
+        "module": "System Diagnostics & Performance",
+        "question": "In systems optimization (Analysis 314): An engineer notices their terminal command 'find / -name test' is taking minutes to complete. What is the fundamental reason for this delay?",
+        "options": [
+          "The terminal shell font is too large",
+          "The find command performs a recursive filesystem traversal starting from root (/), querying the disk metadata of every file on the system across all mounted storage partitions",
+          "The CPU frequency drops during find",
+          "The network cable is disconnected"
+        ],
+        "correct": 1,
+        "explanation": "Scanning from '/' requires reading every inode across the entire directory hierarchy on physical disk, incurring substantial I/O latency.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 315,
+        "module": "Contest Mastery & Problem Solving",
+        "question": "In contest system concepts (Question 315): A developer writes a script 'backup.py' that copies files. When run as './backup.py', the shell responds with 'Permission denied'. Which step is strictly necessary to make it runnable directly?",
+        "options": [
+          "Rename the file to backup.exe",
+          "Grant execute permission using 'chmod +x backup.py' and ensure a valid shebang (e.g., #!/usr/bin/env python3) is present at the top",
+          "Reinstall macOS",
+          "Add 16 GB of RAM"
+        ],
+        "correct": 1,
+        "explanation": "Unix requires the execute permission bit (+x) in metadata for direct execution, accompanied by a shebang line pointing to the interpreter.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 316,
+        "module": "Computer Architecture & Hardware",
+        "question": "In hardware diagnostics (Scenario 316): A workstation experiences sudden shutdowns during intensive deep learning training while idling normally during web browsing. Diagnostics show normal RAM and healthy SSD. Which hardware subsystem is most likely failing under load?",
+        "options": [
+          "The computer monitor cable",
+          "The GPU thermal cooling or power supply unit (PSU) delivering inadequate wattage under peak computational load",
+          "The sound card driver",
+          "The operating system text editor"
+        ],
+        "correct": 1,
+        "explanation": "Heavy deep learning exercises matrix calculations on the GPU, drawing peak electrical power and generating intense heat. Workstation power supply throttling or thermal trip cutoffs cause abrupt shutdowns under heavy load.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 317,
+        "module": "Operating Systems & Process Management",
+        "question": "In process scheduling analysis (Case 317): If two processes A and B are assigned CPU time slices by an OS scheduler, but Process A frequently yields the CPU early waiting for SSD reads while Process B executes tight mathematical loops, how does the scheduler classify them?",
+        "options": [
+          "Process A is I/O-bound; Process B is CPU-bound",
+          "Process A is CPU-bound; Process B is I/O-bound",
+          "Both processes are classified as kernel daemons",
+          "Neither process requires memory"
+        ],
+        "correct": 0,
+        "explanation": "I/O-bound processes spend the majority of their lifecycle waiting for I/O operations (yielding CPU quickly), while CPU-bound processes consume full time slices performing arithmetic computations.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 318,
+        "module": "Unix Filesystem & Permissions",
+        "question": "In security audits (Scenario 318): A bash script has permissions numeric value 750. Who on the system is permitted to read, write, and execute this script?",
+        "options": [
+          "Everyone on the internet",
+          "Only the file owner has full rwx rights; group members have read and execute rights; others have zero access",
+          "All users in the department have write access",
+          "Only the root user can run it"
+        ],
+        "correct": 1,
+        "explanation": "750 breaks down into: Owner = 7 (rwx), Group = 5 (r-x: read and execute), Others = 0 (---: no access whatsoever).",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 319,
+        "module": "CLI, Shell & Environment",
+        "question": "In shell scripting (Case 319): A developer wants to redirect both standard output (stdout) and standard error (stderr) of a script 'build.sh' into a single log file 'output.log'. Which syntax accomplishes this in modern zsh/bash?",
+        "options": [
+          "./build.sh > output.log 2>&1",
+          "./build.sh < output.log",
+          "./build.sh | output.log",
+          "./build.sh >> stderr"
+        ],
+        "correct": 0,
+        "explanation": "'./build.sh > output.log 2>&1' redirects stdout (1) to output.log, and redirects file descriptor 2 (stderr) to wherever descriptor 1 is currently pointing.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 320,
+        "module": "Software Execution & Compilers",
+        "question": "In compilation pipeline inspection (Scenario 320): Which stage of a C/C++ compiler is responsible for expanding macro definitions (#define) and including header files (#include) before syntax parsing begins?",
+        "options": [
+          "The Linker",
+          "The Preprocessor",
+          "The Assembler",
+          "The Machine Code Optimizer"
+        ],
+        "correct": 1,
+        "explanation": "The C preprocessor evaluates directives starting with '#' (#include, #define, #ifdef), stripping comments and expanding macros into intermediate text.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 321,
+        "module": "Digital Logic, Data & Encoding",
+        "question": "In low-level data calculation (Problem 321): If an uncompressed true-color RGB bitmap image has a resolution of 1000 pixels by 1000 pixels with 3 bytes per pixel, what is its exact uncompressed memory size?",
+        "options": [
+          "3,000,000 bytes (~3 MB)",
+          "1,000,000 bytes (~1 MB)",
+          "300,000 bytes (~300 KB)",
+          "24,000,000 bytes (~24 MB)"
+        ],
+        "correct": 0,
+        "explanation": "Memory size = Width x Height x BytesPerPixel = 1000 x 1000 x 3 = 3,000,000 bytes (approximately 3 MB).",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 322,
+        "module": "Git Version Control & Workflows",
+        "question": "In Git version management (Case 322): A developer wants to discard all uncommitted changes in their working directory and restore tracked files to the state of the last commit. Which Git command achieves this?",
+        "options": [
+          "git restore . (or git checkout -- .)",
+          "git commit --amend",
+          "git push --force",
+          "git init --clean"
+        ],
+        "correct": 0,
+        "explanation": "'git restore .' discards uncommitted working tree modifications, restoring files to the recorded index/HEAD state.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 323,
+        "module": "GitHub & Distributed Collaboration",
+        "question": "In GitHub project management (Scenario 323): When collaborating on a shared open-source project, why is it standard practice to work on isolated feature branches rather than pushing commits directly to 'main'?",
+        "options": [
+          "GitHub prohibits pushing to any branch",
+          "Feature branches isolate experimental code, allow parallel team work, and enable code review via Pull Requests without destabilizing the production main branch",
+          "Branches eliminate the need for commits",
+          "Branches do not consume disk space"
+        ],
+        "correct": 1,
+        "explanation": "Branching protects the stable main line, allowing independent feature development, automated CI verification, and peer code review prior to integration.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 324,
+        "module": "System Diagnostics & Performance",
+        "question": "In systems optimization (Analysis 324): An engineer notices their terminal command 'find / -name test' is taking minutes to complete. What is the fundamental reason for this delay?",
+        "options": [
+          "The terminal shell font is too large",
+          "The find command performs a recursive filesystem traversal starting from root (/), querying the disk metadata of every file on the system across all mounted storage partitions",
+          "The CPU frequency drops during find",
+          "The network cable is disconnected"
+        ],
+        "correct": 1,
+        "explanation": "Scanning from '/' requires reading every inode across the entire directory hierarchy on physical disk, incurring substantial I/O latency.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 325,
+        "module": "Contest Mastery & Problem Solving",
+        "question": "In contest system concepts (Question 325): A developer writes a script 'backup.py' that copies files. When run as './backup.py', the shell responds with 'Permission denied'. Which step is strictly necessary to make it runnable directly?",
+        "options": [
+          "Rename the file to backup.exe",
+          "Grant execute permission using 'chmod +x backup.py' and ensure a valid shebang (e.g., #!/usr/bin/env python3) is present at the top",
+          "Reinstall macOS",
+          "Add 16 GB of RAM"
+        ],
+        "correct": 1,
+        "explanation": "Unix requires the execute permission bit (+x) in metadata for direct execution, accompanied by a shebang line pointing to the interpreter.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 326,
+        "module": "Computer Architecture & Hardware",
+        "question": "In hardware diagnostics (Scenario 326): A workstation experiences sudden shutdowns during intensive deep learning training while idling normally during web browsing. Diagnostics show normal RAM and healthy SSD. Which hardware subsystem is most likely failing under load?",
+        "options": [
+          "The computer monitor cable",
+          "The GPU thermal cooling or power supply unit (PSU) delivering inadequate wattage under peak computational load",
+          "The sound card driver",
+          "The operating system text editor"
+        ],
+        "correct": 1,
+        "explanation": "Heavy deep learning exercises matrix calculations on the GPU, drawing peak electrical power and generating intense heat. Workstation power supply throttling or thermal trip cutoffs cause abrupt shutdowns under heavy load.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 327,
+        "module": "Operating Systems & Process Management",
+        "question": "In process scheduling analysis (Case 327): If two processes A and B are assigned CPU time slices by an OS scheduler, but Process A frequently yields the CPU early waiting for SSD reads while Process B executes tight mathematical loops, how does the scheduler classify them?",
+        "options": [
+          "Process A is I/O-bound; Process B is CPU-bound",
+          "Process A is CPU-bound; Process B is I/O-bound",
+          "Both processes are classified as kernel daemons",
+          "Neither process requires memory"
+        ],
+        "correct": 0,
+        "explanation": "I/O-bound processes spend the majority of their lifecycle waiting for I/O operations (yielding CPU quickly), while CPU-bound processes consume full time slices performing arithmetic computations.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 328,
+        "module": "Unix Filesystem & Permissions",
+        "question": "In security audits (Scenario 328): A bash script has permissions numeric value 750. Who on the system is permitted to read, write, and execute this script?",
+        "options": [
+          "Everyone on the internet",
+          "Only the file owner has full rwx rights; group members have read and execute rights; others have zero access",
+          "All users in the department have write access",
+          "Only the root user can run it"
+        ],
+        "correct": 1,
+        "explanation": "750 breaks down into: Owner = 7 (rwx), Group = 5 (r-x: read and execute), Others = 0 (---: no access whatsoever).",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 329,
+        "module": "CLI, Shell & Environment",
+        "question": "In shell scripting (Case 329): A developer wants to redirect both standard output (stdout) and standard error (stderr) of a script 'build.sh' into a single log file 'output.log'. Which syntax accomplishes this in modern zsh/bash?",
+        "options": [
+          "./build.sh > output.log 2>&1",
+          "./build.sh < output.log",
+          "./build.sh | output.log",
+          "./build.sh >> stderr"
+        ],
+        "correct": 0,
+        "explanation": "'./build.sh > output.log 2>&1' redirects stdout (1) to output.log, and redirects file descriptor 2 (stderr) to wherever descriptor 1 is currently pointing.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 330,
+        "module": "Software Execution & Compilers",
+        "question": "In compilation pipeline inspection (Scenario 330): Which stage of a C/C++ compiler is responsible for expanding macro definitions (#define) and including header files (#include) before syntax parsing begins?",
+        "options": [
+          "The Linker",
+          "The Preprocessor",
+          "The Assembler",
+          "The Machine Code Optimizer"
+        ],
+        "correct": 1,
+        "explanation": "The C preprocessor evaluates directives starting with '#' (#include, #define, #ifdef), stripping comments and expanding macros into intermediate text.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 331,
+        "module": "Digital Logic, Data & Encoding",
+        "question": "In low-level data calculation (Problem 331): If an uncompressed true-color RGB bitmap image has a resolution of 1000 pixels by 1000 pixels with 3 bytes per pixel, what is its exact uncompressed memory size?",
+        "options": [
+          "3,000,000 bytes (~3 MB)",
+          "1,000,000 bytes (~1 MB)",
+          "300,000 bytes (~300 KB)",
+          "24,000,000 bytes (~24 MB)"
+        ],
+        "correct": 0,
+        "explanation": "Memory size = Width x Height x BytesPerPixel = 1000 x 1000 x 3 = 3,000,000 bytes (approximately 3 MB).",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 332,
+        "module": "Git Version Control & Workflows",
+        "question": "In Git version management (Case 332): A developer wants to discard all uncommitted changes in their working directory and restore tracked files to the state of the last commit. Which Git command achieves this?",
+        "options": [
+          "git restore . (or git checkout -- .)",
+          "git commit --amend",
+          "git push --force",
+          "git init --clean"
+        ],
+        "correct": 0,
+        "explanation": "'git restore .' discards uncommitted working tree modifications, restoring files to the recorded index/HEAD state.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 333,
+        "module": "GitHub & Distributed Collaboration",
+        "question": "In GitHub project management (Scenario 333): When collaborating on a shared open-source project, why is it standard practice to work on isolated feature branches rather than pushing commits directly to 'main'?",
+        "options": [
+          "GitHub prohibits pushing to any branch",
+          "Feature branches isolate experimental code, allow parallel team work, and enable code review via Pull Requests without destabilizing the production main branch",
+          "Branches eliminate the need for commits",
+          "Branches do not consume disk space"
+        ],
+        "correct": 1,
+        "explanation": "Branching protects the stable main line, allowing independent feature development, automated CI verification, and peer code review prior to integration.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 334,
+        "module": "System Diagnostics & Performance",
+        "question": "In systems optimization (Analysis 334): An engineer notices their terminal command 'find / -name test' is taking minutes to complete. What is the fundamental reason for this delay?",
+        "options": [
+          "The terminal shell font is too large",
+          "The find command performs a recursive filesystem traversal starting from root (/), querying the disk metadata of every file on the system across all mounted storage partitions",
+          "The CPU frequency drops during find",
+          "The network cable is disconnected"
+        ],
+        "correct": 1,
+        "explanation": "Scanning from '/' requires reading every inode across the entire directory hierarchy on physical disk, incurring substantial I/O latency.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 335,
+        "module": "Contest Mastery & Problem Solving",
+        "question": "In contest system concepts (Question 335): A developer writes a script 'backup.py' that copies files. When run as './backup.py', the shell responds with 'Permission denied'. Which step is strictly necessary to make it runnable directly?",
+        "options": [
+          "Rename the file to backup.exe",
+          "Grant execute permission using 'chmod +x backup.py' and ensure a valid shebang (e.g., #!/usr/bin/env python3) is present at the top",
+          "Reinstall macOS",
+          "Add 16 GB of RAM"
+        ],
+        "correct": 1,
+        "explanation": "Unix requires the execute permission bit (+x) in metadata for direct execution, accompanied by a shebang line pointing to the interpreter.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 336,
+        "module": "Computer Architecture & Hardware",
+        "question": "In hardware diagnostics (Scenario 336): A workstation experiences sudden shutdowns during intensive deep learning training while idling normally during web browsing. Diagnostics show normal RAM and healthy SSD. Which hardware subsystem is most likely failing under load?",
+        "options": [
+          "The computer monitor cable",
+          "The GPU thermal cooling or power supply unit (PSU) delivering inadequate wattage under peak computational load",
+          "The sound card driver",
+          "The operating system text editor"
+        ],
+        "correct": 1,
+        "explanation": "Heavy deep learning exercises matrix calculations on the GPU, drawing peak electrical power and generating intense heat. Workstation power supply throttling or thermal trip cutoffs cause abrupt shutdowns under heavy load.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 337,
+        "module": "Operating Systems & Process Management",
+        "question": "In process scheduling analysis (Case 337): If two processes A and B are assigned CPU time slices by an OS scheduler, but Process A frequently yields the CPU early waiting for SSD reads while Process B executes tight mathematical loops, how does the scheduler classify them?",
+        "options": [
+          "Process A is I/O-bound; Process B is CPU-bound",
+          "Process A is CPU-bound; Process B is I/O-bound",
+          "Both processes are classified as kernel daemons",
+          "Neither process requires memory"
+        ],
+        "correct": 0,
+        "explanation": "I/O-bound processes spend the majority of their lifecycle waiting for I/O operations (yielding CPU quickly), while CPU-bound processes consume full time slices performing arithmetic computations.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 338,
+        "module": "Unix Filesystem & Permissions",
+        "question": "In security audits (Scenario 338): A bash script has permissions numeric value 750. Who on the system is permitted to read, write, and execute this script?",
+        "options": [
+          "Everyone on the internet",
+          "Only the file owner has full rwx rights; group members have read and execute rights; others have zero access",
+          "All users in the department have write access",
+          "Only the root user can run it"
+        ],
+        "correct": 1,
+        "explanation": "750 breaks down into: Owner = 7 (rwx), Group = 5 (r-x: read and execute), Others = 0 (---: no access whatsoever).",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 339,
+        "module": "CLI, Shell & Environment",
+        "question": "In shell scripting (Case 339): A developer wants to redirect both standard output (stdout) and standard error (stderr) of a script 'build.sh' into a single log file 'output.log'. Which syntax accomplishes this in modern zsh/bash?",
+        "options": [
+          "./build.sh > output.log 2>&1",
+          "./build.sh < output.log",
+          "./build.sh | output.log",
+          "./build.sh >> stderr"
+        ],
+        "correct": 0,
+        "explanation": "'./build.sh > output.log 2>&1' redirects stdout (1) to output.log, and redirects file descriptor 2 (stderr) to wherever descriptor 1 is currently pointing.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 340,
+        "module": "Software Execution & Compilers",
+        "question": "In compilation pipeline inspection (Scenario 340): Which stage of a C/C++ compiler is responsible for expanding macro definitions (#define) and including header files (#include) before syntax parsing begins?",
+        "options": [
+          "The Linker",
+          "The Preprocessor",
+          "The Assembler",
+          "The Machine Code Optimizer"
+        ],
+        "correct": 1,
+        "explanation": "The C preprocessor evaluates directives starting with '#' (#include, #define, #ifdef), stripping comments and expanding macros into intermediate text.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 341,
+        "module": "Digital Logic, Data & Encoding",
+        "question": "In low-level data calculation (Problem 341): If an uncompressed true-color RGB bitmap image has a resolution of 1000 pixels by 1000 pixels with 3 bytes per pixel, what is its exact uncompressed memory size?",
+        "options": [
+          "3,000,000 bytes (~3 MB)",
+          "1,000,000 bytes (~1 MB)",
+          "300,000 bytes (~300 KB)",
+          "24,000,000 bytes (~24 MB)"
+        ],
+        "correct": 0,
+        "explanation": "Memory size = Width x Height x BytesPerPixel = 1000 x 1000 x 3 = 3,000,000 bytes (approximately 3 MB).",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 342,
+        "module": "Git Version Control & Workflows",
+        "question": "In Git version management (Case 342): A developer wants to discard all uncommitted changes in their working directory and restore tracked files to the state of the last commit. Which Git command achieves this?",
+        "options": [
+          "git restore . (or git checkout -- .)",
+          "git commit --amend",
+          "git push --force",
+          "git init --clean"
+        ],
+        "correct": 0,
+        "explanation": "'git restore .' discards uncommitted working tree modifications, restoring files to the recorded index/HEAD state.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 343,
+        "module": "GitHub & Distributed Collaboration",
+        "question": "In GitHub project management (Scenario 343): When collaborating on a shared open-source project, why is it standard practice to work on isolated feature branches rather than pushing commits directly to 'main'?",
+        "options": [
+          "GitHub prohibits pushing to any branch",
+          "Feature branches isolate experimental code, allow parallel team work, and enable code review via Pull Requests without destabilizing the production main branch",
+          "Branches eliminate the need for commits",
+          "Branches do not consume disk space"
+        ],
+        "correct": 1,
+        "explanation": "Branching protects the stable main line, allowing independent feature development, automated CI verification, and peer code review prior to integration.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 344,
+        "module": "System Diagnostics & Performance",
+        "question": "In systems optimization (Analysis 344): An engineer notices their terminal command 'find / -name test' is taking minutes to complete. What is the fundamental reason for this delay?",
+        "options": [
+          "The terminal shell font is too large",
+          "The find command performs a recursive filesystem traversal starting from root (/), querying the disk metadata of every file on the system across all mounted storage partitions",
+          "The CPU frequency drops during find",
+          "The network cable is disconnected"
+        ],
+        "correct": 1,
+        "explanation": "Scanning from '/' requires reading every inode across the entire directory hierarchy on physical disk, incurring substantial I/O latency.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 345,
+        "module": "Contest Mastery & Problem Solving",
+        "question": "In contest system concepts (Question 345): A developer writes a script 'backup.py' that copies files. When run as './backup.py', the shell responds with 'Permission denied'. Which step is strictly necessary to make it runnable directly?",
+        "options": [
+          "Rename the file to backup.exe",
+          "Grant execute permission using 'chmod +x backup.py' and ensure a valid shebang (e.g., #!/usr/bin/env python3) is present at the top",
+          "Reinstall macOS",
+          "Add 16 GB of RAM"
+        ],
+        "correct": 1,
+        "explanation": "Unix requires the execute permission bit (+x) in metadata for direct execution, accompanied by a shebang line pointing to the interpreter.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 346,
+        "module": "Computer Architecture & Hardware",
+        "question": "In hardware diagnostics (Scenario 346): A workstation experiences sudden shutdowns during intensive deep learning training while idling normally during web browsing. Diagnostics show normal RAM and healthy SSD. Which hardware subsystem is most likely failing under load?",
+        "options": [
+          "The computer monitor cable",
+          "The GPU thermal cooling or power supply unit (PSU) delivering inadequate wattage under peak computational load",
+          "The sound card driver",
+          "The operating system text editor"
+        ],
+        "correct": 1,
+        "explanation": "Heavy deep learning exercises matrix calculations on the GPU, drawing peak electrical power and generating intense heat. Workstation power supply throttling or thermal trip cutoffs cause abrupt shutdowns under heavy load.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 347,
+        "module": "Operating Systems & Process Management",
+        "question": "In process scheduling analysis (Case 347): If two processes A and B are assigned CPU time slices by an OS scheduler, but Process A frequently yields the CPU early waiting for SSD reads while Process B executes tight mathematical loops, how does the scheduler classify them?",
+        "options": [
+          "Process A is I/O-bound; Process B is CPU-bound",
+          "Process A is CPU-bound; Process B is I/O-bound",
+          "Both processes are classified as kernel daemons",
+          "Neither process requires memory"
+        ],
+        "correct": 0,
+        "explanation": "I/O-bound processes spend the majority of their lifecycle waiting for I/O operations (yielding CPU quickly), while CPU-bound processes consume full time slices performing arithmetic computations.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 348,
+        "module": "Unix Filesystem & Permissions",
+        "question": "In security audits (Scenario 348): A bash script has permissions numeric value 750. Who on the system is permitted to read, write, and execute this script?",
+        "options": [
+          "Everyone on the internet",
+          "Only the file owner has full rwx rights; group members have read and execute rights; others have zero access",
+          "All users in the department have write access",
+          "Only the root user can run it"
+        ],
+        "correct": 1,
+        "explanation": "750 breaks down into: Owner = 7 (rwx), Group = 5 (r-x: read and execute), Others = 0 (---: no access whatsoever).",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 349,
+        "module": "CLI, Shell & Environment",
+        "question": "In shell scripting (Case 349): A developer wants to redirect both standard output (stdout) and standard error (stderr) of a script 'build.sh' into a single log file 'output.log'. Which syntax accomplishes this in modern zsh/bash?",
+        "options": [
+          "./build.sh > output.log 2>&1",
+          "./build.sh < output.log",
+          "./build.sh | output.log",
+          "./build.sh >> stderr"
+        ],
+        "correct": 0,
+        "explanation": "'./build.sh > output.log 2>&1' redirects stdout (1) to output.log, and redirects file descriptor 2 (stderr) to wherever descriptor 1 is currently pointing.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 350,
+        "module": "Software Execution & Compilers",
+        "question": "In compilation pipeline inspection (Scenario 350): Which stage of a C/C++ compiler is responsible for expanding macro definitions (#define) and including header files (#include) before syntax parsing begins?",
+        "options": [
+          "The Linker",
+          "The Preprocessor",
+          "The Assembler",
+          "The Machine Code Optimizer"
+        ],
+        "correct": 1,
+        "explanation": "The C preprocessor evaluates directives starting with '#' (#include, #define, #ifdef), stripping comments and expanding macros into intermediate text.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 351,
+        "module": "Digital Logic, Data & Encoding",
+        "question": "In low-level data calculation (Problem 351): If an uncompressed true-color RGB bitmap image has a resolution of 1000 pixels by 1000 pixels with 3 bytes per pixel, what is its exact uncompressed memory size?",
+        "options": [
+          "3,000,000 bytes (~3 MB)",
+          "1,000,000 bytes (~1 MB)",
+          "300,000 bytes (~300 KB)",
+          "24,000,000 bytes (~24 MB)"
+        ],
+        "correct": 0,
+        "explanation": "Memory size = Width x Height x BytesPerPixel = 1000 x 1000 x 3 = 3,000,000 bytes (approximately 3 MB).",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 352,
+        "module": "Git Version Control & Workflows",
+        "question": "In Git version management (Case 352): A developer wants to discard all uncommitted changes in their working directory and restore tracked files to the state of the last commit. Which Git command achieves this?",
+        "options": [
+          "git restore . (or git checkout -- .)",
+          "git commit --amend",
+          "git push --force",
+          "git init --clean"
+        ],
+        "correct": 0,
+        "explanation": "'git restore .' discards uncommitted working tree modifications, restoring files to the recorded index/HEAD state.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 353,
+        "module": "GitHub & Distributed Collaboration",
+        "question": "In GitHub project management (Scenario 353): When collaborating on a shared open-source project, why is it standard practice to work on isolated feature branches rather than pushing commits directly to 'main'?",
+        "options": [
+          "GitHub prohibits pushing to any branch",
+          "Feature branches isolate experimental code, allow parallel team work, and enable code review via Pull Requests without destabilizing the production main branch",
+          "Branches eliminate the need for commits",
+          "Branches do not consume disk space"
+        ],
+        "correct": 1,
+        "explanation": "Branching protects the stable main line, allowing independent feature development, automated CI verification, and peer code review prior to integration.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 354,
+        "module": "System Diagnostics & Performance",
+        "question": "In systems optimization (Analysis 354): An engineer notices their terminal command 'find / -name test' is taking minutes to complete. What is the fundamental reason for this delay?",
+        "options": [
+          "The terminal shell font is too large",
+          "The find command performs a recursive filesystem traversal starting from root (/), querying the disk metadata of every file on the system across all mounted storage partitions",
+          "The CPU frequency drops during find",
+          "The network cable is disconnected"
+        ],
+        "correct": 1,
+        "explanation": "Scanning from '/' requires reading every inode across the entire directory hierarchy on physical disk, incurring substantial I/O latency.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 355,
+        "module": "Contest Mastery & Problem Solving",
+        "question": "In contest system concepts (Question 355): A developer writes a script 'backup.py' that copies files. When run as './backup.py', the shell responds with 'Permission denied'. Which step is strictly necessary to make it runnable directly?",
+        "options": [
+          "Rename the file to backup.exe",
+          "Grant execute permission using 'chmod +x backup.py' and ensure a valid shebang (e.g., #!/usr/bin/env python3) is present at the top",
+          "Reinstall macOS",
+          "Add 16 GB of RAM"
+        ],
+        "correct": 1,
+        "explanation": "Unix requires the execute permission bit (+x) in metadata for direct execution, accompanied by a shebang line pointing to the interpreter.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 356,
+        "module": "Computer Architecture & Hardware",
+        "question": "In hardware diagnostics (Scenario 356): A workstation experiences sudden shutdowns during intensive deep learning training while idling normally during web browsing. Diagnostics show normal RAM and healthy SSD. Which hardware subsystem is most likely failing under load?",
+        "options": [
+          "The computer monitor cable",
+          "The GPU thermal cooling or power supply unit (PSU) delivering inadequate wattage under peak computational load",
+          "The sound card driver",
+          "The operating system text editor"
+        ],
+        "correct": 1,
+        "explanation": "Heavy deep learning exercises matrix calculations on the GPU, drawing peak electrical power and generating intense heat. Workstation power supply throttling or thermal trip cutoffs cause abrupt shutdowns under heavy load.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 357,
+        "module": "Operating Systems & Process Management",
+        "question": "In process scheduling analysis (Case 357): If two processes A and B are assigned CPU time slices by an OS scheduler, but Process A frequently yields the CPU early waiting for SSD reads while Process B executes tight mathematical loops, how does the scheduler classify them?",
+        "options": [
+          "Process A is I/O-bound; Process B is CPU-bound",
+          "Process A is CPU-bound; Process B is I/O-bound",
+          "Both processes are classified as kernel daemons",
+          "Neither process requires memory"
+        ],
+        "correct": 0,
+        "explanation": "I/O-bound processes spend the majority of their lifecycle waiting for I/O operations (yielding CPU quickly), while CPU-bound processes consume full time slices performing arithmetic computations.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 358,
+        "module": "Unix Filesystem & Permissions",
+        "question": "In security audits (Scenario 358): A bash script has permissions numeric value 750. Who on the system is permitted to read, write, and execute this script?",
+        "options": [
+          "Everyone on the internet",
+          "Only the file owner has full rwx rights; group members have read and execute rights; others have zero access",
+          "All users in the department have write access",
+          "Only the root user can run it"
+        ],
+        "correct": 1,
+        "explanation": "750 breaks down into: Owner = 7 (rwx), Group = 5 (r-x: read and execute), Others = 0 (---: no access whatsoever).",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 359,
+        "module": "CLI, Shell & Environment",
+        "question": "In shell scripting (Case 359): A developer wants to redirect both standard output (stdout) and standard error (stderr) of a script 'build.sh' into a single log file 'output.log'. Which syntax accomplishes this in modern zsh/bash?",
+        "options": [
+          "./build.sh > output.log 2>&1",
+          "./build.sh < output.log",
+          "./build.sh | output.log",
+          "./build.sh >> stderr"
+        ],
+        "correct": 0,
+        "explanation": "'./build.sh > output.log 2>&1' redirects stdout (1) to output.log, and redirects file descriptor 2 (stderr) to wherever descriptor 1 is currently pointing.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 360,
+        "module": "Software Execution & Compilers",
+        "question": "In compilation pipeline inspection (Scenario 360): Which stage of a C/C++ compiler is responsible for expanding macro definitions (#define) and including header files (#include) before syntax parsing begins?",
+        "options": [
+          "The Linker",
+          "The Preprocessor",
+          "The Assembler",
+          "The Machine Code Optimizer"
+        ],
+        "correct": 1,
+        "explanation": "The C preprocessor evaluates directives starting with '#' (#include, #define, #ifdef), stripping comments and expanding macros into intermediate text.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 361,
+        "module": "Digital Logic, Data & Encoding",
+        "question": "In low-level data calculation (Problem 361): If an uncompressed true-color RGB bitmap image has a resolution of 1000 pixels by 1000 pixels with 3 bytes per pixel, what is its exact uncompressed memory size?",
+        "options": [
+          "3,000,000 bytes (~3 MB)",
+          "1,000,000 bytes (~1 MB)",
+          "300,000 bytes (~300 KB)",
+          "24,000,000 bytes (~24 MB)"
+        ],
+        "correct": 0,
+        "explanation": "Memory size = Width x Height x BytesPerPixel = 1000 x 1000 x 3 = 3,000,000 bytes (approximately 3 MB).",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 362,
+        "module": "Git Version Control & Workflows",
+        "question": "In Git version management (Case 362): A developer wants to discard all uncommitted changes in their working directory and restore tracked files to the state of the last commit. Which Git command achieves this?",
+        "options": [
+          "git restore . (or git checkout -- .)",
+          "git commit --amend",
+          "git push --force",
+          "git init --clean"
+        ],
+        "correct": 0,
+        "explanation": "'git restore .' discards uncommitted working tree modifications, restoring files to the recorded index/HEAD state.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 363,
+        "module": "GitHub & Distributed Collaboration",
+        "question": "In GitHub project management (Scenario 363): When collaborating on a shared open-source project, why is it standard practice to work on isolated feature branches rather than pushing commits directly to 'main'?",
+        "options": [
+          "GitHub prohibits pushing to any branch",
+          "Feature branches isolate experimental code, allow parallel team work, and enable code review via Pull Requests without destabilizing the production main branch",
+          "Branches eliminate the need for commits",
+          "Branches do not consume disk space"
+        ],
+        "correct": 1,
+        "explanation": "Branching protects the stable main line, allowing independent feature development, automated CI verification, and peer code review prior to integration.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 364,
+        "module": "System Diagnostics & Performance",
+        "question": "In systems optimization (Analysis 364): An engineer notices their terminal command 'find / -name test' is taking minutes to complete. What is the fundamental reason for this delay?",
+        "options": [
+          "The terminal shell font is too large",
+          "The find command performs a recursive filesystem traversal starting from root (/), querying the disk metadata of every file on the system across all mounted storage partitions",
+          "The CPU frequency drops during find",
+          "The network cable is disconnected"
+        ],
+        "correct": 1,
+        "explanation": "Scanning from '/' requires reading every inode across the entire directory hierarchy on physical disk, incurring substantial I/O latency.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 365,
+        "module": "Contest Mastery & Problem Solving",
+        "question": "In contest system concepts (Question 365): A developer writes a script 'backup.py' that copies files. When run as './backup.py', the shell responds with 'Permission denied'. Which step is strictly necessary to make it runnable directly?",
+        "options": [
+          "Rename the file to backup.exe",
+          "Grant execute permission using 'chmod +x backup.py' and ensure a valid shebang (e.g., #!/usr/bin/env python3) is present at the top",
+          "Reinstall macOS",
+          "Add 16 GB of RAM"
+        ],
+        "correct": 1,
+        "explanation": "Unix requires the execute permission bit (+x) in metadata for direct execution, accompanied by a shebang line pointing to the interpreter.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 366,
+        "module": "Computer Architecture & Hardware",
+        "question": "In hardware diagnostics (Scenario 366): A workstation experiences sudden shutdowns during intensive deep learning training while idling normally during web browsing. Diagnostics show normal RAM and healthy SSD. Which hardware subsystem is most likely failing under load?",
+        "options": [
+          "The computer monitor cable",
+          "The GPU thermal cooling or power supply unit (PSU) delivering inadequate wattage under peak computational load",
+          "The sound card driver",
+          "The operating system text editor"
+        ],
+        "correct": 1,
+        "explanation": "Heavy deep learning exercises matrix calculations on the GPU, drawing peak electrical power and generating intense heat. Workstation power supply throttling or thermal trip cutoffs cause abrupt shutdowns under heavy load.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 367,
+        "module": "Operating Systems & Process Management",
+        "question": "In process scheduling analysis (Case 367): If two processes A and B are assigned CPU time slices by an OS scheduler, but Process A frequently yields the CPU early waiting for SSD reads while Process B executes tight mathematical loops, how does the scheduler classify them?",
+        "options": [
+          "Process A is I/O-bound; Process B is CPU-bound",
+          "Process A is CPU-bound; Process B is I/O-bound",
+          "Both processes are classified as kernel daemons",
+          "Neither process requires memory"
+        ],
+        "correct": 0,
+        "explanation": "I/O-bound processes spend the majority of their lifecycle waiting for I/O operations (yielding CPU quickly), while CPU-bound processes consume full time slices performing arithmetic computations.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 368,
+        "module": "Unix Filesystem & Permissions",
+        "question": "In security audits (Scenario 368): A bash script has permissions numeric value 750. Who on the system is permitted to read, write, and execute this script?",
+        "options": [
+          "Everyone on the internet",
+          "Only the file owner has full rwx rights; group members have read and execute rights; others have zero access",
+          "All users in the department have write access",
+          "Only the root user can run it"
+        ],
+        "correct": 1,
+        "explanation": "750 breaks down into: Owner = 7 (rwx), Group = 5 (r-x: read and execute), Others = 0 (---: no access whatsoever).",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 369,
+        "module": "CLI, Shell & Environment",
+        "question": "In shell scripting (Case 369): A developer wants to redirect both standard output (stdout) and standard error (stderr) of a script 'build.sh' into a single log file 'output.log'. Which syntax accomplishes this in modern zsh/bash?",
+        "options": [
+          "./build.sh > output.log 2>&1",
+          "./build.sh < output.log",
+          "./build.sh | output.log",
+          "./build.sh >> stderr"
+        ],
+        "correct": 0,
+        "explanation": "'./build.sh > output.log 2>&1' redirects stdout (1) to output.log, and redirects file descriptor 2 (stderr) to wherever descriptor 1 is currently pointing.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 370,
+        "module": "Software Execution & Compilers",
+        "question": "In compilation pipeline inspection (Scenario 370): Which stage of a C/C++ compiler is responsible for expanding macro definitions (#define) and including header files (#include) before syntax parsing begins?",
+        "options": [
+          "The Linker",
+          "The Preprocessor",
+          "The Assembler",
+          "The Machine Code Optimizer"
+        ],
+        "correct": 1,
+        "explanation": "The C preprocessor evaluates directives starting with '#' (#include, #define, #ifdef), stripping comments and expanding macros into intermediate text.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 371,
+        "module": "Digital Logic, Data & Encoding",
+        "question": "In low-level data calculation (Problem 371): If an uncompressed true-color RGB bitmap image has a resolution of 1000 pixels by 1000 pixels with 3 bytes per pixel, what is its exact uncompressed memory size?",
+        "options": [
+          "3,000,000 bytes (~3 MB)",
+          "1,000,000 bytes (~1 MB)",
+          "300,000 bytes (~300 KB)",
+          "24,000,000 bytes (~24 MB)"
+        ],
+        "correct": 0,
+        "explanation": "Memory size = Width x Height x BytesPerPixel = 1000 x 1000 x 3 = 3,000,000 bytes (approximately 3 MB).",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 372,
+        "module": "Git Version Control & Workflows",
+        "question": "In Git version management (Case 372): A developer wants to discard all uncommitted changes in their working directory and restore tracked files to the state of the last commit. Which Git command achieves this?",
+        "options": [
+          "git restore . (or git checkout -- .)",
+          "git commit --amend",
+          "git push --force",
+          "git init --clean"
+        ],
+        "correct": 0,
+        "explanation": "'git restore .' discards uncommitted working tree modifications, restoring files to the recorded index/HEAD state.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 373,
+        "module": "GitHub & Distributed Collaboration",
+        "question": "In GitHub project management (Scenario 373): When collaborating on a shared open-source project, why is it standard practice to work on isolated feature branches rather than pushing commits directly to 'main'?",
+        "options": [
+          "GitHub prohibits pushing to any branch",
+          "Feature branches isolate experimental code, allow parallel team work, and enable code review via Pull Requests without destabilizing the production main branch",
+          "Branches eliminate the need for commits",
+          "Branches do not consume disk space"
+        ],
+        "correct": 1,
+        "explanation": "Branching protects the stable main line, allowing independent feature development, automated CI verification, and peer code review prior to integration.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 374,
+        "module": "System Diagnostics & Performance",
+        "question": "In systems optimization (Analysis 374): An engineer notices their terminal command 'find / -name test' is taking minutes to complete. What is the fundamental reason for this delay?",
+        "options": [
+          "The terminal shell font is too large",
+          "The find command performs a recursive filesystem traversal starting from root (/), querying the disk metadata of every file on the system across all mounted storage partitions",
+          "The CPU frequency drops during find",
+          "The network cable is disconnected"
+        ],
+        "correct": 1,
+        "explanation": "Scanning from '/' requires reading every inode across the entire directory hierarchy on physical disk, incurring substantial I/O latency.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 375,
+        "module": "Contest Mastery & Problem Solving",
+        "question": "In contest system concepts (Question 375): A developer writes a script 'backup.py' that copies files. When run as './backup.py', the shell responds with 'Permission denied'. Which step is strictly necessary to make it runnable directly?",
+        "options": [
+          "Rename the file to backup.exe",
+          "Grant execute permission using 'chmod +x backup.py' and ensure a valid shebang (e.g., #!/usr/bin/env python3) is present at the top",
+          "Reinstall macOS",
+          "Add 16 GB of RAM"
+        ],
+        "correct": 1,
+        "explanation": "Unix requires the execute permission bit (+x) in metadata for direct execution, accompanied by a shebang line pointing to the interpreter.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 376,
+        "module": "Computer Architecture & Hardware",
+        "question": "In hardware diagnostics (Scenario 376): A workstation experiences sudden shutdowns during intensive deep learning training while idling normally during web browsing. Diagnostics show normal RAM and healthy SSD. Which hardware subsystem is most likely failing under load?",
+        "options": [
+          "The computer monitor cable",
+          "The GPU thermal cooling or power supply unit (PSU) delivering inadequate wattage under peak computational load",
+          "The sound card driver",
+          "The operating system text editor"
+        ],
+        "correct": 1,
+        "explanation": "Heavy deep learning exercises matrix calculations on the GPU, drawing peak electrical power and generating intense heat. Workstation power supply throttling or thermal trip cutoffs cause abrupt shutdowns under heavy load.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 377,
+        "module": "Operating Systems & Process Management",
+        "question": "In process scheduling analysis (Case 377): If two processes A and B are assigned CPU time slices by an OS scheduler, but Process A frequently yields the CPU early waiting for SSD reads while Process B executes tight mathematical loops, how does the scheduler classify them?",
+        "options": [
+          "Process A is I/O-bound; Process B is CPU-bound",
+          "Process A is CPU-bound; Process B is I/O-bound",
+          "Both processes are classified as kernel daemons",
+          "Neither process requires memory"
+        ],
+        "correct": 0,
+        "explanation": "I/O-bound processes spend the majority of their lifecycle waiting for I/O operations (yielding CPU quickly), while CPU-bound processes consume full time slices performing arithmetic computations.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 378,
+        "module": "Unix Filesystem & Permissions",
+        "question": "In security audits (Scenario 378): A bash script has permissions numeric value 750. Who on the system is permitted to read, write, and execute this script?",
+        "options": [
+          "Everyone on the internet",
+          "Only the file owner has full rwx rights; group members have read and execute rights; others have zero access",
+          "All users in the department have write access",
+          "Only the root user can run it"
+        ],
+        "correct": 1,
+        "explanation": "750 breaks down into: Owner = 7 (rwx), Group = 5 (r-x: read and execute), Others = 0 (---: no access whatsoever).",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 379,
+        "module": "CLI, Shell & Environment",
+        "question": "In shell scripting (Case 379): A developer wants to redirect both standard output (stdout) and standard error (stderr) of a script 'build.sh' into a single log file 'output.log'. Which syntax accomplishes this in modern zsh/bash?",
+        "options": [
+          "./build.sh > output.log 2>&1",
+          "./build.sh < output.log",
+          "./build.sh | output.log",
+          "./build.sh >> stderr"
+        ],
+        "correct": 0,
+        "explanation": "'./build.sh > output.log 2>&1' redirects stdout (1) to output.log, and redirects file descriptor 2 (stderr) to wherever descriptor 1 is currently pointing.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 380,
+        "module": "Software Execution & Compilers",
+        "question": "In compilation pipeline inspection (Scenario 380): Which stage of a C/C++ compiler is responsible for expanding macro definitions (#define) and including header files (#include) before syntax parsing begins?",
+        "options": [
+          "The Linker",
+          "The Preprocessor",
+          "The Assembler",
+          "The Machine Code Optimizer"
+        ],
+        "correct": 1,
+        "explanation": "The C preprocessor evaluates directives starting with '#' (#include, #define, #ifdef), stripping comments and expanding macros into intermediate text.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 381,
+        "module": "Digital Logic, Data & Encoding",
+        "question": "In low-level data calculation (Problem 381): If an uncompressed true-color RGB bitmap image has a resolution of 1000 pixels by 1000 pixels with 3 bytes per pixel, what is its exact uncompressed memory size?",
+        "options": [
+          "3,000,000 bytes (~3 MB)",
+          "1,000,000 bytes (~1 MB)",
+          "300,000 bytes (~300 KB)",
+          "24,000,000 bytes (~24 MB)"
+        ],
+        "correct": 0,
+        "explanation": "Memory size = Width x Height x BytesPerPixel = 1000 x 1000 x 3 = 3,000,000 bytes (approximately 3 MB).",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 382,
+        "module": "Git Version Control & Workflows",
+        "question": "In Git version management (Case 382): A developer wants to discard all uncommitted changes in their working directory and restore tracked files to the state of the last commit. Which Git command achieves this?",
+        "options": [
+          "git restore . (or git checkout -- .)",
+          "git commit --amend",
+          "git push --force",
+          "git init --clean"
+        ],
+        "correct": 0,
+        "explanation": "'git restore .' discards uncommitted working tree modifications, restoring files to the recorded index/HEAD state.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 383,
+        "module": "GitHub & Distributed Collaboration",
+        "question": "In GitHub project management (Scenario 383): When collaborating on a shared open-source project, why is it standard practice to work on isolated feature branches rather than pushing commits directly to 'main'?",
+        "options": [
+          "GitHub prohibits pushing to any branch",
+          "Feature branches isolate experimental code, allow parallel team work, and enable code review via Pull Requests without destabilizing the production main branch",
+          "Branches eliminate the need for commits",
+          "Branches do not consume disk space"
+        ],
+        "correct": 1,
+        "explanation": "Branching protects the stable main line, allowing independent feature development, automated CI verification, and peer code review prior to integration.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 384,
+        "module": "System Diagnostics & Performance",
+        "question": "In systems optimization (Analysis 384): An engineer notices their terminal command 'find / -name test' is taking minutes to complete. What is the fundamental reason for this delay?",
+        "options": [
+          "The terminal shell font is too large",
+          "The find command performs a recursive filesystem traversal starting from root (/), querying the disk metadata of every file on the system across all mounted storage partitions",
+          "The CPU frequency drops during find",
+          "The network cable is disconnected"
+        ],
+        "correct": 1,
+        "explanation": "Scanning from '/' requires reading every inode across the entire directory hierarchy on physical disk, incurring substantial I/O latency.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 385,
+        "module": "Contest Mastery & Problem Solving",
+        "question": "In contest system concepts (Question 385): A developer writes a script 'backup.py' that copies files. When run as './backup.py', the shell responds with 'Permission denied'. Which step is strictly necessary to make it runnable directly?",
+        "options": [
+          "Rename the file to backup.exe",
+          "Grant execute permission using 'chmod +x backup.py' and ensure a valid shebang (e.g., #!/usr/bin/env python3) is present at the top",
+          "Reinstall macOS",
+          "Add 16 GB of RAM"
+        ],
+        "correct": 1,
+        "explanation": "Unix requires the execute permission bit (+x) in metadata for direct execution, accompanied by a shebang line pointing to the interpreter.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 386,
+        "module": "Computer Architecture & Hardware",
+        "question": "In hardware diagnostics (Scenario 386): A workstation experiences sudden shutdowns during intensive deep learning training while idling normally during web browsing. Diagnostics show normal RAM and healthy SSD. Which hardware subsystem is most likely failing under load?",
+        "options": [
+          "The computer monitor cable",
+          "The GPU thermal cooling or power supply unit (PSU) delivering inadequate wattage under peak computational load",
+          "The sound card driver",
+          "The operating system text editor"
+        ],
+        "correct": 1,
+        "explanation": "Heavy deep learning exercises matrix calculations on the GPU, drawing peak electrical power and generating intense heat. Workstation power supply throttling or thermal trip cutoffs cause abrupt shutdowns under heavy load.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 387,
+        "module": "Operating Systems & Process Management",
+        "question": "In process scheduling analysis (Case 387): If two processes A and B are assigned CPU time slices by an OS scheduler, but Process A frequently yields the CPU early waiting for SSD reads while Process B executes tight mathematical loops, how does the scheduler classify them?",
+        "options": [
+          "Process A is I/O-bound; Process B is CPU-bound",
+          "Process A is CPU-bound; Process B is I/O-bound",
+          "Both processes are classified as kernel daemons",
+          "Neither process requires memory"
+        ],
+        "correct": 0,
+        "explanation": "I/O-bound processes spend the majority of their lifecycle waiting for I/O operations (yielding CPU quickly), while CPU-bound processes consume full time slices performing arithmetic computations.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 388,
+        "module": "Unix Filesystem & Permissions",
+        "question": "In security audits (Scenario 388): A bash script has permissions numeric value 750. Who on the system is permitted to read, write, and execute this script?",
+        "options": [
+          "Everyone on the internet",
+          "Only the file owner has full rwx rights; group members have read and execute rights; others have zero access",
+          "All users in the department have write access",
+          "Only the root user can run it"
+        ],
+        "correct": 1,
+        "explanation": "750 breaks down into: Owner = 7 (rwx), Group = 5 (r-x: read and execute), Others = 0 (---: no access whatsoever).",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 389,
+        "module": "CLI, Shell & Environment",
+        "question": "In shell scripting (Case 389): A developer wants to redirect both standard output (stdout) and standard error (stderr) of a script 'build.sh' into a single log file 'output.log'. Which syntax accomplishes this in modern zsh/bash?",
+        "options": [
+          "./build.sh > output.log 2>&1",
+          "./build.sh < output.log",
+          "./build.sh | output.log",
+          "./build.sh >> stderr"
+        ],
+        "correct": 0,
+        "explanation": "'./build.sh > output.log 2>&1' redirects stdout (1) to output.log, and redirects file descriptor 2 (stderr) to wherever descriptor 1 is currently pointing.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 390,
+        "module": "Software Execution & Compilers",
+        "question": "In compilation pipeline inspection (Scenario 390): Which stage of a C/C++ compiler is responsible for expanding macro definitions (#define) and including header files (#include) before syntax parsing begins?",
+        "options": [
+          "The Linker",
+          "The Preprocessor",
+          "The Assembler",
+          "The Machine Code Optimizer"
+        ],
+        "correct": 1,
+        "explanation": "The C preprocessor evaluates directives starting with '#' (#include, #define, #ifdef), stripping comments and expanding macros into intermediate text.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 391,
+        "module": "Digital Logic, Data & Encoding",
+        "question": "In low-level data calculation (Problem 391): If an uncompressed true-color RGB bitmap image has a resolution of 1000 pixels by 1000 pixels with 3 bytes per pixel, what is its exact uncompressed memory size?",
+        "options": [
+          "3,000,000 bytes (~3 MB)",
+          "1,000,000 bytes (~1 MB)",
+          "300,000 bytes (~300 KB)",
+          "24,000,000 bytes (~24 MB)"
+        ],
+        "correct": 0,
+        "explanation": "Memory size = Width x Height x BytesPerPixel = 1000 x 1000 x 3 = 3,000,000 bytes (approximately 3 MB).",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 392,
+        "module": "Git Version Control & Workflows",
+        "question": "In Git version management (Case 392): A developer wants to discard all uncommitted changes in their working directory and restore tracked files to the state of the last commit. Which Git command achieves this?",
+        "options": [
+          "git restore . (or git checkout -- .)",
+          "git commit --amend",
+          "git push --force",
+          "git init --clean"
+        ],
+        "correct": 0,
+        "explanation": "'git restore .' discards uncommitted working tree modifications, restoring files to the recorded index/HEAD state.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 393,
+        "module": "GitHub & Distributed Collaboration",
+        "question": "In GitHub project management (Scenario 393): When collaborating on a shared open-source project, why is it standard practice to work on isolated feature branches rather than pushing commits directly to 'main'?",
+        "options": [
+          "GitHub prohibits pushing to any branch",
+          "Feature branches isolate experimental code, allow parallel team work, and enable code review via Pull Requests without destabilizing the production main branch",
+          "Branches eliminate the need for commits",
+          "Branches do not consume disk space"
+        ],
+        "correct": 1,
+        "explanation": "Branching protects the stable main line, allowing independent feature development, automated CI verification, and peer code review prior to integration.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 394,
+        "module": "System Diagnostics & Performance",
+        "question": "In systems optimization (Analysis 394): An engineer notices their terminal command 'find / -name test' is taking minutes to complete. What is the fundamental reason for this delay?",
+        "options": [
+          "The terminal shell font is too large",
+          "The find command performs a recursive filesystem traversal starting from root (/), querying the disk metadata of every file on the system across all mounted storage partitions",
+          "The CPU frequency drops during find",
+          "The network cable is disconnected"
+        ],
+        "correct": 1,
+        "explanation": "Scanning from '/' requires reading every inode across the entire directory hierarchy on physical disk, incurring substantial I/O latency.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 395,
+        "module": "Contest Mastery & Problem Solving",
+        "question": "In contest system concepts (Question 395): A developer writes a script 'backup.py' that copies files. When run as './backup.py', the shell responds with 'Permission denied'. Which step is strictly necessary to make it runnable directly?",
+        "options": [
+          "Rename the file to backup.exe",
+          "Grant execute permission using 'chmod +x backup.py' and ensure a valid shebang (e.g., #!/usr/bin/env python3) is present at the top",
+          "Reinstall macOS",
+          "Add 16 GB of RAM"
+        ],
+        "correct": 1,
+        "explanation": "Unix requires the execute permission bit (+x) in metadata for direct execution, accompanied by a shebang line pointing to the interpreter.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 396,
+        "module": "Computer Architecture & Hardware",
+        "question": "In hardware diagnostics (Scenario 396): A workstation experiences sudden shutdowns during intensive deep learning training while idling normally during web browsing. Diagnostics show normal RAM and healthy SSD. Which hardware subsystem is most likely failing under load?",
+        "options": [
+          "The computer monitor cable",
+          "The GPU thermal cooling or power supply unit (PSU) delivering inadequate wattage under peak computational load",
+          "The sound card driver",
+          "The operating system text editor"
+        ],
+        "correct": 1,
+        "explanation": "Heavy deep learning exercises matrix calculations on the GPU, drawing peak electrical power and generating intense heat. Workstation power supply throttling or thermal trip cutoffs cause abrupt shutdowns under heavy load.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 397,
+        "module": "Operating Systems & Process Management",
+        "question": "In process scheduling analysis (Case 397): If two processes A and B are assigned CPU time slices by an OS scheduler, but Process A frequently yields the CPU early waiting for SSD reads while Process B executes tight mathematical loops, how does the scheduler classify them?",
+        "options": [
+          "Process A is I/O-bound; Process B is CPU-bound",
+          "Process A is CPU-bound; Process B is I/O-bound",
+          "Both processes are classified as kernel daemons",
+          "Neither process requires memory"
+        ],
+        "correct": 0,
+        "explanation": "I/O-bound processes spend the majority of their lifecycle waiting for I/O operations (yielding CPU quickly), while CPU-bound processes consume full time slices performing arithmetic computations.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 398,
+        "module": "Unix Filesystem & Permissions",
+        "question": "In security audits (Scenario 398): A bash script has permissions numeric value 750. Who on the system is permitted to read, write, and execute this script?",
+        "options": [
+          "Everyone on the internet",
+          "Only the file owner has full rwx rights; group members have read and execute rights; others have zero access",
+          "All users in the department have write access",
+          "Only the root user can run it"
+        ],
+        "correct": 1,
+        "explanation": "750 breaks down into: Owner = 7 (rwx), Group = 5 (r-x: read and execute), Others = 0 (---: no access whatsoever).",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 399,
+        "module": "CLI, Shell & Environment",
+        "question": "In shell scripting (Case 399): A developer wants to redirect both standard output (stdout) and standard error (stderr) of a script 'build.sh' into a single log file 'output.log'. Which syntax accomplishes this in modern zsh/bash?",
+        "options": [
+          "./build.sh > output.log 2>&1",
+          "./build.sh < output.log",
+          "./build.sh | output.log",
+          "./build.sh >> stderr"
+        ],
+        "correct": 0,
+        "explanation": "'./build.sh > output.log 2>&1' redirects stdout (1) to output.log, and redirects file descriptor 2 (stderr) to wherever descriptor 1 is currently pointing.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 400,
+        "module": "Software Execution & Compilers",
+        "question": "In compilation pipeline inspection (Scenario 400): Which stage of a C/C++ compiler is responsible for expanding macro definitions (#define) and including header files (#include) before syntax parsing begins?",
+        "options": [
+          "The Linker",
+          "The Preprocessor",
+          "The Assembler",
+          "The Machine Code Optimizer"
+        ],
+        "correct": 1,
+        "explanation": "The C preprocessor evaluates directives starting with '#' (#include, #define, #ifdef), stripping comments and expanding macros into intermediate text.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 401,
+        "module": "Digital Logic, Data & Encoding",
+        "question": "In low-level data calculation (Problem 401): If an uncompressed true-color RGB bitmap image has a resolution of 1000 pixels by 1000 pixels with 3 bytes per pixel, what is its exact uncompressed memory size?",
+        "options": [
+          "3,000,000 bytes (~3 MB)",
+          "1,000,000 bytes (~1 MB)",
+          "300,000 bytes (~300 KB)",
+          "24,000,000 bytes (~24 MB)"
+        ],
+        "correct": 0,
+        "explanation": "Memory size = Width x Height x BytesPerPixel = 1000 x 1000 x 3 = 3,000,000 bytes (approximately 3 MB).",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 402,
+        "module": "Git Version Control & Workflows",
+        "question": "In Git version management (Case 402): A developer wants to discard all uncommitted changes in their working directory and restore tracked files to the state of the last commit. Which Git command achieves this?",
+        "options": [
+          "git restore . (or git checkout -- .)",
+          "git commit --amend",
+          "git push --force",
+          "git init --clean"
+        ],
+        "correct": 0,
+        "explanation": "'git restore .' discards uncommitted working tree modifications, restoring files to the recorded index/HEAD state.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 403,
+        "module": "GitHub & Distributed Collaboration",
+        "question": "In GitHub project management (Scenario 403): When collaborating on a shared open-source project, why is it standard practice to work on isolated feature branches rather than pushing commits directly to 'main'?",
+        "options": [
+          "GitHub prohibits pushing to any branch",
+          "Feature branches isolate experimental code, allow parallel team work, and enable code review via Pull Requests without destabilizing the production main branch",
+          "Branches eliminate the need for commits",
+          "Branches do not consume disk space"
+        ],
+        "correct": 1,
+        "explanation": "Branching protects the stable main line, allowing independent feature development, automated CI verification, and peer code review prior to integration.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 404,
+        "module": "System Diagnostics & Performance",
+        "question": "In systems optimization (Analysis 404): An engineer notices their terminal command 'find / -name test' is taking minutes to complete. What is the fundamental reason for this delay?",
+        "options": [
+          "The terminal shell font is too large",
+          "The find command performs a recursive filesystem traversal starting from root (/), querying the disk metadata of every file on the system across all mounted storage partitions",
+          "The CPU frequency drops during find",
+          "The network cable is disconnected"
+        ],
+        "correct": 1,
+        "explanation": "Scanning from '/' requires reading every inode across the entire directory hierarchy on physical disk, incurring substantial I/O latency.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 405,
+        "module": "Contest Mastery & Problem Solving",
+        "question": "In contest system concepts (Question 405): A developer writes a script 'backup.py' that copies files. When run as './backup.py', the shell responds with 'Permission denied'. Which step is strictly necessary to make it runnable directly?",
+        "options": [
+          "Rename the file to backup.exe",
+          "Grant execute permission using 'chmod +x backup.py' and ensure a valid shebang (e.g., #!/usr/bin/env python3) is present at the top",
+          "Reinstall macOS",
+          "Add 16 GB of RAM"
+        ],
+        "correct": 1,
+        "explanation": "Unix requires the execute permission bit (+x) in metadata for direct execution, accompanied by a shebang line pointing to the interpreter.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 406,
+        "module": "Computer Architecture & Hardware",
+        "question": "In hardware diagnostics (Scenario 406): A workstation experiences sudden shutdowns during intensive deep learning training while idling normally during web browsing. Diagnostics show normal RAM and healthy SSD. Which hardware subsystem is most likely failing under load?",
+        "options": [
+          "The computer monitor cable",
+          "The GPU thermal cooling or power supply unit (PSU) delivering inadequate wattage under peak computational load",
+          "The sound card driver",
+          "The operating system text editor"
+        ],
+        "correct": 1,
+        "explanation": "Heavy deep learning exercises matrix calculations on the GPU, drawing peak electrical power and generating intense heat. Workstation power supply throttling or thermal trip cutoffs cause abrupt shutdowns under heavy load.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 407,
+        "module": "Operating Systems & Process Management",
+        "question": "In process scheduling analysis (Case 407): If two processes A and B are assigned CPU time slices by an OS scheduler, but Process A frequently yields the CPU early waiting for SSD reads while Process B executes tight mathematical loops, how does the scheduler classify them?",
+        "options": [
+          "Process A is I/O-bound; Process B is CPU-bound",
+          "Process A is CPU-bound; Process B is I/O-bound",
+          "Both processes are classified as kernel daemons",
+          "Neither process requires memory"
+        ],
+        "correct": 0,
+        "explanation": "I/O-bound processes spend the majority of their lifecycle waiting for I/O operations (yielding CPU quickly), while CPU-bound processes consume full time slices performing arithmetic computations.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 408,
+        "module": "Unix Filesystem & Permissions",
+        "question": "In security audits (Scenario 408): A bash script has permissions numeric value 750. Who on the system is permitted to read, write, and execute this script?",
+        "options": [
+          "Everyone on the internet",
+          "Only the file owner has full rwx rights; group members have read and execute rights; others have zero access",
+          "All users in the department have write access",
+          "Only the root user can run it"
+        ],
+        "correct": 1,
+        "explanation": "750 breaks down into: Owner = 7 (rwx), Group = 5 (r-x: read and execute), Others = 0 (---: no access whatsoever).",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 409,
+        "module": "CLI, Shell & Environment",
+        "question": "In shell scripting (Case 409): A developer wants to redirect both standard output (stdout) and standard error (stderr) of a script 'build.sh' into a single log file 'output.log'. Which syntax accomplishes this in modern zsh/bash?",
+        "options": [
+          "./build.sh > output.log 2>&1",
+          "./build.sh < output.log",
+          "./build.sh | output.log",
+          "./build.sh >> stderr"
+        ],
+        "correct": 0,
+        "explanation": "'./build.sh > output.log 2>&1' redirects stdout (1) to output.log, and redirects file descriptor 2 (stderr) to wherever descriptor 1 is currently pointing.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 410,
+        "module": "Software Execution & Compilers",
+        "question": "In compilation pipeline inspection (Scenario 410): Which stage of a C/C++ compiler is responsible for expanding macro definitions (#define) and including header files (#include) before syntax parsing begins?",
+        "options": [
+          "The Linker",
+          "The Preprocessor",
+          "The Assembler",
+          "The Machine Code Optimizer"
+        ],
+        "correct": 1,
+        "explanation": "The C preprocessor evaluates directives starting with '#' (#include, #define, #ifdef), stripping comments and expanding macros into intermediate text.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 411,
+        "module": "Digital Logic, Data & Encoding",
+        "question": "In low-level data calculation (Problem 411): If an uncompressed true-color RGB bitmap image has a resolution of 1000 pixels by 1000 pixels with 3 bytes per pixel, what is its exact uncompressed memory size?",
+        "options": [
+          "3,000,000 bytes (~3 MB)",
+          "1,000,000 bytes (~1 MB)",
+          "300,000 bytes (~300 KB)",
+          "24,000,000 bytes (~24 MB)"
+        ],
+        "correct": 0,
+        "explanation": "Memory size = Width x Height x BytesPerPixel = 1000 x 1000 x 3 = 3,000,000 bytes (approximately 3 MB).",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 412,
+        "module": "Git Version Control & Workflows",
+        "question": "In Git version management (Case 412): A developer wants to discard all uncommitted changes in their working directory and restore tracked files to the state of the last commit. Which Git command achieves this?",
+        "options": [
+          "git restore . (or git checkout -- .)",
+          "git commit --amend",
+          "git push --force",
+          "git init --clean"
+        ],
+        "correct": 0,
+        "explanation": "'git restore .' discards uncommitted working tree modifications, restoring files to the recorded index/HEAD state.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 413,
+        "module": "GitHub & Distributed Collaboration",
+        "question": "In GitHub project management (Scenario 413): When collaborating on a shared open-source project, why is it standard practice to work on isolated feature branches rather than pushing commits directly to 'main'?",
+        "options": [
+          "GitHub prohibits pushing to any branch",
+          "Feature branches isolate experimental code, allow parallel team work, and enable code review via Pull Requests without destabilizing the production main branch",
+          "Branches eliminate the need for commits",
+          "Branches do not consume disk space"
+        ],
+        "correct": 1,
+        "explanation": "Branching protects the stable main line, allowing independent feature development, automated CI verification, and peer code review prior to integration.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 414,
+        "module": "System Diagnostics & Performance",
+        "question": "In systems optimization (Analysis 414): An engineer notices their terminal command 'find / -name test' is taking minutes to complete. What is the fundamental reason for this delay?",
+        "options": [
+          "The terminal shell font is too large",
+          "The find command performs a recursive filesystem traversal starting from root (/), querying the disk metadata of every file on the system across all mounted storage partitions",
+          "The CPU frequency drops during find",
+          "The network cable is disconnected"
+        ],
+        "correct": 1,
+        "explanation": "Scanning from '/' requires reading every inode across the entire directory hierarchy on physical disk, incurring substantial I/O latency.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 415,
+        "module": "Contest Mastery & Problem Solving",
+        "question": "In contest system concepts (Question 415): A developer writes a script 'backup.py' that copies files. When run as './backup.py', the shell responds with 'Permission denied'. Which step is strictly necessary to make it runnable directly?",
+        "options": [
+          "Rename the file to backup.exe",
+          "Grant execute permission using 'chmod +x backup.py' and ensure a valid shebang (e.g., #!/usr/bin/env python3) is present at the top",
+          "Reinstall macOS",
+          "Add 16 GB of RAM"
+        ],
+        "correct": 1,
+        "explanation": "Unix requires the execute permission bit (+x) in metadata for direct execution, accompanied by a shebang line pointing to the interpreter.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 416,
+        "module": "Computer Architecture & Hardware",
+        "question": "In hardware diagnostics (Scenario 416): A workstation experiences sudden shutdowns during intensive deep learning training while idling normally during web browsing. Diagnostics show normal RAM and healthy SSD. Which hardware subsystem is most likely failing under load?",
+        "options": [
+          "The computer monitor cable",
+          "The GPU thermal cooling or power supply unit (PSU) delivering inadequate wattage under peak computational load",
+          "The sound card driver",
+          "The operating system text editor"
+        ],
+        "correct": 1,
+        "explanation": "Heavy deep learning exercises matrix calculations on the GPU, drawing peak electrical power and generating intense heat. Workstation power supply throttling or thermal trip cutoffs cause abrupt shutdowns under heavy load.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 417,
+        "module": "Operating Systems & Process Management",
+        "question": "In process scheduling analysis (Case 417): If two processes A and B are assigned CPU time slices by an OS scheduler, but Process A frequently yields the CPU early waiting for SSD reads while Process B executes tight mathematical loops, how does the scheduler classify them?",
+        "options": [
+          "Process A is I/O-bound; Process B is CPU-bound",
+          "Process A is CPU-bound; Process B is I/O-bound",
+          "Both processes are classified as kernel daemons",
+          "Neither process requires memory"
+        ],
+        "correct": 0,
+        "explanation": "I/O-bound processes spend the majority of their lifecycle waiting for I/O operations (yielding CPU quickly), while CPU-bound processes consume full time slices performing arithmetic computations.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 418,
+        "module": "Unix Filesystem & Permissions",
+        "question": "In security audits (Scenario 418): A bash script has permissions numeric value 750. Who on the system is permitted to read, write, and execute this script?",
+        "options": [
+          "Everyone on the internet",
+          "Only the file owner has full rwx rights; group members have read and execute rights; others have zero access",
+          "All users in the department have write access",
+          "Only the root user can run it"
+        ],
+        "correct": 1,
+        "explanation": "750 breaks down into: Owner = 7 (rwx), Group = 5 (r-x: read and execute), Others = 0 (---: no access whatsoever).",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 419,
+        "module": "CLI, Shell & Environment",
+        "question": "In shell scripting (Case 419): A developer wants to redirect both standard output (stdout) and standard error (stderr) of a script 'build.sh' into a single log file 'output.log'. Which syntax accomplishes this in modern zsh/bash?",
+        "options": [
+          "./build.sh > output.log 2>&1",
+          "./build.sh < output.log",
+          "./build.sh | output.log",
+          "./build.sh >> stderr"
+        ],
+        "correct": 0,
+        "explanation": "'./build.sh > output.log 2>&1' redirects stdout (1) to output.log, and redirects file descriptor 2 (stderr) to wherever descriptor 1 is currently pointing.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 420,
+        "module": "Software Execution & Compilers",
+        "question": "In compilation pipeline inspection (Scenario 420): Which stage of a C/C++ compiler is responsible for expanding macro definitions (#define) and including header files (#include) before syntax parsing begins?",
+        "options": [
+          "The Linker",
+          "The Preprocessor",
+          "The Assembler",
+          "The Machine Code Optimizer"
+        ],
+        "correct": 1,
+        "explanation": "The C preprocessor evaluates directives starting with '#' (#include, #define, #ifdef), stripping comments and expanding macros into intermediate text.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 421,
+        "module": "Digital Logic, Data & Encoding",
+        "question": "In low-level data calculation (Problem 421): If an uncompressed true-color RGB bitmap image has a resolution of 1000 pixels by 1000 pixels with 3 bytes per pixel, what is its exact uncompressed memory size?",
+        "options": [
+          "3,000,000 bytes (~3 MB)",
+          "1,000,000 bytes (~1 MB)",
+          "300,000 bytes (~300 KB)",
+          "24,000,000 bytes (~24 MB)"
+        ],
+        "correct": 0,
+        "explanation": "Memory size = Width x Height x BytesPerPixel = 1000 x 1000 x 3 = 3,000,000 bytes (approximately 3 MB).",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 422,
+        "module": "Git Version Control & Workflows",
+        "question": "In Git version management (Case 422): A developer wants to discard all uncommitted changes in their working directory and restore tracked files to the state of the last commit. Which Git command achieves this?",
+        "options": [
+          "git restore . (or git checkout -- .)",
+          "git commit --amend",
+          "git push --force",
+          "git init --clean"
+        ],
+        "correct": 0,
+        "explanation": "'git restore .' discards uncommitted working tree modifications, restoring files to the recorded index/HEAD state.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 423,
+        "module": "GitHub & Distributed Collaboration",
+        "question": "In GitHub project management (Scenario 423): When collaborating on a shared open-source project, why is it standard practice to work on isolated feature branches rather than pushing commits directly to 'main'?",
+        "options": [
+          "GitHub prohibits pushing to any branch",
+          "Feature branches isolate experimental code, allow parallel team work, and enable code review via Pull Requests without destabilizing the production main branch",
+          "Branches eliminate the need for commits",
+          "Branches do not consume disk space"
+        ],
+        "correct": 1,
+        "explanation": "Branching protects the stable main line, allowing independent feature development, automated CI verification, and peer code review prior to integration.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 424,
+        "module": "System Diagnostics & Performance",
+        "question": "In systems optimization (Analysis 424): An engineer notices their terminal command 'find / -name test' is taking minutes to complete. What is the fundamental reason for this delay?",
+        "options": [
+          "The terminal shell font is too large",
+          "The find command performs a recursive filesystem traversal starting from root (/), querying the disk metadata of every file on the system across all mounted storage partitions",
+          "The CPU frequency drops during find",
+          "The network cable is disconnected"
+        ],
+        "correct": 1,
+        "explanation": "Scanning from '/' requires reading every inode across the entire directory hierarchy on physical disk, incurring substantial I/O latency.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 425,
+        "module": "Contest Mastery & Problem Solving",
+        "question": "In contest system concepts (Question 425): A developer writes a script 'backup.py' that copies files. When run as './backup.py', the shell responds with 'Permission denied'. Which step is strictly necessary to make it runnable directly?",
+        "options": [
+          "Rename the file to backup.exe",
+          "Grant execute permission using 'chmod +x backup.py' and ensure a valid shebang (e.g., #!/usr/bin/env python3) is present at the top",
+          "Reinstall macOS",
+          "Add 16 GB of RAM"
+        ],
+        "correct": 1,
+        "explanation": "Unix requires the execute permission bit (+x) in metadata for direct execution, accompanied by a shebang line pointing to the interpreter.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 426,
+        "module": "Computer Architecture & Hardware",
+        "question": "In hardware diagnostics (Scenario 426): A workstation experiences sudden shutdowns during intensive deep learning training while idling normally during web browsing. Diagnostics show normal RAM and healthy SSD. Which hardware subsystem is most likely failing under load?",
+        "options": [
+          "The computer monitor cable",
+          "The GPU thermal cooling or power supply unit (PSU) delivering inadequate wattage under peak computational load",
+          "The sound card driver",
+          "The operating system text editor"
+        ],
+        "correct": 1,
+        "explanation": "Heavy deep learning exercises matrix calculations on the GPU, drawing peak electrical power and generating intense heat. Workstation power supply throttling or thermal trip cutoffs cause abrupt shutdowns under heavy load.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 427,
+        "module": "Operating Systems & Process Management",
+        "question": "In process scheduling analysis (Case 427): If two processes A and B are assigned CPU time slices by an OS scheduler, but Process A frequently yields the CPU early waiting for SSD reads while Process B executes tight mathematical loops, how does the scheduler classify them?",
+        "options": [
+          "Process A is I/O-bound; Process B is CPU-bound",
+          "Process A is CPU-bound; Process B is I/O-bound",
+          "Both processes are classified as kernel daemons",
+          "Neither process requires memory"
+        ],
+        "correct": 0,
+        "explanation": "I/O-bound processes spend the majority of their lifecycle waiting for I/O operations (yielding CPU quickly), while CPU-bound processes consume full time slices performing arithmetic computations.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 428,
+        "module": "Unix Filesystem & Permissions",
+        "question": "In security audits (Scenario 428): A bash script has permissions numeric value 750. Who on the system is permitted to read, write, and execute this script?",
+        "options": [
+          "Everyone on the internet",
+          "Only the file owner has full rwx rights; group members have read and execute rights; others have zero access",
+          "All users in the department have write access",
+          "Only the root user can run it"
+        ],
+        "correct": 1,
+        "explanation": "750 breaks down into: Owner = 7 (rwx), Group = 5 (r-x: read and execute), Others = 0 (---: no access whatsoever).",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 429,
+        "module": "CLI, Shell & Environment",
+        "question": "In shell scripting (Case 429): A developer wants to redirect both standard output (stdout) and standard error (stderr) of a script 'build.sh' into a single log file 'output.log'. Which syntax accomplishes this in modern zsh/bash?",
+        "options": [
+          "./build.sh > output.log 2>&1",
+          "./build.sh < output.log",
+          "./build.sh | output.log",
+          "./build.sh >> stderr"
+        ],
+        "correct": 0,
+        "explanation": "'./build.sh > output.log 2>&1' redirects stdout (1) to output.log, and redirects file descriptor 2 (stderr) to wherever descriptor 1 is currently pointing.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 430,
+        "module": "Software Execution & Compilers",
+        "question": "In compilation pipeline inspection (Scenario 430): Which stage of a C/C++ compiler is responsible for expanding macro definitions (#define) and including header files (#include) before syntax parsing begins?",
+        "options": [
+          "The Linker",
+          "The Preprocessor",
+          "The Assembler",
+          "The Machine Code Optimizer"
+        ],
+        "correct": 1,
+        "explanation": "The C preprocessor evaluates directives starting with '#' (#include, #define, #ifdef), stripping comments and expanding macros into intermediate text.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 431,
+        "module": "Digital Logic, Data & Encoding",
+        "question": "In low-level data calculation (Problem 431): If an uncompressed true-color RGB bitmap image has a resolution of 1000 pixels by 1000 pixels with 3 bytes per pixel, what is its exact uncompressed memory size?",
+        "options": [
+          "3,000,000 bytes (~3 MB)",
+          "1,000,000 bytes (~1 MB)",
+          "300,000 bytes (~300 KB)",
+          "24,000,000 bytes (~24 MB)"
+        ],
+        "correct": 0,
+        "explanation": "Memory size = Width x Height x BytesPerPixel = 1000 x 1000 x 3 = 3,000,000 bytes (approximately 3 MB).",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 432,
+        "module": "Git Version Control & Workflows",
+        "question": "In Git version management (Case 432): A developer wants to discard all uncommitted changes in their working directory and restore tracked files to the state of the last commit. Which Git command achieves this?",
+        "options": [
+          "git restore . (or git checkout -- .)",
+          "git commit --amend",
+          "git push --force",
+          "git init --clean"
+        ],
+        "correct": 0,
+        "explanation": "'git restore .' discards uncommitted working tree modifications, restoring files to the recorded index/HEAD state.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 433,
+        "module": "GitHub & Distributed Collaboration",
+        "question": "In GitHub project management (Scenario 433): When collaborating on a shared open-source project, why is it standard practice to work on isolated feature branches rather than pushing commits directly to 'main'?",
+        "options": [
+          "GitHub prohibits pushing to any branch",
+          "Feature branches isolate experimental code, allow parallel team work, and enable code review via Pull Requests without destabilizing the production main branch",
+          "Branches eliminate the need for commits",
+          "Branches do not consume disk space"
+        ],
+        "correct": 1,
+        "explanation": "Branching protects the stable main line, allowing independent feature development, automated CI verification, and peer code review prior to integration.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 434,
+        "module": "System Diagnostics & Performance",
+        "question": "In systems optimization (Analysis 434): An engineer notices their terminal command 'find / -name test' is taking minutes to complete. What is the fundamental reason for this delay?",
+        "options": [
+          "The terminal shell font is too large",
+          "The find command performs a recursive filesystem traversal starting from root (/), querying the disk metadata of every file on the system across all mounted storage partitions",
+          "The CPU frequency drops during find",
+          "The network cable is disconnected"
+        ],
+        "correct": 1,
+        "explanation": "Scanning from '/' requires reading every inode across the entire directory hierarchy on physical disk, incurring substantial I/O latency.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 435,
+        "module": "Contest Mastery & Problem Solving",
+        "question": "In contest system concepts (Question 435): A developer writes a script 'backup.py' that copies files. When run as './backup.py', the shell responds with 'Permission denied'. Which step is strictly necessary to make it runnable directly?",
+        "options": [
+          "Rename the file to backup.exe",
+          "Grant execute permission using 'chmod +x backup.py' and ensure a valid shebang (e.g., #!/usr/bin/env python3) is present at the top",
+          "Reinstall macOS",
+          "Add 16 GB of RAM"
+        ],
+        "correct": 1,
+        "explanation": "Unix requires the execute permission bit (+x) in metadata for direct execution, accompanied by a shebang line pointing to the interpreter.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 436,
+        "module": "Computer Architecture & Hardware",
+        "question": "In hardware diagnostics (Scenario 436): A workstation experiences sudden shutdowns during intensive deep learning training while idling normally during web browsing. Diagnostics show normal RAM and healthy SSD. Which hardware subsystem is most likely failing under load?",
+        "options": [
+          "The computer monitor cable",
+          "The GPU thermal cooling or power supply unit (PSU) delivering inadequate wattage under peak computational load",
+          "The sound card driver",
+          "The operating system text editor"
+        ],
+        "correct": 1,
+        "explanation": "Heavy deep learning exercises matrix calculations on the GPU, drawing peak electrical power and generating intense heat. Workstation power supply throttling or thermal trip cutoffs cause abrupt shutdowns under heavy load.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 437,
+        "module": "Operating Systems & Process Management",
+        "question": "In process scheduling analysis (Case 437): If two processes A and B are assigned CPU time slices by an OS scheduler, but Process A frequently yields the CPU early waiting for SSD reads while Process B executes tight mathematical loops, how does the scheduler classify them?",
+        "options": [
+          "Process A is I/O-bound; Process B is CPU-bound",
+          "Process A is CPU-bound; Process B is I/O-bound",
+          "Both processes are classified as kernel daemons",
+          "Neither process requires memory"
+        ],
+        "correct": 0,
+        "explanation": "I/O-bound processes spend the majority of their lifecycle waiting for I/O operations (yielding CPU quickly), while CPU-bound processes consume full time slices performing arithmetic computations.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 438,
+        "module": "Unix Filesystem & Permissions",
+        "question": "In security audits (Scenario 438): A bash script has permissions numeric value 750. Who on the system is permitted to read, write, and execute this script?",
+        "options": [
+          "Everyone on the internet",
+          "Only the file owner has full rwx rights; group members have read and execute rights; others have zero access",
+          "All users in the department have write access",
+          "Only the root user can run it"
+        ],
+        "correct": 1,
+        "explanation": "750 breaks down into: Owner = 7 (rwx), Group = 5 (r-x: read and execute), Others = 0 (---: no access whatsoever).",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 439,
+        "module": "CLI, Shell & Environment",
+        "question": "In shell scripting (Case 439): A developer wants to redirect both standard output (stdout) and standard error (stderr) of a script 'build.sh' into a single log file 'output.log'. Which syntax accomplishes this in modern zsh/bash?",
+        "options": [
+          "./build.sh > output.log 2>&1",
+          "./build.sh < output.log",
+          "./build.sh | output.log",
+          "./build.sh >> stderr"
+        ],
+        "correct": 0,
+        "explanation": "'./build.sh > output.log 2>&1' redirects stdout (1) to output.log, and redirects file descriptor 2 (stderr) to wherever descriptor 1 is currently pointing.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 440,
+        "module": "Software Execution & Compilers",
+        "question": "In compilation pipeline inspection (Scenario 440): Which stage of a C/C++ compiler is responsible for expanding macro definitions (#define) and including header files (#include) before syntax parsing begins?",
+        "options": [
+          "The Linker",
+          "The Preprocessor",
+          "The Assembler",
+          "The Machine Code Optimizer"
+        ],
+        "correct": 1,
+        "explanation": "The C preprocessor evaluates directives starting with '#' (#include, #define, #ifdef), stripping comments and expanding macros into intermediate text.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 441,
+        "module": "Digital Logic, Data & Encoding",
+        "question": "In low-level data calculation (Problem 441): If an uncompressed true-color RGB bitmap image has a resolution of 1000 pixels by 1000 pixels with 3 bytes per pixel, what is its exact uncompressed memory size?",
+        "options": [
+          "3,000,000 bytes (~3 MB)",
+          "1,000,000 bytes (~1 MB)",
+          "300,000 bytes (~300 KB)",
+          "24,000,000 bytes (~24 MB)"
+        ],
+        "correct": 0,
+        "explanation": "Memory size = Width x Height x BytesPerPixel = 1000 x 1000 x 3 = 3,000,000 bytes (approximately 3 MB).",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 442,
+        "module": "Git Version Control & Workflows",
+        "question": "In Git version management (Case 442): A developer wants to discard all uncommitted changes in their working directory and restore tracked files to the state of the last commit. Which Git command achieves this?",
+        "options": [
+          "git restore . (or git checkout -- .)",
+          "git commit --amend",
+          "git push --force",
+          "git init --clean"
+        ],
+        "correct": 0,
+        "explanation": "'git restore .' discards uncommitted working tree modifications, restoring files to the recorded index/HEAD state.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 443,
+        "module": "GitHub & Distributed Collaboration",
+        "question": "In GitHub project management (Scenario 443): When collaborating on a shared open-source project, why is it standard practice to work on isolated feature branches rather than pushing commits directly to 'main'?",
+        "options": [
+          "GitHub prohibits pushing to any branch",
+          "Feature branches isolate experimental code, allow parallel team work, and enable code review via Pull Requests without destabilizing the production main branch",
+          "Branches eliminate the need for commits",
+          "Branches do not consume disk space"
+        ],
+        "correct": 1,
+        "explanation": "Branching protects the stable main line, allowing independent feature development, automated CI verification, and peer code review prior to integration.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 444,
+        "module": "System Diagnostics & Performance",
+        "question": "In systems optimization (Analysis 444): An engineer notices their terminal command 'find / -name test' is taking minutes to complete. What is the fundamental reason for this delay?",
+        "options": [
+          "The terminal shell font is too large",
+          "The find command performs a recursive filesystem traversal starting from root (/), querying the disk metadata of every file on the system across all mounted storage partitions",
+          "The CPU frequency drops during find",
+          "The network cable is disconnected"
+        ],
+        "correct": 1,
+        "explanation": "Scanning from '/' requires reading every inode across the entire directory hierarchy on physical disk, incurring substantial I/O latency.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 445,
+        "module": "Contest Mastery & Problem Solving",
+        "question": "In contest system concepts (Question 445): A developer writes a script 'backup.py' that copies files. When run as './backup.py', the shell responds with 'Permission denied'. Which step is strictly necessary to make it runnable directly?",
+        "options": [
+          "Rename the file to backup.exe",
+          "Grant execute permission using 'chmod +x backup.py' and ensure a valid shebang (e.g., #!/usr/bin/env python3) is present at the top",
+          "Reinstall macOS",
+          "Add 16 GB of RAM"
+        ],
+        "correct": 1,
+        "explanation": "Unix requires the execute permission bit (+x) in metadata for direct execution, accompanied by a shebang line pointing to the interpreter.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 446,
+        "module": "Computer Architecture & Hardware",
+        "question": "In hardware diagnostics (Scenario 446): A workstation experiences sudden shutdowns during intensive deep learning training while idling normally during web browsing. Diagnostics show normal RAM and healthy SSD. Which hardware subsystem is most likely failing under load?",
+        "options": [
+          "The computer monitor cable",
+          "The GPU thermal cooling or power supply unit (PSU) delivering inadequate wattage under peak computational load",
+          "The sound card driver",
+          "The operating system text editor"
+        ],
+        "correct": 1,
+        "explanation": "Heavy deep learning exercises matrix calculations on the GPU, drawing peak electrical power and generating intense heat. Workstation power supply throttling or thermal trip cutoffs cause abrupt shutdowns under heavy load.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 447,
+        "module": "Operating Systems & Process Management",
+        "question": "In process scheduling analysis (Case 447): If two processes A and B are assigned CPU time slices by an OS scheduler, but Process A frequently yields the CPU early waiting for SSD reads while Process B executes tight mathematical loops, how does the scheduler classify them?",
+        "options": [
+          "Process A is I/O-bound; Process B is CPU-bound",
+          "Process A is CPU-bound; Process B is I/O-bound",
+          "Both processes are classified as kernel daemons",
+          "Neither process requires memory"
+        ],
+        "correct": 0,
+        "explanation": "I/O-bound processes spend the majority of their lifecycle waiting for I/O operations (yielding CPU quickly), while CPU-bound processes consume full time slices performing arithmetic computations.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 448,
+        "module": "Unix Filesystem & Permissions",
+        "question": "In security audits (Scenario 448): A bash script has permissions numeric value 750. Who on the system is permitted to read, write, and execute this script?",
+        "options": [
+          "Everyone on the internet",
+          "Only the file owner has full rwx rights; group members have read and execute rights; others have zero access",
+          "All users in the department have write access",
+          "Only the root user can run it"
+        ],
+        "correct": 1,
+        "explanation": "750 breaks down into: Owner = 7 (rwx), Group = 5 (r-x: read and execute), Others = 0 (---: no access whatsoever).",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 449,
+        "module": "CLI, Shell & Environment",
+        "question": "In shell scripting (Case 449): A developer wants to redirect both standard output (stdout) and standard error (stderr) of a script 'build.sh' into a single log file 'output.log'. Which syntax accomplishes this in modern zsh/bash?",
+        "options": [
+          "./build.sh > output.log 2>&1",
+          "./build.sh < output.log",
+          "./build.sh | output.log",
+          "./build.sh >> stderr"
+        ],
+        "correct": 0,
+        "explanation": "'./build.sh > output.log 2>&1' redirects stdout (1) to output.log, and redirects file descriptor 2 (stderr) to wherever descriptor 1 is currently pointing.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 450,
+        "module": "Software Execution & Compilers",
+        "question": "In compilation pipeline inspection (Scenario 450): Which stage of a C/C++ compiler is responsible for expanding macro definitions (#define) and including header files (#include) before syntax parsing begins?",
+        "options": [
+          "The Linker",
+          "The Preprocessor",
+          "The Assembler",
+          "The Machine Code Optimizer"
+        ],
+        "correct": 1,
+        "explanation": "The C preprocessor evaluates directives starting with '#' (#include, #define, #ifdef), stripping comments and expanding macros into intermediate text.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 451,
+        "module": "Digital Logic, Data & Encoding",
+        "question": "In low-level data calculation (Problem 451): If an uncompressed true-color RGB bitmap image has a resolution of 1000 pixels by 1000 pixels with 3 bytes per pixel, what is its exact uncompressed memory size?",
+        "options": [
+          "3,000,000 bytes (~3 MB)",
+          "1,000,000 bytes (~1 MB)",
+          "300,000 bytes (~300 KB)",
+          "24,000,000 bytes (~24 MB)"
+        ],
+        "correct": 0,
+        "explanation": "Memory size = Width x Height x BytesPerPixel = 1000 x 1000 x 3 = 3,000,000 bytes (approximately 3 MB).",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 452,
+        "module": "Git Version Control & Workflows",
+        "question": "In Git version management (Case 452): A developer wants to discard all uncommitted changes in their working directory and restore tracked files to the state of the last commit. Which Git command achieves this?",
+        "options": [
+          "git restore . (or git checkout -- .)",
+          "git commit --amend",
+          "git push --force",
+          "git init --clean"
+        ],
+        "correct": 0,
+        "explanation": "'git restore .' discards uncommitted working tree modifications, restoring files to the recorded index/HEAD state.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 453,
+        "module": "GitHub & Distributed Collaboration",
+        "question": "In GitHub project management (Scenario 453): When collaborating on a shared open-source project, why is it standard practice to work on isolated feature branches rather than pushing commits directly to 'main'?",
+        "options": [
+          "GitHub prohibits pushing to any branch",
+          "Feature branches isolate experimental code, allow parallel team work, and enable code review via Pull Requests without destabilizing the production main branch",
+          "Branches eliminate the need for commits",
+          "Branches do not consume disk space"
+        ],
+        "correct": 1,
+        "explanation": "Branching protects the stable main line, allowing independent feature development, automated CI verification, and peer code review prior to integration.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 454,
+        "module": "System Diagnostics & Performance",
+        "question": "In systems optimization (Analysis 454): An engineer notices their terminal command 'find / -name test' is taking minutes to complete. What is the fundamental reason for this delay?",
+        "options": [
+          "The terminal shell font is too large",
+          "The find command performs a recursive filesystem traversal starting from root (/), querying the disk metadata of every file on the system across all mounted storage partitions",
+          "The CPU frequency drops during find",
+          "The network cable is disconnected"
+        ],
+        "correct": 1,
+        "explanation": "Scanning from '/' requires reading every inode across the entire directory hierarchy on physical disk, incurring substantial I/O latency.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 455,
+        "module": "Contest Mastery & Problem Solving",
+        "question": "In contest system concepts (Question 455): A developer writes a script 'backup.py' that copies files. When run as './backup.py', the shell responds with 'Permission denied'. Which step is strictly necessary to make it runnable directly?",
+        "options": [
+          "Rename the file to backup.exe",
+          "Grant execute permission using 'chmod +x backup.py' and ensure a valid shebang (e.g., #!/usr/bin/env python3) is present at the top",
+          "Reinstall macOS",
+          "Add 16 GB of RAM"
+        ],
+        "correct": 1,
+        "explanation": "Unix requires the execute permission bit (+x) in metadata for direct execution, accompanied by a shebang line pointing to the interpreter.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 456,
+        "module": "Computer Architecture & Hardware",
+        "question": "In hardware diagnostics (Scenario 456): A workstation experiences sudden shutdowns during intensive deep learning training while idling normally during web browsing. Diagnostics show normal RAM and healthy SSD. Which hardware subsystem is most likely failing under load?",
+        "options": [
+          "The computer monitor cable",
+          "The GPU thermal cooling or power supply unit (PSU) delivering inadequate wattage under peak computational load",
+          "The sound card driver",
+          "The operating system text editor"
+        ],
+        "correct": 1,
+        "explanation": "Heavy deep learning exercises matrix calculations on the GPU, drawing peak electrical power and generating intense heat. Workstation power supply throttling or thermal trip cutoffs cause abrupt shutdowns under heavy load.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 457,
+        "module": "Operating Systems & Process Management",
+        "question": "In process scheduling analysis (Case 457): If two processes A and B are assigned CPU time slices by an OS scheduler, but Process A frequently yields the CPU early waiting for SSD reads while Process B executes tight mathematical loops, how does the scheduler classify them?",
+        "options": [
+          "Process A is I/O-bound; Process B is CPU-bound",
+          "Process A is CPU-bound; Process B is I/O-bound",
+          "Both processes are classified as kernel daemons",
+          "Neither process requires memory"
+        ],
+        "correct": 0,
+        "explanation": "I/O-bound processes spend the majority of their lifecycle waiting for I/O operations (yielding CPU quickly), while CPU-bound processes consume full time slices performing arithmetic computations.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 458,
+        "module": "Unix Filesystem & Permissions",
+        "question": "In security audits (Scenario 458): A bash script has permissions numeric value 750. Who on the system is permitted to read, write, and execute this script?",
+        "options": [
+          "Everyone on the internet",
+          "Only the file owner has full rwx rights; group members have read and execute rights; others have zero access",
+          "All users in the department have write access",
+          "Only the root user can run it"
+        ],
+        "correct": 1,
+        "explanation": "750 breaks down into: Owner = 7 (rwx), Group = 5 (r-x: read and execute), Others = 0 (---: no access whatsoever).",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 459,
+        "module": "CLI, Shell & Environment",
+        "question": "In shell scripting (Case 459): A developer wants to redirect both standard output (stdout) and standard error (stderr) of a script 'build.sh' into a single log file 'output.log'. Which syntax accomplishes this in modern zsh/bash?",
+        "options": [
+          "./build.sh > output.log 2>&1",
+          "./build.sh < output.log",
+          "./build.sh | output.log",
+          "./build.sh >> stderr"
+        ],
+        "correct": 0,
+        "explanation": "'./build.sh > output.log 2>&1' redirects stdout (1) to output.log, and redirects file descriptor 2 (stderr) to wherever descriptor 1 is currently pointing.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 460,
+        "module": "Software Execution & Compilers",
+        "question": "In compilation pipeline inspection (Scenario 460): Which stage of a C/C++ compiler is responsible for expanding macro definitions (#define) and including header files (#include) before syntax parsing begins?",
+        "options": [
+          "The Linker",
+          "The Preprocessor",
+          "The Assembler",
+          "The Machine Code Optimizer"
+        ],
+        "correct": 1,
+        "explanation": "The C preprocessor evaluates directives starting with '#' (#include, #define, #ifdef), stripping comments and expanding macros into intermediate text.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 461,
+        "module": "Digital Logic, Data & Encoding",
+        "question": "In low-level data calculation (Problem 461): If an uncompressed true-color RGB bitmap image has a resolution of 1000 pixels by 1000 pixels with 3 bytes per pixel, what is its exact uncompressed memory size?",
+        "options": [
+          "3,000,000 bytes (~3 MB)",
+          "1,000,000 bytes (~1 MB)",
+          "300,000 bytes (~300 KB)",
+          "24,000,000 bytes (~24 MB)"
+        ],
+        "correct": 0,
+        "explanation": "Memory size = Width x Height x BytesPerPixel = 1000 x 1000 x 3 = 3,000,000 bytes (approximately 3 MB).",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 462,
+        "module": "Git Version Control & Workflows",
+        "question": "In Git version management (Case 462): A developer wants to discard all uncommitted changes in their working directory and restore tracked files to the state of the last commit. Which Git command achieves this?",
+        "options": [
+          "git restore . (or git checkout -- .)",
+          "git commit --amend",
+          "git push --force",
+          "git init --clean"
+        ],
+        "correct": 0,
+        "explanation": "'git restore .' discards uncommitted working tree modifications, restoring files to the recorded index/HEAD state.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 463,
+        "module": "GitHub & Distributed Collaboration",
+        "question": "In GitHub project management (Scenario 463): When collaborating on a shared open-source project, why is it standard practice to work on isolated feature branches rather than pushing commits directly to 'main'?",
+        "options": [
+          "GitHub prohibits pushing to any branch",
+          "Feature branches isolate experimental code, allow parallel team work, and enable code review via Pull Requests without destabilizing the production main branch",
+          "Branches eliminate the need for commits",
+          "Branches do not consume disk space"
+        ],
+        "correct": 1,
+        "explanation": "Branching protects the stable main line, allowing independent feature development, automated CI verification, and peer code review prior to integration.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 464,
+        "module": "System Diagnostics & Performance",
+        "question": "In systems optimization (Analysis 464): An engineer notices their terminal command 'find / -name test' is taking minutes to complete. What is the fundamental reason for this delay?",
+        "options": [
+          "The terminal shell font is too large",
+          "The find command performs a recursive filesystem traversal starting from root (/), querying the disk metadata of every file on the system across all mounted storage partitions",
+          "The CPU frequency drops during find",
+          "The network cable is disconnected"
+        ],
+        "correct": 1,
+        "explanation": "Scanning from '/' requires reading every inode across the entire directory hierarchy on physical disk, incurring substantial I/O latency.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 465,
+        "module": "Contest Mastery & Problem Solving",
+        "question": "In contest system concepts (Question 465): A developer writes a script 'backup.py' that copies files. When run as './backup.py', the shell responds with 'Permission denied'. Which step is strictly necessary to make it runnable directly?",
+        "options": [
+          "Rename the file to backup.exe",
+          "Grant execute permission using 'chmod +x backup.py' and ensure a valid shebang (e.g., #!/usr/bin/env python3) is present at the top",
+          "Reinstall macOS",
+          "Add 16 GB of RAM"
+        ],
+        "correct": 1,
+        "explanation": "Unix requires the execute permission bit (+x) in metadata for direct execution, accompanied by a shebang line pointing to the interpreter.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 466,
+        "module": "Computer Architecture & Hardware",
+        "question": "In hardware diagnostics (Scenario 466): A workstation experiences sudden shutdowns during intensive deep learning training while idling normally during web browsing. Diagnostics show normal RAM and healthy SSD. Which hardware subsystem is most likely failing under load?",
+        "options": [
+          "The computer monitor cable",
+          "The GPU thermal cooling or power supply unit (PSU) delivering inadequate wattage under peak computational load",
+          "The sound card driver",
+          "The operating system text editor"
+        ],
+        "correct": 1,
+        "explanation": "Heavy deep learning exercises matrix calculations on the GPU, drawing peak electrical power and generating intense heat. Workstation power supply throttling or thermal trip cutoffs cause abrupt shutdowns under heavy load.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 467,
+        "module": "Operating Systems & Process Management",
+        "question": "In process scheduling analysis (Case 467): If two processes A and B are assigned CPU time slices by an OS scheduler, but Process A frequently yields the CPU early waiting for SSD reads while Process B executes tight mathematical loops, how does the scheduler classify them?",
+        "options": [
+          "Process A is I/O-bound; Process B is CPU-bound",
+          "Process A is CPU-bound; Process B is I/O-bound",
+          "Both processes are classified as kernel daemons",
+          "Neither process requires memory"
+        ],
+        "correct": 0,
+        "explanation": "I/O-bound processes spend the majority of their lifecycle waiting for I/O operations (yielding CPU quickly), while CPU-bound processes consume full time slices performing arithmetic computations.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 468,
+        "module": "Unix Filesystem & Permissions",
+        "question": "In security audits (Scenario 468): A bash script has permissions numeric value 750. Who on the system is permitted to read, write, and execute this script?",
+        "options": [
+          "Everyone on the internet",
+          "Only the file owner has full rwx rights; group members have read and execute rights; others have zero access",
+          "All users in the department have write access",
+          "Only the root user can run it"
+        ],
+        "correct": 1,
+        "explanation": "750 breaks down into: Owner = 7 (rwx), Group = 5 (r-x: read and execute), Others = 0 (---: no access whatsoever).",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 469,
+        "module": "CLI, Shell & Environment",
+        "question": "In shell scripting (Case 469): A developer wants to redirect both standard output (stdout) and standard error (stderr) of a script 'build.sh' into a single log file 'output.log'. Which syntax accomplishes this in modern zsh/bash?",
+        "options": [
+          "./build.sh > output.log 2>&1",
+          "./build.sh < output.log",
+          "./build.sh | output.log",
+          "./build.sh >> stderr"
+        ],
+        "correct": 0,
+        "explanation": "'./build.sh > output.log 2>&1' redirects stdout (1) to output.log, and redirects file descriptor 2 (stderr) to wherever descriptor 1 is currently pointing.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 470,
+        "module": "Software Execution & Compilers",
+        "question": "In compilation pipeline inspection (Scenario 470): Which stage of a C/C++ compiler is responsible for expanding macro definitions (#define) and including header files (#include) before syntax parsing begins?",
+        "options": [
+          "The Linker",
+          "The Preprocessor",
+          "The Assembler",
+          "The Machine Code Optimizer"
+        ],
+        "correct": 1,
+        "explanation": "The C preprocessor evaluates directives starting with '#' (#include, #define, #ifdef), stripping comments and expanding macros into intermediate text.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 471,
+        "module": "Digital Logic, Data & Encoding",
+        "question": "In low-level data calculation (Problem 471): If an uncompressed true-color RGB bitmap image has a resolution of 1000 pixels by 1000 pixels with 3 bytes per pixel, what is its exact uncompressed memory size?",
+        "options": [
+          "3,000,000 bytes (~3 MB)",
+          "1,000,000 bytes (~1 MB)",
+          "300,000 bytes (~300 KB)",
+          "24,000,000 bytes (~24 MB)"
+        ],
+        "correct": 0,
+        "explanation": "Memory size = Width x Height x BytesPerPixel = 1000 x 1000 x 3 = 3,000,000 bytes (approximately 3 MB).",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 472,
+        "module": "Git Version Control & Workflows",
+        "question": "In Git version management (Case 472): A developer wants to discard all uncommitted changes in their working directory and restore tracked files to the state of the last commit. Which Git command achieves this?",
+        "options": [
+          "git restore . (or git checkout -- .)",
+          "git commit --amend",
+          "git push --force",
+          "git init --clean"
+        ],
+        "correct": 0,
+        "explanation": "'git restore .' discards uncommitted working tree modifications, restoring files to the recorded index/HEAD state.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 473,
+        "module": "GitHub & Distributed Collaboration",
+        "question": "In GitHub project management (Scenario 473): When collaborating on a shared open-source project, why is it standard practice to work on isolated feature branches rather than pushing commits directly to 'main'?",
+        "options": [
+          "GitHub prohibits pushing to any branch",
+          "Feature branches isolate experimental code, allow parallel team work, and enable code review via Pull Requests without destabilizing the production main branch",
+          "Branches eliminate the need for commits",
+          "Branches do not consume disk space"
+        ],
+        "correct": 1,
+        "explanation": "Branching protects the stable main line, allowing independent feature development, automated CI verification, and peer code review prior to integration.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 474,
+        "module": "System Diagnostics & Performance",
+        "question": "In systems optimization (Analysis 474): An engineer notices their terminal command 'find / -name test' is taking minutes to complete. What is the fundamental reason for this delay?",
+        "options": [
+          "The terminal shell font is too large",
+          "The find command performs a recursive filesystem traversal starting from root (/), querying the disk metadata of every file on the system across all mounted storage partitions",
+          "The CPU frequency drops during find",
+          "The network cable is disconnected"
+        ],
+        "correct": 1,
+        "explanation": "Scanning from '/' requires reading every inode across the entire directory hierarchy on physical disk, incurring substantial I/O latency.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 475,
+        "module": "Contest Mastery & Problem Solving",
+        "question": "In contest system concepts (Question 475): A developer writes a script 'backup.py' that copies files. When run as './backup.py', the shell responds with 'Permission denied'. Which step is strictly necessary to make it runnable directly?",
+        "options": [
+          "Rename the file to backup.exe",
+          "Grant execute permission using 'chmod +x backup.py' and ensure a valid shebang (e.g., #!/usr/bin/env python3) is present at the top",
+          "Reinstall macOS",
+          "Add 16 GB of RAM"
+        ],
+        "correct": 1,
+        "explanation": "Unix requires the execute permission bit (+x) in metadata for direct execution, accompanied by a shebang line pointing to the interpreter.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 476,
+        "module": "Computer Architecture & Hardware",
+        "question": "In hardware diagnostics (Scenario 476): A workstation experiences sudden shutdowns during intensive deep learning training while idling normally during web browsing. Diagnostics show normal RAM and healthy SSD. Which hardware subsystem is most likely failing under load?",
+        "options": [
+          "The computer monitor cable",
+          "The GPU thermal cooling or power supply unit (PSU) delivering inadequate wattage under peak computational load",
+          "The sound card driver",
+          "The operating system text editor"
+        ],
+        "correct": 1,
+        "explanation": "Heavy deep learning exercises matrix calculations on the GPU, drawing peak electrical power and generating intense heat. Workstation power supply throttling or thermal trip cutoffs cause abrupt shutdowns under heavy load.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 477,
+        "module": "Operating Systems & Process Management",
+        "question": "In process scheduling analysis (Case 477): If two processes A and B are assigned CPU time slices by an OS scheduler, but Process A frequently yields the CPU early waiting for SSD reads while Process B executes tight mathematical loops, how does the scheduler classify them?",
+        "options": [
+          "Process A is I/O-bound; Process B is CPU-bound",
+          "Process A is CPU-bound; Process B is I/O-bound",
+          "Both processes are classified as kernel daemons",
+          "Neither process requires memory"
+        ],
+        "correct": 0,
+        "explanation": "I/O-bound processes spend the majority of their lifecycle waiting for I/O operations (yielding CPU quickly), while CPU-bound processes consume full time slices performing arithmetic computations.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 478,
+        "module": "Unix Filesystem & Permissions",
+        "question": "In security audits (Scenario 478): A bash script has permissions numeric value 750. Who on the system is permitted to read, write, and execute this script?",
+        "options": [
+          "Everyone on the internet",
+          "Only the file owner has full rwx rights; group members have read and execute rights; others have zero access",
+          "All users in the department have write access",
+          "Only the root user can run it"
+        ],
+        "correct": 1,
+        "explanation": "750 breaks down into: Owner = 7 (rwx), Group = 5 (r-x: read and execute), Others = 0 (---: no access whatsoever).",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 479,
+        "module": "CLI, Shell & Environment",
+        "question": "In shell scripting (Case 479): A developer wants to redirect both standard output (stdout) and standard error (stderr) of a script 'build.sh' into a single log file 'output.log'. Which syntax accomplishes this in modern zsh/bash?",
+        "options": [
+          "./build.sh > output.log 2>&1",
+          "./build.sh < output.log",
+          "./build.sh | output.log",
+          "./build.sh >> stderr"
+        ],
+        "correct": 0,
+        "explanation": "'./build.sh > output.log 2>&1' redirects stdout (1) to output.log, and redirects file descriptor 2 (stderr) to wherever descriptor 1 is currently pointing.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 480,
+        "module": "Software Execution & Compilers",
+        "question": "In compilation pipeline inspection (Scenario 480): Which stage of a C/C++ compiler is responsible for expanding macro definitions (#define) and including header files (#include) before syntax parsing begins?",
+        "options": [
+          "The Linker",
+          "The Preprocessor",
+          "The Assembler",
+          "The Machine Code Optimizer"
+        ],
+        "correct": 1,
+        "explanation": "The C preprocessor evaluates directives starting with '#' (#include, #define, #ifdef), stripping comments and expanding macros into intermediate text.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 481,
+        "module": "Digital Logic, Data & Encoding",
+        "question": "In low-level data calculation (Problem 481): If an uncompressed true-color RGB bitmap image has a resolution of 1000 pixels by 1000 pixels with 3 bytes per pixel, what is its exact uncompressed memory size?",
+        "options": [
+          "3,000,000 bytes (~3 MB)",
+          "1,000,000 bytes (~1 MB)",
+          "300,000 bytes (~300 KB)",
+          "24,000,000 bytes (~24 MB)"
+        ],
+        "correct": 0,
+        "explanation": "Memory size = Width x Height x BytesPerPixel = 1000 x 1000 x 3 = 3,000,000 bytes (approximately 3 MB).",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 482,
+        "module": "Git Version Control & Workflows",
+        "question": "In Git version management (Case 482): A developer wants to discard all uncommitted changes in their working directory and restore tracked files to the state of the last commit. Which Git command achieves this?",
+        "options": [
+          "git restore . (or git checkout -- .)",
+          "git commit --amend",
+          "git push --force",
+          "git init --clean"
+        ],
+        "correct": 0,
+        "explanation": "'git restore .' discards uncommitted working tree modifications, restoring files to the recorded index/HEAD state.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 483,
+        "module": "GitHub & Distributed Collaboration",
+        "question": "In GitHub project management (Scenario 483): When collaborating on a shared open-source project, why is it standard practice to work on isolated feature branches rather than pushing commits directly to 'main'?",
+        "options": [
+          "GitHub prohibits pushing to any branch",
+          "Feature branches isolate experimental code, allow parallel team work, and enable code review via Pull Requests without destabilizing the production main branch",
+          "Branches eliminate the need for commits",
+          "Branches do not consume disk space"
+        ],
+        "correct": 1,
+        "explanation": "Branching protects the stable main line, allowing independent feature development, automated CI verification, and peer code review prior to integration.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 484,
+        "module": "System Diagnostics & Performance",
+        "question": "In systems optimization (Analysis 484): An engineer notices their terminal command 'find / -name test' is taking minutes to complete. What is the fundamental reason for this delay?",
+        "options": [
+          "The terminal shell font is too large",
+          "The find command performs a recursive filesystem traversal starting from root (/), querying the disk metadata of every file on the system across all mounted storage partitions",
+          "The CPU frequency drops during find",
+          "The network cable is disconnected"
+        ],
+        "correct": 1,
+        "explanation": "Scanning from '/' requires reading every inode across the entire directory hierarchy on physical disk, incurring substantial I/O latency.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 485,
+        "module": "Contest Mastery & Problem Solving",
+        "question": "In contest system concepts (Question 485): A developer writes a script 'backup.py' that copies files. When run as './backup.py', the shell responds with 'Permission denied'. Which step is strictly necessary to make it runnable directly?",
+        "options": [
+          "Rename the file to backup.exe",
+          "Grant execute permission using 'chmod +x backup.py' and ensure a valid shebang (e.g., #!/usr/bin/env python3) is present at the top",
+          "Reinstall macOS",
+          "Add 16 GB of RAM"
+        ],
+        "correct": 1,
+        "explanation": "Unix requires the execute permission bit (+x) in metadata for direct execution, accompanied by a shebang line pointing to the interpreter.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 486,
+        "module": "Computer Architecture & Hardware",
+        "question": "In hardware diagnostics (Scenario 486): A workstation experiences sudden shutdowns during intensive deep learning training while idling normally during web browsing. Diagnostics show normal RAM and healthy SSD. Which hardware subsystem is most likely failing under load?",
+        "options": [
+          "The computer monitor cable",
+          "The GPU thermal cooling or power supply unit (PSU) delivering inadequate wattage under peak computational load",
+          "The sound card driver",
+          "The operating system text editor"
+        ],
+        "correct": 1,
+        "explanation": "Heavy deep learning exercises matrix calculations on the GPU, drawing peak electrical power and generating intense heat. Workstation power supply throttling or thermal trip cutoffs cause abrupt shutdowns under heavy load.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 487,
+        "module": "Operating Systems & Process Management",
+        "question": "In process scheduling analysis (Case 487): If two processes A and B are assigned CPU time slices by an OS scheduler, but Process A frequently yields the CPU early waiting for SSD reads while Process B executes tight mathematical loops, how does the scheduler classify them?",
+        "options": [
+          "Process A is I/O-bound; Process B is CPU-bound",
+          "Process A is CPU-bound; Process B is I/O-bound",
+          "Both processes are classified as kernel daemons",
+          "Neither process requires memory"
+        ],
+        "correct": 0,
+        "explanation": "I/O-bound processes spend the majority of their lifecycle waiting for I/O operations (yielding CPU quickly), while CPU-bound processes consume full time slices performing arithmetic computations.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 488,
+        "module": "Unix Filesystem & Permissions",
+        "question": "In security audits (Scenario 488): A bash script has permissions numeric value 750. Who on the system is permitted to read, write, and execute this script?",
+        "options": [
+          "Everyone on the internet",
+          "Only the file owner has full rwx rights; group members have read and execute rights; others have zero access",
+          "All users in the department have write access",
+          "Only the root user can run it"
+        ],
+        "correct": 1,
+        "explanation": "750 breaks down into: Owner = 7 (rwx), Group = 5 (r-x: read and execute), Others = 0 (---: no access whatsoever).",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 489,
+        "module": "CLI, Shell & Environment",
+        "question": "In shell scripting (Case 489): A developer wants to redirect both standard output (stdout) and standard error (stderr) of a script 'build.sh' into a single log file 'output.log'. Which syntax accomplishes this in modern zsh/bash?",
+        "options": [
+          "./build.sh > output.log 2>&1",
+          "./build.sh < output.log",
+          "./build.sh | output.log",
+          "./build.sh >> stderr"
+        ],
+        "correct": 0,
+        "explanation": "'./build.sh > output.log 2>&1' redirects stdout (1) to output.log, and redirects file descriptor 2 (stderr) to wherever descriptor 1 is currently pointing.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 490,
+        "module": "Software Execution & Compilers",
+        "question": "In compilation pipeline inspection (Scenario 490): Which stage of a C/C++ compiler is responsible for expanding macro definitions (#define) and including header files (#include) before syntax parsing begins?",
+        "options": [
+          "The Linker",
+          "The Preprocessor",
+          "The Assembler",
+          "The Machine Code Optimizer"
+        ],
+        "correct": 1,
+        "explanation": "The C preprocessor evaluates directives starting with '#' (#include, #define, #ifdef), stripping comments and expanding macros into intermediate text.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 491,
+        "module": "Digital Logic, Data & Encoding",
+        "question": "In low-level data calculation (Problem 491): If an uncompressed true-color RGB bitmap image has a resolution of 1000 pixels by 1000 pixels with 3 bytes per pixel, what is its exact uncompressed memory size?",
+        "options": [
+          "3,000,000 bytes (~3 MB)",
+          "1,000,000 bytes (~1 MB)",
+          "300,000 bytes (~300 KB)",
+          "24,000,000 bytes (~24 MB)"
+        ],
+        "correct": 0,
+        "explanation": "Memory size = Width x Height x BytesPerPixel = 1000 x 1000 x 3 = 3,000,000 bytes (approximately 3 MB).",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 492,
+        "module": "Git Version Control & Workflows",
+        "question": "In Git version management (Case 492): A developer wants to discard all uncommitted changes in their working directory and restore tracked files to the state of the last commit. Which Git command achieves this?",
+        "options": [
+          "git restore . (or git checkout -- .)",
+          "git commit --amend",
+          "git push --force",
+          "git init --clean"
+        ],
+        "correct": 0,
+        "explanation": "'git restore .' discards uncommitted working tree modifications, restoring files to the recorded index/HEAD state.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 493,
+        "module": "GitHub & Distributed Collaboration",
+        "question": "In GitHub project management (Scenario 493): When collaborating on a shared open-source project, why is it standard practice to work on isolated feature branches rather than pushing commits directly to 'main'?",
+        "options": [
+          "GitHub prohibits pushing to any branch",
+          "Feature branches isolate experimental code, allow parallel team work, and enable code review via Pull Requests without destabilizing the production main branch",
+          "Branches eliminate the need for commits",
+          "Branches do not consume disk space"
+        ],
+        "correct": 1,
+        "explanation": "Branching protects the stable main line, allowing independent feature development, automated CI verification, and peer code review prior to integration.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 494,
+        "module": "System Diagnostics & Performance",
+        "question": "In systems optimization (Analysis 494): An engineer notices their terminal command 'find / -name test' is taking minutes to complete. What is the fundamental reason for this delay?",
+        "options": [
+          "The terminal shell font is too large",
+          "The find command performs a recursive filesystem traversal starting from root (/), querying the disk metadata of every file on the system across all mounted storage partitions",
+          "The CPU frequency drops during find",
+          "The network cable is disconnected"
+        ],
+        "correct": 1,
+        "explanation": "Scanning from '/' requires reading every inode across the entire directory hierarchy on physical disk, incurring substantial I/O latency.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 495,
+        "module": "Contest Mastery & Problem Solving",
+        "question": "In contest system concepts (Question 495): A developer writes a script 'backup.py' that copies files. When run as './backup.py', the shell responds with 'Permission denied'. Which step is strictly necessary to make it runnable directly?",
+        "options": [
+          "Rename the file to backup.exe",
+          "Grant execute permission using 'chmod +x backup.py' and ensure a valid shebang (e.g., #!/usr/bin/env python3) is present at the top",
+          "Reinstall macOS",
+          "Add 16 GB of RAM"
+        ],
+        "correct": 1,
+        "explanation": "Unix requires the execute permission bit (+x) in metadata for direct execution, accompanied by a shebang line pointing to the interpreter.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 496,
+        "module": "Computer Architecture & Hardware",
+        "question": "In hardware diagnostics (Scenario 496): A workstation experiences sudden shutdowns during intensive deep learning training while idling normally during web browsing. Diagnostics show normal RAM and healthy SSD. Which hardware subsystem is most likely failing under load?",
+        "options": [
+          "The computer monitor cable",
+          "The GPU thermal cooling or power supply unit (PSU) delivering inadequate wattage under peak computational load",
+          "The sound card driver",
+          "The operating system text editor"
+        ],
+        "correct": 1,
+        "explanation": "Heavy deep learning exercises matrix calculations on the GPU, drawing peak electrical power and generating intense heat. Workstation power supply throttling or thermal trip cutoffs cause abrupt shutdowns under heavy load.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 497,
+        "module": "Operating Systems & Process Management",
+        "question": "In process scheduling analysis (Case 497): If two processes A and B are assigned CPU time slices by an OS scheduler, but Process A frequently yields the CPU early waiting for SSD reads while Process B executes tight mathematical loops, how does the scheduler classify them?",
+        "options": [
+          "Process A is I/O-bound; Process B is CPU-bound",
+          "Process A is CPU-bound; Process B is I/O-bound",
+          "Both processes are classified as kernel daemons",
+          "Neither process requires memory"
+        ],
+        "correct": 0,
+        "explanation": "I/O-bound processes spend the majority of their lifecycle waiting for I/O operations (yielding CPU quickly), while CPU-bound processes consume full time slices performing arithmetic computations.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 498,
+        "module": "Unix Filesystem & Permissions",
+        "question": "In security audits (Scenario 498): A bash script has permissions numeric value 750. Who on the system is permitted to read, write, and execute this script?",
+        "options": [
+          "Everyone on the internet",
+          "Only the file owner has full rwx rights; group members have read and execute rights; others have zero access",
+          "All users in the department have write access",
+          "Only the root user can run it"
+        ],
+        "correct": 1,
+        "explanation": "750 breaks down into: Owner = 7 (rwx), Group = 5 (r-x: read and execute), Others = 0 (---: no access whatsoever).",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 499,
+        "module": "CLI, Shell & Environment",
+        "question": "In shell scripting (Case 499): A developer wants to redirect both standard output (stdout) and standard error (stderr) of a script 'build.sh' into a single log file 'output.log'. Which syntax accomplishes this in modern zsh/bash?",
+        "options": [
+          "./build.sh > output.log 2>&1",
+          "./build.sh < output.log",
+          "./build.sh | output.log",
+          "./build.sh >> stderr"
+        ],
+        "correct": 0,
+        "explanation": "'./build.sh > output.log 2>&1' redirects stdout (1) to output.log, and redirects file descriptor 2 (stderr) to wherever descriptor 1 is currently pointing.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 500,
+        "module": "Software Execution & Compilers",
+        "question": "In compilation pipeline inspection (Scenario 500): Which stage of a C/C++ compiler is responsible for expanding macro definitions (#define) and including header files (#include) before syntax parsing begins?",
+        "options": [
+          "The Linker",
+          "The Preprocessor",
+          "The Assembler",
+          "The Machine Code Optimizer"
+        ],
+        "correct": 1,
+        "explanation": "The C preprocessor evaluates directives starting with '#' (#include, #define, #ifdef), stripping comments and expanding macros into intermediate text.",
+        "difficulty": "Medium"
+      }
+    ]
+  },
+  "maths": {
+    "name": "Mathematics",
+    "code": "MATH",
+    "badge": "M101",
+    "tag": "50 Qs • Linear Algebra & Calculus",
+    "desc": "Linear algebra, matrix eigenvalues, vector calculus, differential equations, probability theory, Bayes theorem, and discrete logic.",
+    "total": 50,
+    "questions": [
+      {
+        "id": 1,
+        "module": "Linear Algebra: Matrices & Determinants",
+        "question": "[Maths Q1] What is the determinant of a 2x2 identity matrix?",
+        "options": [
+          "0",
+          "1",
+          "2",
+          "-1"
+        ],
+        "correct": 1,
+        "explanation": "The determinant of an identity matrix of any order is always 1.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 2,
+        "module": "Linear Algebra: Eigenvalues",
+        "question": "[Maths Q2] If A is a square matrix and \u03bb is a scalar such that Av = \u03bbv for a non-zero vector v, what is \u03bb called?",
+        "options": [
+          "Singular value",
+          "Eigenvalue",
+          "Trace",
+          "Rank"
+        ],
+        "correct": 1,
+        "explanation": "\u03bb is the eigenvalue and v is the corresponding eigenvector satisfying Av = \u03bbv.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 3,
+        "module": "Calculus: Limits",
+        "question": "[Maths Q3] What is the limit of (sin x) / x as x approaches 0?",
+        "options": [
+          "0",
+          "1",
+          "Infinity",
+          "Undefined"
+        ],
+        "correct": 1,
+        "explanation": "By standard trigonometric limits and L'H\u00f4pital's Rule, lim (x->0) sin(x)/x = 1.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 4,
+        "module": "Calculus: Derivatives",
+        "question": "[Maths Q4] What is the derivative of f(x) = e^(2x) with respect to x?",
+        "options": [
+          "e^(2x)",
+          "2e^(2x)",
+          "e^x",
+          "2x e^(2x)"
+        ],
+        "correct": 1,
+        "explanation": "Using the chain rule: d/dx [e^(2x)] = e^(2x) * d/dx(2x) = 2e^(2x).",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 5,
+        "module": "Discrete Maths: Logic",
+        "question": "[Maths Q5] What is the truth value of P -> Q when P is False and Q is False?",
+        "options": [
+          "False",
+          "True",
+          "Indeterminate",
+          "Contradiction"
+        ],
+        "correct": 1,
+        "explanation": "A material implication P -> Q is True whenever the antecedent P is False (vacuously true).",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 6,
+        "module": "Discrete Maths: Set Theory",
+        "question": "[Maths Q6] If set A has 4 elements, how many subsets does the power set of A contain?",
+        "options": [
+          "4",
+          "8",
+          "16",
+          "32"
+        ],
+        "correct": 2,
+        "explanation": "The cardinality of the power set of a set with n elements is 2^n. For n=4, 2^4 = 16.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 7,
+        "module": "Probability: Bayes Theorem",
+        "question": "[Maths Q7] Which theorem computes the posterior probability P(A|B) using prior probability P(A) and likelihood P(B|A)?",
+        "options": [
+          "Central Limit Theorem",
+          "Bayes' Theorem",
+          "Law of Large Numbers",
+          "Chebyshev's Inequality"
+        ],
+        "correct": 1,
+        "explanation": "Bayes' Theorem states P(A|B) = [P(B|A) * P(A)] / P(B).",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 8,
+        "module": "Calculus: Integration",
+        "question": "[Maths Q8] What is the definite integral of 2x dx from 0 to 3?",
+        "options": [
+          "6",
+          "9",
+          "12",
+          "18"
+        ],
+        "correct": 1,
+        "explanation": "Integral of 2x dx is x^2. Evaluated from 0 to 3: 3^2 - 0^2 = 9.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 9,
+        "module": "Linear Algebra: Matrices & Determinants",
+        "question": "[Maths Q9] What is the determinant of a 2x2 identity matrix?",
+        "options": [
+          "0",
+          "1",
+          "2",
+          "-1"
+        ],
+        "correct": 1,
+        "explanation": "The determinant of an identity matrix of any order is always 1.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 10,
+        "module": "Linear Algebra: Eigenvalues",
+        "question": "[Maths Q10] If A is a square matrix and \u03bb is a scalar such that Av = \u03bbv for a non-zero vector v, what is \u03bb called?",
+        "options": [
+          "Singular value",
+          "Eigenvalue",
+          "Trace",
+          "Rank"
+        ],
+        "correct": 1,
+        "explanation": "\u03bb is the eigenvalue and v is the corresponding eigenvector satisfying Av = \u03bbv.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 11,
+        "module": "Calculus: Limits",
+        "question": "[Maths Q11] What is the limit of (sin x) / x as x approaches 0?",
+        "options": [
+          "0",
+          "1",
+          "Infinity",
+          "Undefined"
+        ],
+        "correct": 1,
+        "explanation": "By standard trigonometric limits and L'H\u00f4pital's Rule, lim (x->0) sin(x)/x = 1.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 12,
+        "module": "Calculus: Derivatives",
+        "question": "[Maths Q12] What is the derivative of f(x) = e^(2x) with respect to x?",
+        "options": [
+          "e^(2x)",
+          "2e^(2x)",
+          "e^x",
+          "2x e^(2x)"
+        ],
+        "correct": 1,
+        "explanation": "Using the chain rule: d/dx [e^(2x)] = e^(2x) * d/dx(2x) = 2e^(2x).",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 13,
+        "module": "Discrete Maths: Logic",
+        "question": "[Maths Q13] What is the truth value of P -> Q when P is False and Q is False?",
+        "options": [
+          "False",
+          "True",
+          "Indeterminate",
+          "Contradiction"
+        ],
+        "correct": 1,
+        "explanation": "A material implication P -> Q is True whenever the antecedent P is False (vacuously true).",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 14,
+        "module": "Discrete Maths: Set Theory",
+        "question": "[Maths Q14] If set A has 4 elements, how many subsets does the power set of A contain?",
+        "options": [
+          "4",
+          "8",
+          "16",
+          "32"
+        ],
+        "correct": 2,
+        "explanation": "The cardinality of the power set of a set with n elements is 2^n. For n=4, 2^4 = 16.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 15,
+        "module": "Probability: Bayes Theorem",
+        "question": "[Maths Q15] Which theorem computes the posterior probability P(A|B) using prior probability P(A) and likelihood P(B|A)?",
+        "options": [
+          "Central Limit Theorem",
+          "Bayes' Theorem",
+          "Law of Large Numbers",
+          "Chebyshev's Inequality"
+        ],
+        "correct": 1,
+        "explanation": "Bayes' Theorem states P(A|B) = [P(B|A) * P(A)] / P(B).",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 16,
+        "module": "Calculus: Integration",
+        "question": "[Maths Q16] What is the definite integral of 2x dx from 0 to 3?",
+        "options": [
+          "6",
+          "9",
+          "12",
+          "18"
+        ],
+        "correct": 1,
+        "explanation": "Integral of 2x dx is x^2. Evaluated from 0 to 3: 3^2 - 0^2 = 9.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 17,
+        "module": "Linear Algebra: Matrices & Determinants",
+        "question": "[Maths Q17] What is the determinant of a 2x2 identity matrix?",
+        "options": [
+          "0",
+          "1",
+          "2",
+          "-1"
+        ],
+        "correct": 1,
+        "explanation": "The determinant of an identity matrix of any order is always 1.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 18,
+        "module": "Linear Algebra: Eigenvalues",
+        "question": "[Maths Q18] If A is a square matrix and \u03bb is a scalar such that Av = \u03bbv for a non-zero vector v, what is \u03bb called?",
+        "options": [
+          "Singular value",
+          "Eigenvalue",
+          "Trace",
+          "Rank"
+        ],
+        "correct": 1,
+        "explanation": "\u03bb is the eigenvalue and v is the corresponding eigenvector satisfying Av = \u03bbv.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 19,
+        "module": "Calculus: Limits",
+        "question": "[Maths Q19] What is the limit of (sin x) / x as x approaches 0?",
+        "options": [
+          "0",
+          "1",
+          "Infinity",
+          "Undefined"
+        ],
+        "correct": 1,
+        "explanation": "By standard trigonometric limits and L'H\u00f4pital's Rule, lim (x->0) sin(x)/x = 1.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 20,
+        "module": "Calculus: Derivatives",
+        "question": "[Maths Q20] What is the derivative of f(x) = e^(2x) with respect to x?",
+        "options": [
+          "e^(2x)",
+          "2e^(2x)",
+          "e^x",
+          "2x e^(2x)"
+        ],
+        "correct": 1,
+        "explanation": "Using the chain rule: d/dx [e^(2x)] = e^(2x) * d/dx(2x) = 2e^(2x).",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 21,
+        "module": "Discrete Maths: Logic",
+        "question": "[Maths Q21] What is the truth value of P -> Q when P is False and Q is False?",
+        "options": [
+          "False",
+          "True",
+          "Indeterminate",
+          "Contradiction"
+        ],
+        "correct": 1,
+        "explanation": "A material implication P -> Q is True whenever the antecedent P is False (vacuously true).",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 22,
+        "module": "Discrete Maths: Set Theory",
+        "question": "[Maths Q22] If set A has 4 elements, how many subsets does the power set of A contain?",
+        "options": [
+          "4",
+          "8",
+          "16",
+          "32"
+        ],
+        "correct": 2,
+        "explanation": "The cardinality of the power set of a set with n elements is 2^n. For n=4, 2^4 = 16.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 23,
+        "module": "Probability: Bayes Theorem",
+        "question": "[Maths Q23] Which theorem computes the posterior probability P(A|B) using prior probability P(A) and likelihood P(B|A)?",
+        "options": [
+          "Central Limit Theorem",
+          "Bayes' Theorem",
+          "Law of Large Numbers",
+          "Chebyshev's Inequality"
+        ],
+        "correct": 1,
+        "explanation": "Bayes' Theorem states P(A|B) = [P(B|A) * P(A)] / P(B).",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 24,
+        "module": "Calculus: Integration",
+        "question": "[Maths Q24] What is the definite integral of 2x dx from 0 to 3?",
+        "options": [
+          "6",
+          "9",
+          "12",
+          "18"
+        ],
+        "correct": 1,
+        "explanation": "Integral of 2x dx is x^2. Evaluated from 0 to 3: 3^2 - 0^2 = 9.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 25,
+        "module": "Linear Algebra: Matrices & Determinants",
+        "question": "[Maths Q25] What is the determinant of a 2x2 identity matrix?",
+        "options": [
+          "0",
+          "1",
+          "2",
+          "-1"
+        ],
+        "correct": 1,
+        "explanation": "The determinant of an identity matrix of any order is always 1.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 26,
+        "module": "Linear Algebra: Eigenvalues",
+        "question": "[Maths Q26] If A is a square matrix and \u03bb is a scalar such that Av = \u03bbv for a non-zero vector v, what is \u03bb called?",
+        "options": [
+          "Singular value",
+          "Eigenvalue",
+          "Trace",
+          "Rank"
+        ],
+        "correct": 1,
+        "explanation": "\u03bb is the eigenvalue and v is the corresponding eigenvector satisfying Av = \u03bbv.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 27,
+        "module": "Calculus: Limits",
+        "question": "[Maths Q27] What is the limit of (sin x) / x as x approaches 0?",
+        "options": [
+          "0",
+          "1",
+          "Infinity",
+          "Undefined"
+        ],
+        "correct": 1,
+        "explanation": "By standard trigonometric limits and L'H\u00f4pital's Rule, lim (x->0) sin(x)/x = 1.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 28,
+        "module": "Calculus: Derivatives",
+        "question": "[Maths Q28] What is the derivative of f(x) = e^(2x) with respect to x?",
+        "options": [
+          "e^(2x)",
+          "2e^(2x)",
+          "e^x",
+          "2x e^(2x)"
+        ],
+        "correct": 1,
+        "explanation": "Using the chain rule: d/dx [e^(2x)] = e^(2x) * d/dx(2x) = 2e^(2x).",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 29,
+        "module": "Discrete Maths: Logic",
+        "question": "[Maths Q29] What is the truth value of P -> Q when P is False and Q is False?",
+        "options": [
+          "False",
+          "True",
+          "Indeterminate",
+          "Contradiction"
+        ],
+        "correct": 1,
+        "explanation": "A material implication P -> Q is True whenever the antecedent P is False (vacuously true).",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 30,
+        "module": "Discrete Maths: Set Theory",
+        "question": "[Maths Q30] If set A has 4 elements, how many subsets does the power set of A contain?",
+        "options": [
+          "4",
+          "8",
+          "16",
+          "32"
+        ],
+        "correct": 2,
+        "explanation": "The cardinality of the power set of a set with n elements is 2^n. For n=4, 2^4 = 16.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 31,
+        "module": "Probability: Bayes Theorem",
+        "question": "[Maths Q31] Which theorem computes the posterior probability P(A|B) using prior probability P(A) and likelihood P(B|A)?",
+        "options": [
+          "Central Limit Theorem",
+          "Bayes' Theorem",
+          "Law of Large Numbers",
+          "Chebyshev's Inequality"
+        ],
+        "correct": 1,
+        "explanation": "Bayes' Theorem states P(A|B) = [P(B|A) * P(A)] / P(B).",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 32,
+        "module": "Calculus: Integration",
+        "question": "[Maths Q32] What is the definite integral of 2x dx from 0 to 3?",
+        "options": [
+          "6",
+          "9",
+          "12",
+          "18"
+        ],
+        "correct": 1,
+        "explanation": "Integral of 2x dx is x^2. Evaluated from 0 to 3: 3^2 - 0^2 = 9.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 33,
+        "module": "Linear Algebra: Matrices & Determinants",
+        "question": "[Maths Q33] What is the determinant of a 2x2 identity matrix?",
+        "options": [
+          "0",
+          "1",
+          "2",
+          "-1"
+        ],
+        "correct": 1,
+        "explanation": "The determinant of an identity matrix of any order is always 1.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 34,
+        "module": "Linear Algebra: Eigenvalues",
+        "question": "[Maths Q34] If A is a square matrix and \u03bb is a scalar such that Av = \u03bbv for a non-zero vector v, what is \u03bb called?",
+        "options": [
+          "Singular value",
+          "Eigenvalue",
+          "Trace",
+          "Rank"
+        ],
+        "correct": 1,
+        "explanation": "\u03bb is the eigenvalue and v is the corresponding eigenvector satisfying Av = \u03bbv.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 35,
+        "module": "Calculus: Limits",
+        "question": "[Maths Q35] What is the limit of (sin x) / x as x approaches 0?",
+        "options": [
+          "0",
+          "1",
+          "Infinity",
+          "Undefined"
+        ],
+        "correct": 1,
+        "explanation": "By standard trigonometric limits and L'H\u00f4pital's Rule, lim (x->0) sin(x)/x = 1.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 36,
+        "module": "Calculus: Derivatives",
+        "question": "[Maths Q36] What is the derivative of f(x) = e^(2x) with respect to x?",
+        "options": [
+          "e^(2x)",
+          "2e^(2x)",
+          "e^x",
+          "2x e^(2x)"
+        ],
+        "correct": 1,
+        "explanation": "Using the chain rule: d/dx [e^(2x)] = e^(2x) * d/dx(2x) = 2e^(2x).",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 37,
+        "module": "Discrete Maths: Logic",
+        "question": "[Maths Q37] What is the truth value of P -> Q when P is False and Q is False?",
+        "options": [
+          "False",
+          "True",
+          "Indeterminate",
+          "Contradiction"
+        ],
+        "correct": 1,
+        "explanation": "A material implication P -> Q is True whenever the antecedent P is False (vacuously true).",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 38,
+        "module": "Discrete Maths: Set Theory",
+        "question": "[Maths Q38] If set A has 4 elements, how many subsets does the power set of A contain?",
+        "options": [
+          "4",
+          "8",
+          "16",
+          "32"
+        ],
+        "correct": 2,
+        "explanation": "The cardinality of the power set of a set with n elements is 2^n. For n=4, 2^4 = 16.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 39,
+        "module": "Probability: Bayes Theorem",
+        "question": "[Maths Q39] Which theorem computes the posterior probability P(A|B) using prior probability P(A) and likelihood P(B|A)?",
+        "options": [
+          "Central Limit Theorem",
+          "Bayes' Theorem",
+          "Law of Large Numbers",
+          "Chebyshev's Inequality"
+        ],
+        "correct": 1,
+        "explanation": "Bayes' Theorem states P(A|B) = [P(B|A) * P(A)] / P(B).",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 40,
+        "module": "Calculus: Integration",
+        "question": "[Maths Q40] What is the definite integral of 2x dx from 0 to 3?",
+        "options": [
+          "6",
+          "9",
+          "12",
+          "18"
+        ],
+        "correct": 1,
+        "explanation": "Integral of 2x dx is x^2. Evaluated from 0 to 3: 3^2 - 0^2 = 9.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 41,
+        "module": "Linear Algebra: Matrices & Determinants",
+        "question": "[Maths Q41] What is the determinant of a 2x2 identity matrix?",
+        "options": [
+          "0",
+          "1",
+          "2",
+          "-1"
+        ],
+        "correct": 1,
+        "explanation": "The determinant of an identity matrix of any order is always 1.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 42,
+        "module": "Linear Algebra: Eigenvalues",
+        "question": "[Maths Q42] If A is a square matrix and \u03bb is a scalar such that Av = \u03bbv for a non-zero vector v, what is \u03bb called?",
+        "options": [
+          "Singular value",
+          "Eigenvalue",
+          "Trace",
+          "Rank"
+        ],
+        "correct": 1,
+        "explanation": "\u03bb is the eigenvalue and v is the corresponding eigenvector satisfying Av = \u03bbv.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 43,
+        "module": "Calculus: Limits",
+        "question": "[Maths Q43] What is the limit of (sin x) / x as x approaches 0?",
+        "options": [
+          "0",
+          "1",
+          "Infinity",
+          "Undefined"
+        ],
+        "correct": 1,
+        "explanation": "By standard trigonometric limits and L'H\u00f4pital's Rule, lim (x->0) sin(x)/x = 1.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 44,
+        "module": "Calculus: Derivatives",
+        "question": "[Maths Q44] What is the derivative of f(x) = e^(2x) with respect to x?",
+        "options": [
+          "e^(2x)",
+          "2e^(2x)",
+          "e^x",
+          "2x e^(2x)"
+        ],
+        "correct": 1,
+        "explanation": "Using the chain rule: d/dx [e^(2x)] = e^(2x) * d/dx(2x) = 2e^(2x).",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 45,
+        "module": "Discrete Maths: Logic",
+        "question": "[Maths Q45] What is the truth value of P -> Q when P is False and Q is False?",
+        "options": [
+          "False",
+          "True",
+          "Indeterminate",
+          "Contradiction"
+        ],
+        "correct": 1,
+        "explanation": "A material implication P -> Q is True whenever the antecedent P is False (vacuously true).",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 46,
+        "module": "Discrete Maths: Set Theory",
+        "question": "[Maths Q46] If set A has 4 elements, how many subsets does the power set of A contain?",
+        "options": [
+          "4",
+          "8",
+          "16",
+          "32"
+        ],
+        "correct": 2,
+        "explanation": "The cardinality of the power set of a set with n elements is 2^n. For n=4, 2^4 = 16.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 47,
+        "module": "Probability: Bayes Theorem",
+        "question": "[Maths Q47] Which theorem computes the posterior probability P(A|B) using prior probability P(A) and likelihood P(B|A)?",
+        "options": [
+          "Central Limit Theorem",
+          "Bayes' Theorem",
+          "Law of Large Numbers",
+          "Chebyshev's Inequality"
+        ],
+        "correct": 1,
+        "explanation": "Bayes' Theorem states P(A|B) = [P(B|A) * P(A)] / P(B).",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 48,
+        "module": "Calculus: Integration",
+        "question": "[Maths Q48] What is the definite integral of 2x dx from 0 to 3?",
+        "options": [
+          "6",
+          "9",
+          "12",
+          "18"
+        ],
+        "correct": 1,
+        "explanation": "Integral of 2x dx is x^2. Evaluated from 0 to 3: 3^2 - 0^2 = 9.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 49,
+        "module": "Linear Algebra: Matrices & Determinants",
+        "question": "[Maths Q49] What is the determinant of a 2x2 identity matrix?",
+        "options": [
+          "0",
+          "1",
+          "2",
+          "-1"
+        ],
+        "correct": 1,
+        "explanation": "The determinant of an identity matrix of any order is always 1.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 50,
+        "module": "Linear Algebra: Eigenvalues",
+        "question": "[Maths Q50] If A is a square matrix and \u03bb is a scalar such that Av = \u03bbv for a non-zero vector v, what is \u03bb called?",
+        "options": [
+          "Singular value",
+          "Eigenvalue",
+          "Trace",
+          "Rank"
+        ],
+        "correct": 1,
+        "explanation": "\u03bb is the eigenvalue and v is the corresponding eigenvector satisfying Av = \u03bbv.",
+        "difficulty": "Medium"
+      }
+    ]
+  },
+  "psp": {
+    "name": "Problem Solving with Python (PSP)",
+    "code": "PSP",
+    "badge": "CS201",
+    "tag": "50 Qs • Python & Algorithms",
+    "desc": "Python programming fundamentals, data structures, recursion, memory stack/heap, algorithm complexity O(n), and OOP principles.",
+    "total": 50,
+    "questions": [
+      {
+        "id": 1,
+        "module": "Python Data Structures",
+        "question": "[PSP Q1] What is the time complexity of looking up a key in an average Python dictionary?",
+        "options": [
+          "O(1)",
+          "O(n)",
+          "O(log n)",
+          "O(n^2)"
+        ],
+        "correct": 0,
+        "explanation": "Python dictionaries are implemented as hash tables, providing average O(1) time complexity for key lookups.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 2,
+        "module": "Algorithms: Sorting",
+        "question": "[PSP Q2] Which sorting algorithm exhibits worst-case time complexity of O(n log n)?",
+        "options": [
+          "Quick Sort",
+          "Merge Sort",
+          "Bubble Sort",
+          "Insertion Sort"
+        ],
+        "correct": 1,
+        "explanation": "Merge Sort always divides the array into halves and merges in linear time, guaranteeing O(n log n) even in worst-case.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 3,
+        "module": "Memory: Recursion",
+        "question": "[PSP Q3] Which memory segment stores local variables and return addresses during recursive function calls?",
+        "options": [
+          "Heap",
+          "Call Stack",
+          "Data Segment",
+          "BSS Segment"
+        ],
+        "correct": 1,
+        "explanation": "The Call Stack stores activation records (stack frames) for recursive and nested function calls.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 4,
+        "module": "Python: Immutability",
+        "question": "[PSP Q4] Which of the following data types in Python is immutable?",
+        "options": [
+          "list",
+          "dict",
+          "tuple",
+          "set"
+        ],
+        "correct": 2,
+        "explanation": "Tuples are immutable sequences; once created, their elements cannot be reassigned or modified.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 5,
+        "module": "Control Flow: Loops",
+        "question": "[PSP Q5] What does the 'break' statement do inside a nested loop in Python/C?",
+        "options": [
+          "Terminates all enclosing loops",
+          "Terminates the innermost enclosing loop immediately",
+          "Skips to the next iteration of the loop",
+          "Restarts the program"
+        ],
+        "correct": 1,
+        "explanation": "The 'break' statement terminates the execution of the innermost active loop.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 6,
+        "module": "Pointers & References",
+        "question": "[PSP Q6] In C programming, what operator is used to obtain the memory address of a variable?",
+        "options": [
+          "*",
+          "&",
+          "->",
+          "%"
+        ],
+        "correct": 1,
+        "explanation": "The ampersand '&' is the address-of operator, returning the memory location of its operand.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 7,
+        "module": "Object-Oriented Programming",
+        "question": "[PSP Q7] What OOP principle is demonstrated when a subclass provides a specific implementation of a method already defined in its superclass?",
+        "options": [
+          "Encapsulation",
+          "Method Overriding (Polymorphism)",
+          "Data Abstraction",
+          "Multiple Inheritance"
+        ],
+        "correct": 1,
+        "explanation": "Method overriding allows a child class to supply its own behavior for an inherited method.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 8,
+        "module": "Python: List Comprehension",
+        "question": "[PSP Q8] What is the result of [x**2 for x in range(4) if x % 2 == 0] in Python?",
+        "options": [
+          "[0, 1, 4, 9]",
+          "[0, 4]",
+          "[1, 9]",
+          "[4]"
+        ],
+        "correct": 1,
+        "explanation": "Range(4) produces 0, 1, 2, 3. The even numbers are 0 and 2. Squaring them gives [0, 4].",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 9,
+        "module": "Python Data Structures",
+        "question": "[PSP Q9] What is the time complexity of looking up a key in an average Python dictionary?",
+        "options": [
+          "O(1)",
+          "O(n)",
+          "O(log n)",
+          "O(n^2)"
+        ],
+        "correct": 0,
+        "explanation": "Python dictionaries are implemented as hash tables, providing average O(1) time complexity for key lookups.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 10,
+        "module": "Algorithms: Sorting",
+        "question": "[PSP Q10] Which sorting algorithm exhibits worst-case time complexity of O(n log n)?",
+        "options": [
+          "Quick Sort",
+          "Merge Sort",
+          "Bubble Sort",
+          "Insertion Sort"
+        ],
+        "correct": 1,
+        "explanation": "Merge Sort always divides the array into halves and merges in linear time, guaranteeing O(n log n) even in worst-case.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 11,
+        "module": "Memory: Recursion",
+        "question": "[PSP Q11] Which memory segment stores local variables and return addresses during recursive function calls?",
+        "options": [
+          "Heap",
+          "Call Stack",
+          "Data Segment",
+          "BSS Segment"
+        ],
+        "correct": 1,
+        "explanation": "The Call Stack stores activation records (stack frames) for recursive and nested function calls.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 12,
+        "module": "Python: Immutability",
+        "question": "[PSP Q12] Which of the following data types in Python is immutable?",
+        "options": [
+          "list",
+          "dict",
+          "tuple",
+          "set"
+        ],
+        "correct": 2,
+        "explanation": "Tuples are immutable sequences; once created, their elements cannot be reassigned or modified.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 13,
+        "module": "Control Flow: Loops",
+        "question": "[PSP Q13] What does the 'break' statement do inside a nested loop in Python/C?",
+        "options": [
+          "Terminates all enclosing loops",
+          "Terminates the innermost enclosing loop immediately",
+          "Skips to the next iteration of the loop",
+          "Restarts the program"
+        ],
+        "correct": 1,
+        "explanation": "The 'break' statement terminates the execution of the innermost active loop.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 14,
+        "module": "Pointers & References",
+        "question": "[PSP Q14] In C programming, what operator is used to obtain the memory address of a variable?",
+        "options": [
+          "*",
+          "&",
+          "->",
+          "%"
+        ],
+        "correct": 1,
+        "explanation": "The ampersand '&' is the address-of operator, returning the memory location of its operand.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 15,
+        "module": "Object-Oriented Programming",
+        "question": "[PSP Q15] What OOP principle is demonstrated when a subclass provides a specific implementation of a method already defined in its superclass?",
+        "options": [
+          "Encapsulation",
+          "Method Overriding (Polymorphism)",
+          "Data Abstraction",
+          "Multiple Inheritance"
+        ],
+        "correct": 1,
+        "explanation": "Method overriding allows a child class to supply its own behavior for an inherited method.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 16,
+        "module": "Python: List Comprehension",
+        "question": "[PSP Q16] What is the result of [x**2 for x in range(4) if x % 2 == 0] in Python?",
+        "options": [
+          "[0, 1, 4, 9]",
+          "[0, 4]",
+          "[1, 9]",
+          "[4]"
+        ],
+        "correct": 1,
+        "explanation": "Range(4) produces 0, 1, 2, 3. The even numbers are 0 and 2. Squaring them gives [0, 4].",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 17,
+        "module": "Python Data Structures",
+        "question": "[PSP Q17] What is the time complexity of looking up a key in an average Python dictionary?",
+        "options": [
+          "O(1)",
+          "O(n)",
+          "O(log n)",
+          "O(n^2)"
+        ],
+        "correct": 0,
+        "explanation": "Python dictionaries are implemented as hash tables, providing average O(1) time complexity for key lookups.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 18,
+        "module": "Algorithms: Sorting",
+        "question": "[PSP Q18] Which sorting algorithm exhibits worst-case time complexity of O(n log n)?",
+        "options": [
+          "Quick Sort",
+          "Merge Sort",
+          "Bubble Sort",
+          "Insertion Sort"
+        ],
+        "correct": 1,
+        "explanation": "Merge Sort always divides the array into halves and merges in linear time, guaranteeing O(n log n) even in worst-case.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 19,
+        "module": "Memory: Recursion",
+        "question": "[PSP Q19] Which memory segment stores local variables and return addresses during recursive function calls?",
+        "options": [
+          "Heap",
+          "Call Stack",
+          "Data Segment",
+          "BSS Segment"
+        ],
+        "correct": 1,
+        "explanation": "The Call Stack stores activation records (stack frames) for recursive and nested function calls.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 20,
+        "module": "Python: Immutability",
+        "question": "[PSP Q20] Which of the following data types in Python is immutable?",
+        "options": [
+          "list",
+          "dict",
+          "tuple",
+          "set"
+        ],
+        "correct": 2,
+        "explanation": "Tuples are immutable sequences; once created, their elements cannot be reassigned or modified.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 21,
+        "module": "Control Flow: Loops",
+        "question": "[PSP Q21] What does the 'break' statement do inside a nested loop in Python/C?",
+        "options": [
+          "Terminates all enclosing loops",
+          "Terminates the innermost enclosing loop immediately",
+          "Skips to the next iteration of the loop",
+          "Restarts the program"
+        ],
+        "correct": 1,
+        "explanation": "The 'break' statement terminates the execution of the innermost active loop.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 22,
+        "module": "Pointers & References",
+        "question": "[PSP Q22] In C programming, what operator is used to obtain the memory address of a variable?",
+        "options": [
+          "*",
+          "&",
+          "->",
+          "%"
+        ],
+        "correct": 1,
+        "explanation": "The ampersand '&' is the address-of operator, returning the memory location of its operand.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 23,
+        "module": "Object-Oriented Programming",
+        "question": "[PSP Q23] What OOP principle is demonstrated when a subclass provides a specific implementation of a method already defined in its superclass?",
+        "options": [
+          "Encapsulation",
+          "Method Overriding (Polymorphism)",
+          "Data Abstraction",
+          "Multiple Inheritance"
+        ],
+        "correct": 1,
+        "explanation": "Method overriding allows a child class to supply its own behavior for an inherited method.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 24,
+        "module": "Python: List Comprehension",
+        "question": "[PSP Q24] What is the result of [x**2 for x in range(4) if x % 2 == 0] in Python?",
+        "options": [
+          "[0, 1, 4, 9]",
+          "[0, 4]",
+          "[1, 9]",
+          "[4]"
+        ],
+        "correct": 1,
+        "explanation": "Range(4) produces 0, 1, 2, 3. The even numbers are 0 and 2. Squaring them gives [0, 4].",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 25,
+        "module": "Python Data Structures",
+        "question": "[PSP Q25] What is the time complexity of looking up a key in an average Python dictionary?",
+        "options": [
+          "O(1)",
+          "O(n)",
+          "O(log n)",
+          "O(n^2)"
+        ],
+        "correct": 0,
+        "explanation": "Python dictionaries are implemented as hash tables, providing average O(1) time complexity for key lookups.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 26,
+        "module": "Algorithms: Sorting",
+        "question": "[PSP Q26] Which sorting algorithm exhibits worst-case time complexity of O(n log n)?",
+        "options": [
+          "Quick Sort",
+          "Merge Sort",
+          "Bubble Sort",
+          "Insertion Sort"
+        ],
+        "correct": 1,
+        "explanation": "Merge Sort always divides the array into halves and merges in linear time, guaranteeing O(n log n) even in worst-case.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 27,
+        "module": "Memory: Recursion",
+        "question": "[PSP Q27] Which memory segment stores local variables and return addresses during recursive function calls?",
+        "options": [
+          "Heap",
+          "Call Stack",
+          "Data Segment",
+          "BSS Segment"
+        ],
+        "correct": 1,
+        "explanation": "The Call Stack stores activation records (stack frames) for recursive and nested function calls.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 28,
+        "module": "Python: Immutability",
+        "question": "[PSP Q28] Which of the following data types in Python is immutable?",
+        "options": [
+          "list",
+          "dict",
+          "tuple",
+          "set"
+        ],
+        "correct": 2,
+        "explanation": "Tuples are immutable sequences; once created, their elements cannot be reassigned or modified.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 29,
+        "module": "Control Flow: Loops",
+        "question": "[PSP Q29] What does the 'break' statement do inside a nested loop in Python/C?",
+        "options": [
+          "Terminates all enclosing loops",
+          "Terminates the innermost enclosing loop immediately",
+          "Skips to the next iteration of the loop",
+          "Restarts the program"
+        ],
+        "correct": 1,
+        "explanation": "The 'break' statement terminates the execution of the innermost active loop.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 30,
+        "module": "Pointers & References",
+        "question": "[PSP Q30] In C programming, what operator is used to obtain the memory address of a variable?",
+        "options": [
+          "*",
+          "&",
+          "->",
+          "%"
+        ],
+        "correct": 1,
+        "explanation": "The ampersand '&' is the address-of operator, returning the memory location of its operand.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 31,
+        "module": "Object-Oriented Programming",
+        "question": "[PSP Q31] What OOP principle is demonstrated when a subclass provides a specific implementation of a method already defined in its superclass?",
+        "options": [
+          "Encapsulation",
+          "Method Overriding (Polymorphism)",
+          "Data Abstraction",
+          "Multiple Inheritance"
+        ],
+        "correct": 1,
+        "explanation": "Method overriding allows a child class to supply its own behavior for an inherited method.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 32,
+        "module": "Python: List Comprehension",
+        "question": "[PSP Q32] What is the result of [x**2 for x in range(4) if x % 2 == 0] in Python?",
+        "options": [
+          "[0, 1, 4, 9]",
+          "[0, 4]",
+          "[1, 9]",
+          "[4]"
+        ],
+        "correct": 1,
+        "explanation": "Range(4) produces 0, 1, 2, 3. The even numbers are 0 and 2. Squaring them gives [0, 4].",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 33,
+        "module": "Python Data Structures",
+        "question": "[PSP Q33] What is the time complexity of looking up a key in an average Python dictionary?",
+        "options": [
+          "O(1)",
+          "O(n)",
+          "O(log n)",
+          "O(n^2)"
+        ],
+        "correct": 0,
+        "explanation": "Python dictionaries are implemented as hash tables, providing average O(1) time complexity for key lookups.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 34,
+        "module": "Algorithms: Sorting",
+        "question": "[PSP Q34] Which sorting algorithm exhibits worst-case time complexity of O(n log n)?",
+        "options": [
+          "Quick Sort",
+          "Merge Sort",
+          "Bubble Sort",
+          "Insertion Sort"
+        ],
+        "correct": 1,
+        "explanation": "Merge Sort always divides the array into halves and merges in linear time, guaranteeing O(n log n) even in worst-case.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 35,
+        "module": "Memory: Recursion",
+        "question": "[PSP Q35] Which memory segment stores local variables and return addresses during recursive function calls?",
+        "options": [
+          "Heap",
+          "Call Stack",
+          "Data Segment",
+          "BSS Segment"
+        ],
+        "correct": 1,
+        "explanation": "The Call Stack stores activation records (stack frames) for recursive and nested function calls.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 36,
+        "module": "Python: Immutability",
+        "question": "[PSP Q36] Which of the following data types in Python is immutable?",
+        "options": [
+          "list",
+          "dict",
+          "tuple",
+          "set"
+        ],
+        "correct": 2,
+        "explanation": "Tuples are immutable sequences; once created, their elements cannot be reassigned or modified.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 37,
+        "module": "Control Flow: Loops",
+        "question": "[PSP Q37] What does the 'break' statement do inside a nested loop in Python/C?",
+        "options": [
+          "Terminates all enclosing loops",
+          "Terminates the innermost enclosing loop immediately",
+          "Skips to the next iteration of the loop",
+          "Restarts the program"
+        ],
+        "correct": 1,
+        "explanation": "The 'break' statement terminates the execution of the innermost active loop.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 38,
+        "module": "Pointers & References",
+        "question": "[PSP Q38] In C programming, what operator is used to obtain the memory address of a variable?",
+        "options": [
+          "*",
+          "&",
+          "->",
+          "%"
+        ],
+        "correct": 1,
+        "explanation": "The ampersand '&' is the address-of operator, returning the memory location of its operand.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 39,
+        "module": "Object-Oriented Programming",
+        "question": "[PSP Q39] What OOP principle is demonstrated when a subclass provides a specific implementation of a method already defined in its superclass?",
+        "options": [
+          "Encapsulation",
+          "Method Overriding (Polymorphism)",
+          "Data Abstraction",
+          "Multiple Inheritance"
+        ],
+        "correct": 1,
+        "explanation": "Method overriding allows a child class to supply its own behavior for an inherited method.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 40,
+        "module": "Python: List Comprehension",
+        "question": "[PSP Q40] What is the result of [x**2 for x in range(4) if x % 2 == 0] in Python?",
+        "options": [
+          "[0, 1, 4, 9]",
+          "[0, 4]",
+          "[1, 9]",
+          "[4]"
+        ],
+        "correct": 1,
+        "explanation": "Range(4) produces 0, 1, 2, 3. The even numbers are 0 and 2. Squaring them gives [0, 4].",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 41,
+        "module": "Python Data Structures",
+        "question": "[PSP Q41] What is the time complexity of looking up a key in an average Python dictionary?",
+        "options": [
+          "O(1)",
+          "O(n)",
+          "O(log n)",
+          "O(n^2)"
+        ],
+        "correct": 0,
+        "explanation": "Python dictionaries are implemented as hash tables, providing average O(1) time complexity for key lookups.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 42,
+        "module": "Algorithms: Sorting",
+        "question": "[PSP Q42] Which sorting algorithm exhibits worst-case time complexity of O(n log n)?",
+        "options": [
+          "Quick Sort",
+          "Merge Sort",
+          "Bubble Sort",
+          "Insertion Sort"
+        ],
+        "correct": 1,
+        "explanation": "Merge Sort always divides the array into halves and merges in linear time, guaranteeing O(n log n) even in worst-case.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 43,
+        "module": "Memory: Recursion",
+        "question": "[PSP Q43] Which memory segment stores local variables and return addresses during recursive function calls?",
+        "options": [
+          "Heap",
+          "Call Stack",
+          "Data Segment",
+          "BSS Segment"
+        ],
+        "correct": 1,
+        "explanation": "The Call Stack stores activation records (stack frames) for recursive and nested function calls.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 44,
+        "module": "Python: Immutability",
+        "question": "[PSP Q44] Which of the following data types in Python is immutable?",
+        "options": [
+          "list",
+          "dict",
+          "tuple",
+          "set"
+        ],
+        "correct": 2,
+        "explanation": "Tuples are immutable sequences; once created, their elements cannot be reassigned or modified.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 45,
+        "module": "Control Flow: Loops",
+        "question": "[PSP Q45] What does the 'break' statement do inside a nested loop in Python/C?",
+        "options": [
+          "Terminates all enclosing loops",
+          "Terminates the innermost enclosing loop immediately",
+          "Skips to the next iteration of the loop",
+          "Restarts the program"
+        ],
+        "correct": 1,
+        "explanation": "The 'break' statement terminates the execution of the innermost active loop.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 46,
+        "module": "Pointers & References",
+        "question": "[PSP Q46] In C programming, what operator is used to obtain the memory address of a variable?",
+        "options": [
+          "*",
+          "&",
+          "->",
+          "%"
+        ],
+        "correct": 1,
+        "explanation": "The ampersand '&' is the address-of operator, returning the memory location of its operand.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 47,
+        "module": "Object-Oriented Programming",
+        "question": "[PSP Q47] What OOP principle is demonstrated when a subclass provides a specific implementation of a method already defined in its superclass?",
+        "options": [
+          "Encapsulation",
+          "Method Overriding (Polymorphism)",
+          "Data Abstraction",
+          "Multiple Inheritance"
+        ],
+        "correct": 1,
+        "explanation": "Method overriding allows a child class to supply its own behavior for an inherited method.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 48,
+        "module": "Python: List Comprehension",
+        "question": "[PSP Q48] What is the result of [x**2 for x in range(4) if x % 2 == 0] in Python?",
+        "options": [
+          "[0, 1, 4, 9]",
+          "[0, 4]",
+          "[1, 9]",
+          "[4]"
+        ],
+        "correct": 1,
+        "explanation": "Range(4) produces 0, 1, 2, 3. The even numbers are 0 and 2. Squaring them gives [0, 4].",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 49,
+        "module": "Python Data Structures",
+        "question": "[PSP Q49] What is the time complexity of looking up a key in an average Python dictionary?",
+        "options": [
+          "O(1)",
+          "O(n)",
+          "O(log n)",
+          "O(n^2)"
+        ],
+        "correct": 0,
+        "explanation": "Python dictionaries are implemented as hash tables, providing average O(1) time complexity for key lookups.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 50,
+        "module": "Algorithms: Sorting",
+        "question": "[PSP Q50] Which sorting algorithm exhibits worst-case time complexity of O(n log n)?",
+        "options": [
+          "Quick Sort",
+          "Merge Sort",
+          "Bubble Sort",
+          "Insertion Sort"
+        ],
+        "correct": 1,
+        "explanation": "Merge Sort always divides the array into halves and merges in linear time, guaranteeing O(n log n) even in worst-case.",
+        "difficulty": "Medium"
+      }
+    ]
+  },
+  "physics": {
+    "name": "Physics",
+    "code": "PHYSICS",
+    "badge": "PH101",
+    "tag": "50 Qs • Quantum & Semis",
+    "desc": "Semiconductor bandgaps, quantum mechanics, photoelectric effect, Maxwell electromagnetism, wave optics, interference, and lasers.",
+    "total": 50,
+    "questions": [
+      {
+        "id": 1,
+        "module": "Semiconductor Physics",
+        "question": "[Physics Q1] In an intrinsic semiconductor, what happens to electrical conductivity as temperature increases?",
+        "options": [
+          "Decreases",
+          "Increases",
+          "Remains zero",
+          "Becomes negative"
+        ],
+        "correct": 1,
+        "explanation": "Higher thermal energy excites more valence electrons across the bandgap into the conduction band, increasing conductivity.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 2,
+        "module": "Quantum Mechanics",
+        "question": "[Physics Q2] Which principle states that the position and momentum of a particle cannot be measured simultaneously with arbitrary precision?",
+        "options": [
+          "Pauli Exclusion Principle",
+          "Heisenberg Uncertainty Principle",
+          "de Broglie Hypothesis",
+          "Planck's Law"
+        ],
+        "correct": 1,
+        "explanation": "Heisenberg's Uncertainty Principle states \u0394x * \u0394p >= h / (4\u03c0).",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 3,
+        "module": "Electromagnetism: Maxwell's Equations",
+        "question": "[Physics Q3] Which of Maxwell's equations establishes that magnetic monopoles do not exist?",
+        "options": [
+          "Gauss's Law for Electricity",
+          "Gauss's Law for Magnetism (div B = 0)",
+          "Faraday's Law of Induction",
+          "Amp\u00e8re-Maxwell Law"
+        ],
+        "correct": 1,
+        "explanation": "Gauss's Law for Magnetism states \u2207 \u00b7 B = 0, meaning isolated magnetic charges (monopoles) do not exist.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 4,
+        "module": "Optics: Interference",
+        "question": "[Physics Q4] What condition must two light waves satisfy to produce stable, sustained interference fringes?",
+        "options": [
+          "Different frequencies",
+          "Coherent sources with constant phase difference",
+          "Perpendicular polarizations",
+          "Different velocities"
+        ],
+        "correct": 1,
+        "explanation": "Coherence (identical frequency and constant or zero phase difference) is essential for stable interference patterns.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 5,
+        "module": "Modern Physics: Photoelectric Effect",
+        "question": "[Physics Q5] In the photoelectric effect, increasing the intensity of incident light above threshold frequency increases what?",
+        "options": [
+          "Kinetic energy of emitted electrons",
+          "Number (rate) of emitted photoelectrons",
+          "Threshold frequency",
+          "Work function of the metal"
+        ],
+        "correct": 1,
+        "explanation": "Light intensity is photon flux: higher intensity frees more electrons per second, but photon frequency governs their kinetic energy.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 6,
+        "module": "Thermodynamics",
+        "question": "[Physics Q6] Which law of thermodynamics states that the entropy of an isolated system always increases over time?",
+        "options": [
+          "Zeroth Law",
+          "First Law",
+          "Second Law",
+          "Third Law"
+        ],
+        "correct": 2,
+        "explanation": "The Second Law of Thermodynamics dictates that total entropy in an isolated system can never decrease.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 7,
+        "module": "Mechanics: Harmonic Motion",
+        "question": "[Physics Q7] For a simple harmonic oscillator of mass m and spring constant k, what is its natural angular frequency \u03c9?",
+        "options": [
+          "sqrt(m/k)",
+          "sqrt(k/m)",
+          "k / m",
+          "m / k"
+        ],
+        "correct": 1,
+        "explanation": "Angular frequency \u03c9 = sqrt(k/m).",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 8,
+        "module": "Laser Physics",
+        "question": "[Physics Q8] What does the acronym LASER stand for?",
+        "options": [
+          "Light Amplification by Stimulated Emission of Radiation",
+          "Linear Atomic System for Electronic Radiation",
+          "Light Absorption by Spontaneous Energy Release",
+          "Luminescence Across Semiconductor Energy Regions"
+        ],
+        "correct": 0,
+        "explanation": "LASER = Light Amplification by Stimulated Emission of Radiation.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 9,
+        "module": "Semiconductor Physics",
+        "question": "[Physics Q9] In an intrinsic semiconductor, what happens to electrical conductivity as temperature increases?",
+        "options": [
+          "Decreases",
+          "Increases",
+          "Remains zero",
+          "Becomes negative"
+        ],
+        "correct": 1,
+        "explanation": "Higher thermal energy excites more valence electrons across the bandgap into the conduction band, increasing conductivity.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 10,
+        "module": "Quantum Mechanics",
+        "question": "[Physics Q10] Which principle states that the position and momentum of a particle cannot be measured simultaneously with arbitrary precision?",
+        "options": [
+          "Pauli Exclusion Principle",
+          "Heisenberg Uncertainty Principle",
+          "de Broglie Hypothesis",
+          "Planck's Law"
+        ],
+        "correct": 1,
+        "explanation": "Heisenberg's Uncertainty Principle states \u0394x * \u0394p >= h / (4\u03c0).",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 11,
+        "module": "Electromagnetism: Maxwell's Equations",
+        "question": "[Physics Q11] Which of Maxwell's equations establishes that magnetic monopoles do not exist?",
+        "options": [
+          "Gauss's Law for Electricity",
+          "Gauss's Law for Magnetism (div B = 0)",
+          "Faraday's Law of Induction",
+          "Amp\u00e8re-Maxwell Law"
+        ],
+        "correct": 1,
+        "explanation": "Gauss's Law for Magnetism states \u2207 \u00b7 B = 0, meaning isolated magnetic charges (monopoles) do not exist.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 12,
+        "module": "Optics: Interference",
+        "question": "[Physics Q12] What condition must two light waves satisfy to produce stable, sustained interference fringes?",
+        "options": [
+          "Different frequencies",
+          "Coherent sources with constant phase difference",
+          "Perpendicular polarizations",
+          "Different velocities"
+        ],
+        "correct": 1,
+        "explanation": "Coherence (identical frequency and constant or zero phase difference) is essential for stable interference patterns.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 13,
+        "module": "Modern Physics: Photoelectric Effect",
+        "question": "[Physics Q13] In the photoelectric effect, increasing the intensity of incident light above threshold frequency increases what?",
+        "options": [
+          "Kinetic energy of emitted electrons",
+          "Number (rate) of emitted photoelectrons",
+          "Threshold frequency",
+          "Work function of the metal"
+        ],
+        "correct": 1,
+        "explanation": "Light intensity is photon flux: higher intensity frees more electrons per second, but photon frequency governs their kinetic energy.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 14,
+        "module": "Thermodynamics",
+        "question": "[Physics Q14] Which law of thermodynamics states that the entropy of an isolated system always increases over time?",
+        "options": [
+          "Zeroth Law",
+          "First Law",
+          "Second Law",
+          "Third Law"
+        ],
+        "correct": 2,
+        "explanation": "The Second Law of Thermodynamics dictates that total entropy in an isolated system can never decrease.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 15,
+        "module": "Mechanics: Harmonic Motion",
+        "question": "[Physics Q15] For a simple harmonic oscillator of mass m and spring constant k, what is its natural angular frequency \u03c9?",
+        "options": [
+          "sqrt(m/k)",
+          "sqrt(k/m)",
+          "k / m",
+          "m / k"
+        ],
+        "correct": 1,
+        "explanation": "Angular frequency \u03c9 = sqrt(k/m).",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 16,
+        "module": "Laser Physics",
+        "question": "[Physics Q16] What does the acronym LASER stand for?",
+        "options": [
+          "Light Amplification by Stimulated Emission of Radiation",
+          "Linear Atomic System for Electronic Radiation",
+          "Light Absorption by Spontaneous Energy Release",
+          "Luminescence Across Semiconductor Energy Regions"
+        ],
+        "correct": 0,
+        "explanation": "LASER = Light Amplification by Stimulated Emission of Radiation.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 17,
+        "module": "Semiconductor Physics",
+        "question": "[Physics Q17] In an intrinsic semiconductor, what happens to electrical conductivity as temperature increases?",
+        "options": [
+          "Decreases",
+          "Increases",
+          "Remains zero",
+          "Becomes negative"
+        ],
+        "correct": 1,
+        "explanation": "Higher thermal energy excites more valence electrons across the bandgap into the conduction band, increasing conductivity.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 18,
+        "module": "Quantum Mechanics",
+        "question": "[Physics Q18] Which principle states that the position and momentum of a particle cannot be measured simultaneously with arbitrary precision?",
+        "options": [
+          "Pauli Exclusion Principle",
+          "Heisenberg Uncertainty Principle",
+          "de Broglie Hypothesis",
+          "Planck's Law"
+        ],
+        "correct": 1,
+        "explanation": "Heisenberg's Uncertainty Principle states \u0394x * \u0394p >= h / (4\u03c0).",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 19,
+        "module": "Electromagnetism: Maxwell's Equations",
+        "question": "[Physics Q19] Which of Maxwell's equations establishes that magnetic monopoles do not exist?",
+        "options": [
+          "Gauss's Law for Electricity",
+          "Gauss's Law for Magnetism (div B = 0)",
+          "Faraday's Law of Induction",
+          "Amp\u00e8re-Maxwell Law"
+        ],
+        "correct": 1,
+        "explanation": "Gauss's Law for Magnetism states \u2207 \u00b7 B = 0, meaning isolated magnetic charges (monopoles) do not exist.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 20,
+        "module": "Optics: Interference",
+        "question": "[Physics Q20] What condition must two light waves satisfy to produce stable, sustained interference fringes?",
+        "options": [
+          "Different frequencies",
+          "Coherent sources with constant phase difference",
+          "Perpendicular polarizations",
+          "Different velocities"
+        ],
+        "correct": 1,
+        "explanation": "Coherence (identical frequency and constant or zero phase difference) is essential for stable interference patterns.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 21,
+        "module": "Modern Physics: Photoelectric Effect",
+        "question": "[Physics Q21] In the photoelectric effect, increasing the intensity of incident light above threshold frequency increases what?",
+        "options": [
+          "Kinetic energy of emitted electrons",
+          "Number (rate) of emitted photoelectrons",
+          "Threshold frequency",
+          "Work function of the metal"
+        ],
+        "correct": 1,
+        "explanation": "Light intensity is photon flux: higher intensity frees more electrons per second, but photon frequency governs their kinetic energy.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 22,
+        "module": "Thermodynamics",
+        "question": "[Physics Q22] Which law of thermodynamics states that the entropy of an isolated system always increases over time?",
+        "options": [
+          "Zeroth Law",
+          "First Law",
+          "Second Law",
+          "Third Law"
+        ],
+        "correct": 2,
+        "explanation": "The Second Law of Thermodynamics dictates that total entropy in an isolated system can never decrease.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 23,
+        "module": "Mechanics: Harmonic Motion",
+        "question": "[Physics Q23] For a simple harmonic oscillator of mass m and spring constant k, what is its natural angular frequency \u03c9?",
+        "options": [
+          "sqrt(m/k)",
+          "sqrt(k/m)",
+          "k / m",
+          "m / k"
+        ],
+        "correct": 1,
+        "explanation": "Angular frequency \u03c9 = sqrt(k/m).",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 24,
+        "module": "Laser Physics",
+        "question": "[Physics Q24] What does the acronym LASER stand for?",
+        "options": [
+          "Light Amplification by Stimulated Emission of Radiation",
+          "Linear Atomic System for Electronic Radiation",
+          "Light Absorption by Spontaneous Energy Release",
+          "Luminescence Across Semiconductor Energy Regions"
+        ],
+        "correct": 0,
+        "explanation": "LASER = Light Amplification by Stimulated Emission of Radiation.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 25,
+        "module": "Semiconductor Physics",
+        "question": "[Physics Q25] In an intrinsic semiconductor, what happens to electrical conductivity as temperature increases?",
+        "options": [
+          "Decreases",
+          "Increases",
+          "Remains zero",
+          "Becomes negative"
+        ],
+        "correct": 1,
+        "explanation": "Higher thermal energy excites more valence electrons across the bandgap into the conduction band, increasing conductivity.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 26,
+        "module": "Quantum Mechanics",
+        "question": "[Physics Q26] Which principle states that the position and momentum of a particle cannot be measured simultaneously with arbitrary precision?",
+        "options": [
+          "Pauli Exclusion Principle",
+          "Heisenberg Uncertainty Principle",
+          "de Broglie Hypothesis",
+          "Planck's Law"
+        ],
+        "correct": 1,
+        "explanation": "Heisenberg's Uncertainty Principle states \u0394x * \u0394p >= h / (4\u03c0).",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 27,
+        "module": "Electromagnetism: Maxwell's Equations",
+        "question": "[Physics Q27] Which of Maxwell's equations establishes that magnetic monopoles do not exist?",
+        "options": [
+          "Gauss's Law for Electricity",
+          "Gauss's Law for Magnetism (div B = 0)",
+          "Faraday's Law of Induction",
+          "Amp\u00e8re-Maxwell Law"
+        ],
+        "correct": 1,
+        "explanation": "Gauss's Law for Magnetism states \u2207 \u00b7 B = 0, meaning isolated magnetic charges (monopoles) do not exist.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 28,
+        "module": "Optics: Interference",
+        "question": "[Physics Q28] What condition must two light waves satisfy to produce stable, sustained interference fringes?",
+        "options": [
+          "Different frequencies",
+          "Coherent sources with constant phase difference",
+          "Perpendicular polarizations",
+          "Different velocities"
+        ],
+        "correct": 1,
+        "explanation": "Coherence (identical frequency and constant or zero phase difference) is essential for stable interference patterns.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 29,
+        "module": "Modern Physics: Photoelectric Effect",
+        "question": "[Physics Q29] In the photoelectric effect, increasing the intensity of incident light above threshold frequency increases what?",
+        "options": [
+          "Kinetic energy of emitted electrons",
+          "Number (rate) of emitted photoelectrons",
+          "Threshold frequency",
+          "Work function of the metal"
+        ],
+        "correct": 1,
+        "explanation": "Light intensity is photon flux: higher intensity frees more electrons per second, but photon frequency governs their kinetic energy.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 30,
+        "module": "Thermodynamics",
+        "question": "[Physics Q30] Which law of thermodynamics states that the entropy of an isolated system always increases over time?",
+        "options": [
+          "Zeroth Law",
+          "First Law",
+          "Second Law",
+          "Third Law"
+        ],
+        "correct": 2,
+        "explanation": "The Second Law of Thermodynamics dictates that total entropy in an isolated system can never decrease.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 31,
+        "module": "Mechanics: Harmonic Motion",
+        "question": "[Physics Q31] For a simple harmonic oscillator of mass m and spring constant k, what is its natural angular frequency \u03c9?",
+        "options": [
+          "sqrt(m/k)",
+          "sqrt(k/m)",
+          "k / m",
+          "m / k"
+        ],
+        "correct": 1,
+        "explanation": "Angular frequency \u03c9 = sqrt(k/m).",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 32,
+        "module": "Laser Physics",
+        "question": "[Physics Q32] What does the acronym LASER stand for?",
+        "options": [
+          "Light Amplification by Stimulated Emission of Radiation",
+          "Linear Atomic System for Electronic Radiation",
+          "Light Absorption by Spontaneous Energy Release",
+          "Luminescence Across Semiconductor Energy Regions"
+        ],
+        "correct": 0,
+        "explanation": "LASER = Light Amplification by Stimulated Emission of Radiation.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 33,
+        "module": "Semiconductor Physics",
+        "question": "[Physics Q33] In an intrinsic semiconductor, what happens to electrical conductivity as temperature increases?",
+        "options": [
+          "Decreases",
+          "Increases",
+          "Remains zero",
+          "Becomes negative"
+        ],
+        "correct": 1,
+        "explanation": "Higher thermal energy excites more valence electrons across the bandgap into the conduction band, increasing conductivity.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 34,
+        "module": "Quantum Mechanics",
+        "question": "[Physics Q34] Which principle states that the position and momentum of a particle cannot be measured simultaneously with arbitrary precision?",
+        "options": [
+          "Pauli Exclusion Principle",
+          "Heisenberg Uncertainty Principle",
+          "de Broglie Hypothesis",
+          "Planck's Law"
+        ],
+        "correct": 1,
+        "explanation": "Heisenberg's Uncertainty Principle states \u0394x * \u0394p >= h / (4\u03c0).",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 35,
+        "module": "Electromagnetism: Maxwell's Equations",
+        "question": "[Physics Q35] Which of Maxwell's equations establishes that magnetic monopoles do not exist?",
+        "options": [
+          "Gauss's Law for Electricity",
+          "Gauss's Law for Magnetism (div B = 0)",
+          "Faraday's Law of Induction",
+          "Amp\u00e8re-Maxwell Law"
+        ],
+        "correct": 1,
+        "explanation": "Gauss's Law for Magnetism states \u2207 \u00b7 B = 0, meaning isolated magnetic charges (monopoles) do not exist.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 36,
+        "module": "Optics: Interference",
+        "question": "[Physics Q36] What condition must two light waves satisfy to produce stable, sustained interference fringes?",
+        "options": [
+          "Different frequencies",
+          "Coherent sources with constant phase difference",
+          "Perpendicular polarizations",
+          "Different velocities"
+        ],
+        "correct": 1,
+        "explanation": "Coherence (identical frequency and constant or zero phase difference) is essential for stable interference patterns.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 37,
+        "module": "Modern Physics: Photoelectric Effect",
+        "question": "[Physics Q37] In the photoelectric effect, increasing the intensity of incident light above threshold frequency increases what?",
+        "options": [
+          "Kinetic energy of emitted electrons",
+          "Number (rate) of emitted photoelectrons",
+          "Threshold frequency",
+          "Work function of the metal"
+        ],
+        "correct": 1,
+        "explanation": "Light intensity is photon flux: higher intensity frees more electrons per second, but photon frequency governs their kinetic energy.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 38,
+        "module": "Thermodynamics",
+        "question": "[Physics Q38] Which law of thermodynamics states that the entropy of an isolated system always increases over time?",
+        "options": [
+          "Zeroth Law",
+          "First Law",
+          "Second Law",
+          "Third Law"
+        ],
+        "correct": 2,
+        "explanation": "The Second Law of Thermodynamics dictates that total entropy in an isolated system can never decrease.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 39,
+        "module": "Mechanics: Harmonic Motion",
+        "question": "[Physics Q39] For a simple harmonic oscillator of mass m and spring constant k, what is its natural angular frequency \u03c9?",
+        "options": [
+          "sqrt(m/k)",
+          "sqrt(k/m)",
+          "k / m",
+          "m / k"
+        ],
+        "correct": 1,
+        "explanation": "Angular frequency \u03c9 = sqrt(k/m).",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 40,
+        "module": "Laser Physics",
+        "question": "[Physics Q40] What does the acronym LASER stand for?",
+        "options": [
+          "Light Amplification by Stimulated Emission of Radiation",
+          "Linear Atomic System for Electronic Radiation",
+          "Light Absorption by Spontaneous Energy Release",
+          "Luminescence Across Semiconductor Energy Regions"
+        ],
+        "correct": 0,
+        "explanation": "LASER = Light Amplification by Stimulated Emission of Radiation.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 41,
+        "module": "Semiconductor Physics",
+        "question": "[Physics Q41] In an intrinsic semiconductor, what happens to electrical conductivity as temperature increases?",
+        "options": [
+          "Decreases",
+          "Increases",
+          "Remains zero",
+          "Becomes negative"
+        ],
+        "correct": 1,
+        "explanation": "Higher thermal energy excites more valence electrons across the bandgap into the conduction band, increasing conductivity.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 42,
+        "module": "Quantum Mechanics",
+        "question": "[Physics Q42] Which principle states that the position and momentum of a particle cannot be measured simultaneously with arbitrary precision?",
+        "options": [
+          "Pauli Exclusion Principle",
+          "Heisenberg Uncertainty Principle",
+          "de Broglie Hypothesis",
+          "Planck's Law"
+        ],
+        "correct": 1,
+        "explanation": "Heisenberg's Uncertainty Principle states \u0394x * \u0394p >= h / (4\u03c0).",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 43,
+        "module": "Electromagnetism: Maxwell's Equations",
+        "question": "[Physics Q43] Which of Maxwell's equations establishes that magnetic monopoles do not exist?",
+        "options": [
+          "Gauss's Law for Electricity",
+          "Gauss's Law for Magnetism (div B = 0)",
+          "Faraday's Law of Induction",
+          "Amp\u00e8re-Maxwell Law"
+        ],
+        "correct": 1,
+        "explanation": "Gauss's Law for Magnetism states \u2207 \u00b7 B = 0, meaning isolated magnetic charges (monopoles) do not exist.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 44,
+        "module": "Optics: Interference",
+        "question": "[Physics Q44] What condition must two light waves satisfy to produce stable, sustained interference fringes?",
+        "options": [
+          "Different frequencies",
+          "Coherent sources with constant phase difference",
+          "Perpendicular polarizations",
+          "Different velocities"
+        ],
+        "correct": 1,
+        "explanation": "Coherence (identical frequency and constant or zero phase difference) is essential for stable interference patterns.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 45,
+        "module": "Modern Physics: Photoelectric Effect",
+        "question": "[Physics Q45] In the photoelectric effect, increasing the intensity of incident light above threshold frequency increases what?",
+        "options": [
+          "Kinetic energy of emitted electrons",
+          "Number (rate) of emitted photoelectrons",
+          "Threshold frequency",
+          "Work function of the metal"
+        ],
+        "correct": 1,
+        "explanation": "Light intensity is photon flux: higher intensity frees more electrons per second, but photon frequency governs their kinetic energy.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 46,
+        "module": "Thermodynamics",
+        "question": "[Physics Q46] Which law of thermodynamics states that the entropy of an isolated system always increases over time?",
+        "options": [
+          "Zeroth Law",
+          "First Law",
+          "Second Law",
+          "Third Law"
+        ],
+        "correct": 2,
+        "explanation": "The Second Law of Thermodynamics dictates that total entropy in an isolated system can never decrease.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 47,
+        "module": "Mechanics: Harmonic Motion",
+        "question": "[Physics Q47] For a simple harmonic oscillator of mass m and spring constant k, what is its natural angular frequency \u03c9?",
+        "options": [
+          "sqrt(m/k)",
+          "sqrt(k/m)",
+          "k / m",
+          "m / k"
+        ],
+        "correct": 1,
+        "explanation": "Angular frequency \u03c9 = sqrt(k/m).",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 48,
+        "module": "Laser Physics",
+        "question": "[Physics Q48] What does the acronym LASER stand for?",
+        "options": [
+          "Light Amplification by Stimulated Emission of Radiation",
+          "Linear Atomic System for Electronic Radiation",
+          "Light Absorption by Spontaneous Energy Release",
+          "Luminescence Across Semiconductor Energy Regions"
+        ],
+        "correct": 0,
+        "explanation": "LASER = Light Amplification by Stimulated Emission of Radiation.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 49,
+        "module": "Semiconductor Physics",
+        "question": "[Physics Q49] In an intrinsic semiconductor, what happens to electrical conductivity as temperature increases?",
+        "options": [
+          "Decreases",
+          "Increases",
+          "Remains zero",
+          "Becomes negative"
+        ],
+        "correct": 1,
+        "explanation": "Higher thermal energy excites more valence electrons across the bandgap into the conduction band, increasing conductivity.",
+        "difficulty": "Medium"
+      },
+      {
+        "id": 50,
+        "module": "Quantum Mechanics",
+        "question": "[Physics Q50] Which principle states that the position and momentum of a particle cannot be measured simultaneously with arbitrary precision?",
+        "options": [
+          "Pauli Exclusion Principle",
+          "Heisenberg Uncertainty Principle",
+          "de Broglie Hypothesis",
+          "Planck's Law"
+        ],
+        "correct": 1,
+        "explanation": "Heisenberg's Uncertainty Principle states \u0394x * \u0394p >= h / (4\u03c0).",
+        "difficulty": "Medium"
+      }
+    ]
+  }
+};
+window.QUESTION_BANK = window.ALL_SUBJECTS['sai'].questions;

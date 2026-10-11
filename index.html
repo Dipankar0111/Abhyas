@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abhyas — Academic Assessment Platform</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,800;0,9..144,900;1,9..144,700&family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- TOP GLOBAL HEADER -->
+  <header class="app-header">
+    <div class="header-left">
+      <nav class="nav-links">
+        <a href="#" class="nav-link active" id="nav-portal-btn" onclick="showSubjectSelection()">Subjects</a>
+        <a href="#" class="nav-link" id="nav-change-subject" onclick="showSubjectSelection()" style="display: none;">Switch Subject</a>
+        <a href="Systems_and_AI_Master_Guide_and_Contests.pdf" download class="nav-link" title="Download Master Study Guide (44 Pages)">PDF Manual</a>
+      </nav>
+    </div>
+
+    <div class="header-center">
+      <div class="nirman-logo" onclick="showSubjectSelection()" title="Abhyas Assessment Portal">
+        <span class="logo-text">Abhyas</span>
+      </div>
+
+      <!-- Test Header Status (When in Test) -->
+      <div class="test-header-bar" id="test-header-status" style="display: none;">
+        <div class="timer-badge" id="timer-pill">
+          <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          <span id="timer-display">45:00</span>
+        </div>
+        <div class="proctor-badge proctor-active" id="proctor-badge">
+          <span class="pulse-dot"></span>
+          <span id="proctor-status-text">PROCTORED</span>
+        </div>
+        <div class="violation-badge" id="violation-pill">
+          Violations: <span id="violation-count">0</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="header-right">
+      <!-- Signed In State -->
+      <div id="user-header-signedin" style="display: flex; align-items: center; gap: 10px;">
+        <div class="user-profile-pill">
+          <span class="user-online-dot"></span>
+          <span class="user-name" id="header-user-name">Kumar Dipankar Sahoo</span>
+        </div>
+        <button class="icon-circle-btn" onclick="signOutUser()" title="Sign Out / Switch User">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+        </button>
+      </div>
+
+      <!-- Signed Out State -->
+      <div id="user-header-signedout" style="display: none;">
+        <button class="btn btn-black btn-sm" onclick="showSignInScreen()">
+          Sign In &rarr;
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTAINER -->
+  <main class="app-main">
+
+    <!-- 0. SIGN IN VIEW -->
+    <section class="view-panel" id="signin-view" style="display: none;">
+      <div class="signin-container">
+        <div class="nirman-card signin-card">
+          <div class="signin-top-badge">
+            <span class="mono-bracket">[ CANDIDATE VERIFICATION ]</span>
+            <span class="tag-pill yellow-pill">ABHYAS</span>
+          </div>
+          
+          <h1 class="signin-title">Candidate Sign In</h1>
+          <p class="signin-desc">
+            Enter your credentials to access proctored assessments, subject registries, and exam progress.
+          </p>
+
+          <form id="signin-form" onsubmit="handleSignInSubmit(event)">
+            <div class="form-group">
+              <label class="form-label">STUDENT FULL NAME</label>
+              <input type="text" id="input-student-name" class="nirman-input" placeholder="e.g. Kumar Dipankar Sahoo" value="Kumar Dipankar Sahoo" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">CAMPUS ROLL NUMBER</label>
+              <input type="text" id="input-roll-no" class="nirman-input" placeholder="e.g. E26B07F0588" value="E26B07F0588" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">ACADEMIC EMAIL</label>
+              <input type="email" id="input-email" class="nirman-input" placeholder="e.g. kumar.sahoo@student.edu" value="kumar.sahoo@student.edu" required>
+            </div>
+
+            <div class="signin-btn-row">
+              <button type="submit" class="btn btn-black btn-block">
+                Sign In to Portal &rarr;
+              </button>
+            </div>
+          </form>
+
+          <div class="signin-footer-note">
+            <span class="sparkle-icon">&#10022;</span>
+            <span>All assessment sessions are securely logged to candidate roll numbers.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 1. SUBJECT SELECTION VIEW -->
+    <section class="view-panel" id="subjects-view">
+      
+      <!-- HERO HEADER -->
+      <div class="nirman-hero">
+        <div class="hero-top-tag">
+          <span class="mono-bracket">[ ABHYAS ACADEMIC ASSESSMENT REGISTRY ]</span>
+          <span class="tag-pill yellow-pill">4 COURSES ACTIVE</span>
+        </div>
+        
+        <h1 class="page-title">Select Examination Subject</h1>
+        
+        <div class="hero-sub-flex">
+          <p class="hero-desc">
+            Choose an engineering course module below to launch proctored assessment sets, review subject question banks, or continue an active testing pool.
+          </p>
+          <div class="hero-actions">
+            <button class="btn btn-outline" onclick="showSubjectSelection()">
+              <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="23 4 23 10 17 10"></polyline><polyline points="1 20 1 14 7 14"></polyline><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path></svg>
+              Refresh Registry
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- DASHED NOTICE BANNER -->
+      <div class="dashed-notice-banner">
+        <span class="sparkle-icon">&#10022;</span>
+        <span>Candidate: <strong id="subject-candidate-name">Kumar Dipankar Sahoo</strong> &bull; Roll: <strong id="subject-candidate-roll">E26B07F0588</strong> &bull; Select a subject below to proceed.</span>
+      </div>
+
+      <!-- SUBJECT CARDS GRID (4 SUBJECTS: S&AI, MATH, PSP, PHYSICS) -->
+      <div class="subjects-grid">
+        
+        <!-- S&AI CARD -->
+        <div class="nirman-card subject-card" onclick="selectSubject('sai')">
+          <div class="subject-card-top">
+            <span class="tag-pill yellow-pill">SAI-301</span>
+            <span class="badge-flag-active">ACTIVE REPOSITORY</span>
+          </div>
+          <h2 class="subject-title">System &amp; AI Essentials</h2>
+          <div class="dashed-pill-box">
+            &#10022; Computer Architecture &bull; OS &bull; Unix &bull; CLI &bull; Git &bull; Low-Level
+          </div>
+          <p class="subject-desc">
+            Complete curriculum covering Lectures 1 to 10, hardware/software spectrum, process scheduling, memory hierarchies, chmod permissions, and real contest sets.
+          </p>
+          <div class="subject-meta-row">
+            <span class="meta-tag">500 Questions</span>
+            <span class="meta-tag">10 Test Sets</span>
+            <span class="meta-tag color-green-bold">Proctored</span>
+          </div>
+          <button class="btn btn-black btn-block subject-btn">
+            Launch S&amp;AI Portal &rarr;
+          </button>
+        </div>
+
+        <!-- MATH CARD -->
+        <div class="nirman-card subject-card" onclick="selectSubject('maths')">
+          <div class="subject-card-top">
+            <span class="tag-pill yellow-pill">MATH-101</span>
+            <span class="badge-flag-ready">READY</span>
+          </div>
+          <h2 class="subject-title">Mathematics</h2>
+          <div class="dashed-pill-box">
+            &#10022; Linear Algebra &bull; Calculus &bull; Discrete &bull; Probability
+          </div>
+          <p class="subject-desc">
+            Core mathematical foundations: matrices, eigenvalues, vectors, differential equations, limits, integration, set theory, logic, and Bayes theorem.
+          </p>
+          <div class="subject-meta-row">
+            <span class="meta-tag">50 Questions</span>
+            <span class="meta-tag color-green-bold">Proctored Assessment</span>
+          </div>
+          <button class="btn btn-black btn-block subject-btn">
+            Launch Math Portal &rarr;
+          </button>
+        </div>
+
+        <!-- PSP (PROBLEM SOLVING WITH PYTHON) CARD -->
+        <div class="nirman-card subject-card" onclick="selectSubject('psp')">
+          <div class="subject-card-top">
+            <span class="tag-pill yellow-pill">PSP-201</span>
+            <span class="badge-flag-ready">READY</span>
+          </div>
+          <h2 class="subject-title">PSP (Problem Solving with Python)</h2>
+          <div class="dashed-pill-box">
+            &#10022; Python Syntax &bull; Data Structures &bull; Algorithms &bull; Logic
+          </div>
+          <p class="subject-desc">
+            Systematic problem solving using Python: control flow, functions, dictionaries, tuples, recursion, stack/heap memory, algorithmic complexity O(n), and OOP principles.
+          </p>
+          <div class="subject-meta-row">
+            <span class="meta-tag">50 Questions</span>
+            <span class="meta-tag color-green-bold">Proctored Assessment</span>
+          </div>
+          <button class="btn btn-black btn-block subject-btn">
+            Launch PSP Portal &rarr;
+          </button>
+        </div>
+
+        <!-- PHYSICS CARD -->
+        <div class="nirman-card subject-card" onclick="selectSubject('physics')">
+          <div class="subject-card-top">
+            <span class="tag-pill yellow-pill">PHY-101</span>
+            <span class="badge-flag-ready">READY</span>
+          </div>
+          <h2 class="subject-title">Physics</h2>
+          <div class="dashed-pill-box">
+            &#10022; Semiconductors &bull; Quantum &bull; Electromagnetism &bull; Optics
+          </div>
+          <p class="subject-desc">
+            Physical electronics, intrinsic/extrinsic semiconductors, band theory, Heisenberg uncertainty, Maxwell equations, photoelectric effect, and lasers.
+          </p>
+          <div class="subject-meta-row">
+            <span class="meta-tag">50 Questions</span>
+            <span class="meta-tag color-green-bold">Proctored Assessment</span>
+          </div>
+          <button class="btn btn-black btn-block subject-btn">
+            Launch Physics Portal &rarr;
+          </button>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- 2. SUBJECT SPECIFIC DASHBOARD VIEW -->
+    <section class="view-panel" id="dashboard-view" style="display: none;">
+      
+      <!-- HERO HEADER -->
+      <div class="nirman-hero">
+        <div class="hero-top-tag">
+          <span class="mono-bracket" id="dash-subject-bracket">[ SYSTEM &amp; AI ESSENTIALS REGISTRY ]</span>
+          <span class="tag-pill yellow-pill" id="dash-subject-code-tag">500 QUESTION BANK</span>
+        </div>
+        
+        <h1 class="page-title" id="dash-subject-title">Candidate Assessment Hub</h1>
+        
+        <div class="hero-sub-flex">
+          <p class="hero-desc" id="dash-subject-desc">
+            Tests are deployed in sequential blocks of <strong>50 questions</strong>. Uncompleted questions are stored in the pool for subsequent test rounds.
+          </p>
+          <div class="hero-actions">
+            <button class="btn btn-outline" onclick="showSubjectSelection()">
+              &larr; All Subjects
+            </button>
+            <button class="btn btn-black" onclick="openStartTestModal()">
+              Start Test (50 Qs) &rarr;
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- DASHED NOTICE BANNER -->
+      <div class="dashed-notice-banner">
+        <span class="sparkle-icon">&#10022;</span>
+        <span>Proctored evaluation phase: Real-time webcam proctoring, fullscreen enforcement, and tab-focus detection are active.</span>
+      </div>
+
+      <!-- 4 NIRMAN STAT CARDS -->
+      <div class="stats-row">
+        <div class="nirman-stat-card">
+          <div class="stat-label">TOTAL QUESTION BANK</div>
+          <div class="stat-number" id="stat-total-qs">500</div>
+        </div>
+        <div class="nirman-stat-card">
+          <div class="stat-label">QUESTIONS ATTEMPTED</div>
+          <div class="stat-number color-green" id="stat-completed-qs">0</div>
+        </div>
+        <div class="nirman-stat-card">
+          <div class="stat-label">PENDING POOL QUESTIONS</div>
+          <div class="stat-number color-purple" id="stat-remaining-qs">500</div>
+        </div>
+        <div class="nirman-stat-card">
+          <div class="stat-label">TOTAL XP COINS EARNED</div>
+          <div class="stat-number color-orange" id="stat-xp">0</div>
+        </div>
+      </div>
+
+      <!-- FILTER AND SEARCH BAR -->
+      <div class="filter-search-container">
+        <div class="filter-pills-row">
+          <button class="filter-pill active" id="filter-btn-all" onclick="setDashboardFilter('all')">All Sets</button>
+          <button class="filter-pill" id="filter-btn-completed" onclick="setDashboardFilter('completed')">Completed</button>
+          <button class="filter-pill" id="filter-btn-pending" onclick="setDashboardFilter('pending')">Pending</button>
+        </div>
+
+        <div class="search-wrap">
+          <div class="search-input-box">
+            <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            <input type="text" id="test-search-input" placeholder="Search test set..." oninput="filterBatchGrid()">
+          </div>
+        </div>
+      </div>
+
+      <!-- TEST CARDS FEED -->
+      <div class="tests-feed" id="tests-batch-grid">
+        <!-- Rendered dynamically -->
+      </div>
+
+    </section>
+
+    <!-- 3. PROCTORED TEST VIEW -->
+    <section class="view-panel" id="test-view" style="display: none;">
+      <div class="test-layout">
+        
+        <!-- LEFT: QUESTION AREA -->
+        <div class="test-content">
+          <div class="nirman-card test-question-card">
+            
+            <div class="question-header-row">
+              <div class="tags-cluster">
+                <span class="tag-pill yellow-pill" id="current-q-code">TEST-Q01</span>
+                <span class="q-title-bold" id="current-q-pill">Question 1 of 50</span>
+                <span class="tag-pill neutral-pill" id="current-q-module">Hardware &amp; Storage</span>
+              </div>
+              <button class="btn btn-sm btn-outline" id="flag-btn" onclick="toggleReviewFlag()">
+                <span id="flag-btn-text">&#9873; Mark for Review</span>
+              </button>
+            </div>
+
+            <div class="question-body">
+              <h2 class="question-prompt" id="question-text">Loading question text...</h2>
+            </div>
+
+            <div class="options-container" id="options-list">
+              <!-- Rendered dynamically -->
+            </div>
+
+            <div class="test-footer-nav">
+              <div class="nav-left">
+                <button class="btn btn-outline" id="prev-btn" onclick="navigateQuestion(-1)">
+                  &larr; Previous
+                </button>
+                <button class="btn btn-ghost" onclick="clearCurrentSelection()">
+                  Clear Choice
+                </button>
+              </div>
+
+              <div class="nav-right">
+                <button class="btn btn-outline" id="next-btn" onclick="navigateQuestion(1)">
+                  Next &rarr;
+                </button>
+                <button class="btn btn-black" id="submit-test-btn" onclick="confirmSubmitTest()">
+                  Submit Test &rarr;
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- RIGHT: PROCTORING & PALETTE SIDEBAR -->
+        <aside class="test-sidebar">
+          
+          <!-- LIVE CAMERA PROCTOR WIDGET -->
+          <div class="nirman-card proctor-card">
+            <div class="sidebar-card-header">
+              <div class="cam-live-indicator">
+                <span class="pulse-dot"></span>
+                <span class="cam-title">CANDIDATE PROCTOR</span>
+              </div>
+              <span class="tag-pill yellow-pill" id="cam-status-label">ACTIVE</span>
+            </div>
+            
+            <div class="camera-stream-wrapper">
+              <video id="webcam-video" autoplay playsinline muted></video>
+              <canvas id="face-detect-canvas"></canvas>
+              <div class="cam-overlay-guide">
+                <div class="face-target-box"></div>
+              </div>
+              <div class="cam-offline-placeholder" id="cam-fallback">
+                <div class="avatar-icon">&#128100;</div>
+                <span class="mono-label">PROCTORING MONITOR</span>
+                <button class="btn btn-xs btn-outline" onclick="initCameraStream()">Enable Camera</button>
+              </div>
+            </div>
+            
+            <div class="proctor-rule-box">
+              <span class="mono-small">&#10022; Strict Anti-Cheat: Tab switching &amp; blur events trigger penalty strikes.</span>
+            </div>
+          </div>
+
+          <!-- QUESTION PALETTE -->
+          <div class="nirman-card palette-card">
+            <div class="sidebar-card-header">
+              <span class="mono-bold">QUESTION PALETTE</span>
+              <span class="tag-pill neutral-pill" id="palette-summary">0 / 50</span>
+            </div>
+
+            <div class="palette-legend">
+              <div class="legend-item"><span class="legend-box box-answered"></span> Answered</div>
+              <div class="legend-item"><span class="legend-box box-flagged"></span> Marked</div>
+              <div class="legend-item"><span class="legend-box box-visited"></span> Visited</div>
+              <div class="legend-item"><span class="legend-box box-unvisited"></span> Empty</div>
+            </div>
+
+            <div class="palette-grid" id="palette-grid">
+              <!-- Rendered 1 to 50 -->
+            </div>
+          </div>
+
+        </aside>
+
+      </div>
+    </section>
+
+    <!-- 4. TEST RESULT & REVIEW VIEW -->
+    <section class="view-panel" id="result-view" style="display: none;">
+      
+      <div class="nirman-card result-summary-card">
+        <div class="result-top-badge">
+          <span class="mono-bracket">[ ASSESSMENT RESULT REPORT ]</span>
+          <span class="tag-pill yellow-pill" id="result-status-tag">SUBMISSION EVALUATED</span>
+        </div>
+        
+        <div class="result-hero-row">
+          <div class="score-display-box">
+            <div class="score-big-num" id="score-percentage">0%</div>
+            <div class="score-sub-label" id="score-fraction">0 / 50 Correct</div>
+          </div>
+
+          <div class="result-meta-block">
+            <h2 class="result-heading" id="result-verdict">Test Completed!</h2>
+            <p class="result-desc" id="result-message">Evaluation complete. Review your performance breakdown below.</p>
+            
+            <div class="stats-mini-grid">
+              <div class="mini-stat-box">
+                <span class="mini-val color-green" id="res-correct">0</span>
+                <span class="mini-lbl">CORRECT</span>
+              </div>
+              <div class="mini-stat-box">
+                <span class="mini-val color-red" id="res-incorrect">0</span>
+                <span class="mini-lbl">INCORRECT</span>
+              </div>
+              <div class="mini-stat-box">
+                <span class="mini-val" id="res-skipped">0</span>
+                <span class="mini-lbl">SKIPPED</span>
+              </div>
+              <div class="mini-stat-box">
+                <span class="mini-val color-orange" id="res-xp">+0</span>
+                <span class="mini-lbl">XP COINS</span>
+              </div>
+              <div class="mini-stat-box">
+                <span class="mini-val color-purple" id="res-violations">0</span>
+                <span class="mini-lbl">VIOLATIONS</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="result-cta-row">
+          <button class="btn btn-yellow" onclick="startNextUnseenBatch()">
+            Take Next Test (Next 50 Qs) &rarr;
+          </button>
+          <button class="btn btn-outline" onclick="showDashboard()">
+            Return to Subject Portal
+          </button>
+          <button class="btn btn-black" onclick="showSubjectSelection()">
+            Switch Subject &rarr;
+          </button>
+        </div>
+      </div>
+
+      <!-- DETAILED REVIEW SECTION -->
+      <div class="nirman-card review-container-card">
+        <div class="review-header-flex">
+          <h3 class="review-title">Detailed Question Analysis</h3>
+          <div class="filter-pills-row">
+            <button class="filter-pill active" data-filter="all" onclick="filterReview('all')">All (50)</button>
+            <button class="filter-pill" data-filter="incorrect" onclick="filterReview('incorrect')">Incorrect</button>
+            <button class="filter-pill" data-filter="correct" onclick="filterReview('correct')">Correct</button>
+            <button class="filter-pill" data-filter="marked" onclick="filterReview('marked')">Marked</button>
+          </div>
+        </div>
+
+        <div class="review-items-feed" id="review-list">
+          <!-- Rendered dynamically -->
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- PROCTORING VIOLATION WARNING MODAL -->
+  <div class="modal-backdrop" id="violation-modal" style="display: none;">
+    <div class="modal-box nirman-modal violation-box">
+      <div class="modal-icon-alert">&#9888;</div>
+      <h3 class="modal-title">Security Violation Detected</h3>
+      <p id="violation-modal-msg">A tab switch or window focus loss was registered. Assessment integrity requires staying on this tab.</p>
+      <div class="violation-tally-box">
+        Warning <span id="modal-violation-count">1</span> of 3 Recorded
+      </div>
+      <button class="btn btn-black btn-block" onclick="dismissViolationModal()">
+        I Understand &mdash; Return to Assessment
+      </button>
+    </div>
+  </div>
+
+  <!-- START TEST CONFIRMATION MODAL -->
+  <div class="modal-backdrop" id="start-modal" style="display: none;">
+    <div class="modal-box nirman-modal">
+      <div class="modal-tag-row">
+        <span class="mono-bracket">[ READY TO LAUNCH ]</span>
+        <span class="tag-pill yellow-pill">PROCTORED</span>
+      </div>
+      <h3 class="modal-title" id="modal-batch-name">Begin Practice Test</h3>
+      <p class="modal-desc">This test consists of 50 high-yield questions. Real-time camera &amp; screen focus monitoring will be active.</p>
+      
+      <div class="checklist-container">
+        <label class="check-row">
+          <input type="checkbox" id="check-camera" checked>
+          <span>Enable Web Camera proctoring stream</span>
+        </label>
+        <label class="check-row">
+          <input type="checkbox" id="check-fullscreen" checked>
+          <span>Lock Fullscreen mode (prevents accidental tab switches)</span>
+        </label>
+      </div>
+
+      <div class="modal-btn-row">
+        <button class="btn btn-outline" onclick="closeStartModal()">Cancel</button>
+        <button class="btn btn-black" onclick="confirmLaunchTest()">Launch Test Now &rarr;</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- SUBMIT TEST CONFIRMATION MODAL -->
+  <div class="modal-backdrop" id="submit-modal" style="display: none;">
+    <div class="modal-box nirman-modal">
+      <h3 class="modal-title">Confirm Final Submission?</h3>
+      <p class="modal-desc" id="submit-summary-text">You have answered 42 of 50 questions.</p>
+      <div class="modal-btn-row">
+        <button class="btn btn-outline" onclick="closeSubmitModal()">Resume Test</button>
+        <button class="btn btn-black" onclick="executeSubmitTest()">Submit &amp; View Results &rarr;</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCRIPTS -->
+  <script src="questions.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

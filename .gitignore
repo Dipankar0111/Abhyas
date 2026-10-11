@@ -1,0 +1,16 @@
+# OS metadata
+.DS_Store
+Thumbs.db
+
+# Test Screenshots
+*.png
+
+# Python cache & temp
+__pycache__/
+*.pyc
+extracted_lectures/
+
+# Raw lecture slide PDFs (keep compiled master guide tracked)
+lec *.pdf
+lec*.pdf
+!Systems_and_AI_Master_Guide_and_Contests.pdf

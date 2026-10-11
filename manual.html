@@ -1,0 +1,2331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>System & AI Essentials — Master Guide & Contest Review</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap');
+
+  @page {
+    size: A4;
+    margin: 18mm 16mm 18mm 16mm;
+    @bottom-right {
+      content: counter(page);
+    }
+  }
+
+  * { box-sizing: border-box; }
+  
+  body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    color: #1e293b;
+    line-height: 1.55;
+    font-size: 10.5pt;
+    background: #ffffff;
+    margin: 0;
+    padding: 0;
+  }
+
+  .cover-page {
+    page-break-after: always;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px 10px;
+    border-bottom: 3px solid #3b82f6;
+  }
+
+  .cover-badge {
+    display: inline-block;
+    background: #eff6ff;
+    color: #1d4ed8;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 9pt;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border: 1px solid #bfdbfe;
+    width: fit-content;
+  }
+
+  .cover-title {
+    font-size: 32pt;
+    font-weight: 800;
+    line-height: 1.15;
+    color: #0f172a;
+    margin: 20px 0 10px 0;
+    letter-spacing: -0.5px;
+  }
+
+  .cover-subtitle {
+    font-size: 15pt;
+    color: #475569;
+    font-weight: 500;
+    margin-bottom: 25px;
+    line-height: 1.4;
+  }
+
+  .cover-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-top: 30px;
+  }
+
+  .cover-card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 14px 16px;
+  }
+
+  .cover-card h4 {
+    margin: 0 0 6px 0;
+    color: #1e40af;
+    font-size: 11pt;
+  }
+
+  .cover-card p {
+    margin: 0;
+    font-size: 9pt;
+    color: #64748b;
+  }
+
+  .cover-meta {
+    border-top: 1px solid #e2e8f0;
+    padding-top: 15px;
+    font-size: 9pt;
+    color: #94a3b8;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .page-break {
+    page-break-after: always;
+  }
+
+  h1 {
+    font-size: 19pt;
+    color: #0f172a;
+    font-weight: 800;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 8px;
+    margin-top: 24px;
+    margin-bottom: 14px;
+    letter-spacing: -0.3px;
+  }
+
+  h2 {
+    font-size: 13.5pt;
+    color: #1e3a8a;
+    font-weight: 700;
+    margin-top: 20px;
+    margin-bottom: 8px;
+    border-left: 4px solid #3b82f6;
+    padding-left: 8px;
+  }
+
+  h3 {
+    font-size: 11pt;
+    color: #334155;
+    font-weight: 700;
+    margin-top: 14px;
+    margin-bottom: 6px;
+  }
+
+  p {
+    margin: 0 0 8px 0;
+  }
+
+  ul, ol {
+    margin: 4px 0 10px 20px;
+    padding: 0;
+  }
+
+  li {
+    margin-bottom: 4px;
+  }
+
+  code {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9pt;
+    background: #f1f5f9;
+    color: #0f172a;
+    padding: 2px 5px;
+    border-radius: 4px;
+    border: 1px solid #e2e8f0;
+  }
+
+  pre {
+    background: #0f172a;
+    color: #f8fafc;
+    padding: 12px 14px;
+    border-radius: 6px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 8.5pt;
+    line-height: 1.45;
+    overflow-x: auto;
+    margin: 8px 0 12px 0;
+    border: 1px solid #1e293b;
+  }
+
+  pre code {
+    background: transparent;
+    color: inherit;
+    padding: 0;
+    border: none;
+  }
+
+  .callout {
+    background: #eff6ff;
+    border-left: 4px solid #3b82f6;
+    border-radius: 0 6px 6px 0;
+    padding: 10px 14px;
+    margin: 10px 0 14px 0;
+    font-size: 9.5pt;
+  }
+
+  .callout-warning {
+    background: #fffbeb;
+    border-left-color: #f59e0b;
+  }
+
+  .callout-danger {
+    background: #fef2f2;
+    border-left-color: #ef4444;
+  }
+
+  .callout-success {
+    background: #f0fdf4;
+    border-left-color: #22c55e;
+  }
+
+  .callout strong {
+    color: #0f172a;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px 0 16px 0;
+    font-size: 9pt;
+  }
+
+  th, td {
+    padding: 7px 10px;
+    border: 1px solid #cbd5e1;
+    text-align: left;
+  }
+
+  th {
+    background: #f1f5f9;
+    font-weight: 700;
+    color: #1e293b;
+  }
+
+  tr:nth-child(even) td {
+    background: #f8fafc;
+  }
+
+  .badge {
+    display: inline-block;
+    padding: 2px 7px;
+    border-radius: 4px;
+    font-size: 7.5pt;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .badge-correct {
+    background: #dcfce7;
+    color: #15803d;
+    border: 1px solid #bbf7d0;
+  }
+
+  .badge-topic {
+    background: #e0e7ff;
+    color: #4338ca;
+    border: 1px solid #c7d2fe;
+  }
+
+  .question-box {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    padding: 12px 14px;
+    margin-bottom: 14px;
+    break-inside: avoid;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+  }
+
+  .question-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #f1f5f9;
+    padding-bottom: 6px;
+    margin-bottom: 8px;
+  }
+
+  .question-title {
+    font-weight: 700;
+    font-size: 10pt;
+    color: #0f172a;
+  }
+
+  .question-text {
+    font-size: 9.5pt;
+    color: #334155;
+    margin-bottom: 8px;
+    font-weight: 500;
+  }
+
+  .options-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4px;
+    margin-bottom: 8px;
+  }
+
+  .option-item {
+    padding: 5px 9px;
+    border-radius: 4px;
+    font-size: 8.5pt;
+    border: 1px solid #e2e8f0;
+    background: #f8fafc;
+  }
+
+  .option-correct {
+    background: #f0fdf4;
+    border-color: #86efac;
+    color: #166534;
+    font-weight: 600;
+  }
+
+  .explanation-box {
+    background: #f8fafc;
+    border-left: 3px solid #10b981;
+    padding: 6px 10px;
+    font-size: 8.5pt;
+    color: #334155;
+    border-radius: 0 4px 4px 0;
+  }
+
+  .contest-banner {
+    background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+    color: #ffffff;
+    padding: 16px 20px;
+    border-radius: 8px;
+    margin-bottom: 18px;
+  }
+
+  .contest-banner h2 {
+    color: #ffffff;
+    border-left: none;
+    padding-left: 0;
+    margin: 0 0 6px 0;
+    font-size: 16pt;
+  }
+
+  .contest-banner p {
+    color: #dbeafe;
+    margin: 0;
+    font-size: 9.5pt;
+  }
+</style>
+</head>
+<body>
+
+<!-- COVER PAGE -->
+<div class="cover-page">
+  <div>
+    <div class="cover-badge">System &amp; AI Essentials &bull; Comprehensive Course Manual</div>
+    <div class="cover-title">Systems, CLI, Git &amp; Contest Master Guide</div>
+    <div class="cover-subtitle">Complete In-Depth Conceptual Reference for Lectures 1 to 10, Exhaustive Command Cheat Sheets, and Rigorous Solutions for Contest 1 (50 Questions) &amp; Contest 2 (25 Questions)</div>
+    
+    <div class="cover-grid">
+      <div class="cover-card">
+        <h4>Core Systems Architecture</h4>
+        <p>IPOS cycle, embedded vs servers vs supercomputers, CPU vs GPU parallelism, memory &amp; storage hierarchies (RAM volatile vs SSD/HDD), device drivers, and OS resource management.</p>
+      </div>
+      <div class="cover-card">
+        <h4>Terminal, Shell &amp; Filesystem</h4>
+        <p>Command execution, environment variables ($PATH resolution), Unix "Everything is a file" philosophy, pseudo-terminals (/dev/pts), permissions (chmod octal math &amp; +x metadata).</p>
+      </div>
+      <div class="cover-card">
+        <h4>Process Lifecycle &amp; Execution</h4>
+        <p>Program vs process, PID, isolated virtual address spaces, Chrome multi-process model (1 tab = 1 child process), CPU timeslicing, signals (kill -15 vs -9), and OOM handling.</p>
+      </div>
+      <div class="cover-card">
+        <h4>Git &amp; GitHub Distributed VCS</h4>
+        <p>Working directory, Staging area, Local Repository (.git), commits, branching, merging, merge conflicts, remote origin, push, pull, fetch, clone, PRs, and GitHub collaboration.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="cover-meta">
+    <div><strong>Curriculum:</strong> System &amp; AI Essentials (C01 - C10)</div>
+    <div><strong>Includes:</strong> 75 Real Contest Questions &amp; Detailed Explanations</div>
+    <div><strong>Format:</strong> High-Yield Reference Edition</div>
+  </div>
+</div>
+
+<!-- MODULE 1 -->
+<h1>Module 1: Foundations of Computer Systems (Lecture 1)</h1>
+
+<h2>1.1 The Fundamental Nature of a Computer</h2>
+<p>At its theoretical and practical core, a <strong>computer</strong> is an electronic machine that processes data according to a stored set of instructions. It operates along the classic <strong>IPOS Model</strong>:</p>
+<ul>
+  <li><strong>Input:</strong> Capturing raw data from the external physical environment (keystrokes, sensor readings, mouse clicks, packets).</li>
+  <li><strong>Process:</strong> Manipulating, computing, comparing, and transforming that data according to program logic executed by a central processing unit (CPU).</li>
+  <li><strong>Output:</strong> Delivering processed results into human-perceivable or machine-actuable form (screen pixels, radio transmissions, sound, printed sheets).</li>
+  <li><strong>Storage:</strong> Retaining instructions and state across immediate or extended periods (volatile RAM and non-volatile SSD/HDD).</li>
+</ul>
+
+<div class="callout callout-warning">
+  <strong>The Defining Property: Reprogrammability vs Single-Purpose Tool</strong><br>
+  An orange juicer crushes oranges: it takes input, applies physical force, and gives juice. Yet it is <em>not</em> a computer. Why? Its behavior is permanently fixed into physical metal and gears.<br>
+  A digital scale with a microcontroller that weighs crates, receives a firmware update file over USB, and now calculates prices in Rupees and logs past weighings <strong>is a computer</strong>. Its behavior is dictated by <strong>software</strong>, and its hardware is general enough to carry out new, distinct sets of instructions without changing physical parts!
+</div>
+
+<h2>1.2 Taxonomy of Modern Computing Machines</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Class</th>
+      <th>Primary Purpose</th>
+      <th>Key Characteristics</th>
+      <th>Real-World Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Embedded System</strong></td>
+      <td>Dedicated, single-purpose automated control</td>
+      <td>Microcontroller, fixed firmware, minimal/no OS, low power, extreme reliability, no user desktop</td>
+      <td>Water-level sensor box bolted to bridge; automobile ABS brakes; smart thermostat</td>
+    </tr>
+    <tr>
+      <td><strong>Personal Computer (PC)</strong></td>
+      <td>Interactive general-purpose computing for an individual</td>
+      <td>Desktop/laptop, rich graphical OS (macOS, Windows, Linux), mouse/keyboard/screen, runs diverse user software</td>
+      <td>District office desktop; student laptop; office workstation</td>
+    </tr>
+    <tr>
+      <td><strong>Server</strong></td>
+      <td>Serving centralized data and compute over a network to many clients</td>
+      <td>Rack-mounted, headless (no monitor/keyboard attached), optimized for multi-tenant throughput, 24/7 uptime</td>
+      <td>Rack-room machines fielding public flood-alert requests and telemetry database</td>
+    </tr>
+    <tr>
+      <td><strong>Supercomputer</strong></td>
+      <td>Massive parallel floating-point mathematical simulations</td>
+      <td>Thousands of interconnected nodes, Petabytes of RAM, liquid cooled, specialized scheduling (SLURM)</td>
+      <td>Atmospheric simulation computing subcontinent weather grids; molecular dynamics; climate modeling</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>1.3 Failure Analysis: The Hazard of Unused Capability</h2>
+<p>In the weather department trial, 10 bridges replaced sealed embedded sensor boxes with ordinary Windows laptops. The laptops missed 43 readings, whereas the 190 simple boxes missed only 2. Every laptop failure stemmed from features the sensor task never needed: background Windows updates forcing restarts, power-saving sleep modes suspending the radio, and disk bloat from background logging.</p>
+<div class="callout callout-danger">
+  <strong>Core Architectural Law:</strong> Capability a job never uses is not free. It introduces points of failure, resource contention, and maintenance complexity. A general-purpose machine deployed where an embedded controller belongs is inherently unreliable and inefficient.
+</div>
+
+<div class="page-break"></div>
+
+<!-- MODULE 2 -->
+<h1>Module 2: Hardware Architecture &amp; The Software Spectrum (Lecture 2)</h1>
+
+<h2>2.1 Compute Engines: CPU vs GPU</h2>
+<p>Modern computers rely on specialized processing hardware tailored for distinct computational workloads:</p>
+<ul>
+  <li><strong>Central Processing Unit (CPU):</strong> The latency-optimized "brain" of the computer. Possesses a few powerful, highly sophisticated cores (typically 4 to 32) engineered to execute complex, sequential branch-heavy code at extremely high clock speeds with deep instruction-level parallelism.</li>
+  <li><strong>Graphics Processing Unit (GPU):</strong> The throughput-optimized SIMD (Single Instruction, Multiple Data) engine. Possesses thousands of smaller, simpler cores designed to execute the exact same arithmetic instruction simultaneously across millions of data points (e.g. image pixels, matrix multiplication in neural networks).</li>
+</ul>
+
+<div class="callout">
+  <strong>Diagnostic Clinic Case Study: The 40-Second vs 26-Minute Scan</strong><br>
+  Medical scan reconstruction executes identical arithmetic filtering on millions of pixels. The GPU's thousands of lightweight cores perform these operations in parallel in <strong>40 seconds</strong>. When the GPU was disabled, the CPU had to perform the operations sequentially through its few cores, taking <strong>26 minutes</strong>—even though the CPU itself was fast and healthy!
+</div>
+
+<h2>2.2 Memory and Storage Hierarchy</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Layer</th>
+      <th>Technology</th>
+      <th>Speed / Latency</th>
+      <th>Volatility</th>
+      <th>Function in System</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>CPU Registers &amp; Cache</strong></td>
+      <td>SRAM (L1, L2, L3)</td>
+      <td>Sub-nanosecond to ~10 ns</td>
+      <td>Volatile (Lost on power cut)</td>
+      <td>Immediate instruction and data operands inside CPU die</td>
+    </tr>
+    <tr>
+      <td><strong>RAM (Main Memory)</strong></td>
+      <td>DRAM chips</td>
+      <td>~50 – 100 ns</td>
+      <td>Volatile (Lost on power cut)</td>
+      <td>Holds actively executing program code and live variables</td>
+    </tr>
+    <tr>
+      <td><strong>Solid-State Drive (SSD)</strong></td>
+      <td>NAND Flash Memory</td>
+      <td>~50 – 100 &mu;s (Microseconds)</td>
+      <td>Non-Volatile (Retained permanently)</td>
+      <td>Secondary long-term storage; electronic silicon, high random IOPS</td>
+    </tr>
+    <tr>
+      <td><strong>Hard Disk Drive (HDD)</strong></td>
+      <td>Magnetic platters + arm</td>
+      <td>~5 – 15 ms (Milliseconds)</td>
+      <td>Non-Volatile (Retained permanently)</td>
+      <td>Secondary storage; mechanical spinning platters (slower, fragile)</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="callout callout-warning">
+  <strong>Critical Speed Order:</strong> <code>RAM &gt; SSD &gt; HDD</code><br>
+  RAM is thousands of times faster than SSD, and SSD is up to 100 times faster than HDD due to zero mechanical seek time.
+</div>
+
+<h2>2.3 Memory Volatility and Power Cuts: The Unsaved Work Principle</h2>
+<p>When a user types a document, the active keystrokes and document state are held in <strong>RAM</strong>. RAM requires continuous electrical charge to maintain its state. When power drops, all capacitor charges in RAM dissipate immediately.</p>
+<ul>
+  <li><em>Saving a file</em> explicitly copies the buffer from volatile RAM into non-volatile secondary storage (SSD/HDD).</li>
+  <li>Buying 64 GB of RAM does <strong>not</strong> protect unsaved work from a power outage: RAM loses its contents regardless of capacity. Only persisting to secondary storage guarantees durability.</li>
+</ul>
+
+<h2>2.4 Software Classification</h2>
+<ul>
+  <li><strong>System Software:</strong> Software that provides the underlying platform and manages hardware resources so application software can run.
+    <ul>
+      <li><strong>Operating System:</strong> Windows, macOS, Linux, Android (manages CPU, RAM, storage, security).</li>
+      <li><strong>Device Drivers:</strong> Software adapters allowing the OS to communicate with specific hardware (printers, graphics cards, network cards).</li>
+      <li><strong>Utilities:</strong> Antivirus tools, disk formatters, package managers.</li>
+    </ul>
+  </li>
+  <li><strong>Application Software:</strong> Software created to accomplish specific end-user tasks: Web Browsers (Chrome), Spreadsheets (Excel), Word Processors (Word), Media Players (Spotify).</li>
+</ul>
+
+<div class="page-break"></div>
+
+<!-- MODULE 3 & 4 -->
+<h1>Module 3 &amp; 4: Commanding the Machine &amp; The Interface Continuum</h1>
+
+<h2>3.1 Terminal, Shell, and the macOS Transition</h2>
+<p>The <strong>Terminal</strong> is an application (a graphical window emulator) that receives keyboard input and displays text output. The <strong>Shell</strong> is the command-line interpreter running inside the terminal that parses user commands, resolves paths, and executes programs.</p>
+<ul>
+  <li>On modern macOS (macOS Catalina 10.15 and later), the default shell is <strong>zsh</strong> (Z Shell). Prior to 2019, macOS defaulted to <strong>bash</strong> (Bourne Again Shell).</li>
+</ul>
+
+<h2>3.2 Filesystem Navigation and Path Resolution</h2>
+<ul>
+  <li><strong>Root Directory (<code>/</code>):</strong> The absolute top of the Unix filesystem hierarchy. Running <code>cd ..</code> at <code>/</code> leaves you at <code>/</code> because the root has no parent directory.</li>
+  <li><strong>Absolute Path:</strong> Starts from root (e.g. <code>/bin/ls</code> or <code>/Users/student/docs/file.txt</code>).</li>
+  <li><strong>Relative Path:</strong> Starts from the current working directory (e.g. <code>./script.sh</code> or <code>../folder/test.py</code>).</li>
+</ul>
+
+<h2>3.3 The <code>$PATH</code> Environment Variable</h2>
+<p>When you type a command like <code>ls</code>, the shell does not inherently know where the binary lives. It scans the colon-separated list of directories stored in the <code>$PATH</code> environment variable (e.g. <code>/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin</code>).</p>
+<div class="callout callout-danger">
+  <strong>What happens if $PATH is empty?</strong><br>
+  If <code>PATH=""</code>, typing <code>ls</code> outputs <code>command not found</code> because the shell cannot search any directory. However, <strong>the program still exists</strong> on disk! You can run it directly by specifying its absolute path: <code>/bin/ls</code>.
+</div>
+<ul>
+  <li><code>which &lt;command&gt;</code>: Prints the full absolute path of the executable resolved via <code>$PATH</code> (e.g. <code>which ls</code> &rarr; <code>/bin/ls</code>).</li>
+  <li><code>pwd</code>: Prints the current working directory path.</li>
+</ul>
+
+<h2>3.4 Wildcards &amp; Command Construction</h2>
+<ul>
+  <li><code>*</code>: Wildcard matching <strong>zero or more characters</strong>. Example: <code>rm -r folder_*</code> will delete <code>folder_1</code>, <code>folder_20</code>, and <code>folder_100</code>.</li>
+  <li><code>?</code>: Wildcard matching <strong>exactly one character</strong>. <code>folder_?</code> only matches single-digit folders like <code>folder_1</code>.</li>
+  <li><code>|</code> (Pipe): Feeds the standard output of the left command directly into standard input of the right command (e.g. <code>ps aux | grep chrome</code>).</li>
+</ul>
+
+<h2>3.5 Interfaces: CLI vs GUI vs API</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Interface</th>
+      <th>Primary User</th>
+      <th>Input Mechanism</th>
+      <th>Strengths</th>
+      <th>Limitations</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>CLI</strong> (Command Line)</td>
+      <td>Developers, Sysadmins</td>
+      <td>Text commands &amp; arguments</td>
+      <td>Scriptable, automatable, remote access, repeatable</td>
+      <td>Steep learning curve, memorization required</td>
+    </tr>
+    <tr>
+      <td><strong>GUI</strong> (Graphical User)</td>
+      <td>General End Users</td>
+      <td>Mouse, touch, visual icons</td>
+      <td>Intuitive, discoverable, low barrier to entry</td>
+      <td>Hard to automate, heavy resource usage</td>
+    </tr>
+    <tr>
+      <td><strong>API</strong> (Application Programming)</td>
+      <td>Software programs</td>
+      <td>HTTP requests, function calls, JSON</td>
+      <td>Seamless inter-system integration, standard contracts</td>
+      <td>Requires programming to utilize</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="page-break"></div>
+
+<!-- MODULE 5 -->
+<h1>Module 5: Operating Systems &amp; Process Management (Lecture 5)</h1>
+
+<h2>5.1 Program vs Process: A Crucial Distinction</h2>
+<ul>
+  <li><strong>Program:</strong> A passive collection of instructions and static data stored as a file on secondary storage (SSD/HDD). Installed once.</li>
+  <li><strong>Process:</strong> An active instance of a program currently loaded into RAM and being executed by the CPU. A process contains an address space, stack, heap, CPU registers, file descriptors, and a unique <strong>PID</strong> (Process ID).</li>
+</ul>
+
+<div class="callout">
+  <strong>One Program &rarr; Multiple Independent Processes:</strong> Launching three separate Google Chrome windows runs three or more distinct processes from the same single executable installed on disk.
+</div>
+
+<h2>5.2 Modern Multi-Process Architecture (Google Chrome Model)</h2>
+<p>Modern web browsers enforce process isolation: <strong>1 Browser Tab = 1 Child Process</strong>.</p>
+<ul>
+  <li><strong>Why not threads or one big process?</strong> If one tab crashes due to faulty JavaScript or a memory leak, only that specific child process terminates. The parent browser and all other tabs stay alive!</li>
+  <li><strong>Memory Security:</strong> Web tabs execute untrusted code from arbitrary domains. Process isolation prevents one tab from inspecting or altering the memory of online banking in an adjacent tab.</li>
+</ul>
+
+<h2>5.3 Virtual Memory and Address Space Isolation</h2>
+<p>Why cannot Google Chrome read or overwrite data held inside VS Code's memory?</p>
+<div class="callout callout-success">
+  <strong>Virtual Address Space Isolation:</strong> The Operating System provides every process with its own private virtual address space mapped through hardware page tables. An address inside Chrome has no physical or logical relationship to that same numeric address inside VS Code. Process boundaries are strictly hardware-enforced by the MMU (Memory Management Unit).
+</div>
+
+<h2>5.4 Process Signals: Graceful Exit vs Immediate Termination</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Command</th>
+      <th>Signal</th>
+      <th>Behavior</th>
+      <th>Use Case</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>kill -15 &lt;PID&gt;</code></td>
+      <td><strong>SIGTERM</strong> (Signal 15)</td>
+      <td>Politely requests termination. The process intercepts the signal, closes open file handles, flushes network sockets, writes state, and exits cleanly.</td>
+      <td>Standard orderly shutdown</td>
+    </tr>
+    <tr>
+      <td><code>kill -9 &lt;PID&gt;</code></td>
+      <td><strong>SIGKILL</strong> (Signal 9)</td>
+      <td>Kernel immediately kills the process without notifying it. Cannot be caught, blocked, or ignored. Unsaved state is destroyed.</td>
+      <td>Frozen, uncooperative, or runaway zombie processes</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>5.5 Out-Of-Memory (OOM) Errors: CPU vs Memory Allocation</h2>
+<p>When an application under heavy traffic crashes repeatedly with an <strong>Out-Of-Memory (OOM) exception</strong>:</p>
+<ul>
+  <li>Adding more CPU cores will <strong>not</strong> fix the crash. CPU cores provide execution throughput; they do not expand memory capacity.</li>
+  <li>The OS memory manager allocates chunks of RAM upon request. When physical RAM and swap space are exhausted, the OS cannot fulfill the request and invokes the OOM killer or throws a fatal memory exception.</li>
+  <li><strong>The correct solution:</strong> Increase system RAM or refactor the application to consume less memory.</li>
+</ul>
+
+<div class="page-break"></div>
+
+<!-- MODULE 6 -->
+<h1>Module 6: The Unix Filesystem Architecture &amp; Permissions (Lecture 6)</h1>
+
+<h2>6.1 The Unix Philosophy: "Everything is a File"</h2>
+<p>In Unix-like operating systems (macOS, Linux), hardware devices, communication channels, and processes are exposed through the standard filesystem interface:</p>
+<ul>
+  <li><code>/dev/pts/*</code> (Pseudo-Terminals): Terminals appear as files. Running <code>echo "hi" &gt; /dev/pts/2</code> writes the string "hi" directly onto the screen of terminal 2!</li>
+  <li><code>/dev/input/*</code>: Mouse and keyboard event streams represented as readable files.</li>
+  <li><code>/tmp</code>: Temporary workspace for transient files. <strong>Automatically wiped clean on system reboot!</strong></li>
+  <li><code>/bin</code>: Essential system binary executables needed for single-user mode and booting.</li>
+  <li><code>/etc</code>: Host-specific system-wide configuration files.</li>
+</ul>
+
+<h2>6.2 File Permission Triplets and Octal Calculation</h2>
+<p>Running <code>ls -l</code> displays a 10-character string such as <code>-rw-r--r--</code>:</p>
+<pre><code>-  r w -  r - -  r - -
+^  [Owner] [Group] [Others]
+Type: (-) Regular file, (d) Directory</code></pre>
+
+<table>
+  <thead>
+    <tr>
+      <th>Permission</th>
+      <th>Symbol</th>
+      <th>Numeric (Octal) Value</th>
+      <th>Meaning on Files</th>
+      <th>Meaning on Directories</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Read</strong></td>
+      <td><code>r</code></td>
+      <td><strong>4</strong></td>
+      <td>View file content</td>
+      <td>List contents (run <code>ls</code>)</td>
+    </tr>
+    <tr>
+      <td><strong>Write</strong></td>
+      <td><code>w</code></td>
+      <td><strong>2</strong></td>
+      <td>Modify / truncate file</td>
+      <td>Create / delete files in dir</td>
+    </tr>
+    <tr>
+      <td><strong>Execute</strong></td>
+      <td><code>x</code></td>
+      <td><strong>1</strong></td>
+      <td>Run file as a program</td>
+      <td>Enter / <code>cd</code> into directory</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Master Permission Matrix &amp; Key Values</h3>
+<ul>
+  <li><strong><code>chmod 644</code> (<code>-rw-r--r--</code>):</strong> Owner has Read + Write (4+2=6); Group has Read (4); Others have Read (4). Standard permission for text files, web pages, and public documents.</li>
+  <li><strong><code>chmod 600</code> (<code>-rw-------</code>):</strong> Owner has Read + Write (4+2=6); Group has None (0); Others have None (0). Strict privacy for SSH private keys and personal notes.</li>
+  <li><strong><code>chmod 754</code> (<code>-rwxr-xr--</code>):</strong> Owner has Read + Write + Execute (4+2+1=7); Group has Read + Execute (4+1=5); Others have Read (4).</li>
+  <li><strong><code>chmod 755</code> (<code>-rwxr-xr-x</code>):</strong> Owner has Read + Write + Execute (7); Group and Others have Read + Execute (5). Standard for executable scripts and directories.</li>
+  <li><strong><code>chmod 777</code> (<code>-rwxrwxrwx</code>):</strong> Full permissions for everyone. <em>Extremely dangerous anti-pattern.</em> Grants write and execute access to any arbitrary user on the machine.</li>
+</ul>
+
+<h2>6.3 Execution Metadata vs File Extensions</h2>
+<ul>
+  <li>On Windows, a file's executable status is tied to its extension (<code>.exe</code>, <code>.bat</code>).</li>
+  <li>On Unix/Linux/macOS, execution is determined <strong>strictly by the execute bit (<code>x</code>) stored in file metadata</strong>.</li>
+  <li>A file named <code>hello.txt</code> made executable via <code>chmod +x hello.txt</code> and renamed to <code>run_me.banana</code> will execute cleanly with <code>./run_me.banana</code> because the metadata bit persists across renames!</li>
+  <li><strong>Why newly created files lack execute permission:</strong> Security safeguard to prevent unvetted downloaded scripts from accidentally running.</li>
+</ul>
+
+<div class="page-break"></div>
+
+<!-- MODULE 7 & 8 -->
+<h1>Module 7 &amp; 8: Software Execution &amp; Low-Level Data Representation</h1>
+
+<h2>7.1 Software Execution Pipeline: Compilers vs Interpreters</h2>
+<p>The CPU understands only binary machine code. Every programming language must eventually resolve to machine code:</p>
+<ul>
+  <li><strong>Compiled Languages (C, C++, Rust, Go):</strong> An Ahead-Of-Time (AOT) compiler reads source code, optimizes it, and emits a standalone binary machine code file tailored directly for the target CPU architecture. Ultra-fast execution, zero runtime interpreter overhead.</li>
+  <li><strong>Interpreted Languages (Python, Ruby, JavaScript):</strong> Source code is executed via an interpreter program (e.g. <code>/usr/bin/python3</code>). When you run <code>python3 hello.py</code>, two programs are involved: the Python interpreter binary and your script. The interpreter parses code and evaluates it dynamically. Portable, but slower than compiled code.</li>
+  <li><strong>Just-In-Time (JIT) Compilation:</strong> Hybrid approach (e.g. PyPy, Java HotSpot, V8) that compiles frequently executed bytecode loops into native machine code at runtime.</li>
+</ul>
+
+<h2>7.2 Low-Level Data Representation: Bits, Bytes, and Hex</h2>
+<ul>
+  <li><strong>Bit:</strong> The fundamental binary unit (0 or 1), physically represented by electrical voltage levels (high vs low).</li>
+  <li><strong>Byte:</strong> 8 bits. Represents $2^8 = 256$ distinct values (0 to 255 unsigned, or -128 to +127 signed).</li>
+  <li><strong>Hexadecimal (Base-16):</strong> Uses digits <code>0-9</code> and letters <code>A-F</code> (where A=10, B=11, C=12, D=13, E=14, F=15).
+    <ul>
+      <li>1 Hex digit = 4 binary bits (1 Nibble). E.g., binary <code>1111</code> = Hex <code>F</code>.</li>
+      <li>1 Byte = Exactly 2 Hex digits. E.g., binary <code>11111111</code> = Hex <code>FF</code> (decimal 255).</li>
+    </ul>
+  </li>
+</ul>
+
+<h2>7.3 Text Encodings: ASCII vs Unicode UTF-8</h2>
+<ul>
+  <li><strong>ASCII:</strong> 7-bit standard (128 characters) covering standard English alphabet (A-Z, a-z, 0-9, punctuation, control codes). E.g., 'A' is 65 (binary <code>01000001</code>).</li>
+  <li><strong>Unicode (UTF-8):</strong> Variable-length encoding (1 to 4 bytes) that represents over 150,000 characters spanning all human languages, mathematical symbols, and emoji. Backward-compatible with ASCII in its first 128 code points.</li>
+</ul>
+
+<h2>7.4 Image Representation &amp; File Signatures</h2>
+<ul>
+  <li><strong>RGB Image:</strong> Each pixel is composed of 3 bytes: Red (0-255), Green (0-255), Blue (0-255).</li>
+  <li><strong>RGBA Image:</strong> Adds an Alpha transparency channel (4 bytes per pixel).</li>
+  <li><strong>Uncompressed Image Size:</strong> $	ext{Size (bytes)} = 	ext{Width} 	imes 	ext{Height} 	imes 	ext{Channels}$. A $1920 	imes 1080$ RGB image uncompressed requires $pprox 6.22 	ext{ MB}$.</li>
+  <li><strong>Magic Numbers (File Signatures):</strong> Unique byte sequences at the beginning of files that identify their format (e.g., PNG files start with bytes <code>89 50 4E 47 0D 0A 1A 0A</code>).</li>
+  <li><strong>Encoding vs Encryption:</strong> Encoding converts data into standard formats for interoperability (public algorithm, easily reversed without a key). Encryption scrambles data using mathematical ciphers and secret keys to enforce confidentiality.</li>
+</ul>
+
+<div class="page-break"></div>
+
+<!-- MODULE 9 & 10 -->
+<h1>Module 9 &amp; 10: Version Control Systems — Git &amp; GitHub (Lectures 9 &amp; 10)</h1>
+
+<h2>9.1 The Git Architecture: The Three Trees</h2>
+<p>Git is a distributed version control system that runs entirely on your local machine inside a hidden <code>.git</code> repository directory:</p>
+<pre><code>[ Working Directory ]  --- git add ---&gt;  [ Staging Area (Index) ]  --- git commit ---&gt;  [ Local Repository (.git) ]
+(Actual modified files)                   (Snapshot prepared for commit)                 (Permanent immutable history)</code></pre>
+
+<ul>
+  <li><strong>Working Directory:</strong> The active filesystem folder where you edit files. Files can be <em>untracked</em> or <em>modified</em>.</li>
+  <li><strong>Staging Area (Index):</strong> The intermediate staging buffer where changes are selected and reviewed prior to recording.</li>
+  <li><strong>Local Repository (Commit History):</strong> The cryptographically verified Directed Acyclic Graph (DAG) of commit snapshots stored inside <code>.git</code>.</li>
+</ul>
+
+<h2>9.2 Git vs GitHub: Local Tool vs Remote Hub</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Dimension</th>
+      <th>Git</th>
+      <th>GitHub</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Nature</strong></td>
+      <td>Command-line Version Control tool</td>
+      <td>Cloud hosting platform &amp; collaboration hub</td>
+    </tr>
+    <tr>
+      <td><strong>Location</strong></td>
+      <td>Installed locally on your personal machine</td>
+      <td>Hosted on cloud servers (github.com)</td>
+    </tr>
+    <tr>
+      <td><strong>Function</strong></td>
+      <td>Tracks file changes, commits, branches locally</td>
+      <td>Coordinates team sharing, Pull Requests, code reviews, CI/CD</td>
+    </tr>
+    <tr>
+      <td><strong>Internet</strong></td>
+      <td>Functions 100% offline without network</td>
+      <td>Requires internet connectivity to push/pull/browse</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>9.3 The Core Collaboration Workflow</h2>
+<ol>
+  <li><strong>Initialize &amp; Configure:</strong>
+    <pre><code>git config --global user.name "Your Name"
+git config --global user.email "you@example.com"
+git init</code></pre>
+  </li>
+  <li><strong>Stage &amp; Commit Changes:</strong>
+    <pre><code>git status                # Check working tree status
+git add notes.txt         # Move file to Staging Area
+git commit -m "feat: add initial notes"  # Commit to local repo</code></pre>
+  </li>
+  <li><strong>Connect to Remote GitHub Repository:</strong>
+    <pre><code>git remote add origin https://github.com/username/repo.git
+git branch -M main
+git push -u origin main   # Send commit history to GitHub</code></pre>
+  </li>
+  <li><strong>Team Collaboration &amp; Pull Requests:</strong>
+    <pre><code>git clone https://github.com/org/repo.git   # Download full repo
+git switch -c feature-branch                # Create and switch to new branch
+git push origin feature-branch              # Push branch to remote
+# Open a Pull Request (PR) on GitHub for code review, then Merge into main!</code></pre>
+  </li>
+</ol>
+
+<div class="page-break"></div>
+
+<!-- MASTER CHEATSHEET -->
+<h1>Master CLI &amp; Git Command Reference</h1>
+
+<h2>Essential Shell &amp; Terminal Commands</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Command</th>
+      <th>Description</th>
+      <th>Example Usage</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>pwd</code></td>
+      <td>Print Working Directory (prints full absolute path)</td>
+      <td><code>pwd</code></td>
+    </tr>
+    <tr>
+      <td><code>ls</code></td>
+      <td>List directory contents</td>
+      <td><code>ls -la</code> (all files, hidden, long format)</td>
+    </tr>
+    <tr>
+      <td><code>cd &lt;dir&gt;</code></td>
+      <td>Change directory (<code>cd ..</code> moves up, <code>cd ~</code> home)</td>
+      <td><code>cd ../project</code></td>
+    </tr>
+    <tr>
+      <td><code>mkdir &lt;dir&gt;</code></td>
+      <td>Create a new directory</td>
+      <td><code>mkdir -p parent/child</code></td>
+    </tr>
+    <tr>
+      <td><code>touch &lt;file&gt;</code></td>
+      <td>Create empty file or update timestamp</td>
+      <td><code>touch app.py</code></td>
+    </tr>
+    <tr>
+      <td><code>cp &lt;src&gt; &lt;dst&gt;</code></td>
+      <td>Copy files (use <code>-r</code> for directories)</td>
+      <td><code>cp -r src/ backup/</code></td>
+    </tr>
+    <tr>
+      <td><code>mv &lt;src&gt; &lt;dst&gt;</code></td>
+      <td>Move or rename files and directories</td>
+      <td><code>mv old.txt new.txt</code></td>
+    </tr>
+    <tr>
+      <td><code>rm &lt;file&gt;</code></td>
+      <td>Remove file (use <code>-r</code> for directories)</td>
+      <td><code>rm -r folder_*</code></td>
+    </tr>
+    <tr>
+      <td><code>cat &lt;file&gt;</code></td>
+      <td>Concatenate and display file content</td>
+      <td><code>cat notes.txt</code></td>
+    </tr>
+    <tr>
+      <td><code>echo &lt;str&gt;</code></td>
+      <td>Print text to standard output</td>
+      <td><code>echo "hello" &gt; /dev/pts/1</code></td>
+    </tr>
+    <tr>
+      <td><code>grep &lt;pattern&gt;</code></td>
+      <td>Search for text matching regex pattern</td>
+      <td><code>grep -rn "TODO" ./src</code></td>
+    </tr>
+    <tr>
+      <td><code>which &lt;cmd&gt;</code></td>
+      <td>Locate executable path resolved via <code>$PATH</code></td>
+      <td><code>which ls</code> (&rarr; <code>/bin/ls</code>)</td>
+    </tr>
+    <tr>
+      <td><code>ps aux</code></td>
+      <td>Display snapshot of all running processes</td>
+      <td><code>ps aux | grep python</code></td>
+    </tr>
+    <tr>
+      <td><code>top</code> / <code>htop</code></td>
+      <td>Interactive real-time process viewer</td>
+      <td><code>top</code></td>
+    </tr>
+    <tr>
+      <td><code>kill -15 &lt;pid&gt;</code></td>
+      <td>Send graceful termination signal (SIGTERM)</td>
+      <td><code>kill -15 1420</code></td>
+    </tr>
+    <tr>
+      <td><code>kill -9 &lt;pid&gt;</code></td>
+      <td>Force immediate uncatchable process kill (SIGKILL)</td>
+      <td><code>kill -9 1420</code></td>
+    </tr>
+    <tr>
+      <td><code>chmod &lt;mode&gt;</code></td>
+      <td>Change file permissions</td>
+      <td><code>chmod +x run.sh</code>, <code>chmod 644 doc.txt</code></td>
+    </tr>
+    <tr>
+      <td><code>chown &lt;owner&gt;</code></td>
+      <td>Change file ownership (requires <code>sudo</code>)</td>
+      <td><code>sudo chown root:admin config.cfg</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Complete Git &amp; GitHub Command Reference</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Command</th>
+      <th>Function &amp; Purpose</th>
+      <th>Key Flags &amp; Variations</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>git init</code></td>
+      <td>Initialize a brand new local Git repository</td>
+      <td>Creates hidden <code>.git/</code> directory in project root</td>
+    </tr>
+    <tr>
+      <td><code>git config</code></td>
+      <td>Set author credentials and preferences</td>
+      <td><code>git config --global user.name "Name"</code></td>
+    </tr>
+    <tr>
+      <td><code>git status</code></td>
+      <td>Inspect working tree &amp; staged files status</td>
+      <td><code>git status -s</code> (short output format)</td>
+    </tr>
+    <tr>
+      <td><code>git add &lt;file&gt;</code></td>
+      <td>Add file modifications to the Staging Area</td>
+      <td><code>git add .</code> (stages all tracked/untracked changes)</td>
+    </tr>
+    <tr>
+      <td><code>git commit -m &lt;msg&gt;</code></td>
+      <td>Permanently record snapshot in repository history</td>
+      <td><code>git commit -am "msg"</code> (stages tracked &amp; commits)</td>
+    </tr>
+    <tr>
+      <td><code>git log</code></td>
+      <td>View chronological history of commits</td>
+      <td><code>git log --oneline --graph --decorate</code></td>
+    </tr>
+    <tr>
+      <td><code>git diff</code></td>
+      <td>View line-by-line differences</td>
+      <td><code>git diff --staged</code> (compares staged vs last commit)</td>
+    </tr>
+    <tr>
+      <td><code>git branch</code></td>
+      <td>List, create, or delete branches</td>
+      <td><code>git branch -M main</code>, <code>git branch -d old-feat</code></td>
+    </tr>
+    <tr>
+      <td><code>git switch</code> / <code>checkout</code></td>
+      <td>Switch between branches or restore files</td>
+      <td><code>git switch -c feature</code> (create and checkout branch)</td>
+    </tr>
+    <tr>
+      <td><code>git merge &lt;branch&gt;</code></td>
+      <td>Integrate another branch into the current branch</td>
+      <td><code>git merge feature-login</code></td>
+    </tr>
+    <tr>
+      <td><code>git remote add</code></td>
+      <td>Link local repository to a remote GitHub URL</td>
+      <td><code>git remote add origin https://github.com/...</code></td>
+    </tr>
+    <tr>
+      <td><code>git push</code></td>
+      <td>Upload local commits to remote GitHub repository</td>
+      <td><code>git push -u origin main</code> (sets upstream tracking)</td>
+    </tr>
+    <tr>
+      <td><code>git pull</code></td>
+      <td>Fetch and integrate remote changes into local branch</td>
+      <td><code>git pull origin main</code> (equivalent to fetch + merge)</td>
+    </tr>
+    <tr>
+      <td><code>git clone &lt;url&gt;</code></td>
+      <td>Download complete remote repository with full history</td>
+      <td><code>git clone https://github.com/owner/repo.git</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="page-break"></div>
+
+<!-- CONTEST 1 BREAKDOWN -->
+<div class="contest-banner">
+  <h2>Contest 1: 50 Real Questions &amp; In-Depth Solutions</h2>
+  <p>Detailed analysis of all 50 questions covering computer classification, hardware, memory hierarchy, operating systems, and process management.</p>
+</div>
+
+<!-- QUESTIONS 1 to 10 -->
+<div class="question-box">
+  <div class="question-header">
+    <span class="question-title">Question 1 / 50</span>
+    <span class="badge badge-correct">Correct Answer: A</span>
+  </div>
+  <div class="question-text">Aman wants faster boot times and quicker app loading on his old laptop. Which upgrade would be most effective?</div>
+  <div class="options-grid">
+    <div class="option-item option-correct">&bull; Replacing his HDD with an SSD</div>
+    <div class="option-item">&bull; Buying a bigger monitor</div>
+    <div class="option-item">&bull; Getting a mechanical keyboard</div>
+    <div class="option-item">&bull; Adding external speakers</div>
+  </div>
+  <div class="explanation-box">
+    <strong>Explanation:</strong> Boot time and app loading depend heavily on how fast the storage device can read data. SSDs are many times faster than HDDs because they have no moving parts, so switching to an SSD gives a huge speed boost.
+  </div>
+</div>
+
+<div class="question-box">
+  <div class="question-header">
+    <span class="question-title">Question 2 / 50</span>
+    <span class="badge badge-correct">Correct Answer: B</span>
+  </div>
+  <div class="question-text">Which of the following is a primary responsibility of an operating system?</div>
+  <div class="options-grid">
+    <div class="option-item">&bull; Creating spreadsheets</div>
+    <div class="option-item option-correct">&bull; Managing system resources</div>
+    <div class="option-item">&bull; Designing websites</div>
+    <div class="option-item">&bull; Editing photographs</div>
+  </div>
+  <div class="explanation-box">
+    <strong>Explanation:</strong> An operating system acts as the core resource manager of the machine, coordinating CPU time, memory allocation, storage access, and I/O devices among running processes.
+  </div>
+</div>
+
+<div class="question-box">
+  <div class="question-header">
+    <span class="question-title">Question 3 / 50</span>
+    <span class="badge badge-correct">Correct Answer: B</span>
+  </div>
+  <div class="question-text">A state weather department is building a flood-warning system. Four kinds of machine are involved:<br>
+  (1) Waterproof boxes bolted to bridges with small board, water-level sensor, radio.<br>
+  (2) District office machines on desks where officers write reports.<br>
+  (3) Rack-room machines with no person sitting in front of them that receive readings and serve citizen requests.<br>
+  (4) National centre machine running atmospheric simulation dividing the sky into billions of cells.<br>
+  Which classification of machines (1) to (4) matches the lecture categories?</div>
+  <div class="options-grid">
+    <div class="option-item">&bull; (1) personal computer, (2) embedded system, (3) supercomputer, (4) server</div>
+    <div class="option-item option-correct">&bull; (1) embedded system, (2) personal computer, (3) server, (4) supercomputer</div>
+    <div class="option-item">&bull; (1) embedded system, (2) server, (3) personal computer, (4) supercomputer</div>
+    <div class="option-item">&bull; (1) server, (2) personal computer, (3) embedded system, (4) supercomputer</div>
+  </div>
+  <div class="explanation-box">
+    <strong>Explanation:</strong> (1) Dedicated sensor board = Embedded system; (2) Interactive officer workstation = Personal computer; (3) Headless multi-user data provider = Server; (4) Massive parallel atmospheric simulation = Supercomputer.
+  </div>
+</div>
+
+<div class="question-box">
+  <div class="question-header">
+    <span class="question-title">Question 4 / 50</span>
+    <span class="badge badge-correct">Correct Answer: C</span>
+  </div>
+  <div class="question-text">Which feature of the rack-room machines - rather than their physical size or their speed - is what puts them in their category?</div>
+  <div class="options-grid">
+    <div class="option-item">&bull; They are kept in a locked, climate-controlled room.</div>
+    <div class="option-item">&bull; They have more RAM installed than the machines in the district office.</div>
+    <div class="option-item option-correct">&bull; They store data and provide it as a service to many other machines at the same time, over a network.</div>
+    <div class="option-item">&bull; They need no operating system of their own, because no person ever sits in front of them to run a program.</div>
+  </div>
+  <div class="explanation-box">
+    <strong>Explanation:</strong> A server is defined by its role: providing centralized data, compute, or network services concurrently to multiple remote clients over a network.
+  </div>
+</div>
+
+<div class="question-box">
+  <div class="question-header">
+    <span class="question-title">Question 5 / 50</span>
+    <span class="badge badge-correct">Correct Answer: D</span>
+  </div>
+  <div class="question-text">In a trial, 10 bridge boxes are replaced with ordinary laptops. Over one monsoon the laptops miss 43 readings due to Windows updates, power-saving sleep, and disk bloat; the 190 embedded boxes miss only 2. Which conclusion do these findings support?</div>
+  <div class="options-grid">
+    <div class="option-item">&bull; The laptops needed better weatherproofing.</div>
+    <div class="option-item">&bull; The laptops needed faster processors and more memory.</div>
+    <div class="option-item">&bull; The boxes are more reliable only because they were installed first.</div>
+    <div class="option-item option-correct">&bull; Capability a job never uses is not free. It can become a cause for which the job can fail, which is why a computer meant for one task is inefficient here.</div>
+  </div>
+  <div class="explanation-box">
+    <strong>Explanation:</strong> Unused features (desktop OS background services, auto-sleep, automatic updates) act as failure vectors. A dedicated embedded system has zero superfluous background tasks.
+  </div>
+</div>
+
+<div class="question-box">
+  <div class="question-header">
+    <span class="question-title">Question 6 / 50</span>
+    <span class="badge badge-correct">Correct Answer: A</span>
+  </div>
+  <div class="question-text">Halfway through the season the department decides the river boxes should measure every ten seconds instead of thirty, and report battery level. Assuming the boxes allow it, what does the definition of a computer predict?</div>
+  <div class="options-grid">
+    <div class="option-item option-correct">&bull; The behaviour can be changed by loading a new set of instructions into the hardware already on the bridge.</div>
+    <div class="option-item">&bull; Every box must be physically replaced, because its behaviour is fixed by the way it was built.</div>
+    <div class="option-item">&bull; Only the national centre's machine can be reprogrammed.</div>
+    <div class="option-item">&bull; Each box needs a GPU added before it can handle battery-level data.</div>
+  </div>
+  <div class="explanation-box">
+    <strong>Explanation:</strong> A computer's defining trait is reprogrammability: you update software instructions without altering physical hardware.
+  </div>
+</div>
+
+<div class="question-box">
+  <div class="question-header">
+    <span class="question-title">Question 7 / 50</span>
+    <span class="badge badge-correct">Correct Answer: C</span>
+  </div>
+  <div class="question-text">During a flood, the public website becomes unreachable for citizens. At the same time, officers in district office can read data on their screens and bridge boxes transmit normally. Which layer is the most likely point of failure?</div>
+  <div class="options-grid">
+    <div class="option-item">&bull; The river boxes - they are exposed to extreme weather.</div>
+    <div class="option-item">&bull; The national centre's simulation.</div>
+    <div class="option-item option-correct">&bull; The rack-room machines' capacity to answer many simultaneous requests - failure appears where users rose sharply.</div>
+    <div class="option-item">&bull; The officers' desk machines.</div>
+  </div>
+  <div class="explanation-box">
+    <strong>Explanation:</strong> Because internal office views and river sensors function normally, the bottleneck is exclusively at the public-facing server layer overwhelmed by concurrent citizen traffic.
+  </div>
+</div>
+
+<div class="question-box">
+  <div class="question-header">
+    <span class="question-title">Question 8 / 50</span>
+    <span class="badge badge-correct">Correct Answer: B</span>
+  </div>
+  <div class="question-text">Rahul needs to carry a 2 GB project file from home to college to submit it. Which device is the most convenient choice?</div>
+  <div class="options-grid">
+    <div class="option-item">&bull; The internal HDD of his desktop</div>
+    <div class="option-item option-correct">&bull; A USB flash drive</div>
+    <div class="option-item">&bull; His computer's monitor</div>
+    <div class="option-item">&bull; A RAM stick</div>
+  </div>
+  <div class="explanation-box">
+    <strong>Explanation:</strong> A USB flash drive is compact, non-volatile, portable storage. RAM loses data without power, monitors do not store data, and internal HDDs are non-portable.
+  </div>
+</div>
+
+<div class="question-box">
+  <div class="question-header">
+    <span class="question-title">Question 9 / 50</span>
+    <span class="badge badge-correct">Correct Answer: C</span>
+  </div>
+  <div class="question-text">A computer becomes almost unusable because many programs are running simultaneously and consuming available memory. Which OS function is directly involved?</div>
+  <div class="options-grid">
+    <div class="option-item">&bull; Document formatting</div>
+    <div class="option-item">&bull; Screen resolution</div>
+    <div class="option-item option-correct">&bull; Memory management</div>
+    <div class="option-item">&bull; File naming</div>
+  </div>
+  <div class="explanation-box">
+    <strong>Explanation:</strong> Memory management controls RAM allocation, paging/swapping to disk, and reclaiming memory from terminating processes.
+  </div>
+</div>
+
+<div class="question-box">
+  <div class="question-header">
+    <span class="question-title">Question 10 / 50</span>
+    <span class="badge badge-correct">Correct Answer: D</span>
+  </div>
+  <div class="question-text">Which software would normally be used to protect a computer by detecting and removing malicious programs?</div>
+  <div class="options-grid">
+    <div class="option-item">&bull; Spreadsheet software</div>
+    <div class="option-item">&bull; Word processor</div>
+    <div class="option-item">&bull; Presentation software</div>
+    <div class="option-item option-correct">&bull; Antivirus utility</div>
+  </div>
+  <div class="explanation-box">
+    <strong>Explanation:</strong> Antivirus software is a system maintenance utility specialized in detecting, quarantining, and eliminating malware.
+  </div>
+</div>
+
+<!-- QUESTIONS 11 to 20 -->
+<div class="question-box">
+  <div class="question-header">
+    <span class="question-title">Question 11 / 50</span>
+    <span class="badge badge-correct">Correct Answer: D</span>
+  </div>
+  <div class="question-text">Which software would be most appropriate for calculating monthly expenses and creating charts from the results?</div>
+  <div class="options-grid">
+    <div class="option-item">&bull; Antivirus utility</div>
+    <div class="option-item">&bull; Operating system</div>
+    <div class="option-item">&bull; Device driver</div>
+    <div class="option-item option-correct">&bull; Spreadsheet application</div>
+  </div>
+  <div class="explanation-box">
+    <strong>Explanation:</strong> Spreadsheets (like Microsoft Excel, Google Sheets) are specifically designed for grid calculations and data visualization.
+  </div>
+</div>
+
+<div class="question-box">
+  <div class="question-header">
+    <span class="question-title">Question 12 / 50</span>
+    <span class="badge badge-correct">Correct Answer: C</span>
+  </div>
+  <div class="question-text">A computer has enough memory and storage, but a newly connected printer does not work because the OS cannot communicate with it. What is missing?</div>
+  <div class="options-grid">
+    <div class="option-item">&bull; Web browser</div>
+    <div class="option-item">&bull; File manager</div>
+    <div class="option-item option-correct">&bull; Device driver</div>
+    <div class="option-item">&bull; Spreadsheet</div>
+  </div>
+  <div class="explanation-box">
+    <strong>Explanation:</strong> A device driver translates generic OS print requests into hardware-specific control codes the printer understands.
+  </div>
+</div>
+
+<div class="question-box">
+  <div class="question-header">
+    <span class="question-title">Question 13 / 50</span>
+    <span class="badge badge-correct">Correct Answer: B</span>
+  </div>
+  <div class="question-text">Why is an SSD generally faster than an HDD?</div>
+  <div class="options-grid">
+    <div class="option-item">&bull; It uses larger spinning disks</div>
+    <div class="option-item option-correct">&bull; It has no moving parts</div>
+    <div class="option-item">&bull; It uses magnetic tape</div>
+    <div class="option-item">&bull; It is physically bigger in size</div>
+  </div>
+  <div class="explanation-box">
+    <strong>Explanation:</strong> SSDs utilize electronic NAND flash memory with zero mechanical seek time, unlike HDDs which require moving magnetic platters and read/write heads.
+  </div>
+</div>
+
+<div class="question-box">
+  <div class="question-header">
+    <span class="question-title">Question 14 / 50</span>
+    <span class="badge badge-correct">Correct Answer: B</span>
+  </div>
+  <div class="question-text">Front-desk machine: modest CPU, 8 GB RAM, 1 TB HDD. Imaging machine: fast CPU, 32 GB RAM, 1 TB SSD, dedicated GPU. Front-desk machine takes 2 minutes to open patient-records; imaging machine takes seconds. Why?</div>
+  <div class="options-grid">
+    <div class="option-item">&bull; Front-desk machine has less RAM, where programs are kept permanently.</div>
+    <div class="option-item option-correct">&bull; Front-desk machine reads from spinning platters and moving heads; imaging machine reads from flash memory with no moving parts.</div>
+    <div class="option-item">&bull; Processor speed alone controls drive reading.</div>
+    <div class="option-item">&bull; The age of a drive alone determines speed.</div>
+  </div>
+  <div class="explanation-box">
+    <strong>Explanation:</strong> Application launch speed is I/O-bound by secondary storage read rates. SSD flash memory transfers binaries orders of magnitude faster than mechanical HDDs.
+  </div>
+</div>
+
+<div class="question-box">
+  <div class="question-header">
+    <span class="question-title">Question 15 / 50</span>
+    <span class="badge badge-correct">Correct Answer: D</span>
+  </div>
+  <div class="question-text">During a power cut, a receptionist lost the half-typed record she had not yet saved. Every saved record was intact when power returned. What does this demonstrate?</div>
+  <div class="options-grid">
+    <div class="option-item">&bull; The HDD is volatile, losing unsaved data.</div>
+    <div class="option-item">&bull; Unsaved work was held inside the CPU registers.</div>
+    <div class="option-item">&bull; 8 GB RAM was too small to hold the record.</div>
+    <div class="option-item option-correct">&bull; Work being typed lives in RAM, which is volatile; saving copies it into secondary storage, which keeps data without power.</div>
+  </div>
+  <div class="explanation-box">
+    <strong>Explanation:</strong> Active memory lives in volatile DRAM. Only flushing/writing to non-volatile secondary storage (HDD/SSD) preserves data across power failures.
+  </div>
+</div>
+
+<div class="question-box">
+  <div class="question-header">
+    <span class="question-title">Question 16 / 50</span>
+    <span class="badge badge-correct">Correct Answer: A</span>
+  </div>
+  <div class="question-text">The imaging machine reconstructs a scan in 40 seconds. When the graphics card is disabled, the same scan takes 26 minutes, even though the CPU was untouched. Why?</div>
+  <div class="options-grid">
+    <div class="option-item option-correct">&bull; The reconstruction applies the same operation repeatedly, and a GPU's thousands of small cores handle repetitive parallel work far better than a CPU's few powerful cores.</div>
+    <div class="option-item">&bull; The graphics card holds its own copy of the OS.</div>
+    <div class="option-item">&bull; A CPU cannot perform arithmetic directly.</div>
+    <div class="option-item">&bull; Disabling the graphics card disabled the SSD.</div>
+  </div>
+  <div class="explanation-box">
+    <strong>Explanation:</strong> Image reconstruction is massively parallel pixel math (SIMD). GPUs excel at parallel repetitive arithmetic across thousands of cores; CPUs must process them sequentially through a few cores.
+  </div>
+</div>
+
+<div class="question-box">
+  <div class="question-header">
+    <span class="question-title">Question 17 / 50</span>
+    <span class="badge badge-correct">Correct Answer: C</span>
+  </div>
+  <div class="question-text">The clinic can upgrade exactly one component on the front-desk machine to fix slow 2-minute application startup. Which upgrade should it choose?</div>
+  <div class="options-grid">
+    <div class="option-item">&bull; Add a graphics card</div>
+    <div class="option-item">&bull; Double RAM to 16 GB</div>
+    <div class="option-item option-correct">&bull; Replace the hard disk drive with an SSD, because the complaint is about how long data takes to be read out of long-term storage.</div>
+    <div class="option-item">&bull; Replace the processor</div>
+  </div>
+  <div class="explanation-box">
+    <strong>Explanation:</strong> Program startup is bounded by secondary storage read throughput. Replacing the mechanical HDD with an SSD eliminates the 2-minute loading bottleneck.
+  </div>
+</div>
+
+<div class="question-box">
+  <div class="question-header">
+    <span class="question-title">Question 18 / 50</span>
+    <span class="badge badge-correct">Correct Answer: D</span>
+  </div>
+  <div class="question-text">A vendor claims: "Buy 64 GB of RAM and your staff will never again lose unsaved work in a power cut." How should the clinic judge this claim?</div>
+  <div class="options-grid">
+    <div class="option-item">&bull; Accept it - larger RAM keeps data clear of overwritten parts.</div>
+    <div class="option-item">&bull; Accept it - above 32 GB RAM behaves like an SSD.</div>
+    <div class="option-item">&bull; Reject it - RAM cannot hold documents at all.</div>
+    <div class="option-item option-correct">&bull; Reject it - RAM loses its contents when power is lost regardless of how much of it there is; only writing to secondary storage protects the work.</div>
+  </div>
+  <div class="explanation-box">
+    <strong>Explanation:</strong> Volatility is an intrinsic physical characteristic of DRAM. Capacity does not alter volatility.
+  </div>
+</div>
+
+<div class="question-box">
+  <div class="question-header">
+    <span class="question-title">Question 19 / 50</span>
+    <span class="badge badge-correct">Correct Answer: A</span>
+  </div>
+  <div class="question-text">Which pair contains only application software?</div>
+  <div class="options-grid">
+    <div class="option-item option-correct">&bull; Chrome and Excel</div>
+    <div class="option-item">&bull; Windows and macOS</div>
+    <div class="option-item">&bull; Linux and Android</div>
+    <div class="option-item">&bull; BIOS and Linux</div>
+  </div>
+  <div class="explanation-box">
+    <strong>Explanation:</strong> Chrome (browser) and Excel (spreadsheet) are user applications. Windows, macOS, Linux, and Android are operating systems; BIOS is firmware.
+  </div>
+</div>
+
+<div class="question-box">
+  <div class="question-header">
+    <span class="question-title">Question 20 / 50</span>
+    <span class="badge badge-correct">Correct Answer: C</span>
+  </div>
+  <div class="question-text">A monitor is an example of which type of device?</div>
+  <div class="options-grid">
+    <div class="option-item">&bull; Input device</div>
+    <div class="option-item">&bull; Storage device</div>
+    <div class="option-item option-correct">&bull; Output device</div>
+    <div class="option-item">&bull; Processing device</div>
+  </div>
+  <div class="explanation-box">
+    <strong>Explanation:</strong> A monitor presents visual output generated by the computer's graphics hardware.
+  </div>
+</div>
+
+<!-- QUESTIONS 21 to 30 -->
+<div class="question-box">
+  <div class="question-header">
+    <span class="question-title">Question 21 / 50</span>
+    <span class="badge badge-correct">Correct Answer: C</span>
+  </div>
+  <div class="question-text">Machine A: mechanical juicer. Machine B: digital scale updated via USB file to calculate rupee prices and store past 20 weighings. Machine C: billing laptop. Meera says: "All three take input, do something, give output, so all three are computers." Which property is missing from her argument?</div>
+  <div class="options-grid">
+    <div class="option-item">&bull; The machine must be powered by electricity.</div>
+    <div class="option-item">&bull; The machine must produce output faster than humans.</div>
+    <div class="option-item option-correct">&bull; The machine's behaviour must be changeable by loading a different set of instructions into it.</div>
+    <div class="option-item">&bull; The machine must have a display.</div>
+  </div>
+  <div class="explanation-box">
+    <strong>Explanation:</strong> Reprogrammability—the ability to execute different instruction sets without altering the underlying physical machinery—is the hallmark of a computer.
+  </div>
+</div>
+
+<div class="question-box">
+  <div class="question-header">
+    <span class="question-title">Question 22 / 50</span>
+    <span class="badge badge-correct">Correct Answer: A</span>
+  </div>
+  <div class="question-text">Applying that reprogrammability property as the test, which classification of Kiran's three machines is correct?</div>
+  <div class="options-grid">
+    <div class="option-item option-correct">&bull; Machines B and C are computers; Machine A is not.</div>
+    <div class="option-item">&bull; Only Machine A is a computer.</div>
+    <div class="option-item">&bull; All three are computers.</div>
+    <div class="option-item">&bull; Only Machine C is a computer.</div>
+  </div>
+  <div class="explanation-box">
+    <strong>Explanation:</strong> Machine B (firmware reprogrammable digital scale) and Machine C (laptop) execute stored instructions that can change; Machine A is pure fixed mechanical hardware.
+  </div>
+</div>
+
+<div class="question-box">
+  <div class="question-header">
+    <span class="question-title">Question 23 / 50</span>
+    <span class="badge badge-correct">Correct Answer: B</span>
+  </div>
+  <div class="question-text">Machine B gained new behaviour - price display and past weighings memory - without a single physical part replaced. What does this demonstrate?</div>
+  <div class="options-grid">
+    <div class="option-item">&bull; Machine B's hardware is more powerful than A's motor.</div>
+    <div class="option-item option-correct">&bull; What Machine B does is determined by its software, and its hardware is general enough to carry out more than one set of instructions.</div>
+    <div class="option-item">&bull; Machine B has more secondary storage than A.</div>
+    <div class="option-item">&bull; Machine B is an application software rather than hardware.</div>
+  </div>
+  <div class="explanation-box">
+    <strong>Explanation:</strong> Demonstrates the separation of hardware and software: software directs behavior over general execution hardware.
+  </div>
+</div>
+
+<div class="question-box">
+  <div class="question-header">
+    <span class="question-title">Question 24 / 50</span>
+    <span class="badge badge-correct">Correct Answer: D</span>
+  </div>
+  <div class="question-text">Kiran asks for a new scale feature: a distinct beep whenever a crate is lighter than the crate weighed immediately before it. What does this feature require that the first one does not?</div>
+  <div class="options-grid">
+    <div class="option-item">&bull; An output device</div>
+    <div class="option-item">&bull; A faster processor</div>
+    <div class="option-item">&bull; A second sensor</div>
+    <div class="option-item option-correct">&bull; A value kept from an earlier measurement, because the machine must compare the current input against something no longer on the pan.</div>
+  </div>
+  <div class="explanation-box">
+    <strong>Explanation:</strong> Comparing the current item against a previous item requires memory storage to preserve past state across measurements.
+  </div>
+</div>
+
+<div class="question-box">
+  <div class="question-header">
+    <span class="question-title">Question 25 / 50</span>
+    <span class="badge badge-correct">Correct Answer: C</span>
+  </div>
+  <div class="question-text">A student says: "Machine C is a real computer and Machine B is only a gadget, because Machine C runs many programs while Machine B runs one." What is the strongest objection?</div>
+  <div class="options-grid">
+    <div class="option-item">&bull; Machine B has a display.</div>
+    <div class="option-item">&bull; Machine C is an embedded system.</div>
+    <div class="option-item option-correct">&bull; How many programs a device is currently made to run is a design decision; the test is whether it can be given different instructions, and Machine B was shown to pass that test.</div>
+    <div class="option-item">&bull; Machine B weighs fruit faster.</div>
+  </div>
+  <div class="explanation-box">
+    <strong>Explanation:</strong> The qualification of a computer rests on capability for instruction-driven execution, not whether its creator chose to limit it to one domain.
+  </div>
+</div>
+
+<div class="question-box">
+  <div class="question-header">
+    <span class="question-title">Question 26 / 50</span>
+    <span class="badge badge-correct">Correct Answer: B</span>
+  </div>
+  <div class="question-text">Riya's laptop slows down whenever she opens too many browser tabs, Spotify, and Word at once. Upgrading which component would help most?</div>
+  <div class="options-grid">
+    <div class="option-item">&bull; Buying a bigger monitor</div>
+    <div class="option-item option-correct">&bull; Increasing the RAM</div>
+    <div class="option-item">&bull; Getting a wireless mouse</div>
+    <div class="option-item">&bull; Adding more USB ports</div>
+  </div>
+  <div class="explanation-box">
+    <strong>Explanation:</strong> Multiple concurrent active applications demand RAM. When RAM is exhausted, the OS resorts to slow disk paging, degrading responsiveness.
+  </div>
+</div>
+
+<div class="question-box">
+  <div class="question-header">
+    <span class="question-title">Question 27 / 50</span>
+    <span class="badge badge-correct">Correct Answer: C</span>
+  </div>
+  <div class="question-text">A student wants to write assignments, calculate marks, and create presentations. Which type of software will be most useful?</div>
+  <div class="options-grid">
+    <div class="option-item">&bull; Device drivers</div>
+    <div class="option-item">&bull; Firmware</div>
+    <div class="option-item option-correct">&bull; Application software</div>
+    <div class="option-item">&bull; System software</div>
+  </div>
+  <div class="explanation-box">
+    <strong>Explanation:</strong> Office suites (word processors, spreadsheets, presentation creators) are application software.
+  </div>
+</div>
+
+<div class="question-box">
+  <div class="question-header">
+    <span class="question-title">Question 28 / 50</span>
+    <span class="badge badge-correct">Correct Answer: A</span>
+  </div>
+  <div class="question-text">Which option correctly matches the software with its category?</div>
+  <div class="options-grid">
+    <div class="option-item option-correct">&bull; Android &mdash; Operating system</div>
+    <div class="option-item">&bull; Linux &mdash; Application software</div>
+    <div class="option-item">&bull; Excel &mdash; System software</div>
+    <div class="option-item">&bull; Chrome &mdash; Device driver</div>
+  </div>
+  <div class="explanation-box">
+    <strong>Explanation:</strong> Android is a mobile operating system based on the Linux kernel.
+  </div>
+</div>
+
+<div class="question-box">
+  <div class="question-header">
+    <span class="question-title">Question 29 / 50</span>
+    <span class="badge badge-correct">Correct Answer: B</span>
+  </div>
+  <div class="question-text">Which of the following is a characteristic of system software?</div>
+  <div class="options-grid">
+    <div class="option-item">&bull; It is used only for internet browsing</div>
+    <div class="option-item option-correct">&bull; It supports the operation of the computer</div>
+    <div class="option-item">&bull; It is designed only for presentations</div>
+    <div class="option-item">&bull; It is created only for entertainment</div>
+  </div>
+  <div class="explanation-box">
+    <strong>Explanation:</strong> System software manages hardware resources and provides foundational execution environments for applications.
+  </div>
+</div>
+
+<div class="question-box">
+  <div class="question-header">
+    <span class="question-title">Question 30 / 50</span>
+    <span class="badge badge-correct">Correct Answer: B</span>
+  </div>
+  <div class="question-text">Speakers are considered a(n) ______ device.</div>
+  <div class="options-grid">
+    <div class="option-item">&bull; Input</div>
+    <div class="option-item option-correct">&bull; Output</div>
+    <div class="option-item">&bull; Storage</div>
+    <div class="option-item">&bull; Processing</div>
+  </div>
+  <div class="explanation-box">
+    <strong>Explanation:</strong> Speakers convert electrical audio waveforms from the computer into physical sound waves for human hearing.
+  </div>
+</div>
+
+<!-- QUESTIONS 31 to 40 -->
+<div class="question-box">
+  <div class="question-header">
+    <span class="question-title">Question 31 / 50</span>
+    <span class="badge badge-correct">Correct Answer: B</span>
+  </div>
+  <div class="question-text">What does SSD stand for?</div>
+  <div class="options-grid">
+    <div class="option-item">&bull; Simple Storage Device</div>
+    <div class="option-item option-correct">&bull; Solid State Drive</div>
+    <div class="option-item">&bull; System Storage Disk</div>
+    <div class="option-item">&bull; Secondary Save Drive</div>
+  </div>
+  <div class="explanation-box">
+    <strong>Explanation:</strong> Solid State Drive &mdash; called "solid state" because it relies entirely on solid semiconductor chips without moving parts.
+  </div>
+</div>
+
+<div class="question-box">
+  <div class="question-header">
+    <span class="question-title">Question 32 / 50</span>
+    <span class="badge badge-correct">Correct Answer: A</span>
+  </div>
+  <div class="question-text">A lab has identical hardware dual-booting Windows and Ubuntu. Why do the two sessions behave and look so differently despite identical hardware?</div>
+  <div class="options-grid">
+    <div class="option-item option-correct">&bull; The operating system sits between user and hardware; changing it changes how the machine is presented and controlled, while hardware is unchanged.</div>
+    <div class="option-item">&bull; Choosing an OS changes CPU clock speed.</div>
+    <div class="option-item">&bull; Ubuntu reconfigures the SSD into a different physical format.</div>
+    <div class="option-item">&bull; The OS divides RAM differently, which dictates screen design.</div>
+  </div>
+  <div class="explanation-box">
+    <strong>Explanation:</strong> The OS acts as the mediator and abstraction layer between user software and raw electronic hardware.
+  </div>
+</div>
+
+<div class="question-box">
+  <div class="question-header">
+    <span class="question-title">Question 33 / 50</span>
+    <span class="badge badge-correct">Correct Answer: B</span>
+  </div>
+  <div class="question-text">Three pieces of software: browser, word processor, package manager. Which grouping separates system software from application software correctly?</div>
+  <div class="options-grid">
+    <div class="option-item">&bull; System: word processor. App: package manager and browser.</div>
+    <div class="option-item option-correct">&bull; System software: package manager. Application software: browser and word processor.</div>
+    <div class="option-item">&bull; System: browser and package manager. App: word processor.</div>
+    <div class="option-item">&bull; All four are application software.</div>
+  </div>
+  <div class="explanation-box">
+    <strong>Explanation:</strong> A package manager manages system utilities and library dependencies (system software); browsers and word processors are user productivity tools (application software).
+  </div>
+</div>
+
+<div class="question-box">
+  <div class="question-header">
+    <span class="question-title">Question 34 / 50</span>
+    <span class="badge badge-correct">Correct Answer: D</span>
+  </div>
+  <div class="question-text">A browser needs to write a downloaded file onto the SSD. Using the three-layer stack, what actually happens?</div>
+  <div class="options-grid">
+    <div class="option-item">&bull; The browser writes to SSD directly.</div>
+    <div class="option-item">&bull; The SSD runs the browser.</div>
+    <div class="option-item">&bull; The compiler must translate the file first.</div>
+    <div class="option-item option-correct">&bull; The browser asks the operating system for the service, and the operating system, which manages the hardware, carries out the write.</div>
+  </div>
+  <div class="explanation-box">
+    <strong>Explanation:</strong> User applications cannot directly access disk hardware. They make system calls to the OS kernel, which validates permissions and writes through storage drivers.
+  </div>
+</div>
+
+<div class="question-box">
+  <div class="question-header">
+    <span class="question-title">Question 35 / 50</span>
+    <span class="badge badge-correct">Correct Answer: C</span>
+  </div>
+  <div class="question-text">A new printer prints immediately in Windows, but under Ubuntu prints nothing even though connected. What is the most reasonable explanation?</div>
+  <div class="options-grid">
+    <div class="option-item">&bull; The printer hardware is incompatible.</div>
+    <div class="option-item">&bull; Ubuntu has no applications installed.</div>
+    <div class="option-item option-correct">&bull; The two systems need different device drivers, and the driver for this printer is present in one system's software collection but not in the other's.</div>
+    <div class="option-item">&bull; Ubuntu lacks a GPU.</div>
+  </div>
+  <div class="explanation-box">
+    <strong>Explanation:</strong> Hardware devices require OS-specific device drivers. Windows had the driver pre-installed, whereas Ubuntu lacked it.
+  </div>
+</div>
+
+<div class="question-box">
+  <div class="question-header">
+    <span class="question-title">Question 36 / 50</span>
+    <span class="badge badge-correct">Correct Answer: A</span>
+  </div>
+  <div class="question-text">Bhaskar claims the Ubuntu tool to view running programs and Windows Task Manager are "the same thing with a different name". Which is the most defensible version of this claim?</div>
+  <div class="options-grid">
+    <div class="option-item option-correct">&bull; Both are supplied by their operating system to report how the machine's resources - memory and processor time - are being used.</div>
+    <div class="option-item">&bull; Both are applications written by the same company.</div>
+    <div class="option-item">&bull; Both are device drivers.</div>
+    <div class="option-item">&bull; Both are compilers.</div>
+  </div>
+  <div class="explanation-box">
+    <strong>Explanation:</strong> Both serve the identical system utility function: querying the OS kernel to inspect process states and hardware resource utilization.
+  </div>
+</div>
+
+<div class="question-box">
+  <div class="question-header">
+    <span class="question-title">Question 37 / 50</span>
+    <span class="badge badge-correct">Correct Answer: B</span>
+  </div>
+  <div class="question-text">A student says: "My computer has 512 GB of RAM to store all my movies and games permanently." What's wrong with this statement?</div>
+  <div class="options-grid">
+    <div class="option-item">&bull; Nothing &mdash; RAM stores files permanently</div>
+    <div class="option-item option-correct">&bull; RAM is temporary storage</div>
+    <div class="option-item">&bull; 512 GB is too little for storage</div>
+    <div class="option-item">&bull; RAM cannot hold any data at all</div>
+  </div>
+  <div class="explanation-box">
+    <strong>Explanation:</strong> RAM is volatile memory that loses all state upon power cutoff. Permanent files must be saved on secondary storage (SSD/HDD).
+  </div>
+</div>
+
+<div class="question-box">
+  <div class="question-header">
+    <span class="question-title">Question 38 / 50</span>
+    <span class="badge badge-correct">Correct Answer: D</span>
+  </div>
+  <div class="question-text">Which of these is NOT an input device?</div>
+  <div class="options-grid">
+    <div class="option-item">&bull; Keyboard</div>
+    <div class="option-item">&bull; Mouse</div>
+    <div class="option-item">&bull; Microphone</div>
+    <div class="option-item option-correct">&bull; Speaker</div>
+  </div>
+  <div class="explanation-box">
+    <strong>Explanation:</strong> Keyboards, mice, and microphones transmit data into the computer. Speakers output audio from the machine.
+  </div>
+</div>
+
+<div class="question-box">
+  <div class="question-header">
+    <span class="question-title">Question 39 / 50</span>
+    <span class="badge badge-correct">Correct Answer: B</span>
+  </div>
+  <div class="question-text">Which statement best describes computer software?</div>
+  <div class="options-grid">
+    <div class="option-item">&bull; Electrical signals inside a computer</div>
+    <div class="option-item option-correct">&bull; Instructions used by a computer</div>
+    <div class="option-item">&bull; Physical components of a computer</div>
+    <div class="option-item">&bull; Connections between hardware devices</div>
+  </div>
+  <div class="explanation-box">
+    <strong>Explanation:</strong> Software is the organized collection of programs, scripts, and instructions directing hardware execution.
+  </div>
+</div>
+
+<div class="question-box">
+  <div class="question-header">
+    <span class="question-title">Question 40 / 50</span>
+    <span class="badge badge-correct">Correct Answer: B</span>
+  </div>
+  <div class="question-text">Which of the following best describes a Hard Disk Drive (HDD)?</div>
+  <div class="options-grid">
+    <div class="option-item">&bull; A drive with no moving parts</div>
+    <div class="option-item option-correct">&bull; A storage device with spinning disks</div>
+    <div class="option-item">&bull; A temporary memory used by the CPU</div>
+    <div class="option-item">&bull; A device used only for display</div>
+  </div>
+  <div class="explanation-box">
+    <strong>Explanation:</strong> HDDs store bits magnetically across spinning mechanical platters accessed via an actuator arm.
+  </div>
+</div>
+
+<!-- QUESTIONS 41 to 50 -->
+<div class="question-box">
+  <div class="question-header">
+    <span class="question-title">Question 41 / 50</span>
+    <span class="badge badge-correct">Correct Answer: C</span>
+  </div>
+  <div class="question-text">What happens to the data stored in RAM when you turn off your computer?</div>
+  <div class="options-grid">
+    <div class="option-item">&bull; It stays saved forever</div>
+    <div class="option-item">&bull; It gets backed up to cloud</div>
+    <div class="option-item option-correct">&bull; It is erased and lost</div>
+    <div class="option-item">&bull; It moves to hard disk automatically</div>
+  </div>
+  <div class="explanation-box">
+    <strong>Explanation:</strong> RAM requires electrical charge to maintain state. Power interruption dissipates all stored bits.
+  </div>
+</div>
+
+<div class="question-box">
+  <div class="question-header">
+    <span class="question-title">Question 42 / 50</span>
+    <span class="badge badge-correct">Correct Answer: B</span>
+  </div>
+  <div class="question-text">Arrange these from fastest to slowest in terms of data access speed:</div>
+  <div class="options-grid">
+    <div class="option-item">&bull; HDD &rarr; SSD &rarr; RAM</div>
+    <div class="option-item option-correct">&bull; RAM &rarr; SSD &rarr; HDD</div>
+    <div class="option-item">&bull; HDD &rarr; RAM &rarr; SSD</div>
+    <div class="option-item">&bull; SSD &rarr; HDD &rarr; RAM</div>
+  </div>
+  <div class="explanation-box">
+    <strong>Explanation:</strong> RAM operates in nanoseconds, SSD in microseconds, and mechanical HDD in milliseconds.
+  </div>
+</div>
+
+<div class="question-box">
+  <div class="question-header">
+    <span class="question-title">Question 43 / 50</span>
+    <span class="badge badge-correct">Correct Answer: C</span>
+  </div>
+  <div class="question-text">A user saves documents inside folders and later searches for a particular file. Which operating system capability is being used?</div>
+  <div class="options-grid">
+    <div class="option-item">&bull; Memory allocation</div>
+    <div class="option-item">&bull; Device installation</div>
+    <div class="option-item option-correct">&bull; File management</div>
+    <div class="option-item">&bull; Process scheduling</div>
+  </div>
+  <div class="explanation-box">
+    <strong>Explanation:</strong> Filesystem management organizes directories, path resolutions, and metadata indexing.
+  </div>
+</div>
+
+<div class="question-box">
+  <div class="question-header">
+    <span class="question-title">Question 44 / 50</span>
+    <span class="badge badge-correct">Correct Answer: B</span>
+  </div>
+  <div class="question-text">Which statement about operating systems is correct?</div>
+  <div class="options-grid">
+    <div class="option-item">&bull; It replaces all application software</div>
+    <div class="option-item option-correct">&bull; It acts as an interface between users, applications, and hardware</div>
+    <div class="option-item">&bull; It is used only to browse websites</div>
+    <div class="option-item">&bull; It is stored only on external devices</div>
+  </div>
+  <div class="explanation-box">
+    <strong>Explanation:</strong> The OS abstracts hardware complexity and mediates access between applications and physical components.
+  </div>
+</div>
+
+<div class="question-box">
+  <div class="question-header">
+    <span class="question-title">Question 45 / 50</span>
+    <span class="badge badge-correct">Correct Answer: A</span>
+  </div>
+  <div class="question-text">Which of the following is NOT an example of system software?</div>
+  <div class="options-grid">
+    <div class="option-item option-correct">&bull; Microsoft Excel</div>
+    <div class="option-item">&bull; Android</div>
+    <div class="option-item">&bull; Windows</div>
+    <div class="option-item">&bull; Linux</div>
+  </div>
+  <div class="explanation-box">
+    <strong>Explanation:</strong> Excel is an end-user spreadsheet application; Android, Windows, and Linux are operating systems.
+  </div>
+</div>
+
+<div class="question-box">
+  <div class="question-header">
+    <span class="question-title">Question 46 / 50</span>
+    <span class="badge badge-correct">Correct Answer: B</span>
+  </div>
+  <div class="question-text">A USB flash drive is mainly used for:</div>
+  <div class="options-grid">
+    <div class="option-item">&bull; Displaying images on screen</div>
+    <div class="option-item option-correct">&bull; Storing and transferring files</div>
+    <div class="option-item">&bull; Processing calculations</div>
+    <div class="option-item">&bull; Connecting to internet</div>
+  </div>
+  <div class="explanation-box">
+    <strong>Explanation:</strong> USB drives provide portable, non-volatile solid-state storage.
+  </div>
+</div>
+
+<div class="question-box">
+  <div class="question-header">
+    <span class="question-title">Question 47 / 50</span>
+    <span class="badge badge-correct">Correct Answer: B</span>
+  </div>
+  <div class="question-text">Which combination correctly matches the device with its category?</div>
+  <div class="options-grid">
+    <div class="option-item">&bull; Mouse &rarr; Output, Speaker &rarr; Input</div>
+    <div class="option-item option-correct">&bull; Keyboard &rarr; Input, SSD &rarr; Storage</div>
+    <div class="option-item">&bull; Monitor &rarr; Input, HDD &rarr; Output</div>
+    <div class="option-item">&bull; Speaker &rarr; Storage, RAM &rarr; Input</div>
+  </div>
+  <div class="explanation-box">
+    <strong>Explanation:</strong> Keyboard provides input; SSD provides persistent secondary storage.
+  </div>
+</div>
+
+<div class="question-box">
+  <div class="question-header">
+    <span class="question-title">Question 48 / 50</span>
+    <span class="badge badge-correct">Correct Answer: C</span>
+  </div>
+  <div class="question-text">Why is system software generally necessary before application software can be used effectively?</div>
+  <div class="options-grid">
+    <div class="option-item">&bull; It prevents applications from accessing computer resources</div>
+    <div class="option-item">&bull; It replaces the need for hardware</div>
+    <div class="option-item option-correct">&bull; It provides the basic environment and services applications depend on</div>
+    <div class="option-item">&bull; It converts every application into hardware</div>
+  </div>
+  <div class="explanation-box">
+    <strong>Explanation:</strong> Applications rely on system software for memory management, process scheduling, I/O dispatch, and filesystem drivers.
+  </div>
+</div>
+
+<div class="question-box">
+  <div class="question-header">
+    <span class="question-title">Question 49 / 50</span>
+    <span class="badge badge-correct">Correct Answer: C</span>
+  </div>
+  <div class="question-text">A touchscreen on a smartphone acts as which type of device?</div>
+  <div class="options-grid">
+    <div class="option-item">&bull; Storage device</div>
+    <div class="option-item">&bull; Processing device</div>
+    <div class="option-item option-correct">&bull; Input device</div>
+    <div class="option-item">&bull; Power device</div>
+  </div>
+  <div class="explanation-box">
+    <strong>Explanation:</strong> The touch digitizer overlay registers capacitive touch coordinates and sends them into the processor as input events. (Note: visually it also serves output, but its touch-sensing component is an input mechanism).
+  </div>
+</div>
+
+<div class="question-box">
+  <div class="question-header">
+    <span class="question-title">Question 50 / 50</span>
+    <span class="badge badge-correct">Correct Answer: C</span>
+  </div>
+  <div class="question-text">Riya opens several applications simultaneously. The computer needs to allocate and schedule processor time to each. Which OS function is involved?</div>
+  <div class="options-grid">
+    <div class="option-item">&bull; Web browsing</div>
+    <div class="option-item">&bull; Memory allocation</div>
+    <div class="option-item option-correct">&bull; Process management</div>
+    <div class="option-item">&bull; File compression</div>
+  </div>
+  <div class="explanation-box">
+    <strong>Explanation:</strong> Process management and the CPU scheduler allocate CPU time slices and manage process states.
+  </div>
+</div>
+
+<div class="page-break"></div>
+
+<!-- CONTEST 2 BREAKDOWN -->
+<div class="contest-banner">
+  <h2>Contest 2: 25 Real Questions &amp; In-Depth Solutions</h2>
+  <p>Detailed analysis of all 25 questions covering Linux/Unix filesystem, chmod permissions, signals, process isolation, and CLI mechanics.</p>
+</div>
+
+<!-- QUESTIONS 1 to 13 -->
+<div class="question-box">
+  <div class="question-header">
+    <span class="question-title">Question 1 / 25</span>
+    <span class="badge badge-correct">Numeric Answer: 644</span>
+  </div>
+  <div class="question-text">A results file is owned by the teacher. The teacher should be able to read and write the file, while the group and all other users should only be able to read it. Nobody should have execute permission. What three-digit numeric chmod permission value achieves exactly this?</div>
+  <div class="options-grid">
+    <div class="option-item option-correct">&bull; <strong>644</strong> (Owner: 4+2=6, Group: 4, Others: 4)</div>
+  </div>
+  <div class="explanation-box">
+    <strong>Explanation:</strong> Owner: Read (4) + Write (2) = 6. Group: Read (4) = 4. Others: Read (4) = 4. Combine digits: 644.
+  </div>
+</div>
+
+<div class="question-box">
+  <div class="question-header">
+    <span class="question-title">Question 2 / 25</span>
+    <span class="badge badge-correct">Correct Answer: D</span>
+  </div>
+  <div class="question-text">A browser tab crashes and shows an error, but other tabs continue working normally. What best explains this behavior?</div>
+  <div class="options-grid">
+    <div class="option-item">&bull; The browser automatically restarts the crashed tab in the background.</div>
+    <div class="option-item">&bull; The other tabs had already been saved to disk before the crash.</div>
+    <div class="option-item">&bull; The crashed tab had not actually been running as a process.</div>
+    <div class="option-item option-correct">&bull; The browser isolates tab activity across processes, limiting the failure's impact.</div>
+  </div>
+  <div class="explanation-box">
+    <strong>Explanation:</strong> Google Chrome runs each tab in an independent child process. A fatal crash in one child process terminates only that PID; siblings and parent continue unharmed.
+  </div>
+</div>
+
+<div class="question-box">
+  <div class="question-header">
+    <span class="question-title">Question 3 / 25</span>
+    <span class="badge badge-correct">Correct Answer: D</span>
+  </div>
+  <div class="question-text">In class demonstration, text typed in one terminal appeared in a second terminal after running <code>echo "hi" &gt; /dev/pts/2</code>. What does this illustrate?</div>
+  <div class="options-grid">
+    <div class="option-item">&bull; Both terminals share one block of memory from the shell</div>
+    <div class="option-item">&bull; echo has a special mode for sending messages</div>
+    <div class="option-item">&bull; The two terminals were opened by the same parent shell</div>
+    <div class="option-item option-correct">&bull; Terminals are represented as files, so writing works</div>
+  </div>
+  <div class="explanation-box">
+    <strong>Explanation:</strong> Concrete manifestation of the Unix "Everything is a file" philosophy. Pseudo-terminals live under <code>/dev/pts/</code> and accept standard I/O redirection.
+  </div>
+</div>
+
+<div class="question-box">
+  <div class="question-header">
+    <span class="question-title">Question 4 / 25</span>
+    <span class="badge badge-correct">Correct Answer: B</span>
+  </div>
+  <div class="question-text">A newly created file shows <code>-rw-r--r--</code> in <code>ls -l</code>. Which permission does the owner not have?</div>
+  <div class="options-grid">
+    <div class="option-item">&bull; Read</div>
+    <div class="option-item option-correct">&bull; Execute</div>
+    <div class="option-item">&bull; Write</div>
+    <div class="option-item">&bull; The owner has all three</div>
+  </div>
+  <div class="explanation-box">
+    <strong>Explanation:</strong> The owner triplet is <code>rw-</code> (Read present, Write present, Execute absent).
+  </div>
+</div>
+
+<div class="question-box">
+  <div class="question-header">
+    <span class="question-title">Question 5 / 25</span>
+    <span class="badge badge-correct">Correct Answer: A</span>
+  </div>
+  <div class="question-text">A file <code>hello.txt</code> is made executable with <code>chmod +x hello.txt</code>, then renamed to <code>run_me.banana</code>. When running <code>./run_me.banana</code>, it executes successfully. Why?</div>
+  <div class="options-grid">
+    <div class="option-item option-correct">&bull; On Unix-like systems, execute permission is stored in the file's permission metadata, not determined by its filename extension.</div>
+    <div class="option-item">&bull; The shell uses the filename extension to determine executability.</div>
+    <div class="option-item">&bull; The .banana extension must be registered with the OS.</div>
+    <div class="option-item">&bull; Renaming a file automatically restores default permissions.</div>
+  </div>
+  <div class="explanation-box">
+    <strong>Explanation:</strong> Unix relies on metadata inode permission bits, unlike Windows where executability is tied to extensions like <code>.exe</code>.
+  </div>
+</div>
+
+<div class="question-box">
+  <div class="question-header">
+    <span class="question-title">Question 6 / 25</span>
+    <span class="badge badge-correct">Correct Answer: A</span>
+  </div>
+  <div class="question-text">The <code>$PATH</code> environment variable has been set to an empty string. Running <code>ls</code> fails with <code>command not found</code>. How can <code>ls</code> still be run?</div>
+  <div class="options-grid">
+    <div class="option-item option-correct">&bull; By giving its full path: /bin/ls</div>
+    <div class="option-item">&bull; By adding execute permission with chmod +x</div>
+    <div class="option-item">&bull; By running it through sudo instead</div>
+    <div class="option-item">&bull; By renaming the file to ls.exe first</div>
+  </div>
+  <div class="explanation-box">
+    <strong>Explanation:</strong> Emptying <code>$PATH</code> only disables automatic directory search. Giving the exact absolute path <code>/bin/ls</code> bypasses the search completely.
+  </div>
+</div>
+
+<div class="question-box">
+  <div class="question-header">
+    <span class="question-title">Question 7 / 25</span>
+    <span class="badge badge-correct">Numeric Answer: 600</span>
+  </div>
+  <div class="question-text">You keep private notes in a file that only you should be able to read and modify. No other users should have any permissions. What three-digit numeric chmod value achieves this?</div>
+  <div class="options-grid">
+    <div class="option-item option-correct">&bull; <strong>600</strong> (Owner: 4+2=6, Group: 0, Others: 0)</div>
+  </div>
+  <div class="explanation-box">
+    <strong>Explanation:</strong> Owner: Read (4) + Write (2) = 6. Group: None (0). Others: None (0).
+  </div>
+</div>
+
+<div class="question-box">
+  <div class="question-header">
+    <span class="question-title">Question 8 / 25</span>
+    <span class="badge badge-correct">Correct Answer: B</span>
+  </div>
+  <div class="question-text">You need to stop a running process, but you want to give it an opportunity to close its files and exit cleanly. Which command is appropriate?</div>
+  <div class="options-grid">
+    <div class="option-item">&bull; kill -9 &mdash; it terminates the process immediately</div>
+    <div class="option-item option-correct">&bull; kill -15 &mdash; it requests that the process terminate</div>
+    <div class="option-item">&bull; Either command &mdash; both signals behave identically</div>
+    <div class="option-item">&bull; Neither command</div>
+  </div>
+  <div class="explanation-box">
+    <strong>Explanation:</strong> <code>kill -15</code> issues SIGTERM, allowing the process to clean up buffers and gracefully exit. <code>kill -9</code> issues SIGKILL, which abruptly kills the process with zero cleanup.
+  </div>
+</div>
+
+<div class="question-box">
+  <div class="question-header">
+    <span class="question-title">Question 9 / 25</span>
+    <span class="badge badge-correct">Correct Answer: D</span>
+  </div>
+  <div class="question-text">Starting at <code>/</code> and running <code>cd ..</code> repeatedly leaves you at <code>/</code> every time. Why?</div>
+  <div class="options-grid">
+    <div class="option-item">&bull; Permission to move higher was denied</div>
+    <div class="option-item">&bull; cd .. is an alias that performs no action</div>
+    <div class="option-item">&bull; Directories above / exist but stay hidden</div>
+    <div class="option-item option-correct">&bull; The root directory has no parent to move into</div>
+  </div>
+  <div class="explanation-box">
+    <strong>Explanation:</strong> Root (<code>/</code>) is the topmost apex of the Unix directory tree; its parent pointer <code>..</code> points to itself.
+  </div>
+</div>
+
+<div class="question-box">
+  <div class="question-header">
+    <span class="question-title">Question 10 / 25</span>
+    <span class="badge badge-correct">Correct Answer: B</span>
+  </div>
+  <div class="question-text">Running <code>ls -l script.sh</code> shows <code>-rw-r--r--</code>. Running <code>./script.sh</code> returns <code>permission denied</code>. Which command makes it runnable while leaving existing read/write unchanged?</div>
+  <div class="options-grid">
+    <div class="option-item">&bull; sudo ./script.sh</div>
+    <div class="option-item option-correct">&bull; chmod +x script.sh</div>
+    <div class="option-item">&bull; chmod 777 script.sh</div>
+    <div class="option-item">&bull; chown root script.sh</div>
+  </div>
+  <div class="explanation-box">
+    <strong>Explanation:</strong> <code>chmod +x script.sh</code> selectively adds the execute bit without wiping or loosening existing read/write permissions.
+  </div>
+</div>
+
+<div class="question-box">
+  <div class="question-header">
+    <span class="question-title">Question 11 / 25</span>
+    <span class="badge badge-correct">Correct Answer: B</span>
+  </div>
+  <div class="question-text">After running <code>chmod 754 report.sh</code>, what permissions does the group hold?</div>
+  <div class="options-grid">
+    <div class="option-item">&bull; Read, write and execute</div>
+    <div class="option-item option-correct">&bull; Read and execute</div>
+    <div class="option-item">&bull; Read only</div>
+    <div class="option-item">&bull; Read and write</div>
+  </div>
+  <div class="explanation-box">
+    <strong>Explanation:</strong> Second digit is Group: 5 = 4 (Read) + 1 (Execute). Thus Group has Read and Execute (<code>r-x</code>).
+  </div>
+</div>
+
+<div class="question-box">
+  <div class="question-header">
+    <span class="question-title">Question 12 / 25</span>
+    <span class="badge badge-correct">Correct Answer: C</span>
+  </div>
+  <div class="question-text">Which directory is emptied automatically every time the machine reboots?</div>
+  <div class="options-grid">
+    <div class="option-item">&bull; /etc</div>
+    <div class="option-item">&bull; /bin</div>
+    <div class="option-item option-correct">&bull; /tmp</div>
+    <div class="option-item">&bull; /Applications</div>
+  </div>
+  <div class="explanation-box">
+    <strong>Explanation:</strong> <code>/tmp</code> stores ephemeral session data and is purged during system startup.
+  </div>
+</div>
+
+<div class="question-box">
+  <div class="question-header">
+    <span class="question-title">Question 13 / 25</span>
+    <span class="badge badge-correct">Correct Answer: A</span>
+  </div>
+  <div class="question-text">On a current macOS system, which shell is provided as the default command-line interface?</div>
+  <div class="options-grid">
+    <div class="option-item option-correct">&bull; zsh</div>
+    <div class="option-item">&bull; bash</div>
+    <div class="option-item">&bull; fish</div>
+    <div class="option-item">&bull; csh</div>
+  </div>
+  <div class="explanation-box">
+    <strong>Explanation:</strong> macOS switched its default shell from <code>bash</code> to <code>zsh</code> starting in macOS Catalina (2019).
+  </div>
+</div>
+
+<!-- QUESTIONS 14 to 25 -->
+<div class="question-box">
+  <div class="question-header">
+    <span class="question-title">Question 14 / 25</span>
+    <span class="badge badge-correct">Correct Answer: C</span>
+  </div>
+  <div class="question-text">Why cannot Chrome read data held in VS Code's memory?</div>
+  <div class="options-grid">
+    <div class="option-item">&bull; They are written in different programming languages.</div>
+    <div class="option-item">&bull; Their memory contents are encrypted separately by the OS.</div>
+    <div class="option-item option-correct">&bull; The OS gives each process an isolated virtual address space.</div>
+    <div class="option-item">&bull; They are scheduled on different CPU cores.</div>
+  </div>
+  <div class="explanation-box">
+    <strong>Explanation:</strong> Virtual memory architecture assigns each process a private address space; hardware MMU enforces strict isolation boundaries.
+  </div>
+</div>
+
+<div class="question-box">
+  <div class="question-header">
+    <span class="question-title">Question 15 / 25</span>
+    <span class="badge badge-correct">Correct Answer: A</span>
+  </div>
+  <div class="question-text">A classmate advises running <code>chmod 777</code> whenever a permission error appears. What is the best evaluation of this advice?</div>
+  <div class="options-grid">
+    <div class="option-item option-correct">&bull; Poor &mdash; it grants read, write, and execute permissions to the owner, group, and others.</div>
+    <div class="option-item">&bull; Sound &mdash; it is the quickest reliable fix available.</div>
+    <div class="option-item">&bull; Poor &mdash; 777 may only be applied by root.</div>
+    <div class="option-item">&bull; Sound &mdash; 777 makes a file read-only and safe.</div>
+  </div>
+  <div class="explanation-box">
+    <strong>Explanation:</strong> 777 dismantles all security restrictions and allows anyone to alter or execute the file. Always grant only the minimal permission required.
+  </div>
+</div>
+
+<div class="question-box">
+  <div class="question-header">
+    <span class="question-title">Question 16 / 25</span>
+    <span class="badge badge-correct">Correct Answer: A</span>
+  </div>
+  <div class="question-text">A directory holds 100 folders named <code>folder_1</code> through <code>folder_100</code>. Which single command removes them all?</div>
+  <div class="options-grid">
+    <div class="option-item option-correct">&bull; rm -r folder_*</div>
+    <div class="option-item">&bull; rm folder_</div>
+    <div class="option-item">&bull; rm -r folder_?</div>
+    <div class="option-item">&bull; rm -r folder_1</div>
+  </div>
+  <div class="explanation-box">
+    <strong>Explanation:</strong> The <code>*</code> wildcard matches any sequence of trailing characters (single, double, or triple digits), and <code>-r</code> recurses into directories.
+  </div>
+</div>
+
+<div class="question-box">
+  <div class="question-header">
+    <span class="question-title">Question 17 / 25</span>
+    <span class="badge badge-correct">Correct Answer: A</span>
+  </div>
+  <div class="question-text">Which command transfers ownership of a file to a different user?</div>
+  <div class="options-grid">
+    <div class="option-item option-correct">&bull; chown</div>
+    <div class="option-item">&bull; chmod</div>
+    <div class="option-item">&bull; mv</div>
+    <div class="option-item">&bull; cp</div>
+  </div>
+  <div class="explanation-box">
+    <strong>Explanation:</strong> <code>chown</code> (change owner) modifies file ownership; <code>chmod</code> modifies access permissions.
+  </div>
+</div>
+
+<div class="question-box">
+  <div class="question-header">
+    <span class="question-title">Question 18 / 25</span>
+    <span class="badge badge-correct">Correct Answer: D</span>
+  </div>
+  <div class="question-text">Which command reports the full filesystem path of the program that would run for a given command name?</div>
+  <div class="options-grid">
+    <div class="option-item">&bull; man</div>
+    <div class="option-item">&bull; pwd</div>
+    <div class="option-item">&bull; ps</div>
+    <div class="option-item option-correct">&bull; which</div>
+  </div>
+  <div class="explanation-box">
+    <strong>Explanation:</strong> <code>which &lt;command&gt;</code> queries <code>$PATH</code> and outputs the matching executable's absolute path (e.g. <code>which ls</code> &rarr; <code>/bin/ls</code>).
+  </div>
+</div>
+
+<div class="question-box">
+  <div class="question-header">
+    <span class="question-title">Question 19 / 25</span>
+    <span class="badge badge-correct">Correct Answer: B</span>
+  </div>
+  <div class="question-text">A production application repeatedly dies with an out-of-memory exception under load. What is the real remedy for the future?</div>
+  <div class="options-grid">
+    <div class="option-item">&bull; Add more CPU cores so work finishes sooner</div>
+    <div class="option-item option-correct">&bull; Add more memory, or reduce what the app asks for</div>
+    <div class="option-item">&bull; Change file permissions on the executable</div>
+    <div class="option-item">&bull; Terminate it with kill -9 whenever it slows</div>
+  </div>
+  <div class="explanation-box">
+    <strong>Explanation:</strong> CPU cores do not provide memory addresses. Out-Of-Memory can only be solved by allocating more physical RAM/swap or optimizing application memory footprint.
+  </div>
+</div>
+
+<div class="question-box">
+  <div class="question-header">
+    <span class="question-title">Question 20 / 25</span>
+    <span class="badge badge-correct">Correct Answer: A</span>
+  </div>
+  <div class="question-text">What does the <code>/dev</code> directory contain?</div>
+  <div class="options-grid">
+    <div class="option-item option-correct">&bull; Files representing hardware devices</div>
+    <div class="option-item">&bull; Developer tools, compilers and libraries</div>
+    <div class="option-item">&bull; Installed applications</div>
+    <div class="option-item">&bull; System configuration files</div>
+  </div>
+  <div class="explanation-box">
+    <strong>Explanation:</strong> <code>/dev</code> stands for "devices" and holds special device files (block and character devices) representing hardware peripherals and pseudo-devices.
+  </div>
+</div>
+
+<div class="question-box">
+  <div class="question-header">
+    <span class="question-title">Question 21 / 25</span>
+    <span class="badge badge-correct">Correct Answer: D</span>
+  </div>
+  <div class="question-text">Which command prints the absolute path of the directory you are currently working in?</div>
+  <div class="options-grid">
+    <div class="option-item">&bull; ls</div>
+    <div class="option-item">&bull; cd</div>
+    <div class="option-item">&bull; which</div>
+    <div class="option-item option-correct">&bull; pwd</div>
+  </div>
+  <div class="explanation-box">
+    <strong>Explanation:</strong> <code>pwd</code> stands for Print Working Directory.
+  </div>
+</div>
+
+<div class="question-box">
+  <div class="question-header">
+    <span class="question-title">Question 22 / 25</span>
+    <span class="badge badge-correct">Correct Answer: B</span>
+  </div>
+  <div class="question-text">Permissions are given numeric values: read is 4, write is 2, execute is 1. Which single digit grants all three at once?</div>
+  <div class="options-grid">
+    <div class="option-item">&bull; 3</div>
+    <div class="option-item option-correct">&bull; 7</div>
+    <div class="option-item">&bull; 6</div>
+    <div class="option-item">&bull; 9</div>
+  </div>
+  <div class="explanation-box">
+    <strong>Explanation:</strong> 4 (Read) + 2 (Write) + 1 (Execute) = 7.
+  </div>
+</div>
+
+<div class="question-box">
+  <div class="question-header">
+    <span class="question-title">Question 23 / 25</span>
+    <span class="badge badge-correct">Correct Answer: B</span>
+  </div>
+  <div class="question-text">Assuming Google Chrome browser is a parent process, one tab of Chrome corresponds to what, in operating-system terms?</div>
+  <div class="options-grid">
+    <div class="option-item">&bull; One parent process</div>
+    <div class="option-item option-correct">&bull; One child process</div>
+    <div class="option-item">&bull; One thread of main process</div>
+    <div class="option-item">&bull; One separately installed program</div>
+  </div>
+  <div class="explanation-box">
+    <strong>Explanation:</strong> Chrome's multi-process model allocates one child process per tab for sandbox isolation and fault containment.
+  </div>
+</div>
+
+<div class="question-box">
+  <div class="question-header">
+    <span class="question-title">Question 24 / 25</span>
+    <span class="badge badge-correct">Correct Answer: B</span>
+  </div>
+  <div class="question-text">Why does a newly created file deliberately lack execute permission?</div>
+  <div class="options-grid">
+    <div class="option-item">&bull; It keeps the file smaller on disk</div>
+    <div class="option-item option-correct">&bull; It stops unvetted content being run by accident</div>
+    <div class="option-item">&bull; Only the root user is allowed to create executables</div>
+    <div class="option-item">&bull; Execute permission applies only to directories</div>
+  </div>
+  <div class="explanation-box">
+    <strong>Explanation:</strong> Security principle of least privilege: arbitrary created or downloaded files cannot run without explicit affirmative <code>chmod +x</code> action by the user.
+  </div>
+</div>
+
+<div class="question-box">
+  <div class="question-header">
+    <span class="question-title">Question 25 / 25</span>
+    <span class="badge badge-correct">Correct Answer: C</span>
+  </div>
+  <div class="question-text">Google Chrome can be installed once on disk. When launched, multiple processes are created. What is the fundamental difference between a program and a process?</div>
+  <div class="options-grid">
+    <div class="option-item">&bull; Program is source code; process is machine language.</div>
+    <div class="option-item">&bull; Program needs CPU; process needs only memory.</div>
+    <div class="option-item option-correct">&bull; A program is a stored set of instructions; a process is an instance of that program that is currently executing, along with its execution state and allocated resources.</div>
+    <div class="option-item">&bull; Program belongs to user; process belongs to OS.</div>
+  </div>
+  <div class="explanation-box">
+    <strong>Explanation:</strong> Program = passive stored code file on disk. Process = active running instance loaded into RAM with memory space, threads, and execution context.
+  </div>
+</div>
+
+</body>
+</html>

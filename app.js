@@ -27,13 +27,15 @@
   let timerInterval = null;
   let remainingSeconds = DEFAULT_DURATION_SECONDS;
   let violationCount = 0;
+  let lastViolationTime = 0;
+  let testStartTime = 0;
+  let violationAutoSubmitTimer = null;
   let mediaStream = null;
   let isTestActive = false;
   let isReviewFilter = 'all';
 
   // Storage Keys
   const AUTH_KEY = 'abhyas_auth_candidate_v1';
-  const PROGRESS_KEY = 'abhyas_progress_v2';
 
   // Authentication Data
   function getAuthUser() {
@@ -56,11 +58,38 @@
     } catch (e) {}
   }
 
-  // Progress Storage per subject
+  // Student-specific progress key generator so every student has their own data
+  function getStudentProgressKey(customUser) {
+    const user = customUser || getAuthUser();
+    if (!user || !user.isLoggedIn) return 'abhyas_progress_guest';
+    const id = (user.roll || user.email || user.name || 'guest')
+      .trim()
+      .toLowerCase()
+      .replace(/[^a-z0-9_-]/g, '_');
+    return `abhyas_progress_student_${id}`;
+  }
+
+  // Progress Storage per subject (strictly isolated per candidate)
   function getProgressData() {
     try {
-      const data = localStorage.getItem(PROGRESS_KEY);
-      return data ? JSON.parse(data) : {
+      const key = getStudentProgressKey();
+      const data = localStorage.getItem(key);
+      if (data) {
+        return JSON.parse(data);
+      }
+
+      // Preserve Kumar's legacy data if logging in as Kumar Dipankar Sahoo
+      const currentUser = getAuthUser();
+      if (currentUser && (currentUser.roll === 'E26B07F0588' || currentUser.name.toLowerCase().includes('kumar'))) {
+        const legacy = localStorage.getItem('abhyas_progress_v2') || localStorage.getItem('nirman_progress_v1');
+        if (legacy) {
+          localStorage.setItem(key, legacy);
+          return JSON.parse(legacy);
+        }
+      }
+
+      // Fresh student profile starts with 0 attempts, 0 XP, full pending pool
+      return {
         sai: { completedBatches: {}, totalXp: 0 },
         maths: { completedBatches: {}, totalXp: 0 },
         psp: { completedBatches: {}, totalXp: 0 },
@@ -78,7 +107,8 @@
 
   function saveProgressData(data) {
     try {
-      localStorage.setItem(PROGRESS_KEY, JSON.stringify(data));
+      const key = getStudentProgressKey();
+      localStorage.setItem(key, JSON.stringify(data));
     } catch (e) {}
   }
 
@@ -175,6 +205,8 @@
     hideAllViews();
     subjectsView.style.display = 'block';
     testHeaderStatus.style.display = 'none';
+    const mainNav = document.getElementById('main-nav-links');
+    if (mainNav) mainNav.style.display = 'flex';
     navChangeSubject.style.display = 'none';
     document.getElementById('nav-portal-btn').classList.add('active');
   };
@@ -186,6 +218,8 @@
 
     hideAllViews();
     dashboardView.style.display = 'block';
+    const mainNav = document.getElementById('main-nav-links');
+    if (mainNav) mainNav.style.display = 'flex';
     navChangeSubject.style.display = 'inline-block';
     document.getElementById('nav-portal-btn').classList.remove('active');
 
@@ -377,12 +411,20 @@
     visitedQuestions = new Set();
     currentQuestionIndex = 0;
     violationCount = 0;
+    lastViolationTime = 0;
+    testStartTime = Date.now();
+    if (violationAutoSubmitTimer) {
+      clearTimeout(violationAutoSubmitTimer);
+      violationAutoSubmitTimer = null;
+    }
     remainingSeconds = DEFAULT_DURATION_SECONDS;
     isTestActive = true;
 
     hideAllViews();
     testView.style.display = 'block';
     testHeaderStatus.style.display = 'flex';
+    const mainNav = document.getElementById('main-nav-links');
+    if (mainNav) mainNav.style.display = 'none';
 
     violationCountEl.textContent = '0';
 
@@ -543,12 +585,23 @@
 
     if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
       navigator.mediaDevices.getUserMedia({
-        video: { width: { ideal: 320 }, height: { ideal: 240 }, facingMode: 'user' }
+        video: { width: { ideal: 640 }, height: { ideal: 480 }, facingMode: 'user' }
       })
       .then((stream) => {
         mediaStream = stream;
         video.srcObject = stream;
         video.style.display = 'block';
+        video.style.position = 'absolute';
+        video.style.top = '0';
+        video.style.left = '0';
+        video.style.width = '100%';
+        video.style.height = '100%';
+        video.style.objectFit = 'cover';
+        video.style.transform = 'scaleX(-1)';
+        video.style.zIndex = '1';
+        video.onloadedmetadata = () => {
+          video.play().catch(() => {});
+        };
         fallback.style.display = 'none';
         statusLabel.textContent = 'VERIFIED';
       })
@@ -599,17 +652,73 @@
   }
 
   function handleProctorViolation(reason) {
+    if (!isTestActive) return;
+
+    // Grace period for first 4 seconds after test launch (e.g. camera permission dialogs)
+    if (Date.now() - testStartTime < 4000) return;
+
+    // Prevent duplicate triggers while the violation modal is already displayed
+    const modal = document.getElementById('violation-modal');
+    if (modal && modal.style.display === 'flex') return;
+
+    // Debounce rapid successive events (e.g. visibilitychange + blur triggering on same action)
+    const now = Date.now();
+    if (now - lastViolationTime < 2500) return;
+    lastViolationTime = now;
+
     violationCount++;
     violationCountEl.textContent = violationCount;
 
-    document.getElementById('modal-violation-count').textContent = violationCount;
-    document.getElementById('violation-modal-msg').textContent =
-      `Proctored security check triggered: ${reason}. Please stay on this window.`;
-    document.getElementById('violation-modal').style.display = 'flex';
+    const modalCountEl = document.getElementById('modal-violation-count');
+    const modalMsgEl = document.getElementById('violation-modal-msg');
+    const dismissBtn = document.getElementById('violation-dismiss-btn');
+
+    if (violationCount >= 3) {
+      if (modalCountEl) modalCountEl.textContent = '3';
+      if (modalMsgEl) {
+        modalMsgEl.textContent =
+          `Integrity threshold breached (3 of 3 strikes): ${reason}. Your assessment has been automatically locked and submitted.`;
+      }
+      if (dismissBtn) {
+        dismissBtn.textContent = 'Submit Assessment Now';
+        dismissBtn.onclick = function () {
+          dismissViolationModal();
+          executeSubmitTest();
+        };
+      }
+      modal.style.display = 'flex';
+
+      // Auto-submit test after 3 seconds on final strike
+      if (violationAutoSubmitTimer) clearTimeout(violationAutoSubmitTimer);
+      violationAutoSubmitTimer = setTimeout(() => {
+        if (isTestActive) {
+          dismissViolationModal();
+          executeSubmitTest();
+        }
+      }, 3000);
+      return;
+    }
+
+    if (modalCountEl) modalCountEl.textContent = violationCount;
+    if (modalMsgEl) {
+      const remainingStrikes = 3 - violationCount;
+      modalMsgEl.textContent =
+        `Security check triggered: ${reason}. Please keep this assessment window focused. (${remainingStrikes} warning strike${remainingStrikes === 1 ? '' : 's'} remaining).`;
+    }
+    if (dismissBtn) {
+      dismissBtn.textContent = 'I Understand \u2014 Return to Assessment';
+      dismissBtn.onclick = dismissViolationModal;
+    }
+    modal.style.display = 'flex';
   }
 
   window.dismissViolationModal = function () {
-    document.getElementById('violation-modal').style.display = 'none';
+    if (violationAutoSubmitTimer) {
+      clearTimeout(violationAutoSubmitTimer);
+      violationAutoSubmitTimer = null;
+    }
+    const modal = document.getElementById('violation-modal');
+    if (modal) modal.style.display = 'none';
   };
 
   // --------------------------------------------------------------------------
@@ -627,6 +736,10 @@
   };
 
   window.executeSubmitTest = function () {
+    if (violationAutoSubmitTimer) {
+      clearTimeout(violationAutoSubmitTimer);
+      violationAutoSubmitTimer = null;
+    }
     closeSubmitModal();
     clearInterval(timerInterval);
     isTestActive = false;
@@ -671,6 +784,9 @@
   function showResultsView(correct, incorrect, skipped, pct, xp) {
     hideAllViews();
     resultView.style.display = 'block';
+    testHeaderStatus.style.display = 'none';
+    const mainNav = document.getElementById('main-nav-links');
+    if (mainNav) mainNav.style.display = 'flex';
 
     document.getElementById('score-percentage').textContent = `${pct}%`;
     document.getElementById('score-fraction').textContent = `${correct} / ${currentTestQuestions.length} Correct`;

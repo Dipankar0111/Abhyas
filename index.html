@@ -7,14 +7,17 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,800;0,9..144,900;1,9..144,700&family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=20261011_v3">
 </head>
 <body>
 
   <!-- TOP GLOBAL HEADER -->
   <header class="app-header">
     <div class="header-left">
-      <nav class="nav-links">
+      <div class="nirman-logo" onclick="showSubjectSelection()" title="Abhyas Assessment Portal">
+        <span class="logo-text">Abhyas</span>
+      </div>
+      <nav class="nav-links" id="main-nav-links">
         <a href="#" class="nav-link active" id="nav-portal-btn" onclick="showSubjectSelection()">Subjects</a>
         <a href="#" class="nav-link" id="nav-change-subject" onclick="showSubjectSelection()" style="display: none;">Switch Subject</a>
         <a href="Systems_and_AI_Master_Guide_and_Contests.pdf" download class="nav-link" title="Download Master Study Guide (44 Pages)">PDF Manual</a>
@@ -22,10 +25,6 @@
     </div>
 
     <div class="header-center">
-      <div class="nirman-logo" onclick="showSubjectSelection()" title="Abhyas Assessment Portal">
-        <span class="logo-text">Abhyas</span>
-      </div>
-
       <!-- Test Header Status (When in Test) -->
       <div class="test-header-bar" id="test-header-status" style="display: none;">
         <div class="timer-badge" id="timer-pill">
@@ -377,13 +376,12 @@
               <span class="tag-pill yellow-pill" id="cam-status-label">ACTIVE</span>
             </div>
             
-            <div class="camera-stream-wrapper">
-              <video id="webcam-video" autoplay playsinline muted></video>
-              <canvas id="face-detect-canvas"></canvas>
-              <div class="cam-overlay-guide">
+            <div class="camera-stream-wrapper" style="position: relative; width: 100%; height: 190px; background: #18181b; overflow: hidden; border-radius: 10px; display: block;">
+              <video id="webcam-video" autoplay playsinline muted style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; transform: scaleX(-1); z-index: 1; display: none;"></video>
+              <div class="cam-overlay-guide" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; pointer-events: none; z-index: 3;">
                 <div class="face-target-box"></div>
               </div>
-              <div class="cam-offline-placeholder" id="cam-fallback">
+              <div class="cam-offline-placeholder" id="cam-fallback" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 4; display: flex;">
                 <div class="avatar-icon">&#128100;</div>
                 <span class="mono-label">PROCTORING MONITOR</span>
                 <button class="btn btn-xs btn-outline" onclick="initCameraStream()">Enable Camera</button>
@@ -506,7 +504,7 @@
       <div class="violation-tally-box">
         Warning <span id="modal-violation-count">1</span> of 3 Recorded
       </div>
-      <button class="btn btn-black btn-block" onclick="dismissViolationModal()">
+      <button class="btn btn-black btn-block" id="violation-dismiss-btn" onclick="dismissViolationModal()">
         I Understand &mdash; Return to Assessment
       </button>
     </div>
